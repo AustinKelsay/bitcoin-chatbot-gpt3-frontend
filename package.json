@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/AustinKelsay/bitcoin-chatbot-gpt3-frontend.git"
   },
-  "author": "",
+  "author": "Austin Kelsay",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AustinKelsay/bitcoin-chatbot-gpt3-frontend/issues"
