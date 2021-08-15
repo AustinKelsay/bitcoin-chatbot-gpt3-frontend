@@ -1,0 +1,24 @@
+{
+  "name": "bitcoin-chatbot-gpt3-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for a bitcoin focused GPT-3 chatbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AustinKelsay/bitcoin-chatbot-gpt3-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AustinKelsay/bitcoin-chatbot-gpt3-frontend/issues"
+  },
+  "homepage": "https://github.com/AustinKelsay/bitcoin-chatbot-gpt3-frontend#readme",
+  "dependencies": {
+    "parcel": "^2.0.0-rc.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
