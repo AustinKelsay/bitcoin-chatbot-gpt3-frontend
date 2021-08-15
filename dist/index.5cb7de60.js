@@ -22735,10 +22735,16 @@ var _s = $RefreshSig$();
 const App = ()=>{
     _s();
     const [botStatus, setBotStatus] = _react.useState("");
+    const headers = {
+        'Content-Type': 'application/json',
+        "Access-Control-Allow-Origin": "*"
+    };
     _react.useEffect(()=>{
-        _axiosDefault.default.get("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/").then((response)=>{
+        _axiosDefault.default.get("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/", {
+            headers
+        }).then((response)=>{
             console.log(response);
-            setBotStatus(response);
+            setBotStatus(response.data);
         }).catch((error)=>{
             console.log(error);
         });
@@ -22746,10 +22752,17 @@ const App = ()=>{
     return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
         __source: {
             fileName: "src/App.js",
-            lineNumber: 16
+            lineNumber: 23
         },
         __self: undefined,
-        children: botStatus
+        children: /*#__PURE__*/ _jsxRuntime.jsx("h1", {
+            __source: {
+                fileName: "src/App.js",
+                lineNumber: 24
+            },
+            __self: undefined,
+            children: botStatus
+        })
     }));
 };
 _s(App, "5X8sSGKYw8ACx8t1rElh4W6G1gk=");
