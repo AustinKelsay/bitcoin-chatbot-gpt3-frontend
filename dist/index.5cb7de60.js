@@ -22731,6 +22731,7 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _indexCss = require("./index.css");
 var _s = $RefreshSig$();
 const App = ()=>{
     _s();
@@ -22750,18 +22751,38 @@ const App = ()=>{
         });
     });
     return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+        className: "App",
         __source: {
             fileName: "src/App.js",
-            lineNumber: 23
+            lineNumber: 24
         },
         __self: undefined,
-        children: /*#__PURE__*/ _jsxRuntime.jsx("h1", {
+        children: /*#__PURE__*/ _jsxRuntime.jsxs("header", {
+            className: "header",
             __source: {
                 fileName: "src/App.js",
-                lineNumber: 24
+                lineNumber: 25
             },
             __self: undefined,
-            children: botStatus
+            children: [
+                /*#__PURE__*/ _jsxRuntime.jsx("h1", {
+                    __source: {
+                        fileName: "src/App.js",
+                        lineNumber: 26
+                    },
+                    __self: undefined,
+                    children: "Bitcoin Chatbot"
+                }),
+                "Status:",
+                /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                    __source: {
+                        fileName: "src/App.js",
+                        lineNumber: 28
+                    },
+                    __self: undefined,
+                    children: botStatus
+                })
+            ]
         })
     }));
 };
@@ -22776,7 +22797,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","axios":"iYoWk"}],"JacNc":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","axios":"iYoWk","./index.css":"1dfYM"}],"JacNc":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -24294,6 +24315,6 @@ module.exports = CancelToken;
     return typeof payload === 'object' && payload.isAxiosError === true;
 };
 
-},{}]},["2rAXy","8Ye98","6cF5V"], "6cF5V", "parcelRequire04ad")
+},{}],"1dfYM":[function() {},{}]},["2rAXy","8Ye98","6cF5V"], "6cF5V", "parcelRequire04ad")
 
 //# sourceMappingURL=index.5cb7de60.js.map

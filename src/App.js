@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react"
 import axios from "axios"
+import './index.css'
 
 const App = () => {
     const [botStatus, setBotStatus] = useState("")
@@ -20,8 +21,12 @@ const App = () => {
         })
     })
     return (
-        <div>
-            <h1>{botStatus}</h1>
+        <div className='App'>
+            <header className='header'>
+                <h1>Bitcoin Chatbot</h1>
+                Status:
+                <span>{botStatus}</span>
+            </header>
         </div>
         )
 }
