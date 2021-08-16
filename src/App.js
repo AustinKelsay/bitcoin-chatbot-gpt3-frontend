@@ -3,7 +3,7 @@ import axios from "axios"
 import './index.css'
 
 const App = () => {
-    const [botStatus, setBotStatus] = useState("")
+    const [botStatus, setBotStatus] = useState("Bot offline")
     const headers = {
         'Content-Type': 'application/json',
         "Access-Control-Allow-Origin": "*"
@@ -13,7 +13,6 @@ const App = () => {
     useEffect(() => {
         axios.get("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/", {headers})
         .then(response => {
-            console.log(response)
             setBotStatus(response.data)
         })
         .catch(error => {
@@ -27,6 +26,15 @@ const App = () => {
                 Status:
                 <span>{botStatus}</span>
             </header>
+            <div className='body'>
+            <form>
+                <label>
+                    Chat:
+                    <input type="text" name="chat" />
+                </label>
+                <input type="submit" value="Submit" />
+            </form>
+            </div>
         </div>
         )
 }

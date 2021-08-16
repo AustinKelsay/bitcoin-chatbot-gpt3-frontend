@@ -26,3 +26,9 @@ Charcoal: 404E5C
 span {
     text-decoration: underline;
 }
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

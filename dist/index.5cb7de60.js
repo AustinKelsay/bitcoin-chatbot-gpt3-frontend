@@ -22735,7 +22735,7 @@ var _indexCss = require("./index.css");
 var _s = $RefreshSig$();
 const App = ()=>{
     _s();
-    const [botStatus, setBotStatus] = _react.useState("");
+    const [botStatus, setBotStatus] = _react.useState("Bot offline");
     const headers = {
         'Content-Type': 'application/json',
         "Access-Control-Allow-Origin": "*"
@@ -22744,49 +22744,95 @@ const App = ()=>{
         _axiosDefault.default.get("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/", {
             headers
         }).then((response)=>{
-            console.log(response);
             setBotStatus(response.data);
         }).catch((error)=>{
             console.log(error);
         });
     });
-    return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+    return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
         className: "App",
         __source: {
             fileName: "src/App.js",
-            lineNumber: 24
+            lineNumber: 23
         },
         __self: undefined,
-        children: /*#__PURE__*/ _jsxRuntime.jsxs("header", {
-            className: "header",
-            __source: {
-                fileName: "src/App.js",
-                lineNumber: 25
-            },
-            __self: undefined,
-            children: [
-                /*#__PURE__*/ _jsxRuntime.jsx("h1", {
+        children: [
+            /*#__PURE__*/ _jsxRuntime.jsxs("header", {
+                className: "header",
+                __source: {
+                    fileName: "src/App.js",
+                    lineNumber: 24
+                },
+                __self: undefined,
+                children: [
+                    /*#__PURE__*/ _jsxRuntime.jsx("h1", {
+                        __source: {
+                            fileName: "src/App.js",
+                            lineNumber: 25
+                        },
+                        __self: undefined,
+                        children: "Bitcoin Chatbot"
+                    }),
+                    "Status:",
+                    /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                        __source: {
+                            fileName: "src/App.js",
+                            lineNumber: 27
+                        },
+                        __self: undefined,
+                        children: botStatus
+                    })
+                ]
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                className: "body",
+                __source: {
+                    fileName: "src/App.js",
+                    lineNumber: 29
+                },
+                __self: undefined,
+                children: /*#__PURE__*/ _jsxRuntime.jsxs("form", {
                     __source: {
                         fileName: "src/App.js",
-                        lineNumber: 26
+                        lineNumber: 30
                     },
                     __self: undefined,
-                    children: "Bitcoin Chatbot"
-                }),
-                "Status:",
-                /*#__PURE__*/ _jsxRuntime.jsx("span", {
-                    __source: {
-                        fileName: "src/App.js",
-                        lineNumber: 28
-                    },
-                    __self: undefined,
-                    children: botStatus
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsxs("label", {
+                            __source: {
+                                fileName: "src/App.js",
+                                lineNumber: 31
+                            },
+                            __self: undefined,
+                            children: [
+                                "Chat:",
+                                /*#__PURE__*/ _jsxRuntime.jsx("input", {
+                                    type: "text",
+                                    name: "chat",
+                                    __source: {
+                                        fileName: "src/App.js",
+                                        lineNumber: 33
+                                    },
+                                    __self: undefined
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx("input", {
+                            type: "submit",
+                            value: "Submit",
+                            __source: {
+                                fileName: "src/App.js",
+                                lineNumber: 35
+                            },
+                            __self: undefined
+                        })
+                    ]
                 })
-            ]
-        })
+            })
+        ]
     }));
 };
-_s(App, "5X8sSGKYw8ACx8t1rElh4W6G1gk=");
+_s(App, "kQglAnApjSRTzkcUAilcNGFypjA=");
 _c = App;
 exports.default = App;
 var _c;
