@@ -32,4 +32,17 @@ span {
     flex-direction: column;
     align-items: center;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+input .chatbox {
+    width: 90%;
+    margin: 1% auto;
+    height: 80%;
+}
 /*# sourceMappingURL=index.34cb295e.css.map */

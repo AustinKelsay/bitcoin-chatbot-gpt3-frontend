@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react"
 import axios from "axios"
+import { ChatFeed, Message } from 'react-chat-ui'
 import './index.css'
 
 const App = () => {
@@ -27,13 +28,7 @@ const App = () => {
                 <span>{botStatus}</span>
             </header>
             <div className='body'>
-            <form>
-                <label>
-                    Chat:
-                    <input type="text" name="chat" />
-                </label>
-                <input type="submit" value="Submit" />
-            </form>
+                <ChatFeed />
             </div>
         </div>
         )
