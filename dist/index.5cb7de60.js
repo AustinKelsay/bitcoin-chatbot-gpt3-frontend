@@ -21092,6 +21092,10 @@ var _s = $RefreshSig$();
 const App = ()=>{
     _s();
     const [botStatus, setBotStatus] = _react.useState("Bot offline");
+    const [messages, setMessages] = _react.useState([
+        "Hey fuckface"
+    ]);
+    const [isTyping, setIsTyping] = _react.useState(false);
     const headers = {
         'Content-Type': 'application/json',
         "Access-Control-Allow-Origin": "*"
@@ -21109,44 +21113,60 @@ const App = ()=>{
         className: "App",
         __source: {
             fileName: "src/App.js",
-            lineNumber: 24
+            lineNumber: 26
         },
         __self: undefined
     }, /*#__PURE__*/ _reactDefault.default.createElement("header", {
         className: "header",
         __source: {
             fileName: "src/App.js",
-            lineNumber: 25
+            lineNumber: 27
         },
         __self: undefined
     }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
         __source: {
             fileName: "src/App.js",
-            lineNumber: 26
+            lineNumber: 28
         },
         __self: undefined
     }, "Bitcoin Chatbot"), "Status:", /*#__PURE__*/ _reactDefault.default.createElement("span", {
         __source: {
             fileName: "src/App.js",
-            lineNumber: 28
+            lineNumber: 30
         },
         __self: undefined
     }, botStatus)), /*#__PURE__*/ _reactDefault.default.createElement("div", {
         className: "body",
         __source: {
             fileName: "src/App.js",
-            lineNumber: 30
+            lineNumber: 32
         },
         __self: undefined
     }, /*#__PURE__*/ _reactDefault.default.createElement(_reactChatUi.ChatFeed, {
+        messages: messages,
+        isTyping: isTyping,
+        hasInputField: false,
+        showSenderName: true // show the name of the user who sent the message
+        ,
+        bubblesCentered: false,
+        // JSON: Custom bubble styles
+        bubbleStyles: {
+            text: {
+                fontSize: 30
+            },
+            chatbubble: {
+                borderRadius: 70,
+                padding: 40
+            }
+        },
         __source: {
             fileName: "src/App.js",
-            lineNumber: 31
+            lineNumber: 33
         },
         __self: undefined
     }))));
 };
-_s(App, "kQglAnApjSRTzkcUAilcNGFypjA=");
+_s(App, "jjArJUvsJK6GNQMUWR9u0ES1x7Y=");
 _c = App;
 exports.default = App;
 var _c;
