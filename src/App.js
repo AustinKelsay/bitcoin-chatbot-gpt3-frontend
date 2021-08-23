@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react"
 import axios from "axios"
-import { ChatFeed, Message } from 'react-chat-ui'
+import { Widget } from 'react-chat-widget';
+import 'react-chat-widget/lib/styles.css';
 import './index.css'
 
 const App = () => {
@@ -30,25 +31,7 @@ const App = () => {
                 <span>{botStatus}</span>
             </header>
             <div className='body'>
-            <ChatFeed
-                messages={messages} // Array: list of message objects
-                isTyping={isTyping} // Boolean: is the recipient typing
-                hasInputField={false} // Boolean: use our input, or use your own
-                showSenderName // show the name of the user who sent the message
-                bubblesCentered={false} //Boolean should the bubbles be centered in the feed?
-                // JSON: Custom bubble styles
-                bubbleStyles={
-                    {
-                    text: {
-                        fontSize: 30
-                    },
-                    chatbubble: {
-                        borderRadius: 70,
-                        padding: 40
-                    }
-                    }
-                }
-                />
+                <Widget />
             </div>
         </div>
         )
