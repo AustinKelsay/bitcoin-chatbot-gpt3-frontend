@@ -22731,10 +22731,9 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
-var _reactSimpleChat = require("react-simple-chat");
-var _reactSimpleChatDefault = parcelHelpers.interopDefault(_reactSimpleChat);
-var _indexCss = require("react-simple-chat/src/components/index.css");
-var _indexCss1 = require("./index.css");
+var _chatbot = require("./chatbot");
+var _chatbotDefault = parcelHelpers.interopDefault(_chatbot);
+var _indexCss = require("./index.css");
 var _s = $RefreshSig$();
 const App = ()=>{
     _s();
@@ -22750,11 +22749,11 @@ const App = ()=>{
             }
         }
     ]);
-    const headers = {
-        'Content-Type': 'application/json',
-        "Access-Control-Allow-Origin": "*"
-    };
     _react.useEffect(()=>{
+        const headers = {
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "*"
+        };
         _axiosDefault.default.get("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/", {
             headers
         }).then((response)=>{
@@ -22805,17 +22804,7 @@ const App = ()=>{
                     lineNumber: 41
                 },
                 __self: undefined,
-                children: /*#__PURE__*/ _jsxRuntime.jsx(_reactSimpleChatDefault.default, {
-                    title: "Jane Doe",
-                    user: {
-                        id: 1
-                    },
-                    messages: messages,
-                    onSend: (message)=>setMessages([
-                            ...messages,
-                            message
-                        ])
-                    ,
+                children: /*#__PURE__*/ _jsxRuntime.jsx(_chatbotDefault.default, {
                     __source: {
                         fileName: "src/App.js",
                         lineNumber: 42
@@ -22837,7 +22826,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","axios":"iYoWk","./index.css":"1dfYM","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","react-simple-chat":"1vgou","react-simple-chat/src/components/index.css":"jqOG8"}],"iYoWk":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","axios":"iYoWk","./chatbot":"bilBW","./index.css":"1dfYM","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"iYoWk":[function(require,module,exports) {
 module.exports = require('./lib/axios');
 
 },{"./lib/axios":"3QmO2"}],"3QmO2":[function(require,module,exports) {
@@ -24203,7 +24192,2613 @@ module.exports = CancelToken;
     return typeof payload === 'object' && payload.isAxiosError === true;
 };
 
-},{}],"1dfYM":[function() {},{}],"JacNc":[function(require,module,exports) {
+},{}],"bilBW":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$352b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$352b.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _styledComponents = require("styled-components");
+var _reactSimpleChatbot = require("react-simple-chatbot");
+var _reactSimpleChatbotDefault = parcelHelpers.interopDefault(_reactSimpleChatbot);
+// all available props
+const theme = {
+    background: '#f5f8fb',
+    fontFamily: 'Helvetica Neue',
+    headerBgColor: '#EF6C00',
+    headerFontColor: '#fff',
+    headerFontSize: '15px',
+    botBubbleColor: '#EF6C00',
+    botFontColor: '#fff',
+    userBubbleColor: '#fff',
+    userFontColor: '#4a4a4a'
+};
+const steps = [
+    {
+        id: '1',
+        message: 'Hello World',
+        end: true
+    }, 
+];
+const ThemedExample = ()=>/*#__PURE__*/ _jsxRuntime.jsxs(_styledComponents.ThemeProvider, {
+        theme: theme,
+        __source: {
+            fileName: "src/chatbot.js",
+            lineNumber: 27
+        },
+        __self: undefined,
+        children: [
+            /*#__PURE__*/ _jsxRuntime.jsx(_reactSimpleChatbotDefault.default, {
+                steps: steps,
+                __source: {
+                    fileName: "src/chatbot.js",
+                    lineNumber: 28
+                },
+                __self: undefined
+            }),
+            ";"
+        ]
+    })
+;
+_c = ThemedExample;
+exports.default = ThemedExample;
+var _c;
+$RefreshReg$(_c, "ThemedExample");
+
+  $parcel$ReactRefreshHelpers$352b.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","styled-components":"gkt6C","react-simple-chatbot":"jusa8","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"gkt6C":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "createGlobalStyle", ()=>createGlobalStyle
+);
+parcelHelpers.export(exports, "css", ()=>css
+);
+parcelHelpers.export(exports, "isStyledComponent", ()=>isStyledComponent
+);
+parcelHelpers.export(exports, "keyframes", ()=>keyframes
+);
+parcelHelpers.export(exports, "ServerStyleSheet", ()=>ServerStyleSheet
+);
+parcelHelpers.export(exports, "StyleSheetConsumer", ()=>StyleSheetConsumer
+);
+parcelHelpers.export(exports, "StyleSheetContext", ()=>StyleSheetContext
+);
+parcelHelpers.export(exports, "StyleSheetManager", ()=>StyleSheetManager1
+);
+parcelHelpers.export(exports, "ThemeConsumer", ()=>ThemeConsumer
+);
+parcelHelpers.export(exports, "ThemeContext", ()=>ThemeContext
+);
+parcelHelpers.export(exports, "ThemeProvider", ()=>ThemeProvider1
+);
+parcelHelpers.export(exports, "withTheme", ()=>withTheme
+);
+parcelHelpers.export(exports, "__DO_NOT_USE_OR_YOU_WILL_BE_HAUNTED_BY_SPOOKY_GHOSTS", ()=>__DO_NOT_USE_OR_YOU_WILL_BE_HAUNTED_BY_SPOOKY_GHOSTS
+);
+var _stylisMin = require("stylis/stylis.min");
+var _stylisMinDefault = parcelHelpers.interopDefault(_stylisMin);
+var _stylisRuleSheet = require("stylis-rule-sheet");
+var _stylisRuleSheetDefault = parcelHelpers.interopDefault(_stylisRuleSheet);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _unitless = require("@emotion/unitless");
+var _unitlessDefault = parcelHelpers.interopDefault(_unitless);
+var _reactIs = require("react-is");
+var _memoizeOne = require("memoize-one");
+var _memoizeOneDefault = parcelHelpers.interopDefault(_memoizeOne);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _isPropValid = require("@emotion/is-prop-valid");
+var _isPropValidDefault = parcelHelpers.interopDefault(_isPropValid);
+var _mergeAnything = require("merge-anything");
+var _mergeAnythingDefault = parcelHelpers.interopDefault(_mergeAnything);
+var process = require("process");
+// 
+var interleave = function(strings, interpolations) {
+    var result = [
+        strings[0]
+    ];
+    for(var i = 0, len = interpolations.length; i < len; i += 1)result.push(interpolations[i], strings[i + 1]);
+    return result;
+};
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function(obj) {
+    return typeof obj;
+} : function(obj) {
+    return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+};
+var classCallCheck = function(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+};
+var createClass = function() {
+    function defineProperties(target, props) {
+        for(var i = 0; i < props.length; i++){
+            var descriptor = props[i];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ("value" in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+        }
+    }
+    return function(Constructor, protoProps, staticProps) {
+        if (protoProps) defineProperties(Constructor.prototype, protoProps);
+        if (staticProps) defineProperties(Constructor, staticProps);
+        return Constructor;
+    };
+}();
+var _extends = Object.assign || function(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i];
+        for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+};
+var inherits = function(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+            value: subClass,
+            enumerable: false,
+            writable: true,
+            configurable: true
+        }
+    });
+    if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+};
+var objectWithoutProperties = function(obj, keys) {
+    var target = {
+    };
+    for(var i in obj){
+        if (keys.indexOf(i) >= 0) continue;
+        if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
+        target[i] = obj[i];
+    }
+    return target;
+};
+var possibleConstructorReturn = function(self, call) {
+    if (!self) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return call && (typeof call === "object" || typeof call === "function") ? call : self;
+};
+// 
+var isPlainObject = function(x) {
+    return (typeof x === 'undefined' ? 'undefined' : _typeof(x)) === 'object' && x.constructor === Object;
+};
+// 
+var EMPTY_ARRAY = Object.freeze([]);
+var EMPTY_OBJECT = Object.freeze({
+});
+// 
+function isFunction(test) {
+    return typeof test === 'function';
+}
+// 
+function getComponentName(target) {
+    return typeof target === 'string' && target || target.displayName || target.name || 'Component';
+}
+// 
+function isStatelessFunction(test) {
+    return typeof test === 'function' && !(test.prototype && test.prototype.isReactComponent);
+}
+// 
+function isStyledComponent(target) {
+    return target && typeof target.styledComponentId === 'string';
+}
+// 
+var SC_ATTR = 'data-styled';
+var SC_VERSION_ATTR = 'data-styled-version';
+var SC_STREAM_ATTR = 'data-styled-streamed';
+var IS_BROWSER = typeof window !== 'undefined' && 'HTMLElement' in window;
+var DISABLE_SPEEDY = typeof SC_DISABLE_SPEEDY === 'boolean' && SC_DISABLE_SPEEDY || typeof process !== 'undefined' && undefined || true;
+// Shared empty execution context when generating static styles
+var STATIC_EXECUTION_CONTEXT = {
+};
+// 
+/**
+ * Parse errors.md and turn it into a simple hash of code: message
+ */ var ERRORS = {
+    "1": "Cannot create styled-component for component: %s.\n\n",
+    "2": "Can't collect styles once you've consumed a `ServerStyleSheet`'s styles! `ServerStyleSheet` is a one off instance for each server-side render cycle.\n\n- Are you trying to reuse it across renders?\n- Are you accidentally calling collectStyles twice?\n\n",
+    "3": "Streaming SSR is only supported in a Node.js environment; Please do not try to call this method in the browser.\n\n",
+    "4": "The `StyleSheetManager` expects a valid target or sheet prop!\n\n- Does this error occur on the client and is your target falsy?\n- Does this error occur on the server and is the sheet falsy?\n\n",
+    "5": "The clone method cannot be used on the client!\n\n- Are you running in a client-like environment on the server?\n- Are you trying to run SSR on the client?\n\n",
+    "6": "Trying to insert a new style tag, but the given Node is unmounted!\n\n- Are you using a custom target that isn't mounted?\n- Does your document not have a valid head element?\n- Have you accidentally removed a style tag manually?\n\n",
+    "7": "ThemeProvider: Please return an object from your \"theme\" prop function, e.g.\n\n```js\ntheme={() => ({})}\n```\n\n",
+    "8": "ThemeProvider: Please make your \"theme\" prop an object.\n\n",
+    "9": "Missing document `<head>`\n\n",
+    "10": "Cannot find a StyleSheet instance. Usually this happens if there are multiple copies of styled-components loaded at once. Check out this issue for how to troubleshoot and fix the common cases where this situation can happen: https://github.com/styled-components/styled-components/issues/1941#issuecomment-417862021\n\n",
+    "11": "_This error was replaced with a dev-time warning, it will be deleted for v4 final._ [createGlobalStyle] received children which will not be rendered. Please use the component without passing children elements.\n\n",
+    "12": "It seems you are interpolating a keyframe declaration (%s) into an untagged string. This was supported in styled-components v3, but is not longer supported in v4 as keyframes are now injected on-demand. Please wrap your string in the css\\`\\` helper which ensures the styles are injected correctly. See https://www.styled-components.com/docs/api#css\n\n",
+    "13": "%s is not a styled component and cannot be referred to via component selector. See https://www.styled-components.com/docs/advanced#referring-to-other-components for more details.\n"
+};
+/**
+ * super basic version of sprintf
+ */ function format() {
+    var a = arguments.length <= 0 ? undefined : arguments[0];
+    var b = [];
+    for(var c = 1, len = arguments.length; c < len; c += 1)b.push(arguments.length <= c ? undefined : arguments[c]);
+    b.forEach(function(d) {
+        a = a.replace(/%[a-z]/, d);
+    });
+    return a;
+}
+/**
+ * Create an error file out of errors.md for development and a simple web link to the full errors
+ * in production mode.
+ */ var StyledComponentsError1 = function(_Error) {
+    inherits(StyledComponentsError2, _Error);
+    function StyledComponentsError2(code) {
+        classCallCheck(this, StyledComponentsError2);
+        for(var _len = arguments.length, interpolations = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)interpolations[_key - 1] = arguments[_key];
+        var _this;
+        var _this = possibleConstructorReturn(this, _Error.call(this, format.apply(undefined, [
+            ERRORS[code]
+        ].concat(interpolations)).trim()));
+        return possibleConstructorReturn(_this);
+    }
+    return StyledComponentsError2;
+}(Error);
+// 
+var SC_COMPONENT_ID = /^[^\S\n]*?\/\* sc-component-id:\s*(\S+)\s+\*\//gm;
+var extractComps = function(maybeCSS) {
+    var css = '' + (maybeCSS || ''); // Definitely a string, and a clone
+    var existingComponents = [];
+    css.replace(SC_COMPONENT_ID, function(match, componentId, matchIndex) {
+        existingComponents.push({
+            componentId: componentId,
+            matchIndex: matchIndex
+        });
+        return match;
+    });
+    return existingComponents.map(function(_ref, i) {
+        var componentId = _ref.componentId, matchIndex = _ref.matchIndex;
+        var nextComp = existingComponents[i + 1];
+        var cssFromDOM = nextComp ? css.slice(matchIndex, nextComp.matchIndex) : css.slice(matchIndex);
+        return {
+            componentId: componentId,
+            cssFromDOM: cssFromDOM
+        };
+    });
+};
+// 
+var COMMENT_REGEX = /^\s*\/\/.*$/gm;
+// NOTE: This stylis instance is only used to split rules from SSR'd style tags
+var stylisSplitter = new _stylisMinDefault.default({
+    global: false,
+    cascade: true,
+    keyframe: false,
+    prefix: false,
+    compress: false,
+    semicolon: true
+});
+var stylis = new _stylisMinDefault.default({
+    global: false,
+    cascade: true,
+    keyframe: false,
+    prefix: true,
+    compress: false,
+    semicolon: false // NOTE: This means "autocomplete missing semicolons"
+});
+// Wrap `insertRulePlugin to build a list of rules,
+// and then make our own plugin to return the rules. This
+// makes it easier to hook into the existing SSR architecture
+var parsingRules = [];
+// eslint-disable-next-line consistent-return
+var returnRulesPlugin = function returnRulesPlugin1(context) {
+    if (context === -2) {
+        var parsedRules = parsingRules;
+        parsingRules = [];
+        return parsedRules;
+    }
+};
+var parseRulesPlugin = _stylisRuleSheetDefault.default(function(rule) {
+    parsingRules.push(rule);
+});
+var _componentId = void 0;
+var _selector = void 0;
+var _selectorRegexp = void 0;
+var selfReferenceReplacer = function selfReferenceReplacer1(match, offset, string) {
+    if (// the first self-ref is always untouched
+    offset > 0 && // there should be at least two self-refs to do a replacement (.b > .b)
+    string.slice(0, offset).indexOf(_selector) !== -1 && // no consecutive self refs (.b.b); that is a precedence boost and treated differently
+    string.slice(offset - _selector.length, offset) !== _selector) return '.' + _componentId;
+    return match;
+};
+/**
+ * When writing a style like
+ *
+ * & + & {
+ *   color: red;
+ * }
+ *
+ * The second ampersand should be a reference to the static component class. stylis
+ * has no knowledge of static class so we have to intelligently replace the base selector.
+ */ var selfReferenceReplacementPlugin = function selfReferenceReplacementPlugin1(context, _, selectors) {
+    if (context === 2 && selectors.length && selectors[0].lastIndexOf(_selector) > 0) // eslint-disable-next-line no-param-reassign
+    selectors[0] = selectors[0].replace(_selectorRegexp, selfReferenceReplacer);
+};
+stylis.use([
+    selfReferenceReplacementPlugin,
+    parseRulesPlugin,
+    returnRulesPlugin
+]);
+stylisSplitter.use([
+    parseRulesPlugin,
+    returnRulesPlugin
+]);
+var splitByRules = function splitByRules1(css) {
+    return stylisSplitter('', css);
+};
+function stringifyRules(rules, selector, prefix) {
+    var componentId = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '&';
+    var flatCSS = rules.join('').replace(COMMENT_REGEX, ''); // replace JS comments
+    var cssStr = selector && prefix ? prefix + ' ' + selector + ' { ' + flatCSS + ' }' : flatCSS;
+    // stylis has no concept of state to be passed to plugins
+    // but since JS is single=threaded, we can rely on that to ensure
+    // these properties stay in sync with the current stylis run
+    _componentId = componentId;
+    _selector = selector;
+    _selectorRegexp = new RegExp('\\' + _selector + '\\b', 'g');
+    return stylis(prefix || !selector ? '' : selector, cssStr);
+}
+// 
+/* eslint-disable camelcase, no-undef */ var getNonce = function() {
+    return typeof __webpack_nonce__ !== 'undefined' ? __webpack_nonce__ : null;
+};
+// 
+/* These are helpers for the StyleTags to keep track of the injected
+ * rule names for each (component) ID that they're keeping track of.
+ * They're crucial for detecting whether a name has already been
+ * injected.
+ * (This excludes rehydrated names) */ /* adds a new ID:name pairing to a names dictionary */ var addNameForId = function addNameForId1(names, id, name) {
+    if (name) {
+        // eslint-disable-next-line no-param-reassign
+        var namesForId = names[id] || (names[id] = Object.create(null));
+        namesForId[name] = true;
+    }
+};
+/* resets an ID entirely by overwriting it in the dictionary */ var resetIdNames = function resetIdNames1(names, id) {
+    // eslint-disable-next-line no-param-reassign
+    names[id] = Object.create(null);
+};
+/* factory for a names dictionary checking the existance of an ID:name pairing */ var hasNameForId = function hasNameForId1(names) {
+    return function(id, name) {
+        return names[id] !== undefined && names[id][name];
+    };
+};
+/* stringifies names for the html/element output */ var stringifyNames = function stringifyNames1(names) {
+    var str = '';
+    // eslint-disable-next-line guard-for-in
+    for(var id in names)str += Object.keys(names[id]).join(' ') + ' ';
+    return str.trim();
+};
+/* clones the nested names dictionary */ var cloneNames = function cloneNames1(names) {
+    var clone = Object.create(null);
+    // eslint-disable-next-line guard-for-in
+    for(var id in names)clone[id] = _extends({
+    }, names[id]);
+    return clone;
+};
+// 
+/* These are helpers that deal with the insertRule (aka speedy) API
+ * They are used in the StyleTags and specifically the speedy tag
+ */ /* retrieve a sheet for a given style tag */ var sheetForTag = function sheetForTag1(tag) {
+    // $FlowFixMe
+    if (tag.sheet) return tag.sheet;
+    /* Firefox quirk requires us to step through all stylesheets to find one owned by the given tag */ var size = tag.ownerDocument.styleSheets.length;
+    for(var i = 0; i < size; i += 1){
+        var sheet = tag.ownerDocument.styleSheets[i];
+        // $FlowFixMe
+        if (sheet.ownerNode === tag) return sheet;
+    }
+    /* we should always be able to find a tag */ throw new StyledComponentsError1(10);
+};
+/* insert a rule safely and return whether it was actually injected */ var safeInsertRule = function safeInsertRule1(sheet, cssRule, index) {
+    /* abort early if cssRule string is falsy */ if (!cssRule) return false;
+    var maxIndex = sheet.cssRules.length;
+    try {
+        /* use insertRule and cap passed index with maxIndex (no of cssRules) */ sheet.insertRule(cssRule, index <= maxIndex ? index : maxIndex);
+    } catch (err) {
+        /* any error indicates an invalid rule */ return false;
+    }
+    return true;
+};
+/* deletes `size` rules starting from `removalIndex` */ var deleteRules = function deleteRules1(sheet, removalIndex, size) {
+    var lowerBound = removalIndex - size;
+    for(var i = removalIndex; i > lowerBound; i -= 1)sheet.deleteRule(i);
+};
+// 
+/* this marker separates component styles and is important for rehydration */ var makeTextMarker = function makeTextMarker1(id) {
+    return '\n/* sc-component-id: ' + id + ' */\n';
+};
+/* add up all numbers in array up until and including the index */ var addUpUntilIndex = function addUpUntilIndex1(sizes, index) {
+    var totalUpToIndex = 0;
+    for(var i = 0; i <= index; i += 1)totalUpToIndex += sizes[i];
+    return totalUpToIndex;
+};
+/* create a new style tag after lastEl */ var makeStyleTag = function makeStyleTag1(target, tagEl, insertBefore) {
+    var targetDocument = document;
+    if (target) targetDocument = target.ownerDocument;
+    else if (tagEl) targetDocument = tagEl.ownerDocument;
+    var el = targetDocument.createElement('style');
+    el.setAttribute(SC_ATTR, '');
+    el.setAttribute(SC_VERSION_ATTR, "4.4.1");
+    var nonce = getNonce();
+    if (nonce) el.setAttribute('nonce', nonce);
+    /* Work around insertRule quirk in EdgeHTML */ el.appendChild(targetDocument.createTextNode(''));
+    if (target && !tagEl) /* Append to target when no previous element was passed */ target.appendChild(el);
+    else {
+        if (!tagEl || !target || !tagEl.parentNode) throw new StyledComponentsError1(6);
+        /* Insert new style tag after the previous one */ tagEl.parentNode.insertBefore(el, insertBefore ? tagEl : tagEl.nextSibling);
+    }
+    return el;
+};
+/* takes a css factory function and outputs an html styled tag factory */ var wrapAsHtmlTag = function wrapAsHtmlTag1(css, names) {
+    return function(additionalAttrs) {
+        var nonce = getNonce();
+        var attrs = [
+            nonce && 'nonce="' + nonce + '"',
+            SC_ATTR + '="' + stringifyNames(names) + '"',
+            SC_VERSION_ATTR + '="' + "4.4.1" + '"',
+            additionalAttrs
+        ];
+        var htmlAttr = attrs.filter(Boolean).join(' ');
+        return '<style ' + htmlAttr + '>' + css() + '</style>';
+    };
+};
+/* takes a css factory function and outputs an element factory */ var wrapAsElement = function wrapAsElement1(css, names) {
+    return function() {
+        var _props;
+        var props = (_props = {
+        }, _props[SC_ATTR] = stringifyNames(names), _props[SC_VERSION_ATTR] = "4.4.1", _props);
+        var nonce = getNonce();
+        if (nonce) // $FlowFixMe
+        props.nonce = nonce;
+        // eslint-disable-next-line react/no-danger
+        return _reactDefault.default.createElement('style', _extends({
+        }, props, {
+            dangerouslySetInnerHTML: {
+                __html: css()
+            }
+        }));
+    };
+};
+var getIdsFromMarkersFactory = function getIdsFromMarkersFactory1(markers) {
+    return function() {
+        return Object.keys(markers);
+    };
+};
+/* speedy tags utilise insertRule */ var makeSpeedyTag = function makeSpeedyTag1(el, getImportRuleTag) {
+    var names = Object.create(null);
+    var markers = Object.create(null);
+    var sizes = [];
+    var extractImport = getImportRuleTag !== undefined;
+    /* indicates whether getImportRuleTag was called */ var usedImportRuleTag = false;
+    var insertMarker = function insertMarker1(id) {
+        var prev = markers[id];
+        if (prev !== undefined) return prev;
+        markers[id] = sizes.length;
+        sizes.push(0);
+        resetIdNames(names, id);
+        return markers[id];
+    };
+    var insertRules = function insertRules1(id, cssRules, name) {
+        var marker = insertMarker(id);
+        var sheet = sheetForTag(el);
+        var insertIndex = addUpUntilIndex(sizes, marker);
+        var injectedRules = 0;
+        var importRules = [];
+        var cssRulesSize = cssRules.length;
+        for(var i = 0; i < cssRulesSize; i += 1){
+            var cssRule = cssRules[i];
+            var mayHaveImport = extractImport; /* @import rules are reordered to appear first */ 
+            if (mayHaveImport && cssRule.indexOf('@import') !== -1) importRules.push(cssRule);
+            else if (safeInsertRule(sheet, cssRule, insertIndex + injectedRules)) {
+                mayHaveImport = false;
+                injectedRules += 1;
+            }
+        }
+        if (extractImport && importRules.length > 0) {
+            usedImportRuleTag = true;
+            // $FlowFixMe
+            getImportRuleTag().insertRules(id + '-import', importRules);
+        }
+        sizes[marker] += injectedRules; /* add up no of injected rules */ 
+        addNameForId(names, id, name);
+    };
+    var removeRules = function removeRules1(id) {
+        var marker = markers[id];
+        if (marker === undefined) return;
+        // $FlowFixMe
+        if (el.isConnected === false) return;
+        var size = sizes[marker];
+        var sheet = sheetForTag(el);
+        var removalIndex = addUpUntilIndex(sizes, marker) - 1;
+        deleteRules(sheet, removalIndex, size);
+        sizes[marker] = 0;
+        resetIdNames(names, id);
+        if (extractImport && usedImportRuleTag) // $FlowFixMe
+        getImportRuleTag().removeRules(id + '-import');
+    };
+    var css = function css1() {
+        var _sheetForTag = sheetForTag(el), cssRules = _sheetForTag.cssRules;
+        var str = '';
+        // eslint-disable-next-line guard-for-in
+        for(var id in markers){
+            str += makeTextMarker(id);
+            var marker = markers[id];
+            var end = addUpUntilIndex(sizes, marker);
+            var size = sizes[marker];
+            for(var i = end - size; i < end; i += 1){
+                var rule = cssRules[i];
+                if (rule !== undefined) str += rule.cssText;
+            }
+        }
+        return str;
+    };
+    return {
+        clone: function clone() {
+            throw new StyledComponentsError1(5);
+        },
+        css: css,
+        getIds: getIdsFromMarkersFactory(markers),
+        hasNameForId: hasNameForId(names),
+        insertMarker: insertMarker,
+        insertRules: insertRules,
+        removeRules: removeRules,
+        sealed: false,
+        styleTag: el,
+        toElement: wrapAsElement(css, names),
+        toHTML: wrapAsHtmlTag(css, names)
+    };
+};
+var makeTextNode = function makeTextNode1(targetDocument, id) {
+    return targetDocument.createTextNode(makeTextMarker(id));
+};
+var makeBrowserTag = function makeBrowserTag1(el, getImportRuleTag) {
+    var names = Object.create(null);
+    var markers = Object.create(null);
+    var extractImport = getImportRuleTag !== undefined;
+    /* indicates whether getImportRuleTag was called */ var usedImportRuleTag = false;
+    var insertMarker = function insertMarker1(id) {
+        var prev = markers[id];
+        if (prev !== undefined) return prev;
+        markers[id] = makeTextNode(el.ownerDocument, id);
+        el.appendChild(markers[id]);
+        names[id] = Object.create(null);
+        return markers[id];
+    };
+    var insertRules = function insertRules1(id, cssRules, name) {
+        var marker = insertMarker(id);
+        var importRules = [];
+        var cssRulesSize = cssRules.length;
+        for(var i = 0; i < cssRulesSize; i += 1){
+            var rule = cssRules[i];
+            var mayHaveImport = extractImport;
+            if (mayHaveImport && rule.indexOf('@import') !== -1) importRules.push(rule);
+            else {
+                mayHaveImport = false;
+                var separator = i === cssRulesSize - 1 ? '' : ' ';
+                marker.appendData('' + rule + separator);
+            }
+        }
+        addNameForId(names, id, name);
+        if (extractImport && importRules.length > 0) {
+            usedImportRuleTag = true;
+            // $FlowFixMe
+            getImportRuleTag().insertRules(id + '-import', importRules);
+        }
+    };
+    var removeRules = function removeRules1(id) {
+        var marker = markers[id];
+        if (marker === undefined) return;
+        /* create new empty text node and replace the current one */ var newMarker = makeTextNode(el.ownerDocument, id);
+        el.replaceChild(newMarker, marker);
+        markers[id] = newMarker;
+        resetIdNames(names, id);
+        if (extractImport && usedImportRuleTag) // $FlowFixMe
+        getImportRuleTag().removeRules(id + '-import');
+    };
+    var css = function css1() {
+        var str = '';
+        // eslint-disable-next-line guard-for-in
+        for(var id in markers)str += markers[id].data;
+        return str;
+    };
+    return {
+        clone: function clone() {
+            throw new StyledComponentsError1(5);
+        },
+        css: css,
+        getIds: getIdsFromMarkersFactory(markers),
+        hasNameForId: hasNameForId(names),
+        insertMarker: insertMarker,
+        insertRules: insertRules,
+        removeRules: removeRules,
+        sealed: false,
+        styleTag: el,
+        toElement: wrapAsElement(css, names),
+        toHTML: wrapAsHtmlTag(css, names)
+    };
+};
+var makeServerTag = function makeServerTag1(namesArg, markersArg) {
+    var names = namesArg === undefined ? Object.create(null) : namesArg;
+    var markers = markersArg === undefined ? Object.create(null) : markersArg;
+    var insertMarker = function insertMarker1(id) {
+        var prev = markers[id];
+        if (prev !== undefined) return prev;
+        return markers[id] = [
+            ''
+        ];
+    };
+    var insertRules = function insertRules1(id, cssRules, name) {
+        var marker = insertMarker(id);
+        marker[0] += cssRules.join(' ');
+        addNameForId(names, id, name);
+    };
+    var removeRules = function removeRules1(id) {
+        var marker = markers[id];
+        if (marker === undefined) return;
+        marker[0] = '';
+        resetIdNames(names, id);
+    };
+    var css = function css1() {
+        var str = '';
+        // eslint-disable-next-line guard-for-in
+        for(var id in markers){
+            var cssForId = markers[id][0];
+            if (cssForId) str += makeTextMarker(id) + cssForId;
+        }
+        return str;
+    };
+    var clone = function clone1() {
+        var namesClone = cloneNames(names);
+        var markersClone = Object.create(null);
+        // eslint-disable-next-line guard-for-in
+        for(var id in markers)markersClone[id] = [
+            markers[id][0]
+        ];
+        return makeServerTag1(namesClone, markersClone);
+    };
+    var tag = {
+        clone: clone,
+        css: css,
+        getIds: getIdsFromMarkersFactory(markers),
+        hasNameForId: hasNameForId(names),
+        insertMarker: insertMarker,
+        insertRules: insertRules,
+        removeRules: removeRules,
+        sealed: false,
+        styleTag: null,
+        toElement: wrapAsElement(css, names),
+        toHTML: wrapAsHtmlTag(css, names)
+    };
+    return tag;
+};
+var makeTag = function makeTag1(target, tagEl, forceServer, insertBefore, getImportRuleTag) {
+    if (IS_BROWSER && !forceServer) {
+        var el = makeStyleTag(target, tagEl, insertBefore);
+        if (DISABLE_SPEEDY) return makeBrowserTag(el, getImportRuleTag);
+        else return makeSpeedyTag(el, getImportRuleTag);
+    }
+    return makeServerTag();
+};
+var rehydrate = function rehydrate1(tag, els, extracted) {
+    /* add all extracted components to the new tag */ for(var i = 0, len = extracted.length; i < len; i += 1){
+        var _extracted$i = extracted[i], componentId = _extracted$i.componentId, cssFromDOM = _extracted$i.cssFromDOM;
+        var cssRules = splitByRules(cssFromDOM);
+        tag.insertRules(componentId, cssRules);
+    }
+    /* remove old HTMLStyleElements, since they have been rehydrated */ for(var _i = 0, _len = els.length; _i < _len; _i += 1){
+        var el = els[_i];
+        if (el.parentNode) el.parentNode.removeChild(el);
+    }
+};
+// 
+var SPLIT_REGEX = /\s+/;
+/* determine the maximum number of components before tags are sharded */ var MAX_SIZE = void 0;
+if (IS_BROWSER) /* in speedy mode we can keep a lot more rules in a sheet before a slowdown can be expected */ MAX_SIZE = DISABLE_SPEEDY ? 40 : 1000;
+else /* for servers we do not need to shard at all */ MAX_SIZE = -1;
+var sheetRunningId = 0;
+var master = void 0;
+var StyleSheet1 = function() {
+    /* a map from ids to tags */ /* deferred rules for a given id */ /* this is used for not reinjecting rules via hasNameForId() */ /* when rules for an id are removed using remove() we have to ignore rehydratedNames for it */ /* a list of tags belonging to this StyleSheet */ /* a tag for import rules */ /* current capacity until a new tag must be created */ /* children (aka clones) of this StyleSheet inheriting all and future injections */ function StyleSheet2() {
+        var _this = this;
+        var target = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : IS_BROWSER ? document.head : null;
+        var forceServer = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+        classCallCheck(this, StyleSheet2);
+        this.getImportRuleTag = function() {
+            var importRuleTag = _this.importRuleTag;
+            if (importRuleTag !== undefined) return importRuleTag;
+            var firstTag = _this.tags[0];
+            var insertBefore = true;
+            return _this.importRuleTag = makeTag(_this.target, firstTag ? firstTag.styleTag : null, _this.forceServer, insertBefore);
+        };
+        sheetRunningId += 1;
+        this.id = sheetRunningId;
+        this.forceServer = forceServer;
+        this.target = forceServer ? null : target;
+        this.tagMap = {
+        };
+        this.deferred = {
+        };
+        this.rehydratedNames = {
+        };
+        this.ignoreRehydratedNames = {
+        };
+        this.tags = [];
+        this.capacity = 1;
+        this.clones = [];
+    }
+    /* rehydrate all SSR'd style tags */ StyleSheet2.prototype.rehydrate = function rehydrate$$1() {
+        if (!IS_BROWSER || this.forceServer) return this;
+        var els = [];
+        var extracted = [];
+        var isStreamed = false;
+        /* retrieve all of our SSR style elements from the DOM */ var nodes = document.querySelectorAll('style[' + SC_ATTR + '][' + SC_VERSION_ATTR + '="' + "4.4.1" + '"]');
+        var nodesSize = nodes.length;
+        /* abort rehydration if no previous style tags were found */ if (!nodesSize) return this;
+        for(var i = 0; i < nodesSize; i += 1){
+            var el = nodes[i];
+            /* check if style tag is a streamed tag */ if (!isStreamed) isStreamed = !!el.getAttribute(SC_STREAM_ATTR);
+            /* retrieve all component names */ var elNames = (el.getAttribute(SC_ATTR) || '').trim().split(SPLIT_REGEX);
+            var elNamesSize = elNames.length;
+            for(var j = 0, name; j < elNamesSize; j += 1){
+                name = elNames[j];
+                /* add rehydrated name to sheet to avoid re-adding styles */ this.rehydratedNames[name] = true;
+            }
+            /* extract all components and their CSS */ extracted.push.apply(extracted, extractComps(el.textContent));
+            /* store original HTMLStyleElement */ els.push(el);
+        }
+        /* abort rehydration if nothing was extracted */ var extractedSize = extracted.length;
+        if (!extractedSize) return this;
+        /* create a tag to be used for rehydration */ var tag = this.makeTag(null);
+        rehydrate(tag, els, extracted);
+        /* reset capacity and adjust MAX_SIZE by the initial size of the rehydration */ this.capacity = Math.max(1, MAX_SIZE - extractedSize);
+        this.tags.push(tag);
+        /* retrieve all component ids */ for(var _j = 0; _j < extractedSize; _j += 1)this.tagMap[extracted[_j].componentId] = tag;
+        return this;
+    };
+    /* retrieve a "master" instance of StyleSheet which is typically used when no other is available
+   * The master StyleSheet is targeted by createGlobalStyle, keyframes, and components outside of any
+    * StyleSheetManager's context */ /* reset the internal "master" instance */ StyleSheet2.reset = function reset() {
+        var forceServer = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+        master = new StyleSheet2(undefined, forceServer).rehydrate();
+    };
+    /* adds "children" to the StyleSheet that inherit all of the parents' rules
+   * while their own rules do not affect the parent */ StyleSheet2.prototype.clone = function clone() {
+        var sheet = new StyleSheet2(this.target, this.forceServer);
+        /* add to clone array */ this.clones.push(sheet);
+        /* clone all tags */ sheet.tags = this.tags.map(function(tag) {
+            var ids = tag.getIds();
+            var newTag = tag.clone();
+            /* reconstruct tagMap */ for(var i = 0; i < ids.length; i += 1)sheet.tagMap[ids[i]] = newTag;
+            return newTag;
+        });
+        /* clone other maps */ sheet.rehydratedNames = _extends({
+        }, this.rehydratedNames);
+        sheet.deferred = _extends({
+        }, this.deferred);
+        return sheet;
+    };
+    /* force StyleSheet to create a new tag on the next injection */ StyleSheet2.prototype.sealAllTags = function sealAllTags() {
+        this.capacity = 1;
+        this.tags.forEach(function(tag) {
+            // eslint-disable-next-line no-param-reassign
+            tag.sealed = true;
+        });
+    };
+    StyleSheet2.prototype.makeTag = function makeTag$$1(tag) {
+        var lastEl = tag ? tag.styleTag : null;
+        var insertBefore = false;
+        return makeTag(this.target, lastEl, this.forceServer, insertBefore, this.getImportRuleTag);
+    };
+    /* get a tag for a given componentId, assign the componentId to one, or shard */ StyleSheet2.prototype.getTagForId = function getTagForId(id) {
+        /* simply return a tag, when the componentId was already assigned one */ var prev = this.tagMap[id];
+        if (prev !== undefined && !prev.sealed) return prev;
+        var tag = this.tags[this.tags.length - 1];
+        /* shard (create a new tag) if the tag is exhausted (See MAX_SIZE) */ this.capacity -= 1;
+        if (this.capacity === 0) {
+            this.capacity = MAX_SIZE;
+            tag = this.makeTag(tag);
+            this.tags.push(tag);
+        }
+        return this.tagMap[id] = tag;
+    };
+    /* mainly for createGlobalStyle to check for its id */ StyleSheet2.prototype.hasId = function hasId(id) {
+        return this.tagMap[id] !== undefined;
+    };
+    /* caching layer checking id+name to already have a corresponding tag and injected rules */ StyleSheet2.prototype.hasNameForId = function hasNameForId2(id, name) {
+        /* exception for rehydrated names which are checked separately */ if (this.ignoreRehydratedNames[id] === undefined && this.rehydratedNames[name]) return true;
+        var tag = this.tagMap[id];
+        return tag !== undefined && tag.hasNameForId(id, name);
+    };
+    /* registers a componentId and registers it on its tag */ StyleSheet2.prototype.deferredInject = function deferredInject(id, cssRules) {
+        /* don't inject when the id is already registered */ if (this.tagMap[id] !== undefined) return;
+        var clones = this.clones;
+        for(var i = 0; i < clones.length; i += 1)clones[i].deferredInject(id, cssRules);
+        this.getTagForId(id).insertMarker(id);
+        this.deferred[id] = cssRules;
+    };
+    /* injects rules for a given id with a name that will need to be cached */ StyleSheet2.prototype.inject = function inject(id, cssRules, name) {
+        var clones = this.clones;
+        for(var i = 0; i < clones.length; i += 1)clones[i].inject(id, cssRules, name);
+        var tag = this.getTagForId(id);
+        /* add deferred rules for component */ if (this.deferred[id] !== undefined) {
+            // Combine passed cssRules with previously deferred CSS rules
+            // NOTE: We cannot mutate the deferred array itself as all clones
+            // do the same (see clones[i].inject)
+            var rules = this.deferred[id].concat(cssRules);
+            tag.insertRules(id, rules, name);
+            this.deferred[id] = undefined;
+        } else tag.insertRules(id, cssRules, name);
+    };
+    /* removes all rules for a given id, which doesn't remove its marker but resets it */ StyleSheet2.prototype.remove = function remove(id) {
+        var tag = this.tagMap[id];
+        if (tag === undefined) return;
+        var clones = this.clones;
+        for(var i = 0; i < clones.length; i += 1)clones[i].remove(id);
+        /* remove all rules from the tag */ tag.removeRules(id);
+        /* ignore possible rehydrated names */ this.ignoreRehydratedNames[id] = true;
+        /* delete possible deferred rules */ this.deferred[id] = undefined;
+    };
+    StyleSheet2.prototype.toHTML = function toHTML() {
+        return this.tags.map(function(tag) {
+            return tag.toHTML();
+        }).join('');
+    };
+    StyleSheet2.prototype.toReactElements = function toReactElements() {
+        var id = this.id;
+        return this.tags.map(function(tag, i) {
+            var key = 'sc-' + id + '-' + i;
+            return _react.cloneElement(tag.toElement(), {
+                key: key
+            });
+        });
+    };
+    createClass(StyleSheet2, null, [
+        {
+            key: 'master',
+            get: function get$$1() {
+                return master || (master = new StyleSheet2().rehydrate());
+            }
+        },
+        {
+            key: 'instance',
+            get: function get$$1() {
+                return StyleSheet2.master;
+            }
+        }
+    ]);
+    return StyleSheet2;
+}();
+// 
+var Keyframes = function() {
+    function Keyframes1(name, rules) {
+        var _this = this;
+        classCallCheck(this, Keyframes1);
+        this.inject = function(styleSheet) {
+            if (!styleSheet.hasNameForId(_this.id, _this.name)) styleSheet.inject(_this.id, _this.rules, _this.name);
+        };
+        this.toString = function() {
+            throw new StyledComponentsError1(12, String(_this.name));
+        };
+        this.name = name;
+        this.rules = rules;
+        this.id = 'sc-keyframes-' + name;
+    }
+    Keyframes1.prototype.getName = function getName() {
+        return this.name;
+    };
+    return Keyframes1;
+}();
+// 
+/**
+ * inlined version of
+ * https://github.com/facebook/fbjs/blob/master/packages/fbjs/src/core/hyphenateStyleName.js
+ */ var uppercasePattern = /([A-Z])/g;
+var msPattern = /^ms-/;
+/**
+ * Hyphenates a camelcased CSS property name, for example:
+ *
+ *   > hyphenateStyleName('backgroundColor')
+ *   < "background-color"
+ *   > hyphenateStyleName('MozTransition')
+ *   < "-moz-transition"
+ *   > hyphenateStyleName('msTransition')
+ *   < "-ms-transition"
+ *
+ * As Modernizr suggests (http://modernizr.com/docs/#prefixed), an `ms` prefix
+ * is converted to `-ms-`.
+ *
+ * @param {string} string
+ * @return {string}
+ */ function hyphenateStyleName(string) {
+    return string.replace(uppercasePattern, '-$1').toLowerCase().replace(msPattern, '-ms-');
+}
+// 
+// Taken from https://github.com/facebook/react/blob/b87aabdfe1b7461e7331abb3601d9e6bb27544bc/packages/react-dom/src/shared/dangerousStyleValue.js
+function addUnitIfNeeded(name, value) {
+    // https://github.com/amilajack/eslint-plugin-flowtype-errors/issues/133
+    // $FlowFixMe
+    if (value == null || typeof value === 'boolean' || value === '') return '';
+    if (typeof value === 'number' && value !== 0 && !(name in _unitlessDefault.default)) return value + 'px'; // Presumes implicit 'px' suffix for unitless numbers
+    return String(value).trim();
+}
+// 
+/**
+ * It's falsish not falsy because 0 is allowed.
+ */ var isFalsish = function isFalsish1(chunk) {
+    return chunk === undefined || chunk === null || chunk === false || chunk === '';
+};
+var objToCssArray = function objToCssArray1(obj, prevKey) {
+    var rules = [];
+    var keys = Object.keys(obj);
+    keys.forEach(function(key) {
+        if (!isFalsish(obj[key])) {
+            if (isPlainObject(obj[key])) {
+                rules.push.apply(rules, objToCssArray1(obj[key], key));
+                return rules;
+            } else if (isFunction(obj[key])) {
+                rules.push(hyphenateStyleName(key) + ':', obj[key], ';');
+                return rules;
+            }
+            rules.push(hyphenateStyleName(key) + ': ' + addUnitIfNeeded(key, obj[key]) + ';');
+        }
+        return rules;
+    });
+    return prevKey ? [
+        prevKey + ' {'
+    ].concat(rules, [
+        '}'
+    ]) : rules;
+};
+function flatten(chunk, executionContext, styleSheet) {
+    if (Array.isArray(chunk)) {
+        var ruleSet = [];
+        for(var i = 0, len = chunk.length, result; i < len; i += 1){
+            result = flatten(chunk[i], executionContext, styleSheet);
+            if (result === null) continue;
+            else if (Array.isArray(result)) ruleSet.push.apply(ruleSet, result);
+            else ruleSet.push(result);
+        }
+        return ruleSet;
+    }
+    if (isFalsish(chunk)) return null;
+    /* Handle other components */ if (isStyledComponent(chunk)) return '.' + chunk.styledComponentId;
+    /* Either execute or defer the function */ if (isFunction(chunk)) {
+        if (isStatelessFunction(chunk) && executionContext) {
+            var _result = chunk(executionContext);
+            if (_reactIs.isElement(_result)) // eslint-disable-next-line no-console
+            console.warn(getComponentName(chunk) + ' is not a styled component and cannot be referred to via component selector. See https://www.styled-components.com/docs/advanced#referring-to-other-components for more details.');
+            return flatten(_result, executionContext, styleSheet);
+        } else return chunk;
+    }
+    if (chunk instanceof Keyframes) {
+        if (styleSheet) {
+            chunk.inject(styleSheet);
+            return chunk.getName();
+        } else return chunk;
+    }
+    /* Handle objects */ return isPlainObject(chunk) ? objToCssArray(chunk) : chunk.toString();
+}
+// 
+function css(styles) {
+    for(var _len = arguments.length, interpolations = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)interpolations[_key - 1] = arguments[_key];
+    if (isFunction(styles) || isPlainObject(styles)) // $FlowFixMe
+    return flatten(interleave(EMPTY_ARRAY, [
+        styles
+    ].concat(interpolations)));
+    // $FlowFixMe
+    return flatten(interleave(styles, interpolations));
+}
+// 
+function constructWithOptions(componentConstructor, tag) {
+    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : EMPTY_OBJECT;
+    if (!_reactIs.isValidElementType(tag)) throw new StyledComponentsError1(1, String(tag));
+    /* This is callable directly as a template function */ // $FlowFixMe: Not typed to avoid destructuring arguments
+    var templateFunction = function templateFunction1() {
+        return componentConstructor(tag, options, css.apply(undefined, arguments));
+    };
+    /* If config methods are called, wrap up a new template function and merge options */ templateFunction.withConfig = function(config) {
+        return constructWithOptions(componentConstructor, tag, _extends({
+        }, options, config));
+    };
+    /* Modify/inject new props at runtime */ templateFunction.attrs = function(attrs) {
+        return constructWithOptions(componentConstructor, tag, _extends({
+        }, options, {
+            attrs: Array.prototype.concat(options.attrs, attrs).filter(Boolean)
+        }));
+    };
+    return templateFunction;
+}
+// 
+// Source: https://github.com/garycourt/murmurhash-js/blob/master/murmurhash2_gc.js
+function murmurhash(c) {
+    for(var e = c.length | 0, a = e | 0, d = 0, b; e >= 4;)b = c.charCodeAt(d) & 255 | (c.charCodeAt(++d) & 255) << 8 | (c.charCodeAt(++d) & 255) << 16 | (c.charCodeAt(++d) & 255) << 24, b = 1540483477 * (b & 65535) + ((1540483477 * (b >>> 16) & 65535) << 16), b ^= b >>> 24, b = 1540483477 * (b & 65535) + ((1540483477 * (b >>> 16) & 65535) << 16), a = 1540483477 * (a & 65535) + ((1540483477 * (a >>> 16) & 65535) << 16) ^ b, e -= 4, ++d;
+    switch(e){
+        case 3:
+            a ^= (c.charCodeAt(d + 2) & 255) << 16;
+        case 2:
+            a ^= (c.charCodeAt(d + 1) & 255) << 8;
+        case 1:
+            a ^= c.charCodeAt(d) & 255, a = 1540483477 * (a & 65535) + ((1540483477 * (a >>> 16) & 65535) << 16);
+    }
+    a ^= a >>> 13;
+    a = 1540483477 * (a & 65535) + ((1540483477 * (a >>> 16) & 65535) << 16);
+    return (a ^ a >>> 15) >>> 0;
+}
+// 
+/* eslint-disable no-bitwise */ /* This is the "capacity" of our alphabet i.e. 2x26 for all letters plus their capitalised
+ * counterparts */ var charsLength = 52;
+/* start at 75 for 'a' until 'z' (25) and then start at 65 for capitalised letters */ var getAlphabeticChar = function getAlphabeticChar1(code) {
+    return String.fromCharCode(code + (code > 25 ? 39 : 97));
+};
+/* input a number, usually a hash and convert it to base-52 */ function generateAlphabeticName(code) {
+    var name = '';
+    var x = void 0;
+    /* get a char and divide by alphabet-length */ for(x = code; x > charsLength; x = Math.floor(x / charsLength))name = getAlphabeticChar(x % charsLength) + name;
+    return getAlphabeticChar(x % charsLength) + name;
+}
+// 
+function hasFunctionObjectKey(obj) {
+    // eslint-disable-next-line guard-for-in, no-restricted-syntax
+    for(var key in obj){
+        if (isFunction(obj[key])) return true;
+    }
+    return false;
+}
+function isStaticRules(rules, attrs) {
+    for(var i = 0; i < rules.length; i += 1){
+        var rule = rules[i];
+        // recursive case
+        if (Array.isArray(rule) && !isStaticRules(rule, attrs)) return false;
+        else if (isFunction(rule) && !isStyledComponent(rule)) // functions are allowed to be static if they're just being
+        // used to get the classname of a nested styled component
+        return false;
+    }
+    if (attrs.some(function(x) {
+        return isFunction(x) || hasFunctionObjectKey(x);
+    })) return false;
+    return true;
+}
+// 
+/* combines hashStr (murmurhash) and nameGenerator for convenience */ var hasher = function hasher1(str) {
+    return generateAlphabeticName(murmurhash(str));
+};
+/*
+ ComponentStyle is all the CSS-specific stuff, not
+ the React-specific stuff.
+ */ var ComponentStyle = function() {
+    function ComponentStyle1(rules, attrs, componentId) {
+        classCallCheck(this, ComponentStyle1);
+        this.rules = rules;
+        this.isStatic = false;
+        this.componentId = componentId;
+        if (!StyleSheet1.master.hasId(componentId)) StyleSheet1.master.deferredInject(componentId, []);
+    }
+    /*
+   * Flattens a rule set into valid CSS
+   * Hashes it, wraps the whole chunk in a .hash1234 {}
+   * Returns the hash to be injected on render()
+   * */ ComponentStyle1.prototype.generateAndInjectStyles = function generateAndInjectStyles(executionContext, styleSheet) {
+        var isStatic = this.isStatic, componentId = this.componentId, lastClassName = this.lastClassName;
+        if (IS_BROWSER && isStatic && typeof lastClassName === 'string' && styleSheet.hasNameForId(componentId, lastClassName)) return lastClassName;
+        var flatCSS = flatten(this.rules, executionContext, styleSheet);
+        var name = hasher(this.componentId + flatCSS.join(''));
+        if (!styleSheet.hasNameForId(componentId, name)) styleSheet.inject(this.componentId, stringifyRules(flatCSS, '.' + name, undefined, componentId), name);
+        this.lastClassName = name;
+        return name;
+    };
+    ComponentStyle1.generateName = function generateName(str) {
+        return hasher(str);
+    };
+    return ComponentStyle1;
+}();
+// 
+var LIMIT = 200;
+var createWarnTooManyClasses = function(displayName) {
+    var generatedClasses = {
+    };
+    var warningSeen = false;
+    return function(className) {
+        if (!warningSeen) {
+            generatedClasses[className] = true;
+            if (Object.keys(generatedClasses).length >= LIMIT) {
+                // Unable to find latestRule in test environment.
+                /* eslint-disable no-console, prefer-template */ console.warn('Over ' + LIMIT + ' classes were generated for component ' + displayName + '. \n' + 'Consider using the attrs method, together with a style object for frequently changed styles.\n' + 'Example:\n' + '  const Component = styled.div.attrs(props => ({\n' + '    style: {\n' + '      background: props.background,\n' + '    },\n' + '  }))`width: 100%;`\n\n' + '  <Component />');
+                warningSeen = true;
+                generatedClasses = {
+                };
+            }
+        }
+    };
+};
+// 
+var determineTheme = function(props, fallbackTheme) {
+    var defaultProps = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : EMPTY_OBJECT;
+    // Props should take precedence over ThemeProvider, which should take precedence over
+    // defaultProps, but React automatically puts defaultProps on props.
+    /* eslint-disable react/prop-types, flowtype-errors/show-errors */ var isDefaultTheme = defaultProps ? props.theme === defaultProps.theme : false;
+    var theme = props.theme && !isDefaultTheme ? props.theme : fallbackTheme || defaultProps.theme;
+    /* eslint-enable */ return theme;
+};
+// 
+var escapeRegex = /[[\].#*$><+~=|^:(),"'`-]+/g;
+var dashesAtEnds = /(^-|-$)/g;
+/**
+ * TODO: Explore using CSS.escape when it becomes more available
+ * in evergreen browsers.
+ */ function escape(str) {
+    return str// Replace all possible CSS selectors
+    .replace(escapeRegex, '-')// Remove extraneous hyphens at the start and end
+    .replace(dashesAtEnds, '');
+}
+// 
+function isTag(target) {
+    return typeof target === 'string' && target.charAt(0) === target.charAt(0).toLowerCase();
+}
+// 
+function generateDisplayName(target) {
+    // $FlowFixMe
+    return isTag(target) ? 'styled.' + target : 'Styled(' + getComponentName(target) + ')';
+}
+var _TYPE_STATICS;
+var REACT_STATICS = {
+    childContextTypes: true,
+    contextTypes: true,
+    defaultProps: true,
+    displayName: true,
+    getDerivedStateFromProps: true,
+    propTypes: true,
+    type: true
+};
+var KNOWN_STATICS = {
+    name: true,
+    length: true,
+    prototype: true,
+    caller: true,
+    callee: true,
+    arguments: true,
+    arity: true
+};
+var TYPE_STATICS = (_TYPE_STATICS = {
+}, _TYPE_STATICS[_reactIs.ForwardRef] = {
+    $$typeof: true,
+    render: true
+}, _TYPE_STATICS);
+var defineProperty$1 = Object.defineProperty, getOwnPropertyNames = Object.getOwnPropertyNames, _Object$getOwnPropert = Object.getOwnPropertySymbols, getOwnPropertySymbols = _Object$getOwnPropert === undefined ? function() {
+    return [];
+} : _Object$getOwnPropert, getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor, getPrototypeOf = Object.getPrototypeOf, objectPrototype = Object.prototype;
+var arrayPrototype = Array.prototype;
+function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
+    if (typeof sourceComponent !== 'string') {
+        // don't hoist over string (html) components
+        var inheritedComponent = getPrototypeOf(sourceComponent);
+        if (inheritedComponent && inheritedComponent !== objectPrototype) hoistNonReactStatics(targetComponent, inheritedComponent, blacklist);
+        var keys = arrayPrototype.concat(getOwnPropertyNames(sourceComponent), // $FlowFixMe
+        getOwnPropertySymbols(sourceComponent));
+        var targetStatics = TYPE_STATICS[targetComponent.$$typeof] || REACT_STATICS;
+        var sourceStatics = TYPE_STATICS[sourceComponent.$$typeof] || REACT_STATICS;
+        var i = keys.length;
+        var descriptor = void 0;
+        var key = void 0;
+        // eslint-disable-next-line no-plusplus
+        while(i--){
+            key = keys[i];
+            if (// $FlowFixMe
+            !KNOWN_STATICS[key] && !(blacklist && blacklist[key]) && !(sourceStatics && sourceStatics[key]) && // $FlowFixMe
+            !(targetStatics && targetStatics[key])) {
+                descriptor = getOwnPropertyDescriptor(sourceComponent, key);
+                if (descriptor) try {
+                    // Avoid failures from read-only properties
+                    defineProperty$1(targetComponent, key, descriptor);
+                } catch (e) {
+                /* fail silently */ }
+            }
+        }
+        return targetComponent;
+    }
+    return targetComponent;
+}
+// 
+function isDerivedReactComponent(fn) {
+    return !!(fn && fn.prototype && fn.prototype.isReactComponent);
+}
+// 
+// Helper to call a given function, only once
+var once = function(cb) {
+    var called = false;
+    return function() {
+        if (!called) {
+            called = true;
+            cb.apply(undefined, arguments);
+        }
+    };
+};
+// 
+var ThemeContext = _react.createContext();
+var ThemeConsumer = ThemeContext.Consumer;
+/**
+ * Provide a theme to an entire react component tree via context
+ */ var ThemeProvider1 = function(_Component) {
+    inherits(ThemeProvider2, _Component);
+    function ThemeProvider2(props) {
+        classCallCheck(this, ThemeProvider2);
+        var _this = possibleConstructorReturn(this, _Component.call(this, props));
+        _this.getContext = _memoizeOneDefault.default(_this.getContext.bind(_this));
+        _this.renderInner = _this.renderInner.bind(_this);
+        return _this;
+    }
+    ThemeProvider2.prototype.render = function render() {
+        if (!this.props.children) return null;
+        return _reactDefault.default.createElement(ThemeContext.Consumer, null, this.renderInner);
+    };
+    ThemeProvider2.prototype.renderInner = function renderInner(outerTheme) {
+        var context = this.getContext(this.props.theme, outerTheme);
+        return _reactDefault.default.createElement(ThemeContext.Provider, {
+            value: context
+        }, this.props.children);
+    };
+    /**
+   * Get the theme from the props, supporting both (outerTheme) => {}
+   * as well as object notation
+   */ ThemeProvider2.prototype.getTheme = function getTheme(theme, outerTheme) {
+        if (isFunction(theme)) {
+            var mergedTheme = theme(outerTheme);
+            if (mergedTheme === null || Array.isArray(mergedTheme) || (typeof mergedTheme === 'undefined' ? 'undefined' : _typeof(mergedTheme)) !== 'object') throw new StyledComponentsError1(7);
+            return mergedTheme;
+        }
+        if (theme === null || Array.isArray(theme) || (typeof theme === 'undefined' ? 'undefined' : _typeof(theme)) !== 'object') throw new StyledComponentsError1(8);
+        return _extends({
+        }, outerTheme, theme);
+    };
+    ThemeProvider2.prototype.getContext = function getContext(theme, outerTheme) {
+        return this.getTheme(theme, outerTheme);
+    };
+    return ThemeProvider2;
+}(_react.Component);
+// 
+var CLOSING_TAG_R = /^\s*<\/[a-z]/i;
+var ServerStyleSheet = function() {
+    function ServerStyleSheet1() {
+        classCallCheck(this, ServerStyleSheet1);
+        /* The master sheet might be reset, so keep a reference here */ this.masterSheet = StyleSheet1.master;
+        this.instance = this.masterSheet.clone();
+        this.sealed = false;
+    }
+    /**
+   * Mark the ServerStyleSheet as being fully emitted and manually GC it from the
+   * StyleSheet singleton.
+   */ ServerStyleSheet1.prototype.seal = function seal() {
+        if (!this.sealed) {
+            /* Remove sealed StyleSheets from the master sheet */ var index = this.masterSheet.clones.indexOf(this.instance);
+            this.masterSheet.clones.splice(index, 1);
+            this.sealed = true;
+        }
+    };
+    ServerStyleSheet1.prototype.collectStyles = function collectStyles(children) {
+        if (this.sealed) throw new StyledComponentsError1(2);
+        return _reactDefault.default.createElement(StyleSheetManager1, {
+            sheet: this.instance
+        }, children);
+    };
+    ServerStyleSheet1.prototype.getStyleTags = function getStyleTags() {
+        this.seal();
+        return this.instance.toHTML();
+    };
+    ServerStyleSheet1.prototype.getStyleElement = function getStyleElement() {
+        this.seal();
+        return this.instance.toReactElements();
+    };
+    ServerStyleSheet1.prototype.interleaveWithNodeStream = function interleaveWithNodeStream(readableStream) {
+        var _this = this;
+        var instance, instanceTagIndex, streamAttr, transformer, chunk, /* encoding */ _, callback, tags, html, tag, renderedHtml, endOfClosingTag, err;
+        throw new StyledComponentsError1(3);
+    };
+    return ServerStyleSheet1;
+}();
+// 
+var StyleSheetContext = _react.createContext();
+var StyleSheetConsumer = StyleSheetContext.Consumer;
+var StyleSheetManager1 = function(_Component) {
+    inherits(StyleSheetManager2, _Component);
+    function StyleSheetManager2(props) {
+        classCallCheck(this, StyleSheetManager2);
+        var _this = possibleConstructorReturn(this, _Component.call(this, props));
+        _this.getContext = _memoizeOneDefault.default(_this.getContext);
+        return _this;
+    }
+    StyleSheetManager2.prototype.getContext = function getContext(sheet, target) {
+        if (sheet) return sheet;
+        else if (target) return new StyleSheet1(target);
+        else throw new StyledComponentsError1(4);
+    };
+    StyleSheetManager2.prototype.render = function render() {
+        var _props = this.props, children = _props.children, sheet = _props.sheet, target = _props.target;
+        return _reactDefault.default.createElement(StyleSheetContext.Provider, {
+            value: this.getContext(sheet, target)
+        }, _reactDefault.default.Children.only(children));
+    };
+    return StyleSheetManager2;
+}(_react.Component);
+StyleSheetManager1.propTypes = {
+    sheet: _propTypesDefault.default.oneOfType([
+        _propTypesDefault.default.instanceOf(StyleSheet1),
+        _propTypesDefault.default.instanceOf(ServerStyleSheet)
+    ]),
+    target: _propTypesDefault.default.shape({
+        appendChild: _propTypesDefault.default.func.isRequired
+    })
+};
+// 
+var identifiers = {
+};
+/* We depend on components having unique IDs */ function generateId(_ComponentStyle, _displayName, parentComponentId) {
+    var displayName = typeof _displayName !== 'string' ? 'sc' : escape(_displayName);
+    /**
+   * This ensures uniqueness if two components happen to share
+   * the same displayName.
+   */ var nr = (identifiers[displayName] || 0) + 1;
+    identifiers[displayName] = nr;
+    var componentId = displayName + '-' + _ComponentStyle.generateName(displayName + nr);
+    return parentComponentId ? parentComponentId + '-' + componentId : componentId;
+}
+// $FlowFixMe
+var StyledComponent1 = function(_Component) {
+    inherits(StyledComponent2, _Component);
+    function StyledComponent2() {
+        classCallCheck(this, StyledComponent2);
+        var _this = possibleConstructorReturn(this, _Component.call(this));
+        _this.attrs = {
+        };
+        _this.renderOuter = _this.renderOuter.bind(_this);
+        _this.renderInner = _this.renderInner.bind(_this);
+        _this.warnInnerRef = once(function(displayName) {
+            return(// eslint-disable-next-line no-console
+            console.warn('The "innerRef" API has been removed in styled-components v4 in favor of React 16 ref forwarding, use "ref" instead like a typical component. "innerRef" was detected on component "' + displayName + '".'));
+        });
+        _this.warnAttrsFnObjectKeyDeprecated = once(function(key, displayName) {
+            return(// eslint-disable-next-line no-console
+            console.warn('Functions as object-form attrs({}) keys are now deprecated and will be removed in a future version of styled-components. Switch to the new attrs(props => ({})) syntax instead for easier and more powerful composition. The attrs key in question is "' + key + '" on component "' + displayName + '".', '\n ' + new Error().stack));
+        });
+        _this.warnNonStyledComponentAttrsObjectKey = once(function(key, displayName) {
+            return(// eslint-disable-next-line no-console
+            console.warn('It looks like you\'ve used a non styled-component as the value for the "' + key + '" prop in an object-form attrs constructor of "' + displayName + '".\n' + 'You should use the new function-form attrs constructor which avoids this issue: attrs(props => ({ yourStuff }))\n' + "To continue using the deprecated object syntax, you'll need to wrap your component prop in a function to make it available inside the styled component (you'll still get the deprecation warning though.)\n" + ('For example, { ' + key + ': () => InnerComponent } instead of { ' + key + ': InnerComponent }')));
+        });
+        return _this;
+    }
+    StyledComponent2.prototype.render = function render() {
+        return _reactDefault.default.createElement(StyleSheetConsumer, null, this.renderOuter);
+    };
+    StyledComponent2.prototype.renderOuter = function renderOuter() {
+        var styleSheet = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : StyleSheet1.master;
+        this.styleSheet = styleSheet;
+        // No need to subscribe a static component to theme changes, it won't change anything
+        if (this.props.forwardedComponent.componentStyle.isStatic) return this.renderInner();
+        return _reactDefault.default.createElement(ThemeConsumer, null, this.renderInner);
+    };
+    StyledComponent2.prototype.renderInner = function renderInner(theme) {
+        var _props$forwardedCompo = this.props.forwardedComponent, componentStyle = _props$forwardedCompo.componentStyle, defaultProps = _props$forwardedCompo.defaultProps, displayName = _props$forwardedCompo.displayName, foldedComponentIds = _props$forwardedCompo.foldedComponentIds, styledComponentId = _props$forwardedCompo.styledComponentId, target = _props$forwardedCompo.target;
+        var generatedClassName = void 0;
+        if (componentStyle.isStatic) generatedClassName = this.generateAndInjectStyles(EMPTY_OBJECT, this.props);
+        else generatedClassName = this.generateAndInjectStyles(determineTheme(this.props, theme, defaultProps) || EMPTY_OBJECT, this.props);
+        var elementToBeCreated = this.props.as || this.attrs.as || target;
+        var isTargetTag = isTag(elementToBeCreated);
+        var propsForElement = {
+        };
+        var computedProps = _extends({
+        }, this.props, this.attrs);
+        var key = void 0;
+        // eslint-disable-next-line guard-for-in
+        for(key in computedProps){
+            if (key === 'innerRef' && isTargetTag) this.warnInnerRef(displayName);
+            if (key === 'forwardedComponent' || key === 'as') continue;
+            else if (key === 'forwardedRef') propsForElement.ref = computedProps[key];
+            else if (key === 'forwardedAs') propsForElement.as = computedProps[key];
+            else if (!isTargetTag || _isPropValidDefault.default(key)) // Don't pass through non HTML tags through to HTML elements
+            propsForElement[key] = computedProps[key];
+        }
+        if (this.props.style && this.attrs.style) propsForElement.style = _extends({
+        }, this.attrs.style, this.props.style);
+        propsForElement.className = Array.prototype.concat(foldedComponentIds, styledComponentId, generatedClassName !== styledComponentId ? generatedClassName : null, this.props.className, this.attrs.className).filter(Boolean).join(' ');
+        return _react.createElement(elementToBeCreated, propsForElement);
+    };
+    StyledComponent2.prototype.buildExecutionContext = function buildExecutionContext(theme, props, attrs) {
+        var _this2 = this;
+        var context = _extends({
+        }, props, {
+            theme: theme
+        });
+        if (!attrs.length) return context;
+        this.attrs = {
+        };
+        attrs.forEach(function(attrDef) {
+            var resolvedAttrDef = attrDef;
+            var attrDefWasFn = false;
+            var attr = void 0;
+            var key = void 0;
+            if (isFunction(resolvedAttrDef)) {
+                // $FlowFixMe
+                resolvedAttrDef = resolvedAttrDef(context);
+                attrDefWasFn = true;
+            }
+            /* eslint-disable guard-for-in */ // $FlowFixMe
+            for(key in resolvedAttrDef){
+                attr = resolvedAttrDef[key];
+                if (!attrDefWasFn) {
+                    if (isFunction(attr) && !isDerivedReactComponent(attr) && !isStyledComponent(attr)) {
+                        _this2.warnAttrsFnObjectKeyDeprecated(key, props.forwardedComponent.displayName);
+                        attr = attr(context);
+                        if (_reactDefault.default.isValidElement(attr)) _this2.warnNonStyledComponentAttrsObjectKey(key, props.forwardedComponent.displayName);
+                    }
+                }
+                _this2.attrs[key] = attr;
+                context[key] = attr;
+            }
+        /* eslint-enable */ });
+        return context;
+    };
+    StyledComponent2.prototype.generateAndInjectStyles = function generateAndInjectStyles(theme, props) {
+        var _props$forwardedCompo2 = props.forwardedComponent, attrs = _props$forwardedCompo2.attrs, componentStyle = _props$forwardedCompo2.componentStyle, warnTooManyClasses = _props$forwardedCompo2.warnTooManyClasses;
+        // statically styled-components don't need to build an execution context object,
+        // and shouldn't be increasing the number of class names
+        if (componentStyle.isStatic && !attrs.length) return componentStyle.generateAndInjectStyles(EMPTY_OBJECT, this.styleSheet);
+        var className = componentStyle.generateAndInjectStyles(this.buildExecutionContext(theme, props, attrs), this.styleSheet);
+        if (warnTooManyClasses) warnTooManyClasses(className);
+        return className;
+    };
+    return StyledComponent2;
+}(_react.Component);
+function createStyledComponent(target, options, rules) {
+    var isTargetStyledComp = isStyledComponent(target);
+    var isClass = !isTag(target);
+    var _options$displayName = options.displayName, displayName = _options$displayName === undefined ? generateDisplayName(target) : _options$displayName, _options$componentId = options.componentId, componentId = _options$componentId === undefined ? generateId(ComponentStyle, options.displayName, options.parentComponentId) : _options$componentId, _options$ParentCompon = options.ParentComponent, ParentComponent = _options$ParentCompon === undefined ? StyledComponent1 : _options$ParentCompon, _options$attrs = options.attrs, attrs = _options$attrs === undefined ? EMPTY_ARRAY : _options$attrs;
+    var styledComponentId = options.displayName && options.componentId ? escape(options.displayName) + '-' + options.componentId : options.componentId || componentId;
+    // fold the underlying StyledComponent attrs up (implicit extend)
+    var finalAttrs = // $FlowFixMe
+    isTargetStyledComp && target.attrs ? Array.prototype.concat(target.attrs, attrs).filter(Boolean) : attrs;
+    var componentStyle = new ComponentStyle(isTargetStyledComp ? // $FlowFixMe
+    target.componentStyle.rules.concat(rules) : rules, finalAttrs, styledComponentId);
+    /**
+   * forwardRef creates a new interim component, which we'll take advantage of
+   * instead of extending ParentComponent to create _another_ interim class
+   */ var WrappedStyledComponent = void 0;
+    var forwardRef = function forwardRef1(props, ref) {
+        return _reactDefault.default.createElement(ParentComponent, _extends({
+        }, props, {
+            forwardedComponent: WrappedStyledComponent,
+            forwardedRef: ref
+        }));
+    };
+    forwardRef.displayName = displayName;
+    WrappedStyledComponent = _reactDefault.default.forwardRef(forwardRef);
+    WrappedStyledComponent.displayName = displayName;
+    // $FlowFixMe
+    WrappedStyledComponent.attrs = finalAttrs;
+    // $FlowFixMe
+    WrappedStyledComponent.componentStyle = componentStyle;
+    // $FlowFixMe
+    WrappedStyledComponent.foldedComponentIds = isTargetStyledComp ? Array.prototype.concat(target.foldedComponentIds, target.styledComponentId) : EMPTY_ARRAY;
+    // $FlowFixMe
+    WrappedStyledComponent.styledComponentId = styledComponentId;
+    // fold the underlying StyledComponent target up since we folded the styles
+    // $FlowFixMe
+    WrappedStyledComponent.target = isTargetStyledComp ? target.target : target;
+    // $FlowFixMe
+    WrappedStyledComponent.withComponent = function withComponent(tag) {
+        var previousComponentId = options.componentId, optionsToCopy = objectWithoutProperties(options, [
+            'componentId'
+        ]);
+        var newComponentId = previousComponentId && previousComponentId + '-' + (isTag(tag) ? tag : escape(getComponentName(tag)));
+        var newOptions = _extends({
+        }, optionsToCopy, {
+            attrs: finalAttrs,
+            componentId: newComponentId,
+            ParentComponent: ParentComponent
+        });
+        return createStyledComponent(tag, newOptions, rules);
+    };
+    // $FlowFixMe
+    Object.defineProperty(WrappedStyledComponent, 'defaultProps', {
+        get: function get$$1() {
+            return this._foldedDefaultProps;
+        },
+        set: function set$$1(obj) {
+            // $FlowFixMe
+            this._foldedDefaultProps = isTargetStyledComp ? _mergeAnythingDefault.default(target.defaultProps, obj) : obj;
+        }
+    });
+    // $FlowFixMe
+    WrappedStyledComponent.warnTooManyClasses = createWarnTooManyClasses(displayName);
+    // $FlowFixMe
+    WrappedStyledComponent.toString = function() {
+        return '.' + WrappedStyledComponent.styledComponentId;
+    };
+    if (isClass) hoistNonReactStatics(WrappedStyledComponent, target, {
+        // all SC-specific things should not be hoisted
+        attrs: true,
+        componentStyle: true,
+        displayName: true,
+        foldedComponentIds: true,
+        styledComponentId: true,
+        target: true,
+        withComponent: true
+    });
+    return WrappedStyledComponent;
+}
+// 
+// Thanks to ReactDOMFactories for this handy list!
+var domElements = [
+    'a',
+    'abbr',
+    'address',
+    'area',
+    'article',
+    'aside',
+    'audio',
+    'b',
+    'base',
+    'bdi',
+    'bdo',
+    'big',
+    'blockquote',
+    'body',
+    'br',
+    'button',
+    'canvas',
+    'caption',
+    'cite',
+    'code',
+    'col',
+    'colgroup',
+    'data',
+    'datalist',
+    'dd',
+    'del',
+    'details',
+    'dfn',
+    'dialog',
+    'div',
+    'dl',
+    'dt',
+    'em',
+    'embed',
+    'fieldset',
+    'figcaption',
+    'figure',
+    'footer',
+    'form',
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+    'head',
+    'header',
+    'hgroup',
+    'hr',
+    'html',
+    'i',
+    'iframe',
+    'img',
+    'input',
+    'ins',
+    'kbd',
+    'keygen',
+    'label',
+    'legend',
+    'li',
+    'link',
+    'main',
+    'map',
+    'mark',
+    'marquee',
+    'menu',
+    'menuitem',
+    'meta',
+    'meter',
+    'nav',
+    'noscript',
+    'object',
+    'ol',
+    'optgroup',
+    'option',
+    'output',
+    'p',
+    'param',
+    'picture',
+    'pre',
+    'progress',
+    'q',
+    'rp',
+    'rt',
+    'ruby',
+    's',
+    'samp',
+    'script',
+    'section',
+    'select',
+    'small',
+    'source',
+    'span',
+    'strong',
+    'style',
+    'sub',
+    'summary',
+    'sup',
+    'table',
+    'tbody',
+    'td',
+    'textarea',
+    'tfoot',
+    'th',
+    'thead',
+    'time',
+    'title',
+    'tr',
+    'track',
+    'u',
+    'ul',
+    'var',
+    'video',
+    'wbr',
+    // SVG
+    'circle',
+    'clipPath',
+    'defs',
+    'ellipse',
+    'foreignObject',
+    'g',
+    'image',
+    'line',
+    'linearGradient',
+    'marker',
+    'mask',
+    'path',
+    'pattern',
+    'polygon',
+    'polyline',
+    'radialGradient',
+    'rect',
+    'stop',
+    'svg',
+    'text',
+    'tspan'
+];
+// 
+var styled = function styled1(tag) {
+    return constructWithOptions(createStyledComponent, tag);
+};
+// Shorthands for all valid HTML Elements
+domElements.forEach(function(domElement) {
+    styled[domElement] = styled(domElement);
+});
+// 
+var GlobalStyle = function() {
+    function GlobalStyle1(rules, componentId) {
+        classCallCheck(this, GlobalStyle1);
+        this.rules = rules;
+        this.componentId = componentId;
+        this.isStatic = isStaticRules(rules, EMPTY_ARRAY);
+        if (!StyleSheet1.master.hasId(componentId)) StyleSheet1.master.deferredInject(componentId, []);
+    }
+    GlobalStyle1.prototype.createStyles = function createStyles(executionContext, styleSheet) {
+        var flatCSS = flatten(this.rules, executionContext, styleSheet);
+        var css1 = stringifyRules(flatCSS, '');
+        styleSheet.inject(this.componentId, css1);
+    };
+    GlobalStyle1.prototype.removeStyles = function removeStyles(styleSheet) {
+        var componentId = this.componentId;
+        if (styleSheet.hasId(componentId)) styleSheet.remove(componentId);
+    };
+    // TODO: overwrite in-place instead of remove+create?
+    GlobalStyle1.prototype.renderStyles = function renderStyles(executionContext, styleSheet) {
+        this.removeStyles(styleSheet);
+        this.createStyles(executionContext, styleSheet);
+    };
+    return GlobalStyle1;
+}();
+// 
+// place our cache into shared context so it'll persist between HMRs
+if (IS_BROWSER) window.scCGSHMRCache = {
+};
+function createGlobalStyle(strings) {
+    for(var _len = arguments.length, interpolations = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)interpolations[_key - 1] = arguments[_key];
+    var rules = css.apply(undefined, [
+        strings
+    ].concat(interpolations));
+    var id = 'sc-global-' + murmurhash(JSON.stringify(rules));
+    var style = new GlobalStyle(rules, id);
+    var GlobalStyleComponent1 = function(_React$Component) {
+        inherits(GlobalStyleComponent2, _React$Component);
+        function GlobalStyleComponent2(props) {
+            classCallCheck(this, GlobalStyleComponent2);
+            var _this = possibleConstructorReturn(this, _React$Component.call(this, props));
+            var _this$constructor = _this.constructor, globalStyle = _this$constructor.globalStyle, styledComponentId = _this$constructor.styledComponentId;
+            if (IS_BROWSER) window.scCGSHMRCache[styledComponentId] = (window.scCGSHMRCache[styledComponentId] || 0) + 1;
+            /**
+       * This fixes HMR compatibility. Don't ask me why, but this combination of
+       * caching the closure variables via statics and then persisting the statics in
+       * state works across HMR where no other combination did. ¯\_(ツ)_/¯
+       */ _this.state = {
+                globalStyle: globalStyle,
+                styledComponentId: styledComponentId
+            };
+            return _this;
+        }
+        GlobalStyleComponent2.prototype.componentWillUnmount = function componentWillUnmount() {
+            if (window.scCGSHMRCache[this.state.styledComponentId]) window.scCGSHMRCache[this.state.styledComponentId] -= 1;
+            /**
+       * Depending on the order "render" is called this can cause the styles to be lost
+       * until the next render pass of the remaining instance, which may
+       * not be immediate.
+       */ if (window.scCGSHMRCache[this.state.styledComponentId] === 0) this.state.globalStyle.removeStyles(this.styleSheet);
+        };
+        GlobalStyleComponent2.prototype.render = function render() {
+            var _this2 = this;
+            if (_reactDefault.default.Children.count(this.props.children)) // eslint-disable-next-line no-console
+            console.warn('The global style component ' + this.state.styledComponentId + ' was given child JSX. createGlobalStyle does not render children.');
+            return _reactDefault.default.createElement(StyleSheetConsumer, null, function(styleSheet) {
+                _this2.styleSheet = styleSheet || StyleSheet1.master;
+                var globalStyle = _this2.state.globalStyle;
+                if (globalStyle.isStatic) {
+                    globalStyle.renderStyles(STATIC_EXECUTION_CONTEXT, _this2.styleSheet);
+                    return null;
+                } else return _reactDefault.default.createElement(ThemeConsumer, null, function(theme) {
+                    // $FlowFixMe
+                    var defaultProps = _this2.constructor.defaultProps;
+                    var context = _extends({
+                    }, _this2.props);
+                    if (typeof theme !== 'undefined') context.theme = determineTheme(_this2.props, theme, defaultProps);
+                    globalStyle.renderStyles(context, _this2.styleSheet);
+                    return null;
+                });
+            });
+        };
+        return GlobalStyleComponent2;
+    }(_reactDefault.default.Component);
+    GlobalStyleComponent1.globalStyle = style;
+    GlobalStyleComponent1.styledComponentId = id;
+    return GlobalStyleComponent1;
+}
+// 
+var replaceWhitespace = function replaceWhitespace1(str) {
+    return str.replace(/\s|\\n/g, '');
+};
+function keyframes(strings) {
+    /* Warning if you've used keyframes on React Native */ if (typeof navigator !== 'undefined' && navigator.product === 'ReactNative') // eslint-disable-next-line no-console
+    console.warn('`keyframes` cannot be used on ReactNative, only on the web. To do animation in ReactNative please use Animated.');
+    for(var _len = arguments.length, interpolations = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)interpolations[_key - 1] = arguments[_key];
+    var rules = css.apply(undefined, [
+        strings
+    ].concat(interpolations));
+    var name = generateAlphabeticName(murmurhash(replaceWhitespace(JSON.stringify(rules))));
+    return new Keyframes(name, stringifyRules(rules, name, '@keyframes'));
+}
+// 
+var withTheme = function(Component$$1) {
+    var WithTheme = _reactDefault.default.forwardRef(function(props, ref) {
+        return _reactDefault.default.createElement(ThemeConsumer, null, function(theme) {
+            // $FlowFixMe
+            var defaultProps = Component$$1.defaultProps;
+            var themeProp = determineTheme(props, theme, defaultProps);
+            if (themeProp === undefined) // eslint-disable-next-line no-console
+            console.warn('[withTheme] You are not using a ThemeProvider nor passing a theme prop or a theme in defaultProps in component class "' + getComponentName(Component$$1) + '"');
+            return _reactDefault.default.createElement(Component$$1, _extends({
+            }, props, {
+                theme: themeProp,
+                ref: ref
+            }));
+        });
+    });
+    hoistNonReactStatics(WithTheme, Component$$1);
+    WithTheme.displayName = 'WithTheme(' + getComponentName(Component$$1) + ')';
+    return WithTheme;
+};
+// 
+/* eslint-disable */ var __DO_NOT_USE_OR_YOU_WILL_BE_HAUNTED_BY_SPOOKY_GHOSTS = {
+    StyleSheet: StyleSheet1
+};
+// 
+/* Warning if you've imported this file on React Native */ if (typeof navigator !== 'undefined' && navigator.product === 'ReactNative') // eslint-disable-next-line no-console
+console.warn("It looks like you've imported 'styled-components' on React Native.\nPerhaps you're looking to import 'styled-components/native'?\nRead more about this at https://www.styled-components.com/docs/basics#react-native");
+/* Warning if there are several instances of styled-components */ if (typeof window !== 'undefined' && typeof navigator !== 'undefined' && typeof navigator.userAgent === 'string' && navigator.userAgent.indexOf('Node.js') === -1 && navigator.userAgent.indexOf('jsdom') === -1) {
+    window['__styled-components-init__'] = window['__styled-components-init__'] || 0;
+    if (window['__styled-components-init__'] === 1) // eslint-disable-next-line no-console
+    console.warn("It looks like there are several instances of 'styled-components' initialized in this application. This may cause dynamic styles not rendering properly, errors happening during rehydration process and makes your application bigger without a good reason.\n\nSee https://s-c.sh/2BAXzed for more info.");
+    window['__styled-components-init__'] += 1;
+}
+exports.default = styled;
+
+},{"process":"6Upk8","stylis/stylis.min":"hJYoR","stylis-rule-sheet":"hkKXa","react":"6TuXu","@emotion/unitless":"kXMxY","react-is":"5wFcP","memoize-one":"aUd3c","prop-types":"1tgq3","@emotion/is-prop-valid":"b2akg","merge-anything":"luwsj","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"hJYoR":[function(require,module,exports) {
+!function(e) {
+    "object" == typeof exports && "undefined" != typeof module ? module.exports = e(null) : "function" == typeof define && define.amd ? define(e(null)) : window.stylis = e(null);
+}(function e(a) {
+    "use strict";
+    var r = /^\0+/g, c = /[\0\r\f]/g, s = /: */g, t = /zoo|gra/, i = /([,: ])(transform)/g, f = /,+\s*(?![^(]*[)])/g, n = / +\s*(?![^(]*[)])/g, l = / *[\0] */g, o = /,\r+?/g, h = /([\t\r\n ])*\f?&/g, u = /:global\(((?:[^\(\)\[\]]*|\[.*\]|\([^\(\)]*\))*)\)/g, d = /\W+/g, b = /@(k\w+)\s*(\S*)\s*/, p = /::(place)/g, k = /:(read-only)/g, g = /\s+(?=[{\];=:>])/g, A = /([[}=:>])\s+/g, C = /(\{[^{]+?);(?=\})/g, w = /\s{2,}/g, v = /([^\(])(:+) */g, m = /[svh]\w+-[tblr]{2}/, x = /\(\s*(.*)\s*\)/g, $ = /([\s\S]*?);/g, y = /-self|flex-/g, O = /[^]*?(:[rp][el]a[\w-]+)[^]*/, j = /stretch|:\s*\w+\-(?:conte|avail)/, z = /([^-])(image-set\()/, N = "-webkit-", S = "-moz-", F = "-ms-", W = 59, q = 125, B = 123, D = 40, E = 41, G = 91, H = 93, I = 10, J = 13, K = 9, L = 64, M = 32, P = 38, Q = 45, R = 95, T = 42, U = 44, V = 58, X = 39, Y = 34, Z = 47, _ = 62, ee = 43, ae = 126, re = 0, ce = 12, se = 11, te = 107, ie = 109, fe = 115, ne = 112, le = 111, oe = 105, he = 99, ue = 100, de = 112, be = 1, pe = 1, ke = 0, ge = 1, Ae = 1, Ce = 1, we = 0, ve = 0, me = 0, xe = [], $e = [], ye = 0, Oe = null, je = -2, ze = -1, Ne = 0, Se = 1, Fe = 2, We = 3, qe = 0, Be = 1, De = "", Ee = "", Ge = "";
+    function He(e1, a1, s1, t1, i1) {
+        for(var f1, n1, o1 = 0, h1 = 0, u1 = 0, d1 = 0, g1 = 0, A1 = 0, C1 = 0, w1 = 0, m1 = 0, $1 = 0, y1 = 0, O1 = 0, j1 = 0, z1 = 0, R1 = 0, we1 = 0, $e1 = 0, Oe1 = 0, je1 = 0, ze1 = s1.length, Je = ze1 - 1, Re = "", Te = "", Ue = "", Ve = "", Xe = "", Ye = ""; R1 < ze1;){
+            if (C1 = s1.charCodeAt(R1), R1 === Je) {
+                if (h1 + d1 + u1 + o1 !== 0) {
+                    if (0 !== h1) C1 = h1 === Z ? I : Z;
+                    d1 = u1 = o1 = 0, ze1++, Je++;
+                }
+            }
+            if (h1 + d1 + u1 + o1 === 0) {
+                if (R1 === Je) {
+                    if (we1 > 0) Te = Te.replace(c, "");
+                    if (Te.trim().length > 0) {
+                        switch(C1){
+                            case M:
+                            case K:
+                            case W:
+                            case J:
+                            case I:
+                                break;
+                            default:
+                                Te += s1.charAt(R1);
+                        }
+                        C1 = W;
+                    }
+                }
+                if (1 === $e1) switch(C1){
+                    case B:
+                    case q:
+                    case W:
+                    case Y:
+                    case X:
+                    case D:
+                    case E:
+                    case U:
+                        $e1 = 0;
+                    case K:
+                    case J:
+                    case I:
+                    case M:
+                        break;
+                    default:
+                        for($e1 = 0, je1 = R1, g1 = C1, R1--, C1 = W; je1 < ze1;)switch(s1.charCodeAt(je1++)){
+                            case I:
+                            case J:
+                            case W:
+                                ++R1, C1 = g1, je1 = ze1;
+                                break;
+                            case V:
+                                if (we1 > 0) ++R1, C1 = g1;
+                            case B:
+                                je1 = ze1;
+                        }
+                }
+                switch(C1){
+                    case B:
+                        for(g1 = (Te = Te.trim()).charCodeAt(0), y1 = 1, je1 = ++R1; R1 < ze1;){
+                            switch(C1 = s1.charCodeAt(R1)){
+                                case B:
+                                    y1++;
+                                    break;
+                                case q:
+                                    y1--;
+                                    break;
+                                case Z:
+                                    switch(A1 = s1.charCodeAt(R1 + 1)){
+                                        case T:
+                                        case Z:
+                                            R1 = Qe(A1, R1, Je, s1);
+                                    }
+                                    break;
+                                case G:
+                                    C1++;
+                                case D:
+                                    C1++;
+                                case Y:
+                                case X:
+                                    for(; (R1++) < Je && s1.charCodeAt(R1) !== C1;);
+                            }
+                            if (0 === y1) break;
+                            R1++;
+                        }
+                        if (Ue = s1.substring(je1, R1), g1 === re) g1 = (Te = Te.replace(r, "").trim()).charCodeAt(0);
+                        switch(g1){
+                            case L:
+                                if (we1 > 0) Te = Te.replace(c, "");
+                                switch(A1 = Te.charCodeAt(1)){
+                                    case ue:
+                                    case ie:
+                                    case fe:
+                                    case Q:
+                                        f1 = a1;
+                                        break;
+                                    default:
+                                        f1 = xe;
+                                }
+                                if (je1 = (Ue = He(a1, f1, Ue, A1, i1 + 1)).length, me > 0 && 0 === je1) je1 = Te.length;
+                                if (ye > 0) {
+                                    if (f1 = Ie(xe, Te, Oe1), n1 = Pe(We, Ue, f1, a1, pe, be, je1, A1, i1, t1), Te = f1.join(""), (void 0) !== n1) {
+                                        if (0 === (je1 = (Ue = n1.trim()).length)) A1 = 0, Ue = "";
+                                    }
+                                }
+                                if (je1 > 0) switch(A1){
+                                    case fe:
+                                        Te = Te.replace(x, Me);
+                                    case ue:
+                                    case ie:
+                                    case Q:
+                                        Ue = Te + "{" + Ue + "}";
+                                        break;
+                                    case te:
+                                        if (Ue = (Te = Te.replace(b, "$1 $2" + (Be > 0 ? De : ""))) + "{" + Ue + "}", 1 === Ae || 2 === Ae && Le("@" + Ue, 3)) Ue = "@" + N + Ue + "@" + Ue;
+                                        else Ue = "@" + Ue;
+                                        break;
+                                    default:
+                                        if (Ue = Te + Ue, t1 === de) Ve += Ue, Ue = "";
+                                }
+                                else Ue = "";
+                                break;
+                            default:
+                                Ue = He(a1, Ie(a1, Te, Oe1), Ue, t1, i1 + 1);
+                        }
+                        Xe += Ue, O1 = 0, $e1 = 0, z1 = 0, we1 = 0, Oe1 = 0, j1 = 0, Te = "", Ue = "", C1 = s1.charCodeAt(++R1);
+                        break;
+                    case q:
+                    case W:
+                        if ((je1 = (Te = (we1 > 0 ? Te.replace(c, "") : Te).trim()).length) > 1) {
+                            if (0 === z1) {
+                                if ((g1 = Te.charCodeAt(0)) === Q || g1 > 96 && g1 < 123) je1 = (Te = Te.replace(" ", ":")).length;
+                            }
+                            if (ye > 0) {
+                                if ((void 0) !== (n1 = Pe(Se, Te, a1, e1, pe, be, Ve.length, t1, i1, t1))) {
+                                    if (0 === (je1 = (Te = n1.trim()).length)) Te = "\0\0";
+                                }
+                            }
+                            switch(g1 = Te.charCodeAt(0), A1 = Te.charCodeAt(1), g1){
+                                case re:
+                                    break;
+                                case L:
+                                    if (A1 === oe || A1 === he) {
+                                        Ye += Te + s1.charAt(R1);
+                                        break;
+                                    }
+                                default:
+                                    if (Te.charCodeAt(je1 - 1) === V) break;
+                                    Ve += Ke(Te, g1, A1, Te.charCodeAt(2));
+                            }
+                        }
+                        O1 = 0, $e1 = 0, z1 = 0, we1 = 0, Oe1 = 0, Te = "", C1 = s1.charCodeAt(++R1);
+                }
+            }
+            switch(C1){
+                case J:
+                case I:
+                    if (h1 + d1 + u1 + o1 + ve === 0) switch($1){
+                        case E:
+                        case X:
+                        case Y:
+                        case L:
+                        case ae:
+                        case _:
+                        case T:
+                        case ee:
+                        case Z:
+                        case Q:
+                        case V:
+                        case U:
+                        case W:
+                        case B:
+                        case q:
+                            break;
+                        default:
+                            if (z1 > 0) $e1 = 1;
+                    }
+                    if (h1 === Z) h1 = 0;
+                    else if (ge + O1 === 0 && t1 !== te && Te.length > 0) we1 = 1, Te += "\0";
+                    if (ye * qe > 0) Pe(Ne, Te, a1, e1, pe, be, Ve.length, t1, i1, t1);
+                    be = 1, pe++;
+                    break;
+                case W:
+                case q:
+                    if (h1 + d1 + u1 + o1 === 0) {
+                        be++;
+                        break;
+                    }
+                default:
+                    switch(be++, Re = s1.charAt(R1), C1){
+                        case K:
+                        case M:
+                            if (d1 + o1 + h1 === 0) switch(w1){
+                                case U:
+                                case V:
+                                case K:
+                                case M:
+                                    Re = "";
+                                    break;
+                                default:
+                                    if (C1 !== M) Re = " ";
+                            }
+                            break;
+                        case re:
+                            Re = "\\0";
+                            break;
+                        case ce:
+                            Re = "\\f";
+                            break;
+                        case se:
+                            Re = "\\v";
+                            break;
+                        case P:
+                            if (d1 + h1 + o1 === 0 && ge > 0) Oe1 = 1, we1 = 1, Re = "\f" + Re;
+                            break;
+                        case 108:
+                            if (d1 + h1 + o1 + ke === 0 && z1 > 0) switch(R1 - z1){
+                                case 2:
+                                    if (w1 === ne && s1.charCodeAt(R1 - 3) === V) ke = w1;
+                                case 8:
+                                    if (m1 === le) ke = m1;
+                            }
+                            break;
+                        case V:
+                            if (d1 + h1 + o1 === 0) z1 = R1;
+                            break;
+                        case U:
+                            if (h1 + u1 + d1 + o1 === 0) we1 = 1, Re += "\r";
+                            break;
+                        case Y:
+                        case X:
+                            if (0 === h1) d1 = d1 === C1 ? 0 : 0 === d1 ? C1 : d1;
+                            break;
+                        case G:
+                            if (d1 + h1 + u1 === 0) o1++;
+                            break;
+                        case H:
+                            if (d1 + h1 + u1 === 0) o1--;
+                            break;
+                        case E:
+                            if (d1 + h1 + o1 === 0) u1--;
+                            break;
+                        case D:
+                            if (d1 + h1 + o1 === 0) {
+                                if (0 === O1) switch(2 * w1 + 3 * m1){
+                                    case 533:
+                                        break;
+                                    default:
+                                        y1 = 0, O1 = 1;
+                                }
+                                u1++;
+                            }
+                            break;
+                        case L:
+                            if (h1 + u1 + d1 + o1 + z1 + j1 === 0) j1 = 1;
+                            break;
+                        case T:
+                        case Z:
+                            if (d1 + o1 + u1 > 0) break;
+                            switch(h1){
+                                case 0:
+                                    switch(2 * C1 + 3 * s1.charCodeAt(R1 + 1)){
+                                        case 235:
+                                            h1 = Z;
+                                            break;
+                                        case 220:
+                                            je1 = R1, h1 = T;
+                                    }
+                                    break;
+                                case T:
+                                    if (C1 === Z && w1 === T && je1 + 2 !== R1) {
+                                        if (33 === s1.charCodeAt(je1 + 2)) Ve += s1.substring(je1, R1 + 1);
+                                        Re = "", h1 = 0;
+                                    }
+                            }
+                    }
+                    if (0 === h1) {
+                        if (ge + d1 + o1 + j1 === 0 && t1 !== te && C1 !== W) switch(C1){
+                            case U:
+                            case ae:
+                            case _:
+                            case ee:
+                            case E:
+                            case D:
+                                if (0 === O1) {
+                                    switch(w1){
+                                        case K:
+                                        case M:
+                                        case I:
+                                        case J:
+                                            Re += "\0";
+                                            break;
+                                        default:
+                                            Re = "\0" + Re + (C1 === U ? "" : "\0");
+                                    }
+                                    we1 = 1;
+                                } else switch(C1){
+                                    case D:
+                                        if (z1 + 7 === R1 && 108 === w1) z1 = 0;
+                                        O1 = ++y1;
+                                        break;
+                                    case E:
+                                        if (0 == (O1 = --y1)) we1 = 1, Re += "\0";
+                                }
+                                break;
+                            case K:
+                            case M:
+                                switch(w1){
+                                    case re:
+                                    case B:
+                                    case q:
+                                    case W:
+                                    case U:
+                                    case ce:
+                                    case K:
+                                    case M:
+                                    case I:
+                                    case J:
+                                        break;
+                                    default:
+                                        if (0 === O1) we1 = 1, Re += "\0";
+                                }
+                        }
+                        if (Te += Re, C1 !== M && C1 !== K) $1 = C1;
+                    }
+            }
+            m1 = w1, w1 = C1, R1++;
+        }
+        if (je1 = Ve.length, me > 0) {
+            if (0 === je1 && 0 === Xe.length && 0 === a1[0].length == false) {
+                if (t1 !== ie || 1 === a1.length && (ge > 0 ? Ee : Ge) === a1[0]) je1 = a1.join(",").length + 2;
+            }
+        }
+        if (je1 > 0) {
+            if (f1 = 0 === ge && t1 !== te ? (function(e2) {
+                for(var a2, r1, s2 = 0, t2 = e2.length, i2 = Array(t2); s2 < t2; ++s2){
+                    for(var f2 = e2[s2].split(l), n2 = "", o2 = 0, h2 = 0, u2 = 0, d2 = 0, b1 = f2.length; o2 < b1; ++o2){
+                        if (0 === (h2 = (r1 = f2[o2]).length) && b1 > 1) continue;
+                        if (u2 = n2.charCodeAt(n2.length - 1), d2 = r1.charCodeAt(0), a2 = "", 0 !== o2) switch(u2){
+                            case T:
+                            case ae:
+                            case _:
+                            case ee:
+                            case M:
+                            case D:
+                                break;
+                            default:
+                                a2 = " ";
+                        }
+                        switch(d2){
+                            case P:
+                                r1 = a2 + Ee;
+                            case ae:
+                            case _:
+                            case ee:
+                            case M:
+                            case E:
+                            case D:
+                                break;
+                            case G:
+                                r1 = a2 + r1 + Ee;
+                                break;
+                            case V:
+                                switch(2 * r1.charCodeAt(1) + 3 * r1.charCodeAt(2)){
+                                    case 530:
+                                        if (Ce > 0) {
+                                            r1 = a2 + r1.substring(8, h2 - 1);
+                                            break;
+                                        }
+                                    default:
+                                        if (o2 < 1 || f2[o2 - 1].length < 1) r1 = a2 + Ee + r1;
+                                }
+                                break;
+                            case U:
+                                a2 = "";
+                            default:
+                                if (h2 > 1 && r1.indexOf(":") > 0) r1 = a2 + r1.replace(v, "$1" + Ee + "$2");
+                                else r1 = a2 + r1 + Ee;
+                        }
+                        n2 += r1;
+                    }
+                    i2[s2] = n2.replace(c, "").trim();
+                }
+                return i2;
+            })(a1) : a1, ye > 0) {
+                if ((void 0) !== (n1 = Pe(Fe, Ve, f1, e1, pe, be, je1, t1, i1, t1)) && 0 === (Ve = n1).length) return Ye + Ve + Xe;
+            }
+            if (Ve = f1.join(",") + "{" + Ve + "}", Ae * ke != 0) {
+                if (2 === Ae && !Le(Ve, 2)) ke = 0;
+                switch(ke){
+                    case le:
+                        Ve = Ve.replace(k, ":" + S + "$1") + Ve;
+                        break;
+                    case ne:
+                        Ve = Ve.replace(p, "::" + N + "input-$1") + Ve.replace(p, "::" + S + "$1") + Ve.replace(p, ":" + F + "input-$1") + Ve;
+                }
+                ke = 0;
+            }
+        }
+        return Ye + Ve + Xe;
+    }
+    function Ie(e1, a1, r1) {
+        var c1 = a1.trim().split(o), s1 = c1, t1 = c1.length, i1 = e1.length;
+        switch(i1){
+            case 0:
+            case 1:
+                for(var f1 = 0, n1 = 0 === i1 ? "" : e1[0] + " "; f1 < t1; ++f1)s1[f1] = Je(n1, s1[f1], r1, i1).trim();
+                break;
+            default:
+                f1 = 0;
+                var l1 = 0;
+                for(s1 = []; f1 < t1; ++f1)for(var h1 = 0; h1 < i1; ++h1)s1[l1++] = Je(e1[h1] + " ", c1[f1], r1, i1).trim();
+        }
+        return s1;
+    }
+    function Je(e1, a1, r1, c1) {
+        var s1 = a1, t1 = s1.charCodeAt(0);
+        if (t1 < 33) t1 = (s1 = s1.trim()).charCodeAt(0);
+        switch(t1){
+            case P:
+                switch(ge + c1){
+                    case 0:
+                    case 1:
+                        if (0 === e1.trim().length) break;
+                    default:
+                        return s1.replace(h, "$1" + e1.trim());
+                }
+                break;
+            case V:
+                switch(s1.charCodeAt(1)){
+                    case 103:
+                        if (Ce > 0 && ge > 0) return s1.replace(u, "$1").replace(h, "$1" + Ge);
+                        break;
+                    default:
+                        return e1.trim() + s1.replace(h, "$1" + e1.trim());
+                }
+            default:
+                if (r1 * ge > 0 && s1.indexOf("\f") > 0) return s1.replace(h, (e1.charCodeAt(0) === V ? "" : "$1") + e1.trim());
+        }
+        return e1 + s1;
+    }
+    function Ke(e1, a1, r1, c1) {
+        var l1, o1 = 0, h1 = e1 + ";", u1 = 2 * a1 + 3 * r1 + 4 * c1;
+        if (944 === u1) return (function(e2) {
+            var a2 = e2.length, r2 = e2.indexOf(":", 9) + 1, c2 = e2.substring(0, r2).trim(), s1 = e2.substring(r2, a2 - 1).trim();
+            switch(e2.charCodeAt(9) * Be){
+                case 0:
+                    break;
+                case Q:
+                    if (110 !== e2.charCodeAt(10)) break;
+                default:
+                    for(var t1 = s1.split((s1 = "", f)), i1 = 0, r2 = 0, a2 = t1.length; i1 < a2; r2 = 0, ++i1){
+                        for(var l2 = t1[i1], o3 = l2.split(n); l2 = o3[r2];){
+                            var h3 = l2.charCodeAt(0);
+                            if (1 === Be && (h3 > L && h3 < 90 || h3 > 96 && h3 < 123 || h3 === R || h3 === Q && l2.charCodeAt(1) !== Q)) switch(isNaN(parseFloat(l2)) + (-1 !== l2.indexOf("("))){
+                                case 1:
+                                    switch(l2){
+                                        case "infinite":
+                                        case "alternate":
+                                        case "backwards":
+                                        case "running":
+                                        case "normal":
+                                        case "forwards":
+                                        case "both":
+                                        case "none":
+                                        case "linear":
+                                        case "ease":
+                                        case "ease-in":
+                                        case "ease-out":
+                                        case "ease-in-out":
+                                        case "paused":
+                                        case "reverse":
+                                        case "alternate-reverse":
+                                        case "inherit":
+                                        case "initial":
+                                        case "unset":
+                                        case "step-start":
+                                        case "step-end":
+                                            break;
+                                        default:
+                                            l2 += De;
+                                    }
+                            }
+                            o3[r2++] = l2;
+                        }
+                        s1 += (0 === i1 ? "" : ",") + o3.join(" ");
+                    }
+            }
+            if (s1 = c2 + s1 + ";", 1 === Ae || 2 === Ae && Le(s1, 1)) return N + s1 + s1;
+            return s1;
+        })(h1);
+        else if (0 === Ae || 2 === Ae && !Le(h1, 1)) return h1;
+        switch(u1){
+            case 1015:
+                return 97 === h1.charCodeAt(10) ? N + h1 + h1 : h1;
+            case 951:
+                return 116 === h1.charCodeAt(3) ? N + h1 + h1 : h1;
+            case 963:
+                return 110 === h1.charCodeAt(5) ? N + h1 + h1 : h1;
+            case 1009:
+                if (100 !== h1.charCodeAt(4)) break;
+            case 969:
+            case 942:
+                return N + h1 + h1;
+            case 978:
+                return N + h1 + S + h1 + h1;
+            case 1019:
+            case 983:
+                return N + h1 + S + h1 + F + h1 + h1;
+            case 883:
+                if (h1.charCodeAt(8) === Q) return N + h1 + h1;
+                if (h1.indexOf("image-set(", 11) > 0) return h1.replace(z, "$1" + N + "$2") + h1;
+                return h1;
+            case 932:
+                if (h1.charCodeAt(4) === Q) switch(h1.charCodeAt(5)){
+                    case 103:
+                        return N + "box-" + h1.replace("-grow", "") + N + h1 + F + h1.replace("grow", "positive") + h1;
+                    case 115:
+                        return N + h1 + F + h1.replace("shrink", "negative") + h1;
+                    case 98:
+                        return N + h1 + F + h1.replace("basis", "preferred-size") + h1;
+                }
+                return N + h1 + F + h1 + h1;
+            case 964:
+                return N + h1 + F + "flex-" + h1 + h1;
+            case 1023:
+                if (99 !== h1.charCodeAt(8)) break;
+                return l1 = h1.substring(h1.indexOf(":", 15)).replace("flex-", "").replace("space-between", "justify"), N + "box-pack" + l1 + N + h1 + F + "flex-pack" + l1 + h1;
+            case 1005:
+                return t.test(h1) ? h1.replace(s, ":" + N) + h1.replace(s, ":" + S) + h1 : h1;
+            case 1000:
+                switch(o1 = (l1 = h1.substring(13).trim()).indexOf("-") + 1, l1.charCodeAt(0) + l1.charCodeAt(o1)){
+                    case 226:
+                        l1 = h1.replace(m, "tb");
+                        break;
+                    case 232:
+                        l1 = h1.replace(m, "tb-rl");
+                        break;
+                    case 220:
+                        l1 = h1.replace(m, "lr");
+                        break;
+                    default:
+                        return h1;
+                }
+                return N + h1 + F + l1 + h1;
+            case 1017:
+                if (-1 === h1.indexOf("sticky", 9)) return h1;
+            case 975:
+                switch(o1 = (h1 = e1).length - 10, u1 = (l1 = (33 === h1.charCodeAt(o1) ? h1.substring(0, o1) : h1).substring(e1.indexOf(":", 7) + 1).trim()).charCodeAt(0) + (0 | l1.charCodeAt(7))){
+                    case 203:
+                        if (l1.charCodeAt(8) < 111) break;
+                    case 115:
+                        h1 = h1.replace(l1, N + l1) + ";" + h1;
+                        break;
+                    case 207:
+                    case 102:
+                        h1 = h1.replace(l1, N + (u1 > 102 ? "inline-" : "") + "box") + ";" + h1.replace(l1, N + l1) + ";" + h1.replace(l1, F + l1 + "box") + ";" + h1;
+                }
+                return h1 + ";";
+            case 938:
+                if (h1.charCodeAt(5) === Q) switch(h1.charCodeAt(6)){
+                    case 105:
+                        return l1 = h1.replace("-items", ""), N + h1 + N + "box-" + l1 + F + "flex-" + l1 + h1;
+                    case 115:
+                        return N + h1 + F + "flex-item-" + h1.replace(y, "") + h1;
+                    default:
+                        return N + h1 + F + "flex-line-pack" + h1.replace("align-content", "").replace(y, "") + h1;
+                }
+                break;
+            case 973:
+            case 989:
+                if (h1.charCodeAt(3) !== Q || 122 === h1.charCodeAt(4)) break;
+            case 931:
+            case 953:
+                if (true === j.test(e1)) {
+                    if (115 === (l1 = e1.substring(e1.indexOf(":") + 1)).charCodeAt(0)) return Ke(e1.replace("stretch", "fill-available"), a1, r1, c1).replace(":fill-available", ":stretch");
+                    else return h1.replace(l1, N + l1) + h1.replace(l1, S + l1.replace("fill-", "")) + h1;
+                }
+                break;
+            case 962:
+                if (h1 = N + h1 + (102 === h1.charCodeAt(5) ? F + h1 : "") + h1, r1 + c1 === 211 && 105 === h1.charCodeAt(13) && h1.indexOf("transform", 10) > 0) return h1.substring(0, h1.indexOf(";", 27) + 1).replace(i, "$1" + N + "$2") + h1;
+        }
+        return h1;
+    }
+    function Le(e1, a1) {
+        var r1 = e1.indexOf(1 === a1 ? ":" : "{"), c1 = e1.substring(0, 3 !== a1 ? r1 : 10), s1 = e1.substring(r1 + 1, e1.length - 1);
+        return Oe(2 !== a1 ? c1 : c1.replace(O, "$1"), s1, a1);
+    }
+    function Me(e1, a1) {
+        var r1 = Ke(a1, a1.charCodeAt(0), a1.charCodeAt(1), a1.charCodeAt(2));
+        return r1 !== a1 + ";" ? r1.replace($, " or ($1)").substring(4) : "(" + a1 + ")";
+    }
+    function Pe(e1, a1, r1, c1, s1, t1, i1, f1, n1, l1) {
+        for(var o1, h1 = 0, u1 = a1; h1 < ye; ++h1)switch(o1 = $e[h1].call(Te, e1, u1, r1, c1, s1, t1, i1, f1, n1, l1)){
+            case void 0:
+            case false:
+            case true:
+            case null:
+                break;
+            default:
+                u1 = o1;
+        }
+        if (u1 !== a1) return u1;
+    }
+    function Qe(e1, a1, r1, c1) {
+        for(var s1 = a1 + 1; s1 < r1; ++s1)switch(c1.charCodeAt(s1)){
+            case Z:
+                if (e1 === T) {
+                    if (c1.charCodeAt(s1 - 1) === T && a1 + 2 !== s1) return s1 + 1;
+                }
+                break;
+            case I:
+                if (e1 === Z) return s1 + 1;
+        }
+        return s1;
+    }
+    function Re(e1) {
+        for(var a1 in e1){
+            var r1 = e1[a1];
+            switch(a1){
+                case "keyframe":
+                    Be = 0 | r1;
+                    break;
+                case "global":
+                    Ce = 0 | r1;
+                    break;
+                case "cascade":
+                    ge = 0 | r1;
+                    break;
+                case "compress":
+                    we = 0 | r1;
+                    break;
+                case "semicolon":
+                    ve = 0 | r1;
+                    break;
+                case "preserve":
+                    me = 0 | r1;
+                    break;
+                case "prefix":
+                    if (Oe = null, !r1) Ae = 0;
+                    else if ("function" != typeof r1) Ae = 1;
+                    else Ae = 2, Oe = r1;
+            }
+        }
+        return Re;
+    }
+    function Te(a1, r2) {
+        if ((void 0) !== this && this.constructor === Te) return e(a1);
+        var s1 = a1, t1 = s1.charCodeAt(0);
+        if (t1 < 33) t1 = (s1 = s1.trim()).charCodeAt(0);
+        if (Be > 0) De = s1.replace(d, t1 === G ? "" : "-");
+        if (t1 = 1, 1 === ge) Ge = s1;
+        else Ee = s1;
+        var i1, f1 = [
+            Ge
+        ];
+        if (ye > 0) {
+            if ((void 0) !== (i1 = Pe(ze, r2, f1, f1, pe, be, 0, 0, 0, 0)) && "string" == typeof i1) r2 = i1;
+        }
+        var n1 = He(xe, f1, r2, 0, 0);
+        if (ye > 0) {
+            if ((void 0) !== (i1 = Pe(je, n1, f1, f1, pe, be, n1.length, 0, 0, 0)) && "string" != typeof (n1 = i1)) t1 = 0;
+        }
+        return De = "", Ge = "", Ee = "", ke = 0, pe = 1, be = 1, we * t1 == 0 ? n1 : n1.replace(c, "").replace(g, "").replace(A, "$1").replace(C, "$1").replace(w, " ");
+    }
+    if (Te.use = function e1(a1) {
+        switch(a1){
+            case void 0:
+            case null:
+                ye = $e.length = 0;
+                break;
+            default:
+                if ("function" == typeof a1) $e[ye++] = a1;
+                else if ("object" == typeof a1) for(var r2 = 0, c1 = a1.length; r2 < c1; ++r2)e1(a1[r2]);
+                else qe = 0 | !!a1;
+        }
+        return e1;
+    }, Te.set = Re, (void 0) !== a) Re(a);
+    return Te;
+});
+
+},{}],"hkKXa":[function(require,module,exports) {
+(function(factory) {
+    typeof exports === 'object' && typeof module !== 'undefined' ? module['exports'] = factory() : typeof define === 'function' && define['amd'] ? define(factory()) : window['stylisRuleSheet'] = factory();
+})(function() {
+    'use strict';
+    return function(insertRule) {
+        var delimiter = '/*|*/';
+        var needle = delimiter + '}';
+        function toSheet(block) {
+            if (block) try {
+                insertRule(block + '}');
+            } catch (e) {
+            }
+        }
+        return function ruleSheet(context, content, selectors, parents, line, column, length, ns, depth, at) {
+            switch(context){
+                // property
+                case 1:
+                    // @import
+                    if (depth === 0 && content.charCodeAt(0) === 64) return insertRule(content + ';'), '';
+                    break;
+                // selector
+                case 2:
+                    if (ns === 0) return content + delimiter;
+                    break;
+                // at-rule
+                case 3:
+                    switch(ns){
+                        // @font-face, @page
+                        case 102:
+                        case 112:
+                            return insertRule(selectors[0] + content), '';
+                        default:
+                            return content + (at === 0 ? delimiter : '');
+                    }
+                case -2:
+                    content.split(needle).forEach(toSheet);
+            }
+        };
+    };
+});
+
+},{}],"kXMxY":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var unitlessKeys = {
+    animationIterationCount: 1,
+    borderImageOutset: 1,
+    borderImageSlice: 1,
+    borderImageWidth: 1,
+    boxFlex: 1,
+    boxFlexGroup: 1,
+    boxOrdinalGroup: 1,
+    columnCount: 1,
+    columns: 1,
+    flex: 1,
+    flexGrow: 1,
+    flexPositive: 1,
+    flexShrink: 1,
+    flexNegative: 1,
+    flexOrder: 1,
+    gridRow: 1,
+    gridRowEnd: 1,
+    gridRowSpan: 1,
+    gridRowStart: 1,
+    gridColumn: 1,
+    gridColumnEnd: 1,
+    gridColumnSpan: 1,
+    gridColumnStart: 1,
+    msGridRow: 1,
+    msGridRowSpan: 1,
+    msGridColumn: 1,
+    msGridColumnSpan: 1,
+    fontWeight: 1,
+    lineHeight: 1,
+    opacity: 1,
+    order: 1,
+    orphans: 1,
+    tabSize: 1,
+    widows: 1,
+    zIndex: 1,
+    zoom: 1,
+    WebkitLineClamp: 1,
+    // SVG-related properties
+    fillOpacity: 1,
+    floodOpacity: 1,
+    stopOpacity: 1,
+    strokeDasharray: 1,
+    strokeDashoffset: 1,
+    strokeMiterlimit: 1,
+    strokeOpacity: 1,
+    strokeWidth: 1
+};
+exports.default = unitlessKeys;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"JacNc":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -24235,7 +26830,4766 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"5V79J":[function(require,module,exports) {
+},{}],"5wFcP":[function(require,module,exports) {
+'use strict';
+module.exports = require('./cjs/react-is.development.js');
+
+},{"./cjs/react-is.development.js":"dxS2U"}],"dxS2U":[function(require,module,exports) {
+/** @license React v16.13.1
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 'use strict';
+(function() {
+    // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+    // nor polyfill, then a plain number is used for performance.
+    var hasSymbol = typeof Symbol === 'function' && Symbol.for;
+    var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 60103;
+    var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 60106;
+    var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 60107;
+    var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 60108;
+    var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 60114;
+    var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 60109;
+    var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 60110; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+    // (unstable) APIs that have been removed. Can we remove the symbols?
+    var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 60111;
+    var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 60111;
+    var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 60112;
+    var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 60113;
+    var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 60120;
+    var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 60115;
+    var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 60116;
+    var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for('react.block') : 60121;
+    var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 60117;
+    var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 60118;
+    var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 60119;
+    function isValidElementType(type) {
+        return typeof type === 'string' || typeof type === 'function' || type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
+    }
+    function typeOf(object) {
+        if (typeof object === 'object' && object !== null) {
+            var $$typeof = object.$$typeof;
+            switch($$typeof){
+                case REACT_ELEMENT_TYPE:
+                    var type = object.type;
+                    switch(type){
+                        case REACT_ASYNC_MODE_TYPE:
+                        case REACT_CONCURRENT_MODE_TYPE:
+                        case REACT_FRAGMENT_TYPE:
+                        case REACT_PROFILER_TYPE:
+                        case REACT_STRICT_MODE_TYPE:
+                        case REACT_SUSPENSE_TYPE:
+                            return type;
+                        default:
+                            var $$typeofType = type && type.$$typeof;
+                            switch($$typeofType){
+                                case REACT_CONTEXT_TYPE:
+                                case REACT_FORWARD_REF_TYPE:
+                                case REACT_LAZY_TYPE:
+                                case REACT_MEMO_TYPE:
+                                case REACT_PROVIDER_TYPE:
+                                    return $$typeofType;
+                                default:
+                                    return $$typeof;
+                            }
+                    }
+                case REACT_PORTAL_TYPE:
+                    return $$typeof;
+            }
+        }
+        return undefined;
+    } // AsyncMode is deprecated along with isAsyncMode
+    var AsyncMode = REACT_ASYNC_MODE_TYPE;
+    var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
+    var ContextConsumer = REACT_CONTEXT_TYPE;
+    var ContextProvider = REACT_PROVIDER_TYPE;
+    var Element1 = REACT_ELEMENT_TYPE;
+    var ForwardRef = REACT_FORWARD_REF_TYPE;
+    var Fragment = REACT_FRAGMENT_TYPE;
+    var Lazy = REACT_LAZY_TYPE;
+    var Memo = REACT_MEMO_TYPE;
+    var Portal = REACT_PORTAL_TYPE;
+    var Profiler = REACT_PROFILER_TYPE;
+    var StrictMode = REACT_STRICT_MODE_TYPE;
+    var Suspense = REACT_SUSPENSE_TYPE;
+    var hasWarnedAboutDeprecatedIsAsyncMode = false; // AsyncMode should be deprecated
+    function isAsyncMode(object) {
+        if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+            hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
+            console['warn']("The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 17+. Update your code to use ReactIs.isConcurrentMode() instead. It has the exact same API.");
+        }
+        return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
+    }
+    function isConcurrentMode(object) {
+        return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
+    }
+    function isContextConsumer(object) {
+        return typeOf(object) === REACT_CONTEXT_TYPE;
+    }
+    function isContextProvider(object) {
+        return typeOf(object) === REACT_PROVIDER_TYPE;
+    }
+    function isElement(object) {
+        return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+    }
+    function isForwardRef(object) {
+        return typeOf(object) === REACT_FORWARD_REF_TYPE;
+    }
+    function isFragment(object) {
+        return typeOf(object) === REACT_FRAGMENT_TYPE;
+    }
+    function isLazy(object) {
+        return typeOf(object) === REACT_LAZY_TYPE;
+    }
+    function isMemo(object) {
+        return typeOf(object) === REACT_MEMO_TYPE;
+    }
+    function isPortal(object) {
+        return typeOf(object) === REACT_PORTAL_TYPE;
+    }
+    function isProfiler(object) {
+        return typeOf(object) === REACT_PROFILER_TYPE;
+    }
+    function isStrictMode(object) {
+        return typeOf(object) === REACT_STRICT_MODE_TYPE;
+    }
+    function isSuspense(object) {
+        return typeOf(object) === REACT_SUSPENSE_TYPE;
+    }
+    exports.AsyncMode = AsyncMode;
+    exports.ConcurrentMode = ConcurrentMode;
+    exports.ContextConsumer = ContextConsumer;
+    exports.ContextProvider = ContextProvider;
+    exports.Element = Element1;
+    exports.ForwardRef = ForwardRef;
+    exports.Fragment = Fragment;
+    exports.Lazy = Lazy;
+    exports.Memo = Memo;
+    exports.Portal = Portal;
+    exports.Profiler = Profiler;
+    exports.StrictMode = StrictMode;
+    exports.Suspense = Suspense;
+    exports.isAsyncMode = isAsyncMode;
+    exports.isConcurrentMode = isConcurrentMode;
+    exports.isContextConsumer = isContextConsumer;
+    exports.isContextProvider = isContextProvider;
+    exports.isElement = isElement;
+    exports.isForwardRef = isForwardRef;
+    exports.isFragment = isFragment;
+    exports.isLazy = isLazy;
+    exports.isMemo = isMemo;
+    exports.isPortal = isPortal;
+    exports.isProfiler = isProfiler;
+    exports.isStrictMode = isStrictMode;
+    exports.isSuspense = isSuspense;
+    exports.isValidElementType = isValidElementType;
+    exports.typeOf = typeOf;
+})();
+
+},{}],"aUd3c":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var safeIsNaN = Number.isNaN || function ponyfill(value) {
+    return typeof value === 'number' && value !== value;
+};
+function isEqual(first, second) {
+    if (first === second) return true;
+    if (safeIsNaN(first) && safeIsNaN(second)) return true;
+    return false;
+}
+function areInputsEqual(newInputs, lastInputs) {
+    if (newInputs.length !== lastInputs.length) return false;
+    for(var i = 0; i < newInputs.length; i++){
+        if (!isEqual(newInputs[i], lastInputs[i])) return false;
+    }
+    return true;
+}
+function memoizeOne(resultFn, isEqual1) {
+    if (isEqual1 === void 0) isEqual1 = areInputsEqual;
+    var lastThis;
+    var lastArgs = [];
+    var lastResult;
+    var calledOnce = false;
+    function memoized() {
+        var newArgs = [];
+        for(var _i = 0; _i < arguments.length; _i++)newArgs[_i] = arguments[_i];
+        if (calledOnce && lastThis === this && isEqual1(newArgs, lastArgs)) return lastResult;
+        lastResult = resultFn.apply(this, newArgs);
+        calledOnce = true;
+        lastThis = this;
+        lastArgs = newArgs;
+        return lastResult;
+    }
+    return memoized;
+}
+exports.default = memoizeOne;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"1tgq3":[function(require,module,exports) {
+var ReactIs = require('react-is');
+// By explicitly using `prop-types` you are opting into new development behavior.
+// http://fb.me/prop-types-in-prod
+var throwOnDirectAccess = true;
+module.exports = require('./factoryWithTypeCheckers')(ReactIs.isElement, throwOnDirectAccess);
+
+},{"react-is":"5wFcP","./factoryWithTypeCheckers":"gMSjX"}],"gMSjX":[function(require,module,exports) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 'use strict';
+var ReactIs = require('react-is');
+var assign = require('object-assign');
+var ReactPropTypesSecret = require('./lib/ReactPropTypesSecret');
+var checkPropTypes = require('./checkPropTypes');
+var has = Function.call.bind(Object.prototype.hasOwnProperty);
+var printWarning = function() {
+};
+printWarning = function(text) {
+    var message = 'Warning: ' + text;
+    if (typeof console !== 'undefined') console.error(message);
+    try {
+        // --- Welcome to debugging React ---
+        // This error was thrown as a convenience so that you can use this stack
+        // to find the callsite that caused this warning to fire.
+        throw new Error(message);
+    } catch (x) {
+    }
+};
+function emptyFunctionThatReturnsNull() {
+    return null;
+}
+module.exports = function(isValidElement, throwOnDirectAccess) {
+    /* global Symbol */ var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
+    var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
+    /**
+   * Returns the iterator method function contained on the iterable object.
+   *
+   * Be sure to invoke the function with the iterable as context:
+   *
+   *     var iteratorFn = getIteratorFn(myIterable);
+   *     if (iteratorFn) {
+   *       var iterator = iteratorFn.call(myIterable);
+   *       ...
+   *     }
+   *
+   * @param {?object} maybeIterable
+   * @return {?function}
+   */ function getIteratorFn(maybeIterable) {
+        var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
+        if (typeof iteratorFn === 'function') return iteratorFn;
+    }
+    /**
+   * Collection of methods that allow declaration and validation of props that are
+   * supplied to React components. Example usage:
+   *
+   *   var Props = require('ReactPropTypes');
+   *   var MyArticle = React.createClass({
+   *     propTypes: {
+   *       // An optional string prop named "description".
+   *       description: Props.string,
+   *
+   *       // A required enum prop named "category".
+   *       category: Props.oneOf(['News','Photos']).isRequired,
+   *
+   *       // A prop named "dialog" that requires an instance of Dialog.
+   *       dialog: Props.instanceOf(Dialog).isRequired
+   *     },
+   *     render: function() { ... }
+   *   });
+   *
+   * A more formal specification of how these methods are used:
+   *
+   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
+   *   decl := ReactPropTypes.{type}(.isRequired)?
+   *
+   * Each and every declaration produces a function with the same signature. This
+   * allows the creation of custom validation functions. For example:
+   *
+   *  var MyLink = React.createClass({
+   *    propTypes: {
+   *      // An optional string or URI prop named "href".
+   *      href: function(props, propName, componentName) {
+   *        var propValue = props[propName];
+   *        if (propValue != null && typeof propValue !== 'string' &&
+   *            !(propValue instanceof URI)) {
+   *          return new Error(
+   *            'Expected a string or an URI for ' + propName + ' in ' +
+   *            componentName
+   *          );
+   *        }
+   *      }
+   *    },
+   *    render: function() {...}
+   *  });
+   *
+   * @internal
+   */ var ANONYMOUS = '<<anonymous>>';
+    // Important!
+    // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
+    var ReactPropTypes = {
+        array: createPrimitiveTypeChecker('array'),
+        bool: createPrimitiveTypeChecker('boolean'),
+        func: createPrimitiveTypeChecker('function'),
+        number: createPrimitiveTypeChecker('number'),
+        object: createPrimitiveTypeChecker('object'),
+        string: createPrimitiveTypeChecker('string'),
+        symbol: createPrimitiveTypeChecker('symbol'),
+        any: createAnyTypeChecker(),
+        arrayOf: createArrayOfTypeChecker,
+        element: createElementTypeChecker(),
+        elementType: createElementTypeTypeChecker(),
+        instanceOf: createInstanceTypeChecker,
+        node: createNodeChecker(),
+        objectOf: createObjectOfTypeChecker,
+        oneOf: createEnumTypeChecker,
+        oneOfType: createUnionTypeChecker,
+        shape: createShapeTypeChecker,
+        exact: createStrictShapeTypeChecker
+    };
+    /**
+   * inlined Object.is polyfill to avoid requiring consumers ship their own
+   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+   */ /*eslint-disable no-self-compare*/ function is(x, y) {
+        // SameValue algorithm
+        if (x === y) // Steps 1-5, 7-10
+        // Steps 6.b-6.e: +0 != -0
+        return x !== 0 || 1 / x === 1 / y;
+        else // Step 6.a: NaN == NaN
+        return x !== x && y !== y;
+    }
+    /*eslint-enable no-self-compare*/ /**
+   * We use an Error-like object for backward compatibility as people may call
+   * PropTypes directly and inspect their output. However, we don't use real
+   * Errors anymore. We don't inspect their stack anyway, and creating them
+   * is prohibitively expensive if they are created too often, such as what
+   * happens in oneOfType() for any type before the one that matched.
+   */ function PropTypeError(message) {
+        this.message = message;
+        this.stack = '';
+    }
+    // Make `instanceof Error` still work for returned errors.
+    PropTypeError.prototype = Error.prototype;
+    function createChainableTypeChecker(validate) {
+        var manualPropTypeCallCache = {
+        };
+        var manualPropTypeWarningCount = 0;
+        function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
+            componentName = componentName || ANONYMOUS;
+            propFullName = propFullName || propName;
+            if (secret !== ReactPropTypesSecret) {
+                if (throwOnDirectAccess) {
+                    // New behavior only for users of `prop-types` package
+                    var err = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use `PropTypes.checkPropTypes()` to call them. Read more at http://fb.me/use-check-prop-types");
+                    err.name = 'Invariant Violation';
+                    throw err;
+                } else if (typeof console !== 'undefined') {
+                    // Old behavior for people using React.PropTypes
+                    var cacheKey = componentName + ':' + propName;
+                    if (!manualPropTypeCallCache[cacheKey] && // Avoid spamming the console because they are often not actionable except for lib authors
+                    manualPropTypeWarningCount < 3) {
+                        printWarning("You are manually calling a React.PropTypes validation function for the `" + propFullName + '` prop on `' + componentName + '`. This is deprecated ' + 'and will throw in the standalone `prop-types` package. ' + 'You may be seeing this warning due to a third-party PropTypes ' + 'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.');
+                        manualPropTypeCallCache[cacheKey] = true;
+                        manualPropTypeWarningCount++;
+                    }
+                }
+            }
+            if (props[propName] == null) {
+                if (isRequired) {
+                    if (props[propName] === null) return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required ' + ('in `' + componentName + '`, but its value is `null`.'));
+                    return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required in ' + ('`' + componentName + '`, but its value is `undefined`.'));
+                }
+                return null;
+            } else return validate(props, propName, componentName, location, propFullName);
+        }
+        var chainedCheckType = checkType.bind(null, false);
+        chainedCheckType.isRequired = checkType.bind(null, true);
+        return chainedCheckType;
+    }
+    function createPrimitiveTypeChecker(expectedType) {
+        function validate(props, propName, componentName, location, propFullName, secret) {
+            var propValue = props[propName];
+            var propType = getPropType(propValue);
+            if (propType !== expectedType) {
+                // `propValue` being instance of, say, date/regexp, pass the 'object'
+                // check, but we can offer a more precise error message here rather than
+                // 'of type `object`'.
+                var preciseType = getPreciseType(propValue);
+                return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createAnyTypeChecker() {
+        return createChainableTypeChecker(emptyFunctionThatReturnsNull);
+    }
+    function createArrayOfTypeChecker(typeChecker) {
+        function validate(props, propName, componentName, location, propFullName) {
+            if (typeof typeChecker !== 'function') return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside arrayOf.');
+            var propValue = props[propName];
+            if (!Array.isArray(propValue)) {
+                var propType = getPropType(propValue);
+                return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
+            }
+            for(var i = 0; i < propValue.length; i++){
+                var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
+                if (error instanceof Error) return error;
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createElementTypeChecker() {
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            if (!isValidElement(propValue)) {
+                var propType = getPropType(propValue);
+                return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement.'));
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createElementTypeTypeChecker() {
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            if (!ReactIs.isValidElementType(propValue)) {
+                var propType = getPropType(propValue);
+                return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement type.'));
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createInstanceTypeChecker(expectedClass) {
+        function validate(props, propName, componentName, location, propFullName) {
+            if (!(props[propName] instanceof expectedClass)) {
+                var expectedClassName = expectedClass.name || ANONYMOUS;
+                var actualClassName = getClassName(props[propName]);
+                return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createEnumTypeChecker(expectedValues) {
+        if (!Array.isArray(expectedValues)) {
+            {
+                if (arguments.length > 1) printWarning('Invalid arguments supplied to oneOf, expected an array, got ' + arguments.length + ' arguments. ' + 'A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z]).');
+                else printWarning('Invalid argument supplied to oneOf, expected an array.');
+            }
+            return emptyFunctionThatReturnsNull;
+        }
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            for(var i = 0; i < expectedValues.length; i++){
+                if (is(propValue, expectedValues[i])) return null;
+            }
+            var valuesString = JSON.stringify(expectedValues, function replacer(key, value) {
+                var type = getPreciseType(value);
+                if (type === 'symbol') return String(value);
+                return value;
+            });
+            return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + String(propValue) + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createObjectOfTypeChecker(typeChecker) {
+        function validate(props, propName, componentName, location, propFullName) {
+            if (typeof typeChecker !== 'function') return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside objectOf.');
+            var propValue = props[propName];
+            var propType = getPropType(propValue);
+            if (propType !== 'object') return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
+            for(var key in propValue)if (has(propValue, key)) {
+                var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+                if (error instanceof Error) return error;
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createUnionTypeChecker(arrayOfTypeCheckers) {
+        if (!Array.isArray(arrayOfTypeCheckers)) {
+            printWarning('Invalid argument supplied to oneOfType, expected an instance of array.');
+            return emptyFunctionThatReturnsNull;
+        }
+        for(var i = 0; i < arrayOfTypeCheckers.length; i++){
+            var checker = arrayOfTypeCheckers[i];
+            if (typeof checker !== 'function') {
+                printWarning("Invalid argument supplied to oneOfType. Expected an array of check functions, but received " + getPostfixForTypeWarning(checker) + ' at index ' + i + '.');
+                return emptyFunctionThatReturnsNull;
+            }
+        }
+        function validate(props, propName, componentName, location, propFullName) {
+            for(var i1 = 0; i1 < arrayOfTypeCheckers.length; i1++){
+                var checker = arrayOfTypeCheckers[i1];
+                if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) return null;
+            }
+            return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createNodeChecker() {
+        function validate(props, propName, componentName, location, propFullName) {
+            if (!isNode(props[propName])) return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a ReactNode.'));
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createShapeTypeChecker(shapeTypes) {
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            var propType = getPropType(propValue);
+            if (propType !== 'object') return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+            for(var key in shapeTypes){
+                var checker = shapeTypes[key];
+                if (!checker) continue;
+                var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+                if (error) return error;
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function createStrictShapeTypeChecker(shapeTypes) {
+        function validate(props, propName, componentName, location, propFullName) {
+            var propValue = props[propName];
+            var propType = getPropType(propValue);
+            if (propType !== 'object') return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+            // We need to check all keys in case some are required but missing from
+            // props.
+            var allKeys = assign({
+            }, props[propName], shapeTypes);
+            for(var key in allKeys){
+                var checker = shapeTypes[key];
+                if (!checker) return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' + '\nBad object: ' + JSON.stringify(props[propName], null, '  ') + '\nValid keys: ' + JSON.stringify(Object.keys(shapeTypes), null, '  '));
+                var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+                if (error) return error;
+            }
+            return null;
+        }
+        return createChainableTypeChecker(validate);
+    }
+    function isNode(propValue) {
+        switch(typeof propValue){
+            case 'number':
+            case 'string':
+            case 'undefined':
+                return true;
+            case 'boolean':
+                return !propValue;
+            case 'object':
+                if (Array.isArray(propValue)) return propValue.every(isNode);
+                if (propValue === null || isValidElement(propValue)) return true;
+                var iteratorFn = getIteratorFn(propValue);
+                if (iteratorFn) {
+                    var iterator = iteratorFn.call(propValue);
+                    var step;
+                    if (iteratorFn !== propValue.entries) while(!(step = iterator.next()).done){
+                        if (!isNode(step.value)) return false;
+                    }
+                    else // Iterator will provide entry [k,v] tuples rather than values.
+                    while(!(step = iterator.next()).done){
+                        var entry = step.value;
+                        if (entry) {
+                            if (!isNode(entry[1])) return false;
+                        }
+                    }
+                } else return false;
+                return true;
+            default:
+                return false;
+        }
+    }
+    function isSymbol(propType, propValue) {
+        // Native Symbol.
+        if (propType === 'symbol') return true;
+        // falsy value can't be a Symbol
+        if (!propValue) return false;
+        // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
+        if (propValue['@@toStringTag'] === 'Symbol') return true;
+        // Fallback for non-spec compliant Symbols which are polyfilled.
+        if (typeof Symbol === 'function' && propValue instanceof Symbol) return true;
+        return false;
+    }
+    // Equivalent of `typeof` but with special handling for array and regexp.
+    function getPropType(propValue) {
+        var propType = typeof propValue;
+        if (Array.isArray(propValue)) return 'array';
+        if (propValue instanceof RegExp) // Old webkits (at least until Android 4.0) return 'function' rather than
+        // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
+        // passes PropTypes.object.
+        return 'object';
+        if (isSymbol(propType, propValue)) return 'symbol';
+        return propType;
+    }
+    // This handles more types than `getPropType`. Only used for error messages.
+    // See `createPrimitiveTypeChecker`.
+    function getPreciseType(propValue) {
+        if (typeof propValue === 'undefined' || propValue === null) return '' + propValue;
+        var propType = getPropType(propValue);
+        if (propType === 'object') {
+            if (propValue instanceof Date) return 'date';
+            else if (propValue instanceof RegExp) return 'regexp';
+        }
+        return propType;
+    }
+    // Returns a string that is postfixed to a warning about an invalid type.
+    // For example, "undefined" or "of type array"
+    function getPostfixForTypeWarning(value) {
+        var type = getPreciseType(value);
+        switch(type){
+            case 'array':
+            case 'object':
+                return 'an ' + type;
+            case 'boolean':
+            case 'date':
+            case 'regexp':
+                return 'a ' + type;
+            default:
+                return type;
+        }
+    }
+    // Returns class name of the object, if any.
+    function getClassName(propValue) {
+        if (!propValue.constructor || !propValue.constructor.name) return ANONYMOUS;
+        return propValue.constructor.name;
+    }
+    ReactPropTypes.checkPropTypes = checkPropTypes;
+    ReactPropTypes.resetWarningCache = checkPropTypes.resetWarningCache;
+    ReactPropTypes.PropTypes = ReactPropTypes;
+    return ReactPropTypes;
+};
+
+},{"react-is":"5wFcP","object-assign":"jzTFF","./lib/ReactPropTypesSecret":"lYuBM","./checkPropTypes":"3evPV"}],"lYuBM":[function(require,module,exports) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 'use strict';
+var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+module.exports = ReactPropTypesSecret;
+
+},{}],"3evPV":[function(require,module,exports) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 'use strict';
+var printWarning = function() {
+};
+var ReactPropTypesSecret = require('./lib/ReactPropTypesSecret');
+var loggedTypeFailures = {
+};
+var has = Function.call.bind(Object.prototype.hasOwnProperty);
+printWarning = function(text) {
+    var message = 'Warning: ' + text;
+    if (typeof console !== 'undefined') console.error(message);
+    try {
+        // --- Welcome to debugging React ---
+        // This error was thrown as a convenience so that you can use this stack
+        // to find the callsite that caused this warning to fire.
+        throw new Error(message);
+    } catch (x) {
+    }
+};
+/**
+ * Assert that the values match with the type specs.
+ * Error messages are memorized and will only be shown once.
+ *
+ * @param {object} typeSpecs Map of name to a ReactPropType
+ * @param {object} values Runtime values that need to be type-checked
+ * @param {string} location e.g. "prop", "context", "child context"
+ * @param {string} componentName Name of the component for error messages.
+ * @param {?Function} getStack Returns the component stack.
+ * @private
+ */ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
+    for(var typeSpecName in typeSpecs)if (has(typeSpecs, typeSpecName)) {
+        var error;
+        // Prop type validation may throw. In case they do, we don't want to
+        // fail the render phase where it didn't fail before. So we log it.
+        // After these have been cleaned up, we'll let them throw.
+        try {
+            // This is intentionally an invariant that gets caught. It's the same
+            // behavior as without this statement except with a better message.
+            if (typeof typeSpecs[typeSpecName] !== 'function') {
+                var err = Error((componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' + 'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.');
+                err.name = 'Invariant Violation';
+                throw err;
+            }
+            error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
+        } catch (ex) {
+            error = ex;
+        }
+        if (error && !(error instanceof Error)) printWarning((componentName || 'React class') + ': type specification of ' + location + ' `' + typeSpecName + '` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a ' + typeof error + '. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).');
+        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
+            // Only monitor this failure once because there tends to be a lot of the
+            // same error.
+            loggedTypeFailures[error.message] = true;
+            var stack = getStack ? getStack() : '';
+            printWarning('Failed ' + location + ' type: ' + error.message + (stack != null ? stack : ''));
+        }
+    }
+}
+/**
+ * Resets warning cache when testing.
+ *
+ * @private
+ */ checkPropTypes.resetWarningCache = function() {
+    loggedTypeFailures = {
+    };
+};
+module.exports = checkPropTypes;
+
+},{"./lib/ReactPropTypesSecret":"lYuBM"}],"b2akg":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _memoize = require("@emotion/memoize");
+var _memoizeDefault = parcelHelpers.interopDefault(_memoize);
+var reactPropsRegex = /^((children|dangerouslySetInnerHTML|key|ref|autoFocus|defaultValue|defaultChecked|innerHTML|suppressContentEditableWarning|suppressHydrationWarning|valueLink|accept|acceptCharset|accessKey|action|allow|allowUserMedia|allowPaymentRequest|allowFullScreen|allowTransparency|alt|async|autoComplete|autoPlay|capture|cellPadding|cellSpacing|challenge|charSet|checked|cite|classID|className|cols|colSpan|content|contentEditable|contextMenu|controls|controlsList|coords|crossOrigin|data|dateTime|decoding|default|defer|dir|disabled|disablePictureInPicture|download|draggable|encType|form|formAction|formEncType|formMethod|formNoValidate|formTarget|frameBorder|headers|height|hidden|high|href|hrefLang|htmlFor|httpEquiv|id|inputMode|integrity|is|keyParams|keyType|kind|label|lang|list|loading|loop|low|marginHeight|marginWidth|max|maxLength|media|mediaGroup|method|min|minLength|multiple|muted|name|nonce|noValidate|open|optimum|pattern|placeholder|playsInline|poster|preload|profile|radioGroup|readOnly|referrerPolicy|rel|required|reversed|role|rows|rowSpan|sandbox|scope|scoped|scrolling|seamless|selected|shape|size|sizes|slot|span|spellCheck|src|srcDoc|srcLang|srcSet|start|step|style|summary|tabIndex|target|title|type|useMap|value|width|wmode|wrap|about|datatype|inlist|prefix|property|resource|typeof|vocab|autoCapitalize|autoCorrect|autoSave|color|inert|itemProp|itemScope|itemType|itemID|itemRef|on|results|security|unselectable|accentHeight|accumulate|additive|alignmentBaseline|allowReorder|alphabetic|amplitude|arabicForm|ascent|attributeName|attributeType|autoReverse|azimuth|baseFrequency|baselineShift|baseProfile|bbox|begin|bias|by|calcMode|capHeight|clip|clipPathUnits|clipPath|clipRule|colorInterpolation|colorInterpolationFilters|colorProfile|colorRendering|contentScriptType|contentStyleType|cursor|cx|cy|d|decelerate|descent|diffuseConstant|direction|display|divisor|dominantBaseline|dur|dx|dy|edgeMode|elevation|enableBackground|end|exponent|externalResourcesRequired|fill|fillOpacity|fillRule|filter|filterRes|filterUnits|floodColor|floodOpacity|focusable|fontFamily|fontSize|fontSizeAdjust|fontStretch|fontStyle|fontVariant|fontWeight|format|from|fr|fx|fy|g1|g2|glyphName|glyphOrientationHorizontal|glyphOrientationVertical|glyphRef|gradientTransform|gradientUnits|hanging|horizAdvX|horizOriginX|ideographic|imageRendering|in|in2|intercept|k|k1|k2|k3|k4|kernelMatrix|kernelUnitLength|kerning|keyPoints|keySplines|keyTimes|lengthAdjust|letterSpacing|lightingColor|limitingConeAngle|local|markerEnd|markerMid|markerStart|markerHeight|markerUnits|markerWidth|mask|maskContentUnits|maskUnits|mathematical|mode|numOctaves|offset|opacity|operator|order|orient|orientation|origin|overflow|overlinePosition|overlineThickness|panose1|paintOrder|pathLength|patternContentUnits|patternTransform|patternUnits|pointerEvents|points|pointsAtX|pointsAtY|pointsAtZ|preserveAlpha|preserveAspectRatio|primitiveUnits|r|radius|refX|refY|renderingIntent|repeatCount|repeatDur|requiredExtensions|requiredFeatures|restart|result|rotate|rx|ry|scale|seed|shapeRendering|slope|spacing|specularConstant|specularExponent|speed|spreadMethod|startOffset|stdDeviation|stemh|stemv|stitchTiles|stopColor|stopOpacity|strikethroughPosition|strikethroughThickness|string|stroke|strokeDasharray|strokeDashoffset|strokeLinecap|strokeLinejoin|strokeMiterlimit|strokeOpacity|strokeWidth|surfaceScale|systemLanguage|tableValues|targetX|targetY|textAnchor|textDecoration|textRendering|textLength|to|transform|u1|u2|underlinePosition|underlineThickness|unicode|unicodeBidi|unicodeRange|unitsPerEm|vAlphabetic|vHanging|vIdeographic|vMathematical|values|vectorEffect|version|vertAdvY|vertOriginX|vertOriginY|viewBox|viewTarget|visibility|widths|wordSpacing|writingMode|x|xHeight|x1|x2|xChannelSelector|xlinkActuate|xlinkArcrole|xlinkHref|xlinkRole|xlinkShow|xlinkTitle|xlinkType|xmlBase|xmlns|xmlnsXlink|xmlLang|xmlSpace|y|y1|y2|yChannelSelector|z|zoomAndPan|for|class|autofocus)|(([Dd][Aa][Tt][Aa]|[Aa][Rr][Ii][Aa]|x)-.*))$/; // https://esbench.com/bench/5bfee68a4cd7e6009ef61d23
+var index = _memoizeDefault.default(function(prop) {
+    return reactPropsRegex.test(prop) || prop.charCodeAt(0) === 111 && prop.charCodeAt(1) === 110 && prop.charCodeAt(2) < 91;
+});
+exports.default = index;
+
+},{"@emotion/memoize":"kGuNb","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"kGuNb":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function memoize(fn) {
+    var cache = {
+    };
+    return function(arg) {
+        if (cache[arg] === undefined) cache[arg] = fn(arg);
+        return cache[arg];
+    };
+}
+exports.default = memoize;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"luwsj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "concatArrays", ()=>concatArrays
+);
+parcelHelpers.export(exports, "merge", ()=>merge
+);
+var _isWhat = require("is-what");
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */ function __spreadArrays() {
+    for(var s = 0, i = 0, il = arguments.length; i < il; i++)s += arguments[i].length;
+    for(var r = Array(s), k = 0, i = 0; i < il; i++)for(var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)r[k] = a[j];
+    return r;
+}
+function assignProp(carry, key, newVal, originalObject) {
+    var propType = originalObject.propertyIsEnumerable(key) ? 'enumerable' : 'nonenumerable';
+    if (propType === 'enumerable') carry[key] = newVal;
+    if (propType === 'nonenumerable') Object.defineProperty(carry, key, {
+        value: newVal,
+        enumerable: false,
+        writable: true,
+        configurable: true
+    });
+}
+function mergeRecursively(origin, newComer, extensions) {
+    // work directly on newComer if its not an object
+    if (!_isWhat.isPlainObject(newComer)) {
+        // extend merge rules
+        if (extensions && _isWhat.isArray(extensions)) extensions.forEach(function(extend) {
+            newComer = extend(origin, newComer);
+        });
+        return newComer;
+    }
+    // define newObject to merge all values upon
+    var newObject = {
+    };
+    if (_isWhat.isPlainObject(origin)) {
+        var props_1 = Object.getOwnPropertyNames(origin);
+        var symbols_1 = Object.getOwnPropertySymbols(origin);
+        newObject = __spreadArrays(props_1, symbols_1).reduce(function(carry, key) {
+            // @ts-ignore
+            var targetVal = origin[key];
+            if (!_isWhat.isSymbol(key) && !Object.getOwnPropertyNames(newComer).includes(key) || _isWhat.isSymbol(key) && !Object.getOwnPropertySymbols(newComer).includes(key)) assignProp(carry, key, targetVal, origin);
+            return carry;
+        }, {
+        });
+    }
+    var props = Object.getOwnPropertyNames(newComer);
+    var symbols = Object.getOwnPropertySymbols(newComer);
+    var result = __spreadArrays(props, symbols).reduce(function(carry, key) {
+        // re-define the origin and newComer as targetVal and newVal
+        var newVal = newComer[key];
+        var targetVal = _isWhat.isPlainObject(origin) ? origin[key] : undefined;
+        // extend merge rules
+        if (extensions && _isWhat.isArray(extensions)) extensions.forEach(function(extend) {
+            newVal = extend(targetVal, newVal);
+        });
+        // When newVal is an object do the merge recursively
+        if (targetVal !== undefined && _isWhat.isPlainObject(newVal)) newVal = mergeRecursively(targetVal, newVal, extensions);
+        assignProp(carry, key, newVal, newComer);
+        return carry;
+    }, newObject);
+    return result;
+}
+/**
+ * Merge anything recursively.
+ * Objects get merged, special objects (classes etc.) are re-assigned "as is".
+ * Basic types overwrite objects or other basic types.
+ *
+ * @param {(IConfig | any)} origin
+ * @param {...any[]} newComers
+ * @returns the result
+ */ function merge(origin) {
+    var newComers = [];
+    for(var _i = 1; _i < arguments.length; _i++)newComers[_i - 1] = arguments[_i];
+    var extensions = null;
+    var base = origin;
+    if (_isWhat.isPlainObject(origin) && origin.extensions && Object.keys(origin).length === 1) {
+        base = {
+        };
+        extensions = origin.extensions;
+    }
+    return newComers.reduce(function(result, newComer) {
+        return mergeRecursively(result, newComer, extensions);
+    }, base);
+}
+function concatArrays(originVal, newVal) {
+    if (_isWhat.isArray(originVal) && _isWhat.isArray(newVal)) // concat logic
+    return originVal.concat(newVal);
+    return newVal; // always return newVal as fallback!!
+}
+exports.default = merge;
+
+},{"is-what":"hJPya","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"hJPya":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getType", ()=>getType
+);
+parcelHelpers.export(exports, "isAnyObject", ()=>isAnyObject
+);
+parcelHelpers.export(exports, "isArray", ()=>isArray
+);
+parcelHelpers.export(exports, "isBlob", ()=>isBlob
+);
+parcelHelpers.export(exports, "isBoolean", ()=>isBoolean
+);
+parcelHelpers.export(exports, "isDate", ()=>isDate
+);
+parcelHelpers.export(exports, "isEmptyArray", ()=>isEmptyArray
+);
+parcelHelpers.export(exports, "isEmptyObject", ()=>isEmptyObject
+);
+parcelHelpers.export(exports, "isEmptyString", ()=>isEmptyString
+);
+parcelHelpers.export(exports, "isError", ()=>isError
+);
+parcelHelpers.export(exports, "isFile", ()=>isFile
+);
+parcelHelpers.export(exports, "isFullArray", ()=>isFullArray
+);
+parcelHelpers.export(exports, "isFullObject", ()=>isFullObject
+);
+parcelHelpers.export(exports, "isFullString", ()=>isFullString
+);
+parcelHelpers.export(exports, "isFunction", ()=>isFunction
+);
+parcelHelpers.export(exports, "isMap", ()=>isMap
+);
+parcelHelpers.export(exports, "isNaNValue", ()=>isNaNValue
+);
+parcelHelpers.export(exports, "isNull", ()=>isNull
+);
+parcelHelpers.export(exports, "isNullOrUndefined", ()=>isNullOrUndefined
+);
+parcelHelpers.export(exports, "isNumber", ()=>isNumber
+);
+parcelHelpers.export(exports, "isObject", ()=>isObject
+);
+parcelHelpers.export(exports, "isObjectLike", ()=>isObjectLike
+);
+parcelHelpers.export(exports, "isOneOf", ()=>isOneOf
+);
+parcelHelpers.export(exports, "isPlainObject", ()=>isPlainObject
+);
+parcelHelpers.export(exports, "isPrimitive", ()=>isPrimitive
+);
+parcelHelpers.export(exports, "isPromise", ()=>isPromise
+);
+parcelHelpers.export(exports, "isRegExp", ()=>isRegExp
+);
+parcelHelpers.export(exports, "isSet", ()=>isSet
+);
+parcelHelpers.export(exports, "isString", ()=>isString
+);
+parcelHelpers.export(exports, "isSymbol", ()=>isSymbol
+);
+parcelHelpers.export(exports, "isType", ()=>isType
+);
+parcelHelpers.export(exports, "isUndefined", ()=>isUndefined
+);
+parcelHelpers.export(exports, "isWeakMap", ()=>isWeakMap
+);
+parcelHelpers.export(exports, "isWeakSet", ()=>isWeakSet
+);
+/**
+ * Returns the object type of the given payload
+ *
+ * @param {*} payload
+ * @returns {string}
+ */ function getType(payload) {
+    return Object.prototype.toString.call(payload).slice(8, -1);
+}
+/**
+ * Returns whether the payload is undefined
+ *
+ * @param {*} payload
+ * @returns {payload is undefined}
+ */ function isUndefined(payload) {
+    return getType(payload) === 'Undefined';
+}
+/**
+ * Returns whether the payload is null
+ *
+ * @param {*} payload
+ * @returns {payload is null}
+ */ function isNull(payload) {
+    return getType(payload) === 'Null';
+}
+/**
+ * Returns whether the payload is a plain JavaScript object (excluding special classes or objects with other prototypes)
+ *
+ * @param {*} payload
+ * @returns {payload is PlainObject}
+ */ function isPlainObject(payload) {
+    if (getType(payload) !== 'Object') return false;
+    return payload.constructor === Object && Object.getPrototypeOf(payload) === Object.prototype;
+}
+/**
+ * Returns whether the payload is a plain JavaScript object (excluding special classes or objects with other prototypes)
+ *
+ * @param {*} payload
+ * @returns {payload is PlainObject}
+ */ function isObject(payload) {
+    return isPlainObject(payload);
+}
+/**
+ * Returns whether the payload is a an empty object (excluding special classes or objects with other prototypes)
+ *
+ * @param {*} payload
+ * @returns {payload is { [K in any]: never }}
+ */ function isEmptyObject(payload) {
+    return isPlainObject(payload) && Object.keys(payload).length === 0;
+}
+/**
+ * Returns whether the payload is a an empty object (excluding special classes or objects with other prototypes)
+ *
+ * @param {*} payload
+ * @returns {payload is PlainObject}
+ */ function isFullObject(payload) {
+    return isPlainObject(payload) && Object.keys(payload).length > 0;
+}
+/**
+ * Returns whether the payload is an any kind of object (including special classes or objects with different prototypes)
+ *
+ * @param {*} payload
+ * @returns {payload is PlainObject}
+ */ function isAnyObject(payload) {
+    return getType(payload) === 'Object';
+}
+/**
+ * Returns whether the payload is an object like a type passed in < >
+ *
+ * Usage: isObjectLike<{id: any}>(payload) // will make sure it's an object and has an `id` prop.
+ *
+ * @template T this must be passed in < >
+ * @param {*} payload
+ * @returns {payload is T}
+ */ function isObjectLike(payload) {
+    return isAnyObject(payload);
+}
+/**
+ * Returns whether the payload is a function (regular or async)
+ *
+ * @param {*} payload
+ * @returns {payload is AnyFunction}
+ */ function isFunction(payload) {
+    return typeof payload === 'function';
+}
+/**
+ * Returns whether the payload is an array
+ *
+ * @param {any} payload
+ * @returns {payload is any[]}
+ */ function isArray(payload) {
+    return getType(payload) === 'Array';
+}
+/**
+ * Returns whether the payload is a an array with at least 1 item
+ *
+ * @param {*} payload
+ * @returns {payload is any[]}
+ */ function isFullArray(payload) {
+    return isArray(payload) && payload.length > 0;
+}
+/**
+ * Returns whether the payload is a an empty array
+ *
+ * @param {*} payload
+ * @returns {payload is []}
+ */ function isEmptyArray(payload) {
+    return isArray(payload) && payload.length === 0;
+}
+/**
+ * Returns whether the payload is a string
+ *
+ * @param {*} payload
+ * @returns {payload is string}
+ */ function isString(payload) {
+    return getType(payload) === 'String';
+}
+/**
+ * Returns whether the payload is a string, BUT returns false for ''
+ *
+ * @param {*} payload
+ * @returns {payload is string}
+ */ function isFullString(payload) {
+    return isString(payload) && payload !== '';
+}
+/**
+ * Returns whether the payload is ''
+ *
+ * @param {*} payload
+ * @returns {payload is string}
+ */ function isEmptyString(payload) {
+    return payload === '';
+}
+/**
+ * Returns whether the payload is a number (but not NaN)
+ *
+ * This will return `false` for `NaN`!!
+ *
+ * @param {*} payload
+ * @returns {payload is number}
+ */ function isNumber(payload) {
+    return getType(payload) === 'Number' && !isNaN(payload);
+}
+/**
+ * Returns whether the payload is a boolean
+ *
+ * @param {*} payload
+ * @returns {payload is boolean}
+ */ function isBoolean(payload) {
+    return getType(payload) === 'Boolean';
+}
+/**
+ * Returns whether the payload is a regular expression (RegExp)
+ *
+ * @param {*} payload
+ * @returns {payload is RegExp}
+ */ function isRegExp(payload) {
+    return getType(payload) === 'RegExp';
+}
+/**
+ * Returns whether the payload is a Map
+ *
+ * @param {*} payload
+ * @returns {payload is Map<any, any>}
+ */ function isMap(payload) {
+    return getType(payload) === 'Map';
+}
+/**
+ * Returns whether the payload is a WeakMap
+ *
+ * @param {*} payload
+ * @returns {payload is WeakMap<any, any>}
+ */ function isWeakMap(payload) {
+    return getType(payload) === 'WeakMap';
+}
+/**
+ * Returns whether the payload is a Set
+ *
+ * @param {*} payload
+ * @returns {payload is Set<any>}
+ */ function isSet(payload) {
+    return getType(payload) === 'Set';
+}
+/**
+ * Returns whether the payload is a WeakSet
+ *
+ * @param {*} payload
+ * @returns {payload is WeakSet<any>}
+ */ function isWeakSet(payload) {
+    return getType(payload) === 'WeakSet';
+}
+/**
+ * Returns whether the payload is a Symbol
+ *
+ * @param {*} payload
+ * @returns {payload is symbol}
+ */ function isSymbol(payload) {
+    return getType(payload) === 'Symbol';
+}
+/**
+ * Returns whether the payload is a Date, and that the date is valid
+ *
+ * @param {*} payload
+ * @returns {payload is Date}
+ */ function isDate(payload) {
+    return getType(payload) === 'Date' && !isNaN(payload);
+}
+/**
+ * Returns whether the payload is a Blob
+ *
+ * @param {*} payload
+ * @returns {payload is Blob}
+ */ function isBlob(payload) {
+    return getType(payload) === 'Blob';
+}
+/**
+ * Returns whether the payload is a File
+ *
+ * @param {*} payload
+ * @returns {payload is File}
+ */ function isFile(payload) {
+    return getType(payload) === 'File';
+}
+/**
+ * Returns whether the payload is a Promise
+ *
+ * @param {*} payload
+ * @returns {payload is Promise<any>}
+ */ function isPromise(payload) {
+    return getType(payload) === 'Promise';
+}
+/**
+ * Returns whether the payload is an Error
+ *
+ * @param {*} payload
+ * @returns {payload is Error}
+ */ function isError(payload) {
+    return getType(payload) === 'Error';
+}
+/**
+ * Returns whether the payload is literally the value `NaN` (it's `NaN` and also a `number`)
+ *
+ * @param {*} payload
+ * @returns {payload is typeof NaN}
+ */ function isNaNValue(payload) {
+    return getType(payload) === 'Number' && isNaN(payload);
+}
+/**
+ * Returns whether the payload is a primitive type (eg. Boolean | Null | Undefined | Number | String | Symbol)
+ *
+ * @param {*} payload
+ * @returns {(payload is boolean | null | undefined | number | string | symbol)}
+ */ function isPrimitive(payload) {
+    return isBoolean(payload) || isNull(payload) || isUndefined(payload) || isNumber(payload) || isString(payload) || isSymbol(payload);
+}
+/**
+ * Returns true whether the payload is null or undefined
+ *
+ * @param {*} payload
+ * @returns {(payload is null | undefined)}
+ */ var isNullOrUndefined = isOneOf(isNull, isUndefined);
+function isOneOf(a, b, c, d, e) {
+    return function(value) {
+        return a(value) || b(value) || !!c && c(value) || !!d && d(value) || !!e && e(value);
+    };
+}
+/**
+ * Does a generic check to check that the given payload is of a given type.
+ * In cases like Number, it will return true for NaN as NaN is a Number (thanks javascript!);
+ * It will, however, differentiate between object and null
+ *
+ * @template T
+ * @param {*} payload
+ * @param {T} type
+ * @throws {TypeError} Will throw type error if type is an invalid type
+ * @returns {payload is T}
+ */ function isType(payload, type) {
+    if (!(type instanceof Function)) throw new TypeError('Type must be a function');
+    if (!Object.prototype.hasOwnProperty.call(type, 'prototype')) throw new TypeError('Type is not a class');
+    // Classes usually have names (as functions usually have names)
+    var name = type.name;
+    return getType(payload) === name || Boolean(payload && payload.constructor === type);
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"jusa8":[function(require,module,exports) {
+!function(e, t) {
+    "object" == typeof exports && "object" == typeof module ? module.exports = t(require("react"), require("styled-components")) : "function" == typeof define && define.amd ? define([
+        "react",
+        "styled-components"
+    ], t) : "object" == typeof exports ? exports.ReactSimpleChatbot = t(require("react"), require("styled-components")) : e.ReactSimpleChatbot = t(e.react, e["styled-components"]);
+}("undefined" != typeof self ? self : this, function(e, t) {
+    return (function(e1) {
+        function t1(r) {
+            if (n[r]) return n[r].exports;
+            var o = n[r] = {
+                i: r,
+                l: !1,
+                exports: {
+                }
+            };
+            return e1[r].call(o.exports, o, o.exports, t1), o.l = !0, o.exports;
+        }
+        var n = {
+        };
+        return t1.m = e1, t1.c = n, t1.d = function(e2, n1, r) {
+            t1.o(e2, n1) || Object.defineProperty(e2, n1, {
+                enumerable: !0,
+                get: r
+            });
+        }, t1.r = function(e2) {
+            "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e2, Symbol.toStringTag, {
+                value: "Module"
+            }), Object.defineProperty(e2, "__esModule", {
+                value: !0
+            });
+        }, t1.t = function(e2, n1) {
+            if (1 & n1 && (e2 = t1(e2)), 8 & n1) return e2;
+            if (4 & n1 && "object" == typeof e2 && e2 && e2.__esModule) return e2;
+            var r = Object.create(null);
+            if (t1.r(r), Object.defineProperty(r, "default", {
+                enumerable: !0,
+                value: e2
+            }), 2 & n1 && "string" != typeof e2) for(var o in e2)t1.d(r, o, (function(t2) {
+                return e2[t2];
+            }).bind(null, o));
+            return r;
+        }, t1.n = function(e2) {
+            var n1 = e2 && e2.__esModule ? function() {
+                return e2.default;
+            } : function() {
+                return e2;
+            };
+            return t1.d(n1, "a", n1), n1;
+        }, t1.o = function(e2, t2) {
+            return Object.prototype.hasOwnProperty.call(e2, t2);
+        }, t1.p = "dist/", t1(t1.s = 9);
+    })([
+        function(e1, t1, n) {
+            e1.exports = n(5)();
+        },
+        function(t1, n) {
+            t1.exports = e;
+        },
+        function(e1, n) {
+            e1.exports = t;
+        },
+        function(e1, t1) {
+            function n(e2, t2, o) {
+                return t2 instanceof Array ? (function(e3, t3, r) {
+                    for(var o1 = 0, i = t3.length; o1 < i; o1++)t3[o1] = n(e3, t3[o1], r);
+                    return t3;
+                })(e2, t2, o) : t2 instanceof l ? t2.length ? o.hasOwnProperty(t2) ? o[t2] : o[t2] = (function(e3, t3) {
+                    for(var n1 = 0, o1 = t3.length; n1 < o1; e3 = e3[t3[n1++].replace(s, r)]);
+                    return e3;
+                })(e2, t2.split(r)) : e2 : t2 instanceof Object ? (function(e3, t3, r) {
+                    for(var o1 in t3)t3.hasOwnProperty(o1) && (t3[o1] = n(e3, t3[o1], r));
+                    return t3;
+                })(e2, t2, o) : t2;
+            }
+            var r = "~", o = "\\x" + ("0" + r.charCodeAt(0).toString(16)).slice(-2), i = "\\" + o, a = new RegExp(o, "g"), s = new RegExp(i, "g"), u = new RegExp("(?:^|([^\\\\]))" + i), c = [].indexOf || function(e2) {
+                for(var t2 = this.length; (t2--) && this[t2] !== e2;);
+                return t2;
+            }, l = String;
+            this.stringify = function(e2, t2, n1, s1) {
+                return JSON.stringify(e2, function(e3, t3, n2) {
+                    var s2, u1 = [], l1 = [
+                        e3
+                    ], p = [
+                        e3
+                    ], f = [
+                        n2 ? r : "[Circular]"
+                    ], d = e3, h = 1;
+                    return function(e4, b) {
+                        return t3 && (b = t3.call(this, e4, b)), "" !== e4 && (d !== this && (s2 = h - c.call(l1, this) - 1, h -= s2, l1.splice(h, l1.length), u1.splice(h - 1, u1.length), d = this), "object" == typeof b && b ? (c.call(l1, b) < 0 && l1.push(d = b), h = l1.length, (s2 = c.call(p, b)) < 0 ? (s2 = p.push(b) - 1, n2 ? (u1.push(("" + e4).replace(a, o)), f[s2] = r + u1.join(r)) : f[s2] = f[0]) : b = f[s2]) : "string" == typeof b && n2 && (b = b.replace(o, i).replace(r, o))), b;
+                    };
+                }(e2, t2, !s1), n1);
+            }, this.parse = function(e2, t2) {
+                return JSON.parse(e2, function(e3) {
+                    return function(t3, a1) {
+                        var s1 = "string" == typeof a1;
+                        return s1 && a1.charAt(0) === r ? new l(a1.slice(1)) : ("" === t3 && (a1 = n(a1, a1, {
+                        })), s1 && (a1 = a1.replace(u, "$1" + r).replace(i, o)), e3 ? e3.call(this, t3, a1) : a1);
+                    };
+                }(t2));
+            };
+        },
+        function(e1, t1, n) {
+            e1.exports = function(e2, t2) {
+                var n1 = [
+                    "abcdefghijklmnopqrstuvwxyz",
+                    "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                    "0123456789",
+                    "~!@#$%^&()_+-={}[];',"
+                ], r = "";
+                (t2 = t2 || "aA0").split("").forEach(function(e3) {
+                    isNaN(parseInt(e3)) ? /[a-z]/.test(e3) ? r += n1[0] : /[A-Z]/.test(e3) ? r += n1[1] : r += n1[3] : r += n1[2];
+                }), e2 = e2 || 30;
+                for(var o = ""; e2--;)o += r.charAt(Math.floor(Math.random() * r.length));
+                return o;
+            };
+        },
+        function(e1, t1, n) {
+            "use strict";
+            var r = n(6), o = n(7), i = n(8);
+            e1.exports = function() {
+                function e2(e3, t2, n1, r1, a, s) {
+                    s !== i && o(!1, "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+                }
+                function t2() {
+                    return e2;
+                }
+                e2.isRequired = e2;
+                var n1 = {
+                    array: e2,
+                    bool: e2,
+                    func: e2,
+                    number: e2,
+                    object: e2,
+                    string: e2,
+                    symbol: e2,
+                    any: e2,
+                    arrayOf: t2,
+                    element: e2,
+                    instanceOf: t2,
+                    node: e2,
+                    objectOf: t2,
+                    oneOf: t2,
+                    oneOfType: t2,
+                    shape: t2,
+                    exact: t2
+                };
+                return n1.checkPropTypes = r, n1.PropTypes = n1, n1;
+            };
+        },
+        function(e1, t1, n) {
+            "use strict";
+            function r(e2) {
+                return function() {
+                    return e2;
+                };
+            }
+            var o = function() {
+            };
+            o.thatReturns = r, o.thatReturnsFalse = r(!1), o.thatReturnsTrue = r(!0), o.thatReturnsNull = r(null), o.thatReturnsThis = function() {
+                return this;
+            }, o.thatReturnsArgument = function(e2) {
+                return e2;
+            }, e1.exports = o;
+        },
+        function(e1, t1, n) {
+            "use strict";
+            var r = function(e2) {
+            };
+            e1.exports = function(e2, t2, n1, o, i, a, s, u) {
+                if (r(t2), !e2) {
+                    var c;
+                    if ((void 0) === t2) c = new Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");
+                    else {
+                        var l = [
+                            n1,
+                            o,
+                            i,
+                            a,
+                            s,
+                            u
+                        ], p = 0;
+                        (c = new Error(t2.replace(/%s/g, function() {
+                            return l[p++];
+                        }))).name = "Invariant Violation";
+                    }
+                    throw c.framesToPop = 1, c;
+                }
+            };
+        },
+        function(e1, t1, n) {
+            "use strict";
+            e1.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
+        },
+        function(e1, t1, n) {
+            "use strict";
+            function r() {
+                var e2 = s([
+                    "\n  0% { box-shadow: 0 0 0 0 ",
+                    "; }\n  70% { box-shadow: 0 0 0 10px ",
+                    "; }\n  100% { box-shadow: 0 0 0 0 ",
+                    "; }\n"
+                ]);
+                return r = function() {
+                    return e2;
+                }, e2;
+            }
+            function o() {
+                var e2 = s([
+                    "\n  25% { transform: rotate(-1deg); }\n  100% { transform: rotate(1deg); }\n"
+                ]);
+                return o = function() {
+                    return e2;
+                }, e2;
+            }
+            function i() {
+                var e2 = s([
+                    "\n  100% { transform: scale(1); }\n"
+                ]);
+                return i = function() {
+                    return e2;
+                }, e2;
+            }
+            function a() {
+                var e2 = s([
+                    "\n  0% { opacity: .2; }\n  20% { opacity: 1; }\n  100% { opacity: .2; }\n"
+                ]);
+                return a = function() {
+                    return e2;
+                }, e2;
+            }
+            function s(e2, t2) {
+                return t2 || (t2 = e2.slice(0)), Object.freeze(Object.defineProperties(e2, {
+                    raw: {
+                        value: Object.freeze(t2)
+                    }
+                }));
+            }
+            function u() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n  animation: ",
+                    " 1.4s infinite both;\n  animation-delay: ",
+                    ";\n"
+                ]);
+                return u = function() {
+                    return e2;
+                }, e2;
+            }
+            function c() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n  background: #fff;\n  border-radius: 5px;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px 0px;\n  display: flex;\n  justify-content: center;\n  margin: 0 6px 10px 6px;\n  padding: 16px;\n"
+                ]);
+                return c = function() {
+                    return e2;
+                }, e2;
+            }
+            function l(e2) {
+                return (l = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e3) {
+                    return typeof e3;
+                } : function(e3) {
+                    return e3 && "function" == typeof Symbol && e3.constructor === Symbol && e3 !== Symbol.prototype ? "symbol" : typeof e3;
+                })(e2);
+            }
+            function p(e2, t2) {
+                for(var n1 = 0; n1 < t2.length; n1++){
+                    var r1 = t2[n1];
+                    r1.enumerable = r1.enumerable || !1, r1.configurable = !0, "value" in r1 && (r1.writable = !0), Object.defineProperty(e2, r1.key, r1);
+                }
+            }
+            function f(e2) {
+                return (f = Object.setPrototypeOf ? Object.getPrototypeOf : function(e3) {
+                    return e3.__proto__ || Object.getPrototypeOf(e3);
+                })(e2);
+            }
+            function d(e2, t2) {
+                if ("function" != typeof t2 && null !== t2) throw new TypeError("Super expression must either be null or a function");
+                e2.prototype = Object.create(t2 && t2.prototype, {
+                    constructor: {
+                        value: e2,
+                        writable: !0,
+                        configurable: !0
+                    }
+                }), t2 && (function(e3, t3) {
+                    (Object.setPrototypeOf || function(e4, t4) {
+                        return e4.__proto__ = t4, e4;
+                    })(e3, t3);
+                })(e2, t2);
+            }
+            function h(e2) {
+                if ((void 0) === e2) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                return e2;
+            }
+            function b(e2, t2, n1) {
+                return t2 in e2 ? Object.defineProperty(e2, t2, {
+                    value: n1,
+                    enumerable: !0,
+                    configurable: !0,
+                    writable: !0
+                }) : e2[t2] = n1, e2;
+            }
+            function g() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n  animation: ",
+                    " .3s ease forwards;\n  cursor: pointer;\n  display: inline-block;\n  margin: 2px;\n  transform: scale(0);\n"
+                ]);
+                return g = function() {
+                    return e2;
+                }, e2;
+            }
+            function y() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n  background: ",
+                    ";\n  border-radius: 22px;\n  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);\n  color: ",
+                    ";\n  display: inline-block;\n  font-size: 14px;\n  padding: 12px;\n\n  &:hover { opacity: .7; }\n"
+                ]);
+                return y = function() {
+                    return e2;
+                }, e2;
+            }
+            function v() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n  margin: 2px 0 12px 0;\n  padding: 0 6px;\n"
+                ]);
+                return v = function() {
+                    return e2;
+                }, e2;
+            }
+            function m() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n\n"
+                ]);
+                return m = function() {
+                    return e2;
+                }, e2;
+            }
+            function S(e2) {
+                return (S = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e3) {
+                    return typeof e3;
+                } : function(e3) {
+                    return e3 && "function" == typeof Symbol && e3.constructor === Symbol && e3 !== Symbol.prototype ? "symbol" : typeof e3;
+                })(e2);
+            }
+            function x(e2, t2) {
+                for(var n1 = 0; n1 < t2.length; n1++){
+                    var r2 = t2[n1];
+                    r2.enumerable = r2.enumerable || !1, r2.configurable = !0, "value" in r2 && (r2.writable = !0), Object.defineProperty(e2, r2.key, r2);
+                }
+            }
+            function w(e2) {
+                return (w = Object.setPrototypeOf ? Object.getPrototypeOf : function(e3) {
+                    return e3.__proto__ || Object.getPrototypeOf(e3);
+                })(e2);
+            }
+            function O(e2, t2) {
+                if ("function" != typeof t2 && null !== t2) throw new TypeError("Super expression must either be null or a function");
+                e2.prototype = Object.create(t2 && t2.prototype, {
+                    constructor: {
+                        value: e2,
+                        writable: !0,
+                        configurable: !0
+                    }
+                }), t2 && (function(e3, t3) {
+                    (Object.setPrototypeOf || function(e4, t4) {
+                        return e4.__proto__ = t4, e4;
+                    })(e3, t3);
+                })(e2, t2);
+            }
+            function j(e2) {
+                if ((void 0) === e2) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                return e2;
+            }
+            function k(e2, t2, n1) {
+                return t2 in e2 ? Object.defineProperty(e2, t2, {
+                    value: n1,
+                    enumerable: !0,
+                    configurable: !0,
+                    writable: !0
+                }) : e2[t2] = n1, e2;
+            }
+            function E() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n  animation: ",
+                    " .3s ease forwards;\n  background: ",
+                    ";\n  border-radius: ",
+                    ";\n  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);\n  color: ",
+                    ";\n  display: inline-block;\n  font-size: 14px;\n  max-width: 50%;\n  margin: ",
+                    ";\n  overflow: hidden;\n  position: relative;\n  padding: 12px;\n  transform: scale(0);\n  transform-origin: ",
+                    ";\n"
+                ]);
+                return E = function() {
+                    return e2;
+                }, e2;
+            }
+            function z() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n  animation: ",
+                    " .3s ease forwards;\n  border-radius: ",
+                    ";\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px 0px;\n  height: 40px;\n  min-width: 40px;\n  padding: 3px;\n  transform: scale(0);\n  transform-origin: ",
+                    ";\n  width: 40;\n"
+                ]);
+                return z = function() {
+                    return e2;
+                }, e2;
+            }
+            function P() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n  display: inline-block;\n  order: ",
+                    ";\n  padding: 6px;\n"
+                ]);
+                return P = function() {
+                    return e2;
+                }, e2;
+            }
+            function q() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n  align-items: flex-end;\n  display: flex;\n  justify-content: ",
+                    ";\n"
+                ]);
+                return q = function() {
+                    return e2;
+                }, e2;
+            }
+            function C(e2) {
+                return (C = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e3) {
+                    return typeof e3;
+                } : function(e3) {
+                    return e3 && "function" == typeof Symbol && e3.constructor === Symbol && e3 !== Symbol.prototype ? "symbol" : typeof e3;
+                })(e2);
+            }
+            function R(e2, t2) {
+                for(var n1 = 0; n1 < t2.length; n1++){
+                    var r3 = t2[n1];
+                    r3.enumerable = r3.enumerable || !1, r3.configurable = !0, "value" in r3 && (r3.writable = !0), Object.defineProperty(e2, r3.key, r3);
+                }
+            }
+            function N(e2) {
+                return (N = Object.setPrototypeOf ? Object.getPrototypeOf : function(e3) {
+                    return e3.__proto__ || Object.getPrototypeOf(e3);
+                })(e2);
+            }
+            function I(e2, t2) {
+                if ("function" != typeof t2 && null !== t2) throw new TypeError("Super expression must either be null or a function");
+                e2.prototype = Object.create(t2 && t2.prototype, {
+                    constructor: {
+                        value: e2,
+                        writable: !0,
+                        configurable: !0
+                    }
+                }), t2 && (function(e3, t3) {
+                    (Object.setPrototypeOf || function(e4, t4) {
+                        return e4.__proto__ = t4, e4;
+                    })(e3, t3);
+                })(e2, t2);
+            }
+            function M(e2) {
+                if ((void 0) === e2) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                return e2;
+            }
+            function A(e2, t2, n1) {
+                return t2 in e2 ? Object.defineProperty(e2, t2, {
+                    value: n1,
+                    enumerable: !0,
+                    configurable: !0,
+                    writable: !0
+                }) : e2[t2] = n1, e2;
+            }
+            function T(e2) {
+                return (T = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e3) {
+                    return typeof e3;
+                } : function(e3) {
+                    return e3 && "function" == typeof Symbol && e3.constructor === Symbol && e3 !== Symbol.prototype ? "symbol" : typeof e3;
+                })(e2);
+            }
+            function _() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n  background: ",
+                    ";\n  border-radius: 10px;\n  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.15);\n  font-family: ",
+                    ";\n  overflow: hidden;\n  position: ",
+                    ";\n  bottom: ",
+                    ";\n  top: ",
+                    ";\n  right: ",
+                    ";\n  left: ",
+                    ";\n  width: ",
+                    ";\n  height: ",
+                    ";\n  z-index: 999;\n  transform: ",
+                    ";\n  transform-origin: ",
+                    ";\n  transition: transform .3s ease;\n\n  @media screen and (max-width: 568px) {\n    border-radius: ",
+                    ";\n    bottom: 0 !important;\n    left: initial !important;\n    height: 100%;\n    right: 0 !important;\n    top: initial !important;\n    width: 100%;\n  }\n"
+                ]);
+                return _ = function() {
+                    return e2;
+                }, e2;
+            }
+            function B() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n  height: calc(",
+                    " - ",
+                    ");\n  overflow-y: scroll;\n  margin-top: 2px;\n  padding-top: 6px;\n\n  @media screen and (max-width: 568px) {\n    height: ",
+                    ";\n  }\n"
+                ]);
+                return B = function() {
+                    return e2;
+                }, e2;
+            }
+            function V() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n  align-items: center;\n  background: ",
+                    ";\n  color: ",
+                    ";\n  display: flex;\n  fill: ",
+                    ";\n  height: 56px;\n  justify-content: space-between;\n  padding: 0 10px;\n"
+                ]);
+                return V = function() {
+                    return e2;
+                }, e2;
+            }
+            function F() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n  margin: 0;\n  font-size:",
+                    ";\n"
+                ]);
+                return F = function() {
+                    return e2;
+                }, e2;
+            }
+            function L() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n  cursor: pointer;\n"
+                ]);
+                return L = function() {
+                    return e2;
+                }, e2;
+            }
+            function U() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n  align-items: center;\n  cursor: pointer;\n  background: ",
+                    ";\n  bottom: 32px;\n  border-radius: 100%;\n  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.15);\n  display: flex;\n  fill: ",
+                    ";\n  height: 56px;\n  justify-content: center;\n  position: fixed;\n  right: 32px;\n  transform: ",
+                    ";\n  transition: transform .3s ease;\n  width: 56px;\n  z-index: 999;\n"
+                ]);
+                return U = function() {
+                    return e2;
+                }, e2;
+            }
+            function D() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n  height: 24px;\n  width: 24px;\n"
+                ]);
+                return D = function() {
+                    return e2;
+                }, e2;
+            }
+            function H() {
+                var e2 = function(e3, t2) {
+                    return t2 || (t2 = e3.slice(0)), Object.freeze(Object.defineProperties(e3, {
+                        raw: {
+                            value: Object.freeze(t2)
+                        }
+                    }));
+                }([
+                    "\n  position: relative;\n"
+                ]);
+                return H = function() {
+                    return e2;
+                }, e2;
+            }
+            function K() {
+                var e2 = $([
+                    "",
+                    " .2s ease"
+                ]);
+                return K = function() {
+                    return e2;
+                }, e2;
+            }
+            function W() {
+                var e2 = $([
+                    "\n  animation: ",
+                    ";\n  border: 0;\n  border-radius: 0;\n  border-bottom-left-radius: 10px;\n  border-bottom-right-radius: 10px;\n  border-top: ",
+                    ";\n  box-shadow: ",
+                    ";\n  box-sizing: border-box;\n  color: ",
+                    ";\n  font-size: 16px;\n  opacity: ",
+                    ";\n  outline: none;\n  padding: ",
+                    ";\n  width: 100%;\n  -webkit-appearance: none;\n\n  &:disabled { background: #fff; }\n\n  @media screen and (max-width: 568px) {\n    border-bottom-left-radius: ",
+                    ";\n    border-bottom-right-radius: ",
+                    ";\n  }\n"
+                ]);
+                return W = function() {
+                    return e2;
+                }, e2;
+            }
+            function $(e2, t2) {
+                return t2 || (t2 = e2.slice(0)), Object.freeze(Object.defineProperties(e2, {
+                    raw: {
+                        value: Object.freeze(t2)
+                    }
+                }));
+            }
+            function J() {
+                var e2 = Z([
+                    "",
+                    " 2s ease infinite"
+                ]);
+                return J = function() {
+                    return e2;
+                }, e2;
+            }
+            function Y() {
+                var e2 = Z([
+                    "\n  background-color: transparent;\n  border: 0;\n  border-bottom-right-radius: 10px;\n  box-shadow: none;\n  cursor: ",
+                    ";\n  fill: ",
+                    ";\n  opacity: ",
+                    ";\n  outline: none;\n  padding: 14px 16px 12px 16px;\n  position: absolute;\n  right: 0;\n  top: 0;\n  &:before {\n    content: '';\n    position: absolute;\n    width: 23px;\n    height: 23px;\n    border-radius: 50%;\n    animation: ",
+                    ";\n  }\n  &:not(:disabled):hover {\n    opacity: 0.7;\n  }\n"
+                ]);
+                return Y = function() {
+                    return e2;
+                }, e2;
+            }
+            function Z(e2, t2) {
+                return t2 || (t2 = e2.slice(0)), Object.freeze(Object.defineProperties(e2, {
+                    raw: {
+                        value: Object.freeze(t2)
+                    }
+                }));
+            }
+            function G(e2, t2) {
+                for(var n1 = 0; n1 < t2.length; n1++){
+                    var r4 = t2[n1];
+                    r4.enumerable = r4.enumerable || !1, r4.configurable = !0, "value" in r4 && (r4.writable = !0), Object.defineProperty(e2, r4.key, r4);
+                }
+            }
+            function Q(e2, t2, n1) {
+                return t2 && G(e2.prototype, t2), n1 && G(e2, n1), e2;
+            }
+            function X(e2) {
+                return (X = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e3) {
+                    return typeof e3;
+                } : function(e3) {
+                    return e3 && "function" == typeof Symbol && e3.constructor === Symbol && e3 !== Symbol.prototype ? "symbol" : typeof e3;
+                })(e2);
+            }
+            function ee() {
+                return (ee = Object.assign || function(e2) {
+                    for(var t2 = 1; t2 < arguments.length; t2++){
+                        var n1 = arguments[t2];
+                        for(var r5 in n1)Object.prototype.hasOwnProperty.call(n1, r5) && (e2[r5] = n1[r5]);
+                    }
+                    return e2;
+                }).apply(this, arguments);
+            }
+            function te(e2, t2) {
+                for(var n2 = 0; n2 < t2.length; n2++){
+                    var r6 = t2[n2];
+                    r6.enumerable = r6.enumerable || !1, r6.configurable = !0, "value" in r6 && (r6.writable = !0), Object.defineProperty(e2, r6.key, r6);
+                }
+            }
+            function ne(e2) {
+                return (ne = Object.setPrototypeOf ? Object.getPrototypeOf : function(e3) {
+                    return e3.__proto__ || Object.getPrototypeOf(e3);
+                })(e2);
+            }
+            function re(e2, t2) {
+                if ("function" != typeof t2 && null !== t2) throw new TypeError("Super expression must either be null or a function");
+                e2.prototype = Object.create(t2 && t2.prototype, {
+                    constructor: {
+                        value: e2,
+                        writable: !0,
+                        configurable: !0
+                    }
+                }), t2 && (function(e3, t3) {
+                    (Object.setPrototypeOf || function(e4, t4) {
+                        return e4.__proto__ = t4, e4;
+                    })(e3, t3);
+                })(e2, t2);
+            }
+            function oe(e2) {
+                if ((void 0) === e2) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                return e2;
+            }
+            function ie(e2, t2, n2) {
+                return t2 in e2 ? Object.defineProperty(e2, t2, {
+                    value: n2,
+                    enumerable: !0,
+                    configurable: !0,
+                    writable: !0
+                }) : e2[t2] = n2, e2;
+            }
+            n.r(t1);
+            var ae = n(1), se = n.n(ae), ue = n(0), ce = n.n(ue), le = n(4), pe = n.n(le), fe = n(2), de = n.n(fe), he = function(e2) {
+                var t2 = arguments.length > 1 && (void 0) !== arguments[1] ? arguments[1] : 1, n2 = function(e3) {
+                    e3 = e3.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, function(e4, t3, n3, r7) {
+                        return t3 + t3 + n3 + n3 + r7 + r7;
+                    });
+                    var t3 = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(e3);
+                    return t3 ? {
+                        r: parseInt(t3[1], 16),
+                        g: parseInt(t3[2], 16),
+                        b: parseInt(t3[3], 16)
+                    } : null;
+                }(e2);
+                return "rgba(".concat(n2.r, ", ").concat(n2.g, ", ").concat(n2.b, ", ").concat(t2, ")");
+            }, be = Object(fe.keyframes)(a()), ge = Object(fe.keyframes)(i()), ye = Object(fe.keyframes)(o()), ve = de.a.span(u(), be, function(e2) {
+                return e2.delay;
+            }), me = function() {
+                return se.a.createElement("span", {
+                    className: "rsc-loading"
+                }, se.a.createElement(ve, {
+                    delay: "0s"
+                }, "."), se.a.createElement(ve, {
+                    delay: ".2s"
+                }, "."), se.a.createElement(ve, {
+                    delay: ".4s"
+                }, "."));
+            }, Se = de.a.div(c()), xe = function(e2) {
+                function t2() {
+                    var e3, n2;
+                    !function(e4, t3) {
+                        if (!(e4 instanceof t3)) throw new TypeError("Cannot call a class as a function");
+                    }(this, t2);
+                    for(var r7 = arguments.length, o1 = new Array(r7), i1 = 0; i1 < r7; i1++)o1[i1] = arguments[i1];
+                    return b(h(h(n2 = function(e4, t3) {
+                        return !t3 || "object" !== l(t3) && "function" != typeof t3 ? h(e4) : t3;
+                    }(this, (e3 = f(t2)).call.apply(e3, [
+                        this
+                    ].concat(o1))))), "state", {
+                        loading: !0
+                    }), b(h(h(n2)), "renderComponent", function() {
+                        var e4 = n2.props, t3 = e4.step, r8 = e4.steps, o2 = e4.previousStep, i2 = e4.triggerNextStep, a1 = t3.component;
+                        return se.a.cloneElement(a1, {
+                            step: t3,
+                            steps: r8,
+                            previousStep: o2,
+                            triggerNextStep: i2
+                        });
+                    }), n2;
+                }
+                return d(t2, ae.Component), (function(e3, t3, n2) {
+                    t3 && p(e3.prototype, t3), n2 && p(e3, n2);
+                })(t2, [
+                    {
+                        key: "componentDidMount",
+                        value: function() {
+                            var e3 = this, t3 = this.props, n2 = t3.speak, r7 = t3.step, o1 = t3.previousValue, i1 = t3.triggerNextStep, a1 = r7.delay, s1 = r7.waitAction;
+                            setTimeout(function() {
+                                e3.setState({
+                                    loading: !1
+                                }, function() {
+                                    s1 || r7.rendered || i1(), n2(r7, o1);
+                                });
+                            }, a1);
+                        }
+                    },
+                    {
+                        key: "render",
+                        value: function() {
+                            var e3 = this.state.loading, t3 = this.props.style;
+                            return se.a.createElement(Se, {
+                                className: "rsc-cs",
+                                style: t3
+                            }, e3 ? se.a.createElement(me, null) : this.renderComponent());
+                        }
+                    }
+                ]), t2;
+            }();
+            xe.propTypes = {
+                previousStep: ce.a.objectOf(ce.a.any).isRequired,
+                previousValue: ce.a.oneOfType([
+                    ce.a.string,
+                    ce.a.bool,
+                    ce.a.number,
+                    ce.a.object,
+                    ce.a.array
+                ]),
+                speak: ce.a.func,
+                step: ce.a.objectOf(ce.a.any).isRequired,
+                steps: ce.a.objectOf(ce.a.any).isRequired,
+                style: ce.a.objectOf(ce.a.any).isRequired,
+                triggerNextStep: ce.a.func.isRequired
+            }, xe.defaultProps = {
+                previousValue: "",
+                speak: function() {
+                }
+            };
+            var we = xe, Oe = de.a.li(g(), ge), je = {
+                background: "#f5f8fb",
+                fontFamily: "monospace",
+                headerBgColor: "#6e48aa",
+                headerFontColor: "#fff",
+                headerFontSize: "16px",
+                botBubbleColor: "#6E48AA",
+                botFontColor: "#fff",
+                userBubbleColor: "#fff",
+                userFontColor: "#4a4a4a"
+            }, ke = de.a.a(y(), function(e2) {
+                return e2.theme.botBubbleColor;
+            }, function(e2) {
+                return e2.theme.botFontColor;
+            });
+            ke.defaultProps = {
+                theme: je
+            };
+            var Ee = ke, ze = de.a.ul(v()), Pe = de.a.div(m()), qe = function(e2) {
+                function t2() {
+                    var e3, n2;
+                    !function(e4, t3) {
+                        if (!(e4 instanceof t3)) throw new TypeError("Cannot call a class as a function");
+                    }(this, t2);
+                    for(var r7 = arguments.length, o1 = new Array(r7), i1 = 0; i1 < r7; i1++)o1[i1] = arguments[i1];
+                    return k(j(j(n2 = function(e4, t3) {
+                        return !t3 || "object" !== S(t3) && "function" != typeof t3 ? j(e4) : t3;
+                    }(this, (e3 = w(t2)).call.apply(e3, [
+                        this
+                    ].concat(o1))))), "onOptionClick", function(e4) {
+                        var t3 = e4.value;
+                        n2.props.triggerNextStep({
+                            value: t3
+                        });
+                    }), k(j(j(n2)), "renderOption", function(e4) {
+                        var t3 = n2.props, r8 = t3.bubbleOptionStyle, o2 = t3.step.user, i2 = e4.value, a1 = e4.label;
+                        return se.a.createElement(Oe, {
+                            key: i2,
+                            className: "rsc-os-option"
+                        }, se.a.createElement(Ee, {
+                            className: "rsc-os-option-element",
+                            style: r8,
+                            user: o2,
+                            onClick: function() {
+                                return n2.onOptionClick({
+                                    value: i2
+                                });
+                            }
+                        }, a1));
+                    }), n2;
+                }
+                return O(t2, ae.Component), (function(e3, t3, n2) {
+                    t3 && x(e3.prototype, t3), n2 && x(e3, n2);
+                })(t2, [
+                    {
+                        key: "render",
+                        value: function() {
+                            var e3 = this.props.step.options;
+                            return se.a.createElement(Pe, {
+                                className: "rsc-os"
+                            }, se.a.createElement(ze, {
+                                className: "rsc-os-options"
+                            }, Object.values(e3).map(this.renderOption)));
+                        }
+                    }
+                ]), t2;
+            }();
+            qe.propTypes = {
+                bubbleOptionStyle: ce.a.objectOf(ce.a.any).isRequired,
+                step: ce.a.objectOf(ce.a.any).isRequired,
+                triggerNextStep: ce.a.func.isRequired
+            };
+            var Ce = qe, Re = de.a.div(E(), ge, function(e2) {
+                return e2.user ? e2.theme.userBubbleColor : e2.theme.botBubbleColor;
+            }, function(e2) {
+                var t2 = e2.isFirst, n2 = e2.isLast, r7 = e2.user;
+                return t2 || n2 ? !t2 && n2 ? r7 ? "18px 0 18px 18px" : "0 18px 18px 18px" : e2.user ? "18px 18px 0 18px" : "18px 18px 18px 0" : r7 ? "18px 0 0 18px" : "0 18px 18px 0px";
+            }, function(e2) {
+                return e2.user ? e2.theme.userFontColor : e2.theme.botFontColor;
+            }, function(e2) {
+                var t2 = e2.isFirst, n2 = e2.showAvatar, r7 = e2.user;
+                return !t2 && n2 ? r7 ? "-8px 46px 10px 0" : "-8px 0 10px 46px" : t2 || n2 ? "0 0 10px 0" : r7 ? "-8px 0px 10px 0" : "-8px 0 10px 0px";
+            }, function(e2) {
+                var t2 = e2.isFirst, n2 = e2.user;
+                return t2 ? n2 ? "bottom right" : "bottom left" : n2 ? "top right" : "top left";
+            });
+            Re.defaultProps = {
+                theme: je
+            };
+            var Ne = Re, Ie = de.a.img(z(), ge, function(e2) {
+                return e2.user ? "50% 50% 50% 0" : "50% 50% 0 50%";
+            }, function(e2) {
+                return e2.user ? "bottom left" : "bottom right";
+            }), Me = de.a.div(P(), function(e2) {
+                return e2.user ? "1" : "0";
+            }), Ae = de.a.div(q(), function(e2) {
+                return e2.user ? "flex-end" : "flex-start";
+            }), Te = function(e2) {
+                function t2() {
+                    var e3, n2;
+                    !function(e4, t3) {
+                        if (!(e4 instanceof t3)) throw new TypeError("Cannot call a class as a function");
+                    }(this, t2);
+                    for(var r7 = arguments.length, o1 = new Array(r7), i1 = 0; i1 < r7; i1++)o1[i1] = arguments[i1];
+                    return A(M(M(n2 = function(e4, t3) {
+                        return !t3 || "object" !== C(t3) && "function" != typeof t3 ? M(e4) : t3;
+                    }(this, (e3 = N(t2)).call.apply(e3, [
+                        this
+                    ].concat(o1))))), "state", {
+                        loading: !0
+                    }), A(M(M(n2)), "getMessage", function() {
+                        var e4 = n2.props, t3 = e4.previousValue, r8 = e4.step.message;
+                        return r8 ? r8.replace(/{previousValue}/g, t3) : "";
+                    }), A(M(M(n2)), "renderMessage", function() {
+                        var e4 = n2.props, t3 = e4.step, r8 = e4.steps, o2 = e4.previousStep, i2 = e4.triggerNextStep, a1 = t3.component;
+                        return a1 ? se.a.cloneElement(a1, {
+                            step: t3,
+                            steps: r8,
+                            previousStep: o2,
+                            triggerNextStep: i2
+                        }) : n2.getMessage();
+                    }), n2;
+                }
+                return I(t2, ae.Component), (function(e3, t3, n2) {
+                    t3 && R(e3.prototype, t3), n2 && R(e3, n2);
+                })(t2, [
+                    {
+                        key: "componentDidMount",
+                        value: function() {
+                            var e3 = this, t3 = this.props, n2 = t3.step, r7 = t3.speak, o1 = t3.previousValue, i1 = t3.triggerNextStep, a1 = n2.component, s1 = n2.delay, u1 = n2.waitAction, c1 = a1 && u1;
+                            setTimeout(function() {
+                                e3.setState({
+                                    loading: !1
+                                }, function() {
+                                    c1 || n2.rendered || i1(), r7(n2, o1);
+                                });
+                            }, s1);
+                        }
+                    },
+                    {
+                        key: "render",
+                        value: function() {
+                            var e3 = this.props, t3 = e3.step, n2 = e3.isFirst, r7 = e3.isLast, o1 = e3.avatarStyle, i1 = e3.bubbleStyle, a1 = e3.hideBotAvatar, s1 = e3.hideUserAvatar, u1 = this.state.loading, c1 = t3.avatar, l1 = t3.user, p1 = l1 ? !s1 : !a1;
+                            return se.a.createElement(Ae, {
+                                className: "rsc-ts ".concat(l1 ? "rsc-ts-user" : "rsc-ts-bot"),
+                                user: l1
+                            }, se.a.createElement(Me, {
+                                className: "rsc-ts-image-container",
+                                user: l1
+                            }, n2 && p1 && se.a.createElement(Ie, {
+                                className: "rsc-ts-image",
+                                style: o1,
+                                showAvatar: p1,
+                                user: l1,
+                                src: c1,
+                                alt: "avatar"
+                            })), se.a.createElement(Ne, {
+                                className: "rsc-ts-bubble",
+                                style: i1,
+                                user: l1,
+                                showAvatar: p1,
+                                isFirst: n2,
+                                isLast: r7
+                            }, u1 ? se.a.createElement(me, null) : this.renderMessage()));
+                        }
+                    }
+                ]), t2;
+            }();
+            Te.propTypes = {
+                avatarStyle: ce.a.objectOf(ce.a.any).isRequired,
+                isFirst: ce.a.bool.isRequired,
+                isLast: ce.a.bool.isRequired,
+                bubbleStyle: ce.a.objectOf(ce.a.any).isRequired,
+                hideBotAvatar: ce.a.bool.isRequired,
+                hideUserAvatar: ce.a.bool.isRequired,
+                previousStep: ce.a.objectOf(ce.a.any),
+                previousValue: ce.a.oneOfType([
+                    ce.a.string,
+                    ce.a.bool,
+                    ce.a.number,
+                    ce.a.object,
+                    ce.a.array
+                ]),
+                speak: ce.a.func,
+                step: ce.a.objectOf(ce.a.any).isRequired,
+                steps: ce.a.objectOf(ce.a.any),
+                triggerNextStep: ce.a.func.isRequired
+            }, Te.defaultProps = {
+                previousStep: {
+                },
+                previousValue: "",
+                speak: function() {
+                },
+                steps: {
+                }
+            };
+            var _e = Te, Be = [
+                {
+                    key: "id",
+                    types: [
+                        "string",
+                        "number"
+                    ],
+                    required: !0
+                },
+                {
+                    key: "user",
+                    types: [
+                        "boolean"
+                    ],
+                    required: !0
+                },
+                {
+                    key: "trigger",
+                    types: [
+                        "string",
+                        "number",
+                        "function"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "validator",
+                    types: [
+                        "function"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "end",
+                    types: [
+                        "boolean"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "placeholder",
+                    types: [
+                        "string"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "inputAttributes",
+                    types: [
+                        "object"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "metadata",
+                    types: [
+                        "object"
+                    ],
+                    required: !1
+                }
+            ], Ve = [
+                {
+                    key: "id",
+                    types: [
+                        "string",
+                        "number"
+                    ],
+                    required: !0
+                },
+                {
+                    key: "message",
+                    types: [
+                        "string",
+                        "function"
+                    ],
+                    required: !0
+                },
+                {
+                    key: "avatar",
+                    types: [
+                        "string"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "trigger",
+                    types: [
+                        "string",
+                        "number",
+                        "function"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "delay",
+                    types: [
+                        "number"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "end",
+                    types: [
+                        "boolean"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "placeholder",
+                    types: [
+                        "string"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "hideInput",
+                    types: [
+                        "boolean"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "inputAttributes",
+                    types: [
+                        "object"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "metadata",
+                    types: [
+                        "object"
+                    ],
+                    required: !1
+                }
+            ], Fe = [
+                {
+                    key: "id",
+                    types: [
+                        "string",
+                        "number"
+                    ],
+                    required: !0
+                },
+                {
+                    key: "options",
+                    types: [
+                        "object"
+                    ],
+                    required: !0
+                },
+                {
+                    key: "end",
+                    types: [
+                        "boolean"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "placeholder",
+                    types: [
+                        "string"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "hideInput",
+                    types: [
+                        "boolean"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "inputAttributes",
+                    types: [
+                        "object"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "metadata",
+                    types: [
+                        "object"
+                    ],
+                    required: !1
+                }
+            ], Le = [
+                {
+                    key: "id",
+                    types: [
+                        "string",
+                        "number"
+                    ],
+                    required: !0
+                },
+                {
+                    key: "component",
+                    types: [
+                        "any"
+                    ],
+                    required: !0
+                },
+                {
+                    key: "avatar",
+                    types: [
+                        "string"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "replace",
+                    types: [
+                        "boolean"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "waitAction",
+                    types: [
+                        "boolean"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "asMessage",
+                    types: [
+                        "boolean"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "trigger",
+                    types: [
+                        "string",
+                        "number",
+                        "function"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "delay",
+                    types: [
+                        "number"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "end",
+                    types: [
+                        "boolean"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "placeholder",
+                    types: [
+                        "string"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "hideInput",
+                    types: [
+                        "boolean"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "inputAttributes",
+                    types: [
+                        "object"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "metadata",
+                    types: [
+                        "object"
+                    ],
+                    required: !1
+                }
+            ], Ue = [
+                {
+                    key: "id",
+                    types: [
+                        "string",
+                        "number"
+                    ],
+                    required: !0
+                },
+                {
+                    key: "update",
+                    types: [
+                        "string",
+                        "number"
+                    ],
+                    required: !0
+                },
+                {
+                    key: "trigger",
+                    types: [
+                        "string",
+                        "number",
+                        "function"
+                    ],
+                    required: !0
+                },
+                {
+                    key: "placeholder",
+                    types: [
+                        "string"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "inputAttributes",
+                    types: [
+                        "object"
+                    ],
+                    required: !1
+                },
+                {
+                    key: "metadata",
+                    types: [
+                        "object"
+                    ],
+                    required: !1
+                }
+            ], De = n(3), He = {
+                parse: function(e2) {
+                    var t2 = [];
+                    if (e2.user) t2 = Be;
+                    else if (e2.message) t2 = Ve;
+                    else if (e2.options) t2 = Fe;
+                    else if (e2.component) t2 = Le;
+                    else {
+                        if (!e2.update) throw new Error("The step ".concat(De.stringify(e2), " is invalid"));
+                        t2 = Ue;
+                    }
+                    for(var n2 = 0, r7 = t2.length; n2 < r7; n2 += 1){
+                        var o1 = t2[n2], i1 = o1.key, a1 = o1.types, s1 = o1.required;
+                        if (!e2[i1] && s1) throw new Error("Key '".concat(i1, "' is required in step ").concat(De.stringify(e2)));
+                        if (e2[i1] && "any" !== a1[0] && a1.indexOf(T(e2[i1])) < 0) throw new Error("The type of '".concat(i1, "' value must be ").concat(a1.join(" or "), " instead of ").concat(T(e2[i1])));
+                    }
+                    var u1 = t2.map(function(e3) {
+                        return e3.key;
+                    });
+                    for(var i1 in e2)u1.indexOf(i1) < 0 && (console.error("Invalid key '".concat(i1, "' in step '").concat(e2.id, "'")), delete e2[i1]);
+                    return e2;
+                },
+                checkInvalidIds: function(e2) {
+                    for(var t2 in e2){
+                        var n2 = e2[t2], r7 = e2[t2].trigger;
+                        if ("function" != typeof r7) {
+                            if (n2.options) for(var o2 = n2.options.filter(function(e3) {
+                                return "function" != typeof e3.trigger;
+                            }).map(function(e3) {
+                                return e3.trigger;
+                            }), i2 = 0, a2 = o2.length; i2 < a2; i2 += 1){
+                                var s2 = o2[i2];
+                                if (s2 && !e2[s2]) throw new Error("The id '".concat(s2, "' triggered by option ").concat(i2 + 1, " in step '").concat(e2[t2].id, "' does not exist"));
+                            }
+                            else if (r7 && !e2[r7]) throw new Error("The id '".concat(r7, "' triggered by step '").concat(e2[t2].id, "' does not exist"));
+                        }
+                    }
+                }
+            }, Ke = n(3), We = function(e2, t2) {
+                var n3 = Ke.parse(Ke.stringify(t2));
+                for(var r8 in n3)for(var o3 = 0, i3 = n3[r8].length; o3 < i3; o3 += 1)n3[r8][o3].component && (n3[r8][o3].component = n3[r8][o3].id);
+                localStorage.setItem(e2, Ke.stringify(n3));
+            }, $e = de.a.div(_(), function(e2) {
+                return e2.theme.background;
+            }, function(e2) {
+                return e2.theme.fontFamily;
+            }, function(e2) {
+                return e2.floating ? "fixed" : "relative";
+            }, function(e2) {
+                var t2 = e2.floating, n3 = e2.floatingStyle;
+                return t2 ? n3.bottom || "32px" : "initial";
+            }, function(e2) {
+                var t2 = e2.floating, n3 = e2.floatingStyle;
+                return t2 && n3.top || "initial";
+            }, function(e2) {
+                var t2 = e2.floating, n3 = e2.floatingStyle;
+                return t2 ? n3.right || "32px" : "initial";
+            }, function(e2) {
+                var t2 = e2.floating, n3 = e2.floatingStyle;
+                return t2 && n3.left || "initial";
+            }, function(e2) {
+                return e2.width;
+            }, function(e2) {
+                return e2.height;
+            }, function(e2) {
+                return e2.opened ? "scale(1)" : "scale(0)";
+            }, function(e2) {
+                return e2.floatingStyle.transformOrigin || "bottom right";
+            }, function(e2) {
+                return e2.floating ? "0" : "";
+            });
+            $e.defaultProps = {
+                theme: je
+            };
+            var Je = $e, Ye = de.a.div(B(), function(e2) {
+                return e2.height;
+            }, function(e2) {
+                return e2.hideInput ? "56px" : "112px";
+            }, function(e2) {
+                return e2.floating ? "calc(100% - 112px)" : "";
+            }), Ze = de.a.div(V(), function(e2) {
+                return e2.theme.headerBgColor;
+            }, function(e2) {
+                return e2.theme.headerFontColor;
+            }, function(e2) {
+                return e2.theme.headerFontColor;
+            });
+            Ze.defaultProps = {
+                theme: je
+            };
+            var Ge = Ze, Qe = de.a.h2(F(), function(e2) {
+                return e2.theme.headerFontSize;
+            });
+            Qe.defaultProps = {
+                theme: je
+            };
+            var Xe = Qe, et = de.a.a(L()), tt = de.a.a(U(), function(e2) {
+                return e2.theme.headerBgColor;
+            }, function(e2) {
+                return e2.theme.headerFontColor;
+            }, function(e2) {
+                return e2.opened ? "scale(0)" : "scale(1)";
+            });
+            tt.defaultProps = {
+                theme: {
+                    headerBgColor: "#6e48aa",
+                    headerFontColor: "#fff"
+                }
+            };
+            var nt = tt, rt = de.a.img(D()), ot = de.a.div(H()), it = de.a.input(W(), function(e2) {
+                return e2.invalid ? Object(fe.css)(K(), ye) : "";
+            }, function(e2) {
+                return e2.invalid ? "0" : "1px solid #eee";
+            }, function(e2) {
+                return e2.invalid ? "inset 0 0 2px #E53935" : "none";
+            }, function(e2) {
+                return e2.invalid ? "#E53935" : "";
+            }, function(e2) {
+                return e2.disabled && !e2.invalid ? ".5" : "1";
+            }, function(e2) {
+                return e2.hasButton ? "16px 52px 16px 10px" : "16px 10px";
+            }, function(e2) {
+                return e2.floating ? "0" : "10px";
+            }, function(e2) {
+                return e2.floating ? "0" : "10px";
+            }), at = de.a.button(Y(), function(e2) {
+                return e2.disabled ? "default" : "pointer";
+            }, function(e2) {
+                var t2 = e2.speaking, n3 = e2.invalid, r8 = e2.theme;
+                return t2 ? r8.headerBgColor : n3 ? "#E53935" : "#4a4a4a";
+            }, function(e2) {
+                return e2.disabled && !e2.invalid ? ".5" : "1";
+            }, function(e2) {
+                var t2 = e2.theme;
+                return e2.speaking ? Object(fe.css)(J(), function(e3) {
+                    return Object(fe.keyframes)(r(), he(e3, 0.4), he(e3, 0), he(e3, 0));
+                }(t2.headerBgColor)) : "";
+            });
+            at.defaultProps = {
+                theme: je
+            };
+            var st = at, ut = null, ct = function() {
+            }, lt = function() {
+                function e2() {
+                    var t2 = arguments.length > 0 && (void 0) !== arguments[0] ? arguments[0] : ct, n3 = arguments.length > 1 && (void 0) !== arguments[1] ? arguments[1] : ct, r8 = arguments.length > 2 && (void 0) !== arguments[2] ? arguments[2] : ct, o3 = arguments.length > 3 && (void 0) !== arguments[3] ? arguments[3] : "en";
+                    return (function(e3, t3) {
+                        if (!(e3 instanceof t3)) throw new TypeError("Cannot call a class as a function");
+                    })(this, e2), ut || (ut = this), this.state = {
+                        inputValue: "",
+                        lang: o3,
+                        onChange: t2,
+                        onEnd: n3,
+                        onStop: r8
+                    }, this.onResult = this.onResult.bind(this), this.onEnd = this.onEnd.bind(this), this.setup(), ut;
+                }
+                return Q(e2, null, [
+                    {
+                        key: "isSupported",
+                        value: function() {
+                            return "webkitSpeechRecognition" in window;
+                        }
+                    }
+                ]), Q(e2, [
+                    {
+                        key: "onChange",
+                        value: function(e3) {
+                            var t2 = this.state.onChange;
+                            this.setState({
+                                inputValue: e3
+                            }), t2(e3);
+                        }
+                    },
+                    {
+                        key: "onFinal",
+                        value: function(e3) {
+                            this.setState({
+                                inputValue: e3
+                            }), this.recognition.stop();
+                        }
+                    },
+                    {
+                        key: "onEnd",
+                        value: function() {
+                            var e3 = this.state, t2 = e3.onStop, n3 = e3.onEnd, r8 = e3.force;
+                            this.setState({
+                                speaking: !1
+                            }), r8 ? t2() : n3();
+                        }
+                    },
+                    {
+                        key: "onResult",
+                        value: function(e3) {
+                            for(var t2 = "", n3 = "", r8 = e3.resultIndex; r8 < e3.results.length; r8 += 1)e3.results[r8].isFinal ? (n3 += e3.results[r8][0].transcript, this.onFinal(n3)) : (t2 += e3.results[r8][0].transcript, this.onChange(t2));
+                        }
+                    },
+                    {
+                        key: "setState",
+                        value: function(e3) {
+                            this.state = Object.assign({
+                            }, this.state, e3);
+                        }
+                    },
+                    {
+                        key: "setup",
+                        value: function() {
+                            if (!e2.isSupported()) return this;
+                            var t2 = window.webkitSpeechRecognition;
+                            return this.recognition = new t2, this.recognition.continuous = !0, this.recognition.interimResults = !0, this.recognition.lang = this.state.lang, this.recognition.onresult = this.onResult, this.recognition.onend = this.onEnd, this;
+                        }
+                    },
+                    {
+                        key: "setLang",
+                        value: function(e3) {
+                            return this.setState({
+                                lang: e3
+                            }), this.setup(), this;
+                        }
+                    },
+                    {
+                        key: "speak",
+                        value: function() {
+                            return e2.isSupported() ? (this.state.speaking ? (this.setState({
+                                force: !0
+                            }), this.recognition.stop()) : (this.recognition.start(), this.setState({
+                                speaking: !0,
+                                inputValue: ""
+                            })), this) : this;
+                        }
+                    }
+                ]), e2;
+            }(), pt = function() {
+                return se.a.createElement("svg", {
+                    height: "24",
+                    viewBox: "0 0 24 24",
+                    width: "24",
+                    xmlns: "http://www.w3.org/2000/svg"
+                }, se.a.createElement("path", {
+                    d: "M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"
+                }), se.a.createElement("path", {
+                    d: "M0 0h24v24H0z",
+                    fill: "none"
+                }));
+            }, ft = function() {
+                return se.a.createElement("svg", {
+                    height: "24",
+                    viewBox: "0 0 24 24",
+                    width: "24",
+                    xmlns: "http://www.w3.org/2000/svg"
+                }, se.a.createElement("path", {
+                    d: "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                }), se.a.createElement("path", {
+                    d: "M0 0h24v24H0z",
+                    fill: "none"
+                }));
+            }, dt = function(e2) {
+                return se.a.createElement("svg", {
+                    version: "1.1",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: e2.size,
+                    height: e2.size,
+                    viewBox: "0 0 500 500"
+                }, se.a.createElement("g", null, se.a.createElement("g", null, se.a.createElement("polygon", {
+                    points: "0,497.25 535.5,267.75 0,38.25 0,216.75 382.5,267.75 0,318.75"
+                }))));
+            };
+            dt.propTypes = {
+                size: ce.a.number
+            }, dt.defaultProps = {
+                size: 20
+            };
+            var ht = dt, bt = function(e2) {
+                return se.a.createElement("svg", {
+                    version: "1.1",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: e2.size,
+                    height: e2.size,
+                    viewBox: "0 0 400 400"
+                }, se.a.createElement("g", null, se.a.createElement("path", {
+                    d: "M290.991,240.991c0,26.392-21.602,47.999-48.002,47.999h-11.529c-26.4,0-48.002-21.607-48.002-47.999V104.002   c0-26.4,21.602-48.004,48.002-48.004h11.529c26.4,0,48.002,21.604,48.002,48.004V240.991z"
+                }), se.a.createElement("path", {
+                    d: "M342.381,209.85h-8.961c-4.932,0-8.961,4.034-8.961,8.961v8.008c0,50.26-37.109,91.001-87.361,91.001   c-50.26,0-87.109-40.741-87.109-91.001v-8.008c0-4.927-4.029-8.961-8.961-8.961h-8.961c-4.924,0-8.961,4.034-8.961,8.961v8.008   c0,58.862,40.229,107.625,96.07,116.362v36.966h-34.412c-4.932,0-8.961,4.039-8.961,8.971v17.922c0,4.923,4.029,8.961,8.961,8.961   h104.688c4.926,0,8.961-4.038,8.961-8.961v-17.922c0-4.932-4.035-8.971-8.961-8.971h-34.43v-36.966   c55.889-8.729,96.32-57.5,96.32-116.362v-8.008C351.342,213.884,347.303,209.85,342.381,209.85z"
+                })));
+            };
+            bt.propTypes = {
+                size: ce.a.number
+            }, bt.defaultProps = {
+                size: 20
+            };
+            var gt = bt, yt = function() {
+                return /iphone|ipod|android|ie|blackberry|fennec/i.test(navigator.userAgent);
+            }, vt = function(e2) {
+                return "string" == typeof e2;
+            }, mt = function(e2) {
+                return function(t2, n3) {
+                    var r8 = e2.lang, o3 = e2.voice, i3 = e2.enable, a3 = t2.user;
+                    if (window.SpeechSynthesisUtterance && window.speechSynthesis && !a3 && i3) {
+                        var s3 = function(e3) {
+                            var t3 = e3.message, n4 = e3.metadata, r9 = (void 0) === n4 ? {
+                            } : n4;
+                            return vt(r9.speak) ? r9.speak : vt(t3) ? t3 : "";
+                        }(t2), u1 = new window.SpeechSynthesisUtterance;
+                        u1.text = s3.replace(/{previousValue}/g, n3), u1.lang = r8, u1.voice = o3, window.speechSynthesis.speak(u1);
+                    }
+                };
+            }, St = function(e2) {
+                function t2(e3) {
+                    var n3;
+                    return (function(e4, t3) {
+                        if (!(e4 instanceof t3)) throw new TypeError("Cannot call a class as a function");
+                    })(this, t2), ie(oe(oe(n3 = function(e4, t3) {
+                        return !t3 || "object" !== X(t3) && "function" != typeof t3 ? oe(e4) : t3;
+                    }(this, ne(t2).call(this, e3)))), "onNodeInserted", function(e4) {
+                        e4.currentTarget.scrollTop = e4.currentTarget.scrollHeight;
+                    }), ie(oe(oe(n3)), "onResize", function() {
+                        n3.content.scrollTop = n3.content.scrollHeight;
+                    }), ie(oe(oe(n3)), "onRecognitionChange", function(e4) {
+                        n3.setState({
+                            inputValue: e4
+                        });
+                    }), ie(oe(oe(n3)), "onRecognitionEnd", function() {
+                        n3.setState({
+                            speaking: !1
+                        }), n3.handleSubmitButton();
+                    }), ie(oe(oe(n3)), "onRecognitionStop", function() {
+                        n3.setState({
+                            speaking: !1
+                        });
+                    }), ie(oe(oe(n3)), "onValueChange", function(e4) {
+                        n3.setState({
+                            inputValue: e4.target.value
+                        });
+                    }), ie(oe(oe(n3)), "getTriggeredStep", function(e4, t3) {
+                        var r8 = n3.generateRenderedStepsById();
+                        return "function" == typeof e4 ? e4({
+                            value: t3,
+                            steps: r8
+                        }) : e4;
+                    }), ie(oe(oe(n3)), "getStepMessage", function(e4) {
+                        var t3 = n3.state.previousSteps, r8 = t3.length > 0 ? t3.length - 1 : 0, o3 = n3.generateRenderedStepsById(), i3 = t3[r8].value;
+                        return "function" == typeof e4 ? e4({
+                            previousValue: i3,
+                            steps: o3
+                        }) : e4;
+                    }), ie(oe(oe(n3)), "generateRenderedStepsById", function() {
+                        for(var e4 = n3.state.previousSteps, t3 = {
+                        }, r8 = 0, o3 = e4.length; r8 < o3; r8 += 1){
+                            var i3 = e4[r8], a3 = i3.id, s4 = i3.message, u2 = i3.value, c1 = i3.metadata;
+                            t3[a3] = {
+                                id: a3,
+                                message: s4,
+                                value: u2,
+                                metadata: c1
+                            };
+                        }
+                        return t3;
+                    }), ie(oe(oe(n3)), "triggerNextStep", function(e4) {
+                        var t3 = n3.props.enableMobileAutoFocus, r8 = n3.state, o3 = r8.defaultUserSettings, i4 = r8.previousSteps, a4 = r8.renderedSteps, s5 = r8.steps, u3 = n3.state, c2 = u3.currentStep, l1 = u3.previousStep, p1 = c2.end;
+                        if (e4 && e4.value && (c2.value = e4.value), e4 && e4.hideInput && (c2.hideInput = e4.hideInput), e4 && e4.trigger && (c2.trigger = n3.getTriggeredStep(e4.trigger, e4.value)), p1) n3.handleEnd();
+                        else if (c2.options && e4) {
+                            var f1 = c2.options.filter(function(t4) {
+                                return t4.value === e4.value;
+                            })[0], d1 = n3.getTriggeredStep(f1.trigger, c2.value);
+                            delete c2.options, c2 = Object.assign({
+                            }, c2, f1, o3, {
+                                user: !0,
+                                message: f1.label,
+                                trigger: d1
+                            }), a4.pop(), i4.pop(), a4.push(c2), i4.push(c2), n3.setState({
+                                currentStep: c2,
+                                renderedSteps: a4,
+                                previousSteps: i4
+                            });
+                        } else if (c2.trigger) {
+                            c2.replace && a4.pop();
+                            var h1 = n3.getTriggeredStep(c2.trigger, c2.value), b1 = Object.assign({
+                            }, s5[h1]);
+                            if (b1.message) b1.message = n3.getStepMessage(b1.message);
+                            else if (b1.update) {
+                                var g1 = b1;
+                                if ((b1 = Object.assign({
+                                }, s5[g1.update])).options) for(var y1 = 0, v1 = b1.options.length; y1 < v1; y1 += 1)b1.options[y1].trigger = g1.trigger;
+                                else b1.trigger = g1.trigger;
+                            }
+                            b1.key = pe()(24), l1 = c2, c2 = b1, n3.setState({
+                                renderedSteps: a4,
+                                currentStep: c2,
+                                previousStep: l1
+                            }, function() {
+                                b1.user ? n3.setState({
+                                    disabled: !1
+                                }, function() {
+                                    !t3 && yt() || n3.input && n3.input.focus();
+                                }) : (a4.push(b1), i4.push(b1), n3.setState({
+                                    renderedSteps: a4,
+                                    previousSteps: i4
+                                }));
+                            });
+                        }
+                        var m1 = n3.props, S1 = m1.cache, x1 = m1.cacheName;
+                        S1 && setTimeout(function() {
+                            We(x1, {
+                                currentStep: c2,
+                                previousStep: l1,
+                                previousSteps: i4,
+                                renderedSteps: a4
+                            });
+                        }, 300);
+                    }), ie(oe(oe(n3)), "handleEnd", function() {
+                        var e4 = n3.props.handleEnd;
+                        if (e4) {
+                            for(var t3 = n3.state.previousSteps, r8 = t3.map(function(e5) {
+                                return {
+                                    id: e5.id,
+                                    message: e5.message,
+                                    value: e5.value,
+                                    metadata: e5.metadata
+                                };
+                            }), o3 = [], i4 = 0, a4 = t3.length; i4 < a4; i4 += 1){
+                                var s5 = t3[i4], u3 = s5.id, c2 = s5.message, l1 = s5.value, p1 = s5.metadata;
+                                o3[u3] = {
+                                    id: u3,
+                                    message: c2,
+                                    value: l1,
+                                    metadata: p1
+                                };
+                            }
+                            e4({
+                                renderedSteps: r8,
+                                steps: o3,
+                                values: t3.filter(function(e5) {
+                                    return e5.value;
+                                }).map(function(e5) {
+                                    return e5.value;
+                                })
+                            });
+                        }
+                    }), ie(oe(oe(n3)), "isInputValueEmpty", function() {
+                        var e4 = n3.state.inputValue;
+                        return Boolean(e4) && e4.length > 0;
+                    }), ie(oe(oe(n3)), "isLastPosition", function(e4) {
+                        var t4 = n3.state.renderedSteps, r9 = t4.length, o4 = t4.map(function(e5) {
+                            return e5.key;
+                        }).indexOf(e4.key);
+                        if (r9 <= 1 || o4 + 1 === r9) return !0;
+                        var i5 = t4[o4 + 1];
+                        return !i5.message && !i5.asMessage || e4.user !== i5.user;
+                    }), ie(oe(oe(n3)), "isFirstPosition", function(e4) {
+                        var t4 = n3.state.renderedSteps, r9 = t4.map(function(e5) {
+                            return e5.key;
+                        }).indexOf(e4.key);
+                        if (0 === r9) return !0;
+                        var o4 = t4[r9 - 1];
+                        return !o4.message && !o4.asMessage || e4.user !== o4.user;
+                    }), ie(oe(oe(n3)), "handleKeyPress", function(e4) {
+                        "Enter" === e4.key && n3.submitUserMessage();
+                    }), ie(oe(oe(n3)), "handleSubmitButton", function() {
+                        var e4 = n3.state, t4 = e4.speaking, r9 = e4.recognitionEnable;
+                        if ((n3.isInputValueEmpty() || t4) && r9) return n3.recognition.speak(), void (t4 || n3.setState({
+                            speaking: !0
+                        }));
+                        n3.submitUserMessage();
+                    }), ie(oe(oe(n3)), "submitUserMessage", function() {
+                        var e4 = n3.state, t4 = e4.defaultUserSettings, r9 = e4.inputValue, o4 = e4.previousSteps, i5 = e4.renderedSteps, a5 = n3.state.currentStep;
+                        if (!a5.validator || !n3.checkInvalidInput()) {
+                            var s6 = {
+                                message: r9,
+                                value: r9
+                            };
+                            a5 = Object.assign({
+                            }, t4, a5, s6), i5.push(a5), o4.push(a5), n3.setState({
+                                currentStep: a5,
+                                renderedSteps: i5,
+                                previousSteps: o4,
+                                disabled: !0,
+                                inputValue: ""
+                            }, function() {
+                                n3.input && n3.input.blur();
+                            });
+                        }
+                    }), ie(oe(oe(n3)), "checkInvalidInput", function() {
+                        var e4 = n3.props.enableMobileAutoFocus, t4 = n3.state, r9 = t4.currentStep, o4 = t4.inputValue, i5 = r9.validator(o4), a5 = o4;
+                        return !("boolean" == typeof i5 && i5 || (n3.setState({
+                            inputValue: i5.toString(),
+                            inputInvalid: !0,
+                            disabled: !0
+                        }, function() {
+                            setTimeout(function() {
+                                n3.setState({
+                                    inputValue: a5,
+                                    inputInvalid: !1,
+                                    disabled: !1
+                                }, function() {
+                                    !e4 && yt() || n3.input && n3.input.focus();
+                                });
+                            }, 2000);
+                        }), 0));
+                    }), ie(oe(oe(n3)), "toggleChatBot", function(e4) {
+                        var t4 = n3.props.toggleFloating;
+                        t4 ? t4({
+                            opened: e4
+                        }) : n3.setState({
+                            opened: e4
+                        });
+                    }), ie(oe(oe(n3)), "renderStep", function(e4, t4) {
+                        var r9 = n3.state.renderedSteps, o4 = n3.props, i5 = o4.avatarStyle, a5 = o4.bubbleStyle, s7 = o4.bubbleOptionStyle, u4 = o4.customStyle, c3 = o4.hideBotAvatar, l2 = o4.hideUserAvatar, p2 = o4.speechSynthesis, f2 = e4.options, d2 = e4.component, h2 = e4.asMessage, b2 = n3.generateRenderedStepsById(), g2 = t4 > 0 ? r9[t4 - 1] : {
+                        };
+                        return d2 && !h2 ? se.a.createElement(we, {
+                            key: t4,
+                            speak: n3.speak,
+                            step: e4,
+                            steps: b2,
+                            style: u4,
+                            previousStep: g2,
+                            previousValue: g2.value,
+                            triggerNextStep: n3.triggerNextStep
+                        }) : f2 ? se.a.createElement(Ce, {
+                            key: t4,
+                            step: e4,
+                            speak: n3.speak,
+                            previousValue: g2.value,
+                            triggerNextStep: n3.triggerNextStep,
+                            bubbleOptionStyle: s7
+                        }) : se.a.createElement(_e, {
+                            key: t4,
+                            step: e4,
+                            steps: b2,
+                            speak: n3.speak,
+                            previousStep: g2,
+                            previousValue: g2.value,
+                            triggerNextStep: n3.triggerNextStep,
+                            avatarStyle: i5,
+                            bubbleStyle: a5,
+                            hideBotAvatar: c3,
+                            hideUserAvatar: l2,
+                            speechSynthesis: p2,
+                            isFirst: n3.isFirstPosition(e4),
+                            isLast: n3.isLastPosition(e4)
+                        });
+                    }), n3.content = null, n3.input = null, n3.setContentRef = function(e4) {
+                        n3.content = e4;
+                    }, n3.setInputRef = function(e4) {
+                        n3.input = e4;
+                    }, n3.state = {
+                        renderedSteps: [],
+                        previousSteps: [],
+                        currentStep: {
+                        },
+                        previousStep: {
+                        },
+                        steps: {
+                        },
+                        disabled: !0,
+                        opened: e3.opened || !e3.floating,
+                        inputValue: "",
+                        inputInvalid: !1,
+                        speaking: !1,
+                        recognitionEnable: e3.recognitionEnable && lt.isSupported(),
+                        defaultUserSettings: {
+                        }
+                    }, n3.speak = mt(e3.speechSynthesis), n3;
+                }
+                return re(t2, ae.Component), (function(e3, t4, n3) {
+                    t4 && te(e3.prototype, t4), n3 && te(e3, n3);
+                })(t2, [
+                    {
+                        key: "componentWillMount",
+                        value: function() {
+                            for(var e3 = this, t4 = this.props.steps, n3 = this.props, r9 = n3.botDelay, o4 = n3.botAvatar, i5 = n3.cache, a5 = n3.cacheName, s7 = n3.customDelay, u4 = n3.enableMobileAutoFocus, c3 = n3.userAvatar, l2 = {
+                            }, p2 = {
+                                delay: r9,
+                                avatar: o4
+                            }, f2 = {
+                                delay: n3.userDelay,
+                                avatar: c3,
+                                hideInput: !1
+                            }, d2 = {
+                                delay: s7
+                            }, h2 = 0, b2 = t4.length; h2 < b2; h2 += 1){
+                                var g2 = t4[h2], y2 = {
+                                };
+                                g2.user ? y2 = f2 : g2.message || g2.asMessage ? y2 = p2 : g2.component && (y2 = d2), l2[g2.id] = Object.assign({
+                                }, y2, He.parse(g2));
+                            }
+                            He.checkInvalidIds(l2);
+                            var v2 = t4[0];
+                            if (v2.message) {
+                                var m1 = v2.message;
+                                v2.message = "function" == typeof m1 ? m1() : m1, l2[v2.id].message = v2.message;
+                            }
+                            var S1 = function(e4, t5) {
+                                var n4 = e4.cacheName, r10 = e4.cache, o5 = e4.firstStep, i6 = e4.steps, a6 = o5, s8 = [
+                                    i6[a6.id]
+                                ], u5 = [
+                                    i6[a6.id]
+                                ];
+                                if (r10 && localStorage.getItem(n4)) {
+                                    var c4 = Ke.parse(localStorage.getItem(n4)), l3 = c4.renderedSteps[c4.renderedSteps.length - 1];
+                                    if (!l3 || !l3.end) {
+                                        for(var p3 = 0, f3 = c4.renderedSteps.length; p3 < f3; p3 += 1){
+                                            var d3 = c4.renderedSteps[p3];
+                                            if (c4.renderedSteps[p3].delay = 0, c4.renderedSteps[p3].rendered = !0, d3.component) {
+                                                var h3 = d3.id;
+                                                c4.renderedSteps[p3].component = i6[h3].component;
+                                            }
+                                        }
+                                        var b3 = c4.currentStep, g3 = b3.trigger, y3 = b3.end, v3 = b3.options, m2 = c4.currentStep.id;
+                                        if (v3 && delete c4.currentStep.rendered, !g3 && !y3) {
+                                            if (v3) for(var S2 = 0; S2 < v3.length; S2 += 1)c4.currentStep.options[S2].trigger = i6[m2].options[S2].trigger;
+                                            else c4.currentStep.trigger = i6[m2].trigger;
+                                        }
+                                        return c4.currentStep.user && t5(), c4;
+                                    }
+                                    localStorage.removeItem(n4);
+                                }
+                                return {
+                                    currentStep: a6,
+                                    previousStep: {
+                                    },
+                                    previousSteps: u5,
+                                    renderedSteps: s8
+                                };
+                            }({
+                                cacheName: a5,
+                                cache: i5,
+                                firstStep: v2,
+                                steps: l2
+                            }, function() {
+                                e3.setState({
+                                    disabled: !1
+                                }, function() {
+                                    !u4 && yt() || e3.input && e3.input.focus();
+                                });
+                            }), x1 = S1.currentStep, w1 = S1.previousStep, O1 = S1.previousSteps, j1 = S1.renderedSteps;
+                            this.setState({
+                                currentStep: x1,
+                                defaultUserSettings: f2,
+                                previousStep: w1,
+                                previousSteps: O1,
+                                renderedSteps: j1,
+                                steps: l2
+                            });
+                        }
+                    },
+                    {
+                        key: "componentDidMount",
+                        value: function() {
+                            var e3 = this.state.recognitionEnable, t4 = this.props.recognitionLang;
+                            e3 && (this.recognition = new lt(this.onRecognitionChange, this.onRecognitionEnd, this.onRecognitionStop, t4)), this.content && (this.content.addEventListener("DOMNodeInserted", this.onNodeInserted), window.addEventListener("resize", this.onResize));
+                        }
+                    },
+                    {
+                        key: "componentWillUpdate",
+                        value: function(e3, t4) {
+                            var n3 = e3.opened;
+                            (void 0) !== n3 && n3 !== t4.opened && this.setState({
+                                opened: n3
+                            });
+                        }
+                    },
+                    {
+                        key: "componentWillUnmount",
+                        value: function() {
+                            this.content && (this.content.removeEventListener("DOMNodeInserted", this.onNodeInserted), window.removeEventListener("resize", this.onResize));
+                        }
+                    },
+                    {
+                        key: "render",
+                        value: function() {
+                            var e3 = this, t4 = this.state, n3 = t4.currentStep, r9 = t4.disabled, o4 = t4.inputInvalid, i5 = t4.inputValue, a5 = t4.opened, s7 = t4.renderedSteps, u4 = t4.speaking, c3 = t4.recognitionEnable, l2 = this.props, p2 = l2.className, f2 = l2.contentStyle, d2 = l2.floating, h2 = l2.floatingIcon, b2 = l2.floatingStyle, g4 = l2.footerStyle, y4 = l2.headerComponent, v2 = l2.headerTitle, m3 = l2.hideHeader, S1 = l2.hideSubmitButton, x1 = l2.inputStyle, w1 = l2.placeholder, O1 = l2.inputAttributes, j1 = l2.recognitionPlaceholder, k1 = l2.style, E1 = l2.submitButtonStyle, z1 = l2.width, P1 = l2.height, q1 = y4 || se.a.createElement(Ge, {
+                                className: "rsc-header"
+                            }, se.a.createElement(Xe, {
+                                className: "rsc-header-title"
+                            }, v2), d2 && se.a.createElement(et, {
+                                className: "rsc-header-close-button",
+                                onClick: function() {
+                                    return e3.toggleChatBot(!1);
+                                }
+                            }, se.a.createElement(ft, null))), C1 = (this.isInputValueEmpty() || u4) && c3 ? se.a.createElement(gt, null) : se.a.createElement(ht, null), R1 = u4 ? j1 : n3.placeholder || w1, N1 = n3.inputAttributes || O1;
+                            return se.a.createElement("div", {
+                                className: "rsc ".concat(p2)
+                            }, d2 && se.a.createElement(nt, {
+                                className: "rsc-float-button",
+                                style: b2,
+                                opened: a5,
+                                onClick: function() {
+                                    return e3.toggleChatBot(!0);
+                                }
+                            }, "string" == typeof h2 ? se.a.createElement(rt, {
+                                src: h2
+                            }) : h2), se.a.createElement(Je, {
+                                className: "rsc-container",
+                                floating: d2,
+                                floatingStyle: b2,
+                                opened: a5,
+                                style: k1,
+                                width: z1,
+                                height: P1
+                            }, !m3 && q1, se.a.createElement(Ye, {
+                                className: "rsc-content",
+                                ref: this.setContentRef,
+                                floating: d2,
+                                style: f2,
+                                height: P1,
+                                hideInput: n3.hideInput
+                            }, s7.map(this.renderStep)), se.a.createElement(ot, {
+                                className: "rsc-footer",
+                                style: g4
+                            }, !n3.hideInput && se.a.createElement(it, ee({
+                                type: "textarea",
+                                style: x1,
+                                ref: this.setInputRef,
+                                className: "rsc-input",
+                                placeholder: o4 ? "" : R1,
+                                onKeyPress: this.handleKeyPress,
+                                onChange: this.onValueChange,
+                                value: i5,
+                                floating: d2,
+                                invalid: o4,
+                                disabled: r9,
+                                hasButton: !S1
+                            }, N1)), !n3.hideInput && !S1 && se.a.createElement(st, {
+                                className: "rsc-submit-button",
+                                style: E1,
+                                onClick: this.handleSubmitButton,
+                                invalid: o4,
+                                disabled: r9,
+                                speaking: u4
+                            }, C1))));
+                        }
+                    }
+                ]), t2;
+            }();
+            St.propTypes = {
+                avatarStyle: ce.a.objectOf(ce.a.any),
+                botAvatar: ce.a.string,
+                botDelay: ce.a.number,
+                bubbleOptionStyle: ce.a.objectOf(ce.a.any),
+                bubbleStyle: ce.a.objectOf(ce.a.any),
+                cache: ce.a.bool,
+                cacheName: ce.a.string,
+                className: ce.a.string,
+                contentStyle: ce.a.objectOf(ce.a.any),
+                customDelay: ce.a.number,
+                customStyle: ce.a.objectOf(ce.a.any),
+                enableMobileAutoFocus: ce.a.bool,
+                floating: ce.a.bool,
+                floatingIcon: ce.a.oneOfType([
+                    ce.a.string,
+                    ce.a.element
+                ]),
+                floatingStyle: ce.a.objectOf(ce.a.any),
+                footerStyle: ce.a.objectOf(ce.a.any),
+                handleEnd: ce.a.func,
+                headerComponent: ce.a.element,
+                headerTitle: ce.a.string,
+                height: ce.a.string,
+                hideBotAvatar: ce.a.bool,
+                hideHeader: ce.a.bool,
+                hideSubmitButton: ce.a.bool,
+                hideUserAvatar: ce.a.bool,
+                inputAttributes: ce.a.objectOf(ce.a.any),
+                inputStyle: ce.a.objectOf(ce.a.any),
+                opened: ce.a.bool,
+                toggleFloating: ce.a.func,
+                placeholder: ce.a.string,
+                recognitionEnable: ce.a.bool,
+                recognitionLang: ce.a.string,
+                recognitionPlaceholder: ce.a.string,
+                speechSynthesis: ce.a.shape({
+                    enable: ce.a.bool,
+                    lang: ce.a.string,
+                    voice: "undefined" != typeof window ? ce.a.instanceOf(window.SpeechSynthesisVoice) : ce.a.any
+                }),
+                steps: ce.a.arrayOf(ce.a.object).isRequired,
+                style: ce.a.objectOf(ce.a.any),
+                submitButtonStyle: ce.a.objectOf(ce.a.any),
+                userAvatar: ce.a.string,
+                userDelay: ce.a.number,
+                width: ce.a.string
+            }, St.defaultProps = {
+                avatarStyle: {
+                },
+                botDelay: 1000,
+                bubbleOptionStyle: {
+                },
+                bubbleStyle: {
+                },
+                cache: !1,
+                cacheName: "rsc_cache",
+                className: "",
+                contentStyle: {
+                },
+                customStyle: {
+                },
+                customDelay: 1000,
+                enableMobileAutoFocus: !1,
+                floating: !1,
+                floatingIcon: se.a.createElement(pt, null),
+                floatingStyle: {
+                },
+                footerStyle: {
+                },
+                handleEnd: void 0,
+                headerComponent: void 0,
+                headerTitle: "Chat",
+                height: "520px",
+                hideBotAvatar: !1,
+                hideHeader: !1,
+                hideSubmitButton: !1,
+                hideUserAvatar: !1,
+                inputStyle: {
+                },
+                opened: void 0,
+                placeholder: "Type the message ...",
+                inputAttributes: {
+                },
+                recognitionEnable: !1,
+                recognitionLang: "en",
+                recognitionPlaceholder: "Listening ...",
+                speechSynthesis: {
+                    enable: !1,
+                    lang: "en",
+                    voice: null
+                },
+                style: {
+                },
+                submitButtonStyle: {
+                },
+                toggleFloating: void 0,
+                userDelay: 1000,
+                width: "350px",
+                botAvatar: "data:image/svg+xml,%3csvg version='1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3e%3cpath d='M303 70a47 47 0 1 0-70 40v84h46v-84c14-8 24-23 24-40z' fill='%2393c7ef'/%3e%3cpath d='M256 23v171h23v-84a47 47 0 0 0-23-87z' fill='%235a8bb0'/%3e%3cpath fill='%2393c7ef' d='M0 240h248v124H0z'/%3e%3cpath fill='%235a8bb0' d='M264 240h248v124H264z'/%3e%3cpath fill='%2393c7ef' d='M186 365h140v124H186z'/%3e%3cpath fill='%235a8bb0' d='M256 365h70v124h-70z'/%3e%3cpath fill='%23cce9f9' d='M47 163h419v279H47z'/%3e%3cpath fill='%2393c7ef' d='M256 163h209v279H256z'/%3e%3cpath d='M194 272a31 31 0 0 1-62 0c0-18 14-32 31-32s31 14 31 32z' fill='%233c5d76'/%3e%3cpath d='M380 272a31 31 0 0 1-62 0c0-18 14-32 31-32s31 14 31 32z' fill='%231e2e3b'/%3e%3cpath d='M186 349a70 70 0 1 0 140 0H186z' fill='%233c5d76'/%3e%3cpath d='M256 349v70c39 0 70-31 70-70h-70z' fill='%231e2e3b'/%3e%3c/svg%3e",
+                userAvatar: "data:image/svg+xml,%3csvg viewBox='-208.5 21 100 100' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3ccircle cx='-158.5' cy='71' fill='%23F5EEE5' r='50'/%3e%3cdefs%3e%3ccircle cx='-158.5' cy='71' id='a' r='50'/%3e%3c/defs%3e%3cclipPath id='b'%3e%3cuse overflow='visible' xlink:href='%23a'/%3e%3c/clipPath%3e%3cpath clip-path='url(%23b)' d='M-108.5 121v-14s-21.2-4.9-28-6.7c-2.5-.7-7-3.3-7-12V82h-30v6.3c0 8.7-4.5 11.3-7 12-6.8 1.9-28.1 7.3-28.1 6.7v14h100.1z' fill='%23E6C19C'/%3e%3cg clip-path='url(%23b)'%3e%3cdefs%3e%3cpath d='M-108.5 121v-14s-21.2-4.9-28-6.7c-2.5-.7-7-3.3-7-12V82h-30v6.3c0 8.7-4.5 11.3-7 12-6.8 1.9-28.1 7.3-28.1 6.7v14h100.1z' id='c'/%3e%3c/defs%3e%3cclipPath id='d'%3e%3cuse overflow='visible' xlink:href='%23c'/%3e%3c/clipPath%3e%3cpath clip-path='url(%23d)' d='M-158.5 100.1c12.7 0 23-18.6 23-34.4 0-16.2-10.3-24.7-23-24.7s-23 8.5-23 24.7c0 15.8 10.3 34.4 23 34.4z' fill='%23D4B08C'/%3e%3c/g%3e%3cpath d='M-158.5 96c12.7 0 23-16.3 23-31 0-15.1-10.3-23-23-23s-23 7.9-23 23c0 14.7 10.3 31 23 31z' fill='%23F2CEA5'/%3e%3c/svg%3e"
+            };
+            var xt = St;
+            n.d(t1, "Loading", function() {
+                return me;
+            }), t1.default = xt;
+        }
+    ]);
+});
+
+},{"react":"gJIPr","styled-components":"gkt6C"}],"gJIPr":[function(require,module,exports) {
+'use strict';
+module.exports = require('./cjs/react.development.js');
+
+},{"./cjs/react.development.js":"bqBNQ"}],"bqBNQ":[function(require,module,exports) {
+/** @license React v16.14.0
+ * react.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ 'use strict';
+(function() {
+    var _assign = require('object-assign');
+    var checkPropTypes = require('prop-types/checkPropTypes');
+    var ReactVersion = '16.14.0';
+    // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+    // nor polyfill, then a plain number is used for performance.
+    var hasSymbol = typeof Symbol === 'function' && Symbol.for;
+    var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 60103;
+    var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 60106;
+    var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 60107;
+    var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 60108;
+    var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 60114;
+    var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 60109;
+    var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 60110; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+    var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 60111;
+    var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 60112;
+    var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 60113;
+    var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 60120;
+    var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 60115;
+    var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 60116;
+    var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for('react.block') : 60121;
+    var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 60117;
+    var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 60118;
+    var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 60119;
+    var MAYBE_ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
+    var FAUX_ITERATOR_SYMBOL = '@@iterator';
+    function getIteratorFn(maybeIterable) {
+        if (maybeIterable === null || typeof maybeIterable !== 'object') return null;
+        var maybeIterator = MAYBE_ITERATOR_SYMBOL && maybeIterable[MAYBE_ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL];
+        if (typeof maybeIterator === 'function') return maybeIterator;
+        return null;
+    }
+    /**
+ * Keeps track of the current dispatcher.
+ */ var ReactCurrentDispatcher = {
+        /**
+   * @internal
+   * @type {ReactComponent}
+   */ current: null
+    };
+    /**
+ * Keeps track of the current batch's configuration such as how long an update
+ * should suspend for if it needs to.
+ */ var ReactCurrentBatchConfig = {
+        suspense: null
+    };
+    /**
+ * Keeps track of the current owner.
+ *
+ * The current owner is the component who should own any components that are
+ * currently being constructed.
+ */ var ReactCurrentOwner = {
+        /**
+   * @internal
+   * @type {ReactComponent}
+   */ current: null
+    };
+    var BEFORE_SLASH_RE = /^(.*)[\\\/]/;
+    function describeComponentFrame(name, source, ownerName) {
+        var sourceInfo = '';
+        if (source) {
+            var path = source.fileName;
+            var fileName = path.replace(BEFORE_SLASH_RE, '');
+            // In DEV, include code for a common special case:
+            // prefer "folder/index.js" instead of just "index.js".
+            if (/^index\./.test(fileName)) {
+                var match = path.match(BEFORE_SLASH_RE);
+                if (match) {
+                    var pathBeforeSlash = match[1];
+                    if (pathBeforeSlash) {
+                        var folderName = pathBeforeSlash.replace(BEFORE_SLASH_RE, '');
+                        fileName = folderName + '/' + fileName;
+                    }
+                }
+            }
+            sourceInfo = ' (at ' + fileName + ':' + source.lineNumber + ')';
+        } else if (ownerName) sourceInfo = ' (created by ' + ownerName + ')';
+        return '\n    in ' + (name || 'Unknown') + sourceInfo;
+    }
+    var Resolved = 1;
+    function refineResolvedLazyComponent(lazyComponent) {
+        return lazyComponent._status === Resolved ? lazyComponent._result : null;
+    }
+    function getWrappedName(outerType, innerType, wrapperName) {
+        var functionName = innerType.displayName || innerType.name || '';
+        return outerType.displayName || (functionName !== '' ? wrapperName + "(" + functionName + ")" : wrapperName);
+    }
+    function getComponentName(type) {
+        if (type == null) // Host root, text node or just invalid type.
+        return null;
+        if (typeof type.tag === 'number') error("Received an unexpected object in getComponentName(). This is likely a bug in React. Please file an issue.");
+        if (typeof type === 'function') return type.displayName || type.name || null;
+        if (typeof type === 'string') return type;
+        switch(type){
+            case REACT_FRAGMENT_TYPE:
+                return 'Fragment';
+            case REACT_PORTAL_TYPE:
+                return 'Portal';
+            case REACT_PROFILER_TYPE:
+                return "Profiler";
+            case REACT_STRICT_MODE_TYPE:
+                return 'StrictMode';
+            case REACT_SUSPENSE_TYPE:
+                return 'Suspense';
+            case REACT_SUSPENSE_LIST_TYPE:
+                return 'SuspenseList';
+        }
+        if (typeof type === 'object') switch(type.$$typeof){
+            case REACT_CONTEXT_TYPE:
+                return 'Context.Consumer';
+            case REACT_PROVIDER_TYPE:
+                return 'Context.Provider';
+            case REACT_FORWARD_REF_TYPE:
+                return getWrappedName(type, type.render, 'ForwardRef');
+            case REACT_MEMO_TYPE:
+                return getComponentName(type.type);
+            case REACT_BLOCK_TYPE:
+                return getComponentName(type.render);
+            case REACT_LAZY_TYPE:
+                var thenable = type;
+                var resolvedThenable = refineResolvedLazyComponent(thenable);
+                if (resolvedThenable) return getComponentName(resolvedThenable);
+                break;
+        }
+        return null;
+    }
+    var ReactDebugCurrentFrame = {
+    };
+    var currentlyValidatingElement = null;
+    function setCurrentlyValidatingElement(element) {
+        currentlyValidatingElement = element;
+    }
+    // Stack implementation injected by the current renderer.
+    ReactDebugCurrentFrame.getCurrentStack = null;
+    ReactDebugCurrentFrame.getStackAddendum = function() {
+        var stack = ''; // Add an extra top frame while an element is being validated
+        if (currentlyValidatingElement) {
+            var name = getComponentName(currentlyValidatingElement.type);
+            var owner = currentlyValidatingElement._owner;
+            stack += describeComponentFrame(name, currentlyValidatingElement._source, owner && getComponentName(owner.type));
+        } // Delegate to the injected renderer-specific implementation
+        var impl = ReactDebugCurrentFrame.getCurrentStack;
+        if (impl) stack += impl() || '';
+        return stack;
+    };
+    /**
+ * Used by act() to track whether you're inside an act() scope.
+ */ var IsSomeRendererActing = {
+        current: false
+    };
+    var ReactSharedInternals = {
+        ReactCurrentDispatcher: ReactCurrentDispatcher,
+        ReactCurrentBatchConfig: ReactCurrentBatchConfig,
+        ReactCurrentOwner: ReactCurrentOwner,
+        IsSomeRendererActing: IsSomeRendererActing,
+        // Used by renderers to avoid bundling object-assign twice in UMD bundles:
+        assign: _assign
+    };
+    _assign(ReactSharedInternals, {
+        // These should not be included in production.
+        ReactDebugCurrentFrame: ReactDebugCurrentFrame,
+        // Shim for React DOM 16.0.0 which still destructured (but not used) this.
+        // TODO: remove in React 17.0.
+        ReactComponentTreeHook: {
+        }
+    });
+    // by calls to these methods by a Babel plugin.
+    //
+    // In PROD (or in packages without access to React internals),
+    // they are left as they are instead.
+    function warn(format) {
+        for(var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)args[_key - 1] = arguments[_key];
+        printWarning('warn', format, args);
+    }
+    function error(format) {
+        for(var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++)args[_key2 - 1] = arguments[_key2];
+        printWarning('error', format, args);
+    }
+    function printWarning(level, format, args) {
+        var hasExistingStack = args.length > 0 && typeof args[args.length - 1] === 'string' && args[args.length - 1].indexOf('\n    in') === 0;
+        if (!hasExistingStack) {
+            var ReactDebugCurrentFrame1 = ReactSharedInternals.ReactDebugCurrentFrame;
+            var stack = ReactDebugCurrentFrame1.getStackAddendum();
+            if (stack !== '') {
+                format += '%s';
+                args = args.concat([
+                    stack
+                ]);
+            }
+        }
+        var argsWithFormat = args.map(function(item) {
+            return '' + item;
+        }); // Careful: RN currently depends on this prefix
+        argsWithFormat.unshift('Warning: ' + format); // We intentionally don't use spread (or .apply) directly because it
+        // breaks IE9: https://github.com/facebook/react/issues/13610
+        // eslint-disable-next-line react-internal/no-production-logging
+        Function.prototype.apply.call(console[level], console, argsWithFormat);
+        try {
+            // --- Welcome to debugging React ---
+            // This error was thrown as a convenience so that you can use this stack
+            // to find the callsite that caused this warning to fire.
+            var argIndex = 0;
+            var message = 'Warning: ' + format.replace(/%s/g, function() {
+                return args[argIndex++];
+            });
+            throw new Error(message);
+        } catch (x) {
+        }
+    }
+    var didWarnStateUpdateForUnmountedComponent = {
+    };
+    function warnNoop(publicInstance, callerName) {
+        var _constructor = publicInstance.constructor;
+        var componentName = _constructor && (_constructor.displayName || _constructor.name) || 'ReactClass';
+        var warningKey = componentName + "." + callerName;
+        if (didWarnStateUpdateForUnmountedComponent[warningKey]) return;
+        error("Can't call %s on a component that is not yet mounted. This is a no-op, but it might indicate a bug in your application. Instead, assign to `this.state` directly or define a `state = {};` class property with the desired state in the %s component.", callerName, componentName);
+        didWarnStateUpdateForUnmountedComponent[warningKey] = true;
+    }
+    /**
+ * This is the abstract API for an update queue.
+ */ var ReactNoopUpdateQueue = {
+        /**
+   * Checks whether or not this composite component is mounted.
+   * @param {ReactClass} publicInstance The instance we want to test.
+   * @return {boolean} True if mounted, false otherwise.
+   * @protected
+   * @final
+   */ isMounted: function(publicInstance) {
+            return false;
+        },
+        /**
+   * Forces an update. This should only be invoked when it is known with
+   * certainty that we are **not** in a DOM transaction.
+   *
+   * You may want to call this when you know that some deeper aspect of the
+   * component's state has changed but `setState` was not called.
+   *
+   * This will not invoke `shouldComponentUpdate`, but it will invoke
+   * `componentWillUpdate` and `componentDidUpdate`.
+   *
+   * @param {ReactClass} publicInstance The instance that should rerender.
+   * @param {?function} callback Called after component is updated.
+   * @param {?string} callerName name of the calling function in the public API.
+   * @internal
+   */ enqueueForceUpdate: function(publicInstance, callback, callerName) {
+            warnNoop(publicInstance, 'forceUpdate');
+        },
+        /**
+   * Replaces all of the state. Always use this or `setState` to mutate state.
+   * You should treat `this.state` as immutable.
+   *
+   * There is no guarantee that `this.state` will be immediately updated, so
+   * accessing `this.state` after calling this method may return the old value.
+   *
+   * @param {ReactClass} publicInstance The instance that should rerender.
+   * @param {object} completeState Next state.
+   * @param {?function} callback Called after component is updated.
+   * @param {?string} callerName name of the calling function in the public API.
+   * @internal
+   */ enqueueReplaceState: function(publicInstance, completeState, callback, callerName) {
+            warnNoop(publicInstance, 'replaceState');
+        },
+        /**
+   * Sets a subset of the state. This only exists because _pendingState is
+   * internal. This provides a merging strategy that is not available to deep
+   * properties which is confusing. TODO: Expose pendingState or don't use it
+   * during the merge.
+   *
+   * @param {ReactClass} publicInstance The instance that should rerender.
+   * @param {object} partialState Next partial state to be merged with state.
+   * @param {?function} callback Called after component is updated.
+   * @param {?string} Name of the calling function in the public API.
+   * @internal
+   */ enqueueSetState: function(publicInstance, partialState, callback, callerName) {
+            warnNoop(publicInstance, 'setState');
+        }
+    };
+    var emptyObject = {
+    };
+    Object.freeze(emptyObject);
+    /**
+ * Base class helpers for the updating state of a component.
+ */ function Component(props, context, updater) {
+        this.props = props;
+        this.context = context; // If a component has string refs, we will assign a different object later.
+        this.refs = emptyObject; // We initialize the default updater but the real one gets injected by the
+        // renderer.
+        this.updater = updater || ReactNoopUpdateQueue;
+    }
+    Component.prototype.isReactComponent = {
+    };
+    /**
+ * Sets a subset of the state. Always use this to mutate
+ * state. You should treat `this.state` as immutable.
+ *
+ * There is no guarantee that `this.state` will be immediately updated, so
+ * accessing `this.state` after calling this method may return the old value.
+ *
+ * There is no guarantee that calls to `setState` will run synchronously,
+ * as they may eventually be batched together.  You can provide an optional
+ * callback that will be executed when the call to setState is actually
+ * completed.
+ *
+ * When a function is provided to setState, it will be called at some point in
+ * the future (not synchronously). It will be called with the up to date
+ * component arguments (state, props, context). These values can be different
+ * from this.* because your function may be called after receiveProps but before
+ * shouldComponentUpdate, and this new state, props, and context will not yet be
+ * assigned to this.
+ *
+ * @param {object|function} partialState Next partial state or function to
+ *        produce next partial state to be merged with current state.
+ * @param {?function} callback Called after state is updated.
+ * @final
+ * @protected
+ */ Component.prototype.setState = function(partialState, callback) {
+        if (!(typeof partialState === 'object' || typeof partialState === 'function' || partialState == null)) throw Error("setState(...): takes an object of state variables to update or a function which returns an object of state variables.");
+        this.updater.enqueueSetState(this, partialState, callback, 'setState');
+    };
+    /**
+ * Forces an update. This should only be invoked when it is known with
+ * certainty that we are **not** in a DOM transaction.
+ *
+ * You may want to call this when you know that some deeper aspect of the
+ * component's state has changed but `setState` was not called.
+ *
+ * This will not invoke `shouldComponentUpdate`, but it will invoke
+ * `componentWillUpdate` and `componentDidUpdate`.
+ *
+ * @param {?function} callback Called after update is complete.
+ * @final
+ * @protected
+ */ Component.prototype.forceUpdate = function(callback) {
+        this.updater.enqueueForceUpdate(this, callback, 'forceUpdate');
+    };
+    var deprecatedAPIs = {
+        isMounted: [
+            'isMounted',
+            "Instead, make sure to clean up subscriptions and pending requests in componentWillUnmount to prevent memory leaks."
+        ],
+        replaceState: [
+            'replaceState',
+            "Refactor your code to use setState instead (see https://github.com/facebook/react/issues/3236)."
+        ]
+    };
+    var defineDeprecationWarning = function(methodName, info) {
+        Object.defineProperty(Component.prototype, methodName, {
+            get: function() {
+                warn('%s(...) is deprecated in plain JavaScript React classes. %s', info[0], info[1]);
+                return undefined;
+            }
+        });
+    };
+    for(var fnName in deprecatedAPIs)if (deprecatedAPIs.hasOwnProperty(fnName)) defineDeprecationWarning(fnName, deprecatedAPIs[fnName]);
+    function ComponentDummy() {
+    }
+    ComponentDummy.prototype = Component.prototype;
+    /**
+ * Convenience component with default shallow equality check for sCU.
+ */ function PureComponent(props, context, updater) {
+        this.props = props;
+        this.context = context; // If a component has string refs, we will assign a different object later.
+        this.refs = emptyObject;
+        this.updater = updater || ReactNoopUpdateQueue;
+    }
+    var pureComponentPrototype = PureComponent.prototype = new ComponentDummy();
+    pureComponentPrototype.constructor = PureComponent; // Avoid an extra prototype jump for these methods.
+    _assign(pureComponentPrototype, Component.prototype);
+    pureComponentPrototype.isPureReactComponent = true;
+    // an immutable object with a single mutable value
+    function createRef() {
+        var refObject = {
+            current: null
+        };
+        Object.seal(refObject);
+        return refObject;
+    }
+    var hasOwnProperty = Object.prototype.hasOwnProperty;
+    var RESERVED_PROPS = {
+        key: true,
+        ref: true,
+        __self: true,
+        __source: true
+    };
+    var specialPropKeyWarningShown, specialPropRefWarningShown, didWarnAboutStringRefs;
+    didWarnAboutStringRefs = {
+    };
+    function hasValidRef(config) {
+        if (hasOwnProperty.call(config, 'ref')) {
+            var getter = Object.getOwnPropertyDescriptor(config, 'ref').get;
+            if (getter && getter.isReactWarning) return false;
+        }
+        return config.ref !== undefined;
+    }
+    function hasValidKey(config) {
+        if (hasOwnProperty.call(config, 'key')) {
+            var getter = Object.getOwnPropertyDescriptor(config, 'key').get;
+            if (getter && getter.isReactWarning) return false;
+        }
+        return config.key !== undefined;
+    }
+    function defineKeyPropWarningGetter(props, displayName) {
+        var warnAboutAccessingKey = function() {
+            if (!specialPropKeyWarningShown) {
+                specialPropKeyWarningShown = true;
+                error("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://fb.me/react-special-props)", displayName);
+            }
+        };
+        warnAboutAccessingKey.isReactWarning = true;
+        Object.defineProperty(props, 'key', {
+            get: warnAboutAccessingKey,
+            configurable: true
+        });
+    }
+    function defineRefPropWarningGetter(props, displayName) {
+        var warnAboutAccessingRef = function() {
+            if (!specialPropRefWarningShown) {
+                specialPropRefWarningShown = true;
+                error("%s: `ref` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://fb.me/react-special-props)", displayName);
+            }
+        };
+        warnAboutAccessingRef.isReactWarning = true;
+        Object.defineProperty(props, 'ref', {
+            get: warnAboutAccessingRef,
+            configurable: true
+        });
+    }
+    function warnIfStringRefCannotBeAutoConverted(config) {
+        if (typeof config.ref === 'string' && ReactCurrentOwner.current && config.__self && ReactCurrentOwner.current.stateNode !== config.__self) {
+            var componentName = getComponentName(ReactCurrentOwner.current.type);
+            if (!didWarnAboutStringRefs[componentName]) {
+                error("Component \"%s\" contains the string ref \"%s\". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://fb.me/react-strict-mode-string-ref", getComponentName(ReactCurrentOwner.current.type), config.ref);
+                didWarnAboutStringRefs[componentName] = true;
+            }
+        }
+    }
+    /**
+ * Factory method to create a new React element. This no longer adheres to
+ * the class pattern, so do not use new to call it. Also, instanceof check
+ * will not work. Instead test $$typeof field against Symbol.for('react.element') to check
+ * if something is a React Element.
+ *
+ * @param {*} type
+ * @param {*} props
+ * @param {*} key
+ * @param {string|object} ref
+ * @param {*} owner
+ * @param {*} self A *temporary* helper to detect places where `this` is
+ * different from the `owner` when React.createElement is called, so that we
+ * can warn. We want to get rid of owner and replace string `ref`s with arrow
+ * functions, and as long as `this` and owner are the same, there will be no
+ * change in behavior.
+ * @param {*} source An annotation object (added by a transpiler or otherwise)
+ * indicating filename, line number, and/or other information.
+ * @internal
+ */ var ReactElement = function(type, key, ref, self, source, owner, props) {
+        var element = {
+            // This tag allows us to uniquely identify this as a React Element
+            $$typeof: REACT_ELEMENT_TYPE,
+            // Built-in properties that belong on the element
+            type: type,
+            key: key,
+            ref: ref,
+            props: props,
+            // Record the component responsible for creating this element.
+            _owner: owner
+        };
+        // The validation flag is currently mutative. We put it on
+        // an external backing store so that we can freeze the whole object.
+        // This can be replaced with a WeakMap once they are implemented in
+        // commonly used development environments.
+        element._store = {
+        }; // To make comparing ReactElements easier for testing purposes, we make
+        // the validation flag non-enumerable (where possible, which should
+        // include every environment we run tests in), so the test framework
+        // ignores it.
+        Object.defineProperty(element._store, 'validated', {
+            configurable: false,
+            enumerable: false,
+            writable: true,
+            value: false
+        }); // self and source are DEV only properties.
+        Object.defineProperty(element, '_self', {
+            configurable: false,
+            enumerable: false,
+            writable: false,
+            value: self
+        }); // Two elements created in two different places should be considered
+        // equal for testing purposes and therefore we hide it from enumeration.
+        Object.defineProperty(element, '_source', {
+            configurable: false,
+            enumerable: false,
+            writable: false,
+            value: source
+        });
+        if (Object.freeze) {
+            Object.freeze(element.props);
+            Object.freeze(element);
+        }
+        return element;
+    };
+    /**
+ * Create and return a new ReactElement of the given type.
+ * See https://reactjs.org/docs/react-api.html#createelement
+ */ function createElement(type, config, children) {
+        var propName; // Reserved names are extracted
+        var props = {
+        };
+        var key = null;
+        var ref = null;
+        var self = null;
+        var source = null;
+        if (config != null) {
+            if (hasValidRef(config)) {
+                ref = config.ref;
+                warnIfStringRefCannotBeAutoConverted(config);
+            }
+            if (hasValidKey(config)) key = '' + config.key;
+            self = config.__self === undefined ? null : config.__self;
+            source = config.__source === undefined ? null : config.__source; // Remaining properties are added to a new props object
+            for(propName in config)if (hasOwnProperty.call(config, propName) && !RESERVED_PROPS.hasOwnProperty(propName)) props[propName] = config[propName];
+        } // Children can be more than one argument, and those are transferred onto
+        // the newly allocated props object.
+        var childrenLength = arguments.length - 2;
+        if (childrenLength === 1) props.children = children;
+        else if (childrenLength > 1) {
+            var childArray = Array(childrenLength);
+            for(var i = 0; i < childrenLength; i++)childArray[i] = arguments[i + 2];
+            if (Object.freeze) Object.freeze(childArray);
+            props.children = childArray;
+        } // Resolve default props
+        if (type && type.defaultProps) {
+            var defaultProps = type.defaultProps;
+            for(propName in defaultProps)if (props[propName] === undefined) props[propName] = defaultProps[propName];
+        }
+        if (key || ref) {
+            var displayName = typeof type === 'function' ? type.displayName || type.name || 'Unknown' : type;
+            if (key) defineKeyPropWarningGetter(props, displayName);
+            if (ref) defineRefPropWarningGetter(props, displayName);
+        }
+        return ReactElement(type, key, ref, self, source, ReactCurrentOwner.current, props);
+    }
+    function cloneAndReplaceKey(oldElement, newKey) {
+        var newElement = ReactElement(oldElement.type, newKey, oldElement.ref, oldElement._self, oldElement._source, oldElement._owner, oldElement.props);
+        return newElement;
+    }
+    /**
+ * Clone and return a new ReactElement using element as the starting point.
+ * See https://reactjs.org/docs/react-api.html#cloneelement
+ */ function cloneElement(element, config, children) {
+        if (!!(element === null || element === undefined)) throw Error("React.cloneElement(...): The argument must be a React element, but you passed " + element + ".");
+        var propName; // Original props are copied
+        var props = _assign({
+        }, element.props); // Reserved names are extracted
+        var key = element.key;
+        var ref = element.ref; // Self is preserved since the owner is preserved.
+        var self = element._self; // Source is preserved since cloneElement is unlikely to be targeted by a
+        // transpiler, and the original source is probably a better indicator of the
+        // true owner.
+        var source = element._source; // Owner will be preserved, unless ref is overridden
+        var owner = element._owner;
+        if (config != null) {
+            if (hasValidRef(config)) {
+                // Silently steal the ref from the parent.
+                ref = config.ref;
+                owner = ReactCurrentOwner.current;
+            }
+            if (hasValidKey(config)) key = '' + config.key;
+             // Remaining properties override existing props
+            var defaultProps;
+            if (element.type && element.type.defaultProps) defaultProps = element.type.defaultProps;
+            for(propName in config)if (hasOwnProperty.call(config, propName) && !RESERVED_PROPS.hasOwnProperty(propName)) {
+                if (config[propName] === undefined && defaultProps !== undefined) // Resolve default props
+                props[propName] = defaultProps[propName];
+                else props[propName] = config[propName];
+            }
+        } // Children can be more than one argument, and those are transferred onto
+        // the newly allocated props object.
+        var childrenLength = arguments.length - 2;
+        if (childrenLength === 1) props.children = children;
+        else if (childrenLength > 1) {
+            var childArray = Array(childrenLength);
+            for(var i = 0; i < childrenLength; i++)childArray[i] = arguments[i + 2];
+            props.children = childArray;
+        }
+        return ReactElement(element.type, key, ref, self, source, owner, props);
+    }
+    /**
+ * Verifies the object is a ReactElement.
+ * See https://reactjs.org/docs/react-api.html#isvalidelement
+ * @param {?object} object
+ * @return {boolean} True if `object` is a ReactElement.
+ * @final
+ */ function isValidElement(object) {
+        return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+    }
+    var SEPARATOR = '.';
+    var SUBSEPARATOR = ':';
+    /**
+ * Escape and wrap key so it is safe to use as a reactid
+ *
+ * @param {string} key to be escaped.
+ * @return {string} the escaped key.
+ */ function escape(key) {
+        var escapeRegex = /[=:]/g;
+        var escaperLookup = {
+            '=': '=0',
+            ':': '=2'
+        };
+        var escapedString = ('' + key).replace(escapeRegex, function(match) {
+            return escaperLookup[match];
+        });
+        return '$' + escapedString;
+    }
+    /**
+ * TODO: Test that a single child and an array with one item have the same key
+ * pattern.
+ */ var didWarnAboutMaps = false;
+    var userProvidedKeyEscapeRegex = /\/+/g;
+    function escapeUserProvidedKey(text) {
+        return ('' + text).replace(userProvidedKeyEscapeRegex, '$&/');
+    }
+    var POOL_SIZE = 10;
+    var traverseContextPool = [];
+    function getPooledTraverseContext(mapResult, keyPrefix, mapFunction, mapContext) {
+        if (traverseContextPool.length) {
+            var traverseContext = traverseContextPool.pop();
+            traverseContext.result = mapResult;
+            traverseContext.keyPrefix = keyPrefix;
+            traverseContext.func = mapFunction;
+            traverseContext.context = mapContext;
+            traverseContext.count = 0;
+            return traverseContext;
+        } else return {
+            result: mapResult,
+            keyPrefix: keyPrefix,
+            func: mapFunction,
+            context: mapContext,
+            count: 0
+        };
+    }
+    function releaseTraverseContext(traverseContext) {
+        traverseContext.result = null;
+        traverseContext.keyPrefix = null;
+        traverseContext.func = null;
+        traverseContext.context = null;
+        traverseContext.count = 0;
+        if (traverseContextPool.length < POOL_SIZE) traverseContextPool.push(traverseContext);
+    }
+    /**
+ * @param {?*} children Children tree container.
+ * @param {!string} nameSoFar Name of the key path so far.
+ * @param {!function} callback Callback to invoke with each child found.
+ * @param {?*} traverseContext Used to pass information throughout the traversal
+ * process.
+ * @return {!number} The number of children in this subtree.
+ */ function traverseAllChildrenImpl(children, nameSoFar, callback, traverseContext) {
+        var type = typeof children;
+        if (type === 'undefined' || type === 'boolean') // All of the above are perceived as null.
+        children = null;
+        var invokeCallback = false;
+        if (children === null) invokeCallback = true;
+        else switch(type){
+            case 'string':
+            case 'number':
+                invokeCallback = true;
+                break;
+            case 'object':
+                switch(children.$$typeof){
+                    case REACT_ELEMENT_TYPE:
+                    case REACT_PORTAL_TYPE:
+                        invokeCallback = true;
+                }
+        }
+        if (invokeCallback) {
+            callback(traverseContext, children, // so that it's consistent if the number of children grows.
+            nameSoFar === '' ? SEPARATOR + getComponentKey(children, 0) : nameSoFar);
+            return 1;
+        }
+        var child;
+        var nextName;
+        var subtreeCount = 0; // Count of children found in the current subtree.
+        var nextNamePrefix = nameSoFar === '' ? SEPARATOR : nameSoFar + SUBSEPARATOR;
+        if (Array.isArray(children)) for(var i = 0; i < children.length; i++){
+            child = children[i];
+            nextName = nextNamePrefix + getComponentKey(child, i);
+            subtreeCount += traverseAllChildrenImpl(child, nextName, callback, traverseContext);
+        }
+        else {
+            var iteratorFn = getIteratorFn(children);
+            if (typeof iteratorFn === 'function') {
+                // Warn about using Maps as children
+                if (iteratorFn === children.entries) {
+                    if (!didWarnAboutMaps) warn("Using Maps as children is deprecated and will be removed in a future major release. Consider converting children to an array of keyed ReactElements instead.");
+                    didWarnAboutMaps = true;
+                }
+                var iterator = iteratorFn.call(children);
+                var step;
+                var ii = 0;
+                while(!(step = iterator.next()).done){
+                    child = step.value;
+                    nextName = nextNamePrefix + getComponentKey(child, ii++);
+                    subtreeCount += traverseAllChildrenImpl(child, nextName, callback, traverseContext);
+                }
+            } else if (type === 'object') {
+                var addendum = '';
+                addendum = " If you meant to render a collection of children, use an array instead." + ReactDebugCurrentFrame.getStackAddendum();
+                var childrenString = '' + children;
+                throw Error("Objects are not valid as a React child (found: " + (childrenString === '[object Object]' ? 'object with keys {' + Object.keys(children).join(', ') + '}' : childrenString) + ")." + addendum);
+            }
+        }
+        return subtreeCount;
+    }
+    /**
+ * Traverses children that are typically specified as `props.children`, but
+ * might also be specified through attributes:
+ *
+ * - `traverseAllChildren(this.props.children, ...)`
+ * - `traverseAllChildren(this.props.leftPanelChildren, ...)`
+ *
+ * The `traverseContext` is an optional argument that is passed through the
+ * entire traversal. It can be used to store accumulations or anything else that
+ * the callback might find relevant.
+ *
+ * @param {?*} children Children tree object.
+ * @param {!function} callback To invoke upon traversing each child.
+ * @param {?*} traverseContext Context for traversal.
+ * @return {!number} The number of children in this subtree.
+ */ function traverseAllChildren(children, callback, traverseContext) {
+        if (children == null) return 0;
+        return traverseAllChildrenImpl(children, '', callback, traverseContext);
+    }
+    /**
+ * Generate a key string that identifies a component within a set.
+ *
+ * @param {*} component A component that could contain a manual key.
+ * @param {number} index Index that is used if a manual key is not provided.
+ * @return {string}
+ */ function getComponentKey(component, index) {
+        // Do some typechecking here since we call this blindly. We want to ensure
+        // that we don't block potential future ES APIs.
+        if (typeof component === 'object' && component !== null && component.key != null) // Explicit key
+        return escape(component.key);
+         // Implicit key determined by the index in the set
+        return index.toString(36);
+    }
+    function forEachSingleChild(bookKeeping, child, name) {
+        var func = bookKeeping.func, context = bookKeeping.context;
+        func.call(context, child, bookKeeping.count++);
+    }
+    /**
+ * Iterates through children that are typically specified as `props.children`.
+ *
+ * See https://reactjs.org/docs/react-api.html#reactchildrenforeach
+ *
+ * The provided forEachFunc(child, index) will be called for each
+ * leaf child.
+ *
+ * @param {?*} children Children tree container.
+ * @param {function(*, int)} forEachFunc
+ * @param {*} forEachContext Context for forEachContext.
+ */ function forEachChildren(children, forEachFunc, forEachContext) {
+        if (children == null) return children;
+        var traverseContext = getPooledTraverseContext(null, null, forEachFunc, forEachContext);
+        traverseAllChildren(children, forEachSingleChild, traverseContext);
+        releaseTraverseContext(traverseContext);
+    }
+    function mapSingleChildIntoContext(bookKeeping, child, childKey) {
+        var result = bookKeeping.result, keyPrefix = bookKeeping.keyPrefix, func = bookKeeping.func, context = bookKeeping.context;
+        var mappedChild = func.call(context, child, bookKeeping.count++);
+        if (Array.isArray(mappedChild)) mapIntoWithKeyPrefixInternal(mappedChild, result, childKey, function(c) {
+            return c;
+        });
+        else if (mappedChild != null) {
+            if (isValidElement(mappedChild)) mappedChild = cloneAndReplaceKey(mappedChild, // traverseAllChildren used to do for objects as children
+            keyPrefix + (mappedChild.key && (!child || child.key !== mappedChild.key) ? escapeUserProvidedKey(mappedChild.key) + '/' : '') + childKey);
+            result.push(mappedChild);
+        }
+    }
+    function mapIntoWithKeyPrefixInternal(children, array, prefix, func, context) {
+        var escapedPrefix = '';
+        if (prefix != null) escapedPrefix = escapeUserProvidedKey(prefix) + '/';
+        var traverseContext = getPooledTraverseContext(array, escapedPrefix, func, context);
+        traverseAllChildren(children, mapSingleChildIntoContext, traverseContext);
+        releaseTraverseContext(traverseContext);
+    }
+    /**
+ * Maps children that are typically specified as `props.children`.
+ *
+ * See https://reactjs.org/docs/react-api.html#reactchildrenmap
+ *
+ * The provided mapFunction(child, key, index) will be called for each
+ * leaf child.
+ *
+ * @param {?*} children Children tree container.
+ * @param {function(*, int)} func The map function.
+ * @param {*} context Context for mapFunction.
+ * @return {object} Object containing the ordered map of results.
+ */ function mapChildren(children, func, context) {
+        if (children == null) return children;
+        var result = [];
+        mapIntoWithKeyPrefixInternal(children, result, null, func, context);
+        return result;
+    }
+    /**
+ * Count the number of children that are typically specified as
+ * `props.children`.
+ *
+ * See https://reactjs.org/docs/react-api.html#reactchildrencount
+ *
+ * @param {?*} children Children tree container.
+ * @return {number} The number of children.
+ */ function countChildren(children) {
+        return traverseAllChildren(children, function() {
+            return null;
+        }, null);
+    }
+    /**
+ * Flatten a children object (typically specified as `props.children`) and
+ * return an array with appropriately re-keyed children.
+ *
+ * See https://reactjs.org/docs/react-api.html#reactchildrentoarray
+ */ function toArray(children) {
+        var result = [];
+        mapIntoWithKeyPrefixInternal(children, result, null, function(child) {
+            return child;
+        });
+        return result;
+    }
+    /**
+ * Returns the first child in a collection of children and verifies that there
+ * is only one child in the collection.
+ *
+ * See https://reactjs.org/docs/react-api.html#reactchildrenonly
+ *
+ * The current implementation of this function assumes that a single child gets
+ * passed without a wrapper, but the purpose of this helper function is to
+ * abstract away the particular structure of children.
+ *
+ * @param {?object} children Child collection structure.
+ * @return {ReactElement} The first and only `ReactElement` contained in the
+ * structure.
+ */ function onlyChild(children) {
+        if (!isValidElement(children)) throw Error("React.Children.only expected to receive a single React element child.");
+        return children;
+    }
+    function createContext(defaultValue, calculateChangedBits) {
+        if (calculateChangedBits === undefined) calculateChangedBits = null;
+        else if (calculateChangedBits !== null && typeof calculateChangedBits !== 'function') error("createContext: Expected the optional second argument to be a function. Instead received: %s", calculateChangedBits);
+        var context = {
+            $$typeof: REACT_CONTEXT_TYPE,
+            _calculateChangedBits: calculateChangedBits,
+            // As a workaround to support multiple concurrent renderers, we categorize
+            // some renderers as primary and others as secondary. We only expect
+            // there to be two concurrent renderers at most: React Native (primary) and
+            // Fabric (secondary); React DOM (primary) and React ART (secondary).
+            // Secondary renderers store their context values on separate fields.
+            _currentValue: defaultValue,
+            _currentValue2: defaultValue,
+            // Used to track how many concurrent renderers this context currently
+            // supports within in a single renderer. Such as parallel server rendering.
+            _threadCount: 0,
+            // These are circular
+            Provider: null,
+            Consumer: null
+        };
+        context.Provider = {
+            $$typeof: REACT_PROVIDER_TYPE,
+            _context: context
+        };
+        var hasWarnedAboutUsingNestedContextConsumers = false;
+        var hasWarnedAboutUsingConsumerProvider = false;
+        // A separate object, but proxies back to the original context object for
+        // backwards compatibility. It has a different $$typeof, so we can properly
+        // warn for the incorrect usage of Context as a Consumer.
+        var Consumer = {
+            $$typeof: REACT_CONTEXT_TYPE,
+            _context: context,
+            _calculateChangedBits: context._calculateChangedBits
+        }; // $FlowFixMe: Flow complains about not setting a value, which is intentional here
+        Object.defineProperties(Consumer, {
+            Provider: {
+                get: function() {
+                    if (!hasWarnedAboutUsingConsumerProvider) {
+                        hasWarnedAboutUsingConsumerProvider = true;
+                        error("Rendering <Context.Consumer.Provider> is not supported and will be removed in a future major release. Did you mean to render <Context.Provider> instead?");
+                    }
+                    return context.Provider;
+                },
+                set: function(_Provider) {
+                    context.Provider = _Provider;
+                }
+            },
+            _currentValue: {
+                get: function() {
+                    return context._currentValue;
+                },
+                set: function(_currentValue) {
+                    context._currentValue = _currentValue;
+                }
+            },
+            _currentValue2: {
+                get: function() {
+                    return context._currentValue2;
+                },
+                set: function(_currentValue2) {
+                    context._currentValue2 = _currentValue2;
+                }
+            },
+            _threadCount: {
+                get: function() {
+                    return context._threadCount;
+                },
+                set: function(_threadCount) {
+                    context._threadCount = _threadCount;
+                }
+            },
+            Consumer: {
+                get: function() {
+                    if (!hasWarnedAboutUsingNestedContextConsumers) {
+                        hasWarnedAboutUsingNestedContextConsumers = true;
+                        error("Rendering <Context.Consumer.Consumer> is not supported and will be removed in a future major release. Did you mean to render <Context.Consumer> instead?");
+                    }
+                    return context.Consumer;
+                }
+            }
+        }); // $FlowFixMe: Flow complains about missing properties because it doesn't understand defineProperty
+        context.Consumer = Consumer;
+        context._currentRenderer = null;
+        context._currentRenderer2 = null;
+        return context;
+    }
+    function lazy(ctor) {
+        var lazyType = {
+            $$typeof: REACT_LAZY_TYPE,
+            _ctor: ctor,
+            // React uses these fields to store the result.
+            _status: -1,
+            _result: null
+        };
+        // In production, this would just set it on the object.
+        var defaultProps;
+        var propTypes;
+        Object.defineProperties(lazyType, {
+            defaultProps: {
+                configurable: true,
+                get: function() {
+                    return defaultProps;
+                },
+                set: function(newDefaultProps) {
+                    error("React.lazy(...): It is not supported to assign `defaultProps` to a lazy component import. Either specify them where the component is defined, or create a wrapping component around it.");
+                    defaultProps = newDefaultProps; // Match production behavior more closely:
+                    Object.defineProperty(lazyType, 'defaultProps', {
+                        enumerable: true
+                    });
+                }
+            },
+            propTypes: {
+                configurable: true,
+                get: function() {
+                    return propTypes;
+                },
+                set: function(newPropTypes) {
+                    error("React.lazy(...): It is not supported to assign `propTypes` to a lazy component import. Either specify them where the component is defined, or create a wrapping component around it.");
+                    propTypes = newPropTypes; // Match production behavior more closely:
+                    Object.defineProperty(lazyType, 'propTypes', {
+                        enumerable: true
+                    });
+                }
+            }
+        });
+        return lazyType;
+    }
+    function forwardRef(render) {
+        if (render != null && render.$$typeof === REACT_MEMO_TYPE) error("forwardRef requires a render function but received a `memo` component. Instead of forwardRef(memo(...)), use memo(forwardRef(...)).");
+        else if (typeof render !== 'function') error('forwardRef requires a render function but was given %s.', render === null ? 'null' : typeof render);
+        else if (render.length !== 0 && render.length !== 2) error('forwardRef render functions accept exactly two parameters: props and ref. %s', render.length === 1 ? 'Did you forget to use the ref parameter?' : 'Any additional parameter will be undefined.');
+        if (render != null) {
+            if (render.defaultProps != null || render.propTypes != null) error("forwardRef render functions do not support propTypes or defaultProps. Did you accidentally pass a React component?");
+        }
+        return {
+            $$typeof: REACT_FORWARD_REF_TYPE,
+            render: render
+        };
+    }
+    function isValidElementType(type) {
+        return typeof type === 'string' || typeof type === 'function' || type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
+    }
+    function memo(type, compare) {
+        if (!isValidElementType(type)) error("memo: The first argument must be a component. Instead received: %s", type === null ? 'null' : typeof type);
+        return {
+            $$typeof: REACT_MEMO_TYPE,
+            type: type,
+            compare: compare === undefined ? null : compare
+        };
+    }
+    function resolveDispatcher() {
+        var dispatcher = ReactCurrentDispatcher.current;
+        if (!(dispatcher !== null)) throw Error("Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:\n1. You might have mismatching versions of React and the renderer (such as React DOM)\n2. You might be breaking the Rules of Hooks\n3. You might have more than one copy of React in the same app\nSee https://fb.me/react-invalid-hook-call for tips about how to debug and fix this problem.");
+        return dispatcher;
+    }
+    function useContext(Context, unstable_observedBits) {
+        var dispatcher = resolveDispatcher();
+        if (unstable_observedBits !== undefined) error("useContext() second argument is reserved for future use in React. Passing it is not supported. You passed: %s.%s", unstable_observedBits, typeof unstable_observedBits === 'number' && Array.isArray(arguments[2]) ? "\n\nDid you call array.map(useContext)? Calling Hooks inside a loop is not supported. Learn more at https://fb.me/rules-of-hooks" : '');
+         // TODO: add a more generic warning for invalid values.
+        if (Context._context !== undefined) {
+            var realContext = Context._context; // Don't deduplicate because this legitimately causes bugs
+            // and nobody should be using this in existing code.
+            if (realContext.Consumer === Context) error("Calling useContext(Context.Consumer) is not supported, may cause bugs, and will be removed in a future major release. Did you mean to call useContext(Context) instead?");
+            else if (realContext.Provider === Context) error("Calling useContext(Context.Provider) is not supported. Did you mean to call useContext(Context) instead?");
+        }
+        return dispatcher.useContext(Context, unstable_observedBits);
+    }
+    function useState(initialState) {
+        var dispatcher = resolveDispatcher();
+        return dispatcher.useState(initialState);
+    }
+    function useReducer(reducer, initialArg, init) {
+        var dispatcher = resolveDispatcher();
+        return dispatcher.useReducer(reducer, initialArg, init);
+    }
+    function useRef(initialValue) {
+        var dispatcher = resolveDispatcher();
+        return dispatcher.useRef(initialValue);
+    }
+    function useEffect(create, deps) {
+        var dispatcher = resolveDispatcher();
+        return dispatcher.useEffect(create, deps);
+    }
+    function useLayoutEffect(create, deps) {
+        var dispatcher = resolveDispatcher();
+        return dispatcher.useLayoutEffect(create, deps);
+    }
+    function useCallback(callback, deps) {
+        var dispatcher = resolveDispatcher();
+        return dispatcher.useCallback(callback, deps);
+    }
+    function useMemo(create, deps) {
+        var dispatcher = resolveDispatcher();
+        return dispatcher.useMemo(create, deps);
+    }
+    function useImperativeHandle(ref, create, deps) {
+        var dispatcher = resolveDispatcher();
+        return dispatcher.useImperativeHandle(ref, create, deps);
+    }
+    function useDebugValue(value, formatterFn) {
+        var dispatcher = resolveDispatcher();
+        return dispatcher.useDebugValue(value, formatterFn);
+    }
+    var propTypesMisspellWarningShown;
+    propTypesMisspellWarningShown = false;
+    function getDeclarationErrorAddendum() {
+        if (ReactCurrentOwner.current) {
+            var name = getComponentName(ReactCurrentOwner.current.type);
+            if (name) return '\n\nCheck the render method of `' + name + '`.';
+        }
+        return '';
+    }
+    function getSourceInfoErrorAddendum(source) {
+        if (source !== undefined) {
+            var fileName = source.fileName.replace(/^.*[\\\/]/, '');
+            var lineNumber = source.lineNumber;
+            return '\n\nCheck your code at ' + fileName + ':' + lineNumber + '.';
+        }
+        return '';
+    }
+    function getSourceInfoErrorAddendumForProps(elementProps) {
+        if (elementProps !== null && elementProps !== undefined) return getSourceInfoErrorAddendum(elementProps.__source);
+        return '';
+    }
+    /**
+ * Warn if there's no key explicitly set on dynamic arrays of children or
+ * object keys are not valid. This allows us to keep track of children between
+ * updates.
+ */ var ownerHasKeyUseWarning = {
+    };
+    function getCurrentComponentErrorInfo(parentType) {
+        var info = getDeclarationErrorAddendum();
+        if (!info) {
+            var parentName = typeof parentType === 'string' ? parentType : parentType.displayName || parentType.name;
+            if (parentName) info = "\n\nCheck the top-level render call using <" + parentName + ">.";
+        }
+        return info;
+    }
+    /**
+ * Warn if the element doesn't have an explicit key assigned to it.
+ * This element is in an array. The array could grow and shrink or be
+ * reordered. All children that haven't already been validated are required to
+ * have a "key" property assigned to it. Error statuses are cached so a warning
+ * will only be shown once.
+ *
+ * @internal
+ * @param {ReactElement} element Element that requires a key.
+ * @param {*} parentType element's parent's type.
+ */ function validateExplicitKey(element, parentType) {
+        if (!element._store || element._store.validated || element.key != null) return;
+        element._store.validated = true;
+        var currentComponentErrorInfo = getCurrentComponentErrorInfo(parentType);
+        if (ownerHasKeyUseWarning[currentComponentErrorInfo]) return;
+        ownerHasKeyUseWarning[currentComponentErrorInfo] = true; // Usually the current owner is the offender, but if it accepts children as a
+        // property, it may be the creator of the child that's responsible for
+        // assigning it a key.
+        var childOwner = '';
+        if (element && element._owner && element._owner !== ReactCurrentOwner.current) // Give the component that originally created this child.
+        childOwner = " It was passed a child from " + getComponentName(element._owner.type) + ".";
+        setCurrentlyValidatingElement(element);
+        error("Each child in a list should have a unique \"key\" prop.%s%s See https://fb.me/react-warning-keys for more information.", currentComponentErrorInfo, childOwner);
+        setCurrentlyValidatingElement(null);
+    }
+    /**
+ * Ensure that every element either is passed in a static location, in an
+ * array with an explicit keys property defined, or in an object literal
+ * with valid key property.
+ *
+ * @internal
+ * @param {ReactNode} node Statically passed child of any type.
+ * @param {*} parentType node's parent's type.
+ */ function validateChildKeys(node, parentType) {
+        if (typeof node !== 'object') return;
+        if (Array.isArray(node)) for(var i = 0; i < node.length; i++){
+            var child = node[i];
+            if (isValidElement(child)) validateExplicitKey(child, parentType);
+        }
+        else if (isValidElement(node)) // This element was passed in a valid location.
+        {
+            if (node._store) node._store.validated = true;
+        } else if (node) {
+            var iteratorFn = getIteratorFn(node);
+            if (typeof iteratorFn === 'function') // Entry iterators used to provide implicit keys,
+            // but now we print a separate warning for them later.
+            {
+                if (iteratorFn !== node.entries) {
+                    var iterator = iteratorFn.call(node);
+                    var step;
+                    while(!(step = iterator.next()).done)if (isValidElement(step.value)) validateExplicitKey(step.value, parentType);
+                }
+            }
+        }
+    }
+    /**
+ * Given an element, validate that its props follow the propTypes definition,
+ * provided by the type.
+ *
+ * @param {ReactElement} element
+ */ function validatePropTypes(element) {
+        var type = element.type;
+        if (type === null || type === undefined || typeof type === 'string') return;
+        var name = getComponentName(type);
+        var propTypes;
+        if (typeof type === 'function') propTypes = type.propTypes;
+        else if (typeof type === 'object' && (type.$$typeof === REACT_FORWARD_REF_TYPE || // Inner props are checked in the reconciler.
+        type.$$typeof === REACT_MEMO_TYPE)) propTypes = type.propTypes;
+        else return;
+        if (propTypes) {
+            setCurrentlyValidatingElement(element);
+            checkPropTypes(propTypes, element.props, 'prop', name, ReactDebugCurrentFrame.getStackAddendum);
+            setCurrentlyValidatingElement(null);
+        } else if (type.PropTypes !== undefined && !propTypesMisspellWarningShown) {
+            propTypesMisspellWarningShown = true;
+            error('Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?', name || 'Unknown');
+        }
+        if (typeof type.getDefaultProps === 'function' && !type.getDefaultProps.isReactClassApproved) error("getDefaultProps is only used on classic React.createClass definitions. Use a static property named `defaultProps` instead.");
+    }
+    /**
+ * Given a fragment, validate that it can only be provided with fragment props
+ * @param {ReactElement} fragment
+ */ function validateFragmentProps(fragment) {
+        setCurrentlyValidatingElement(fragment);
+        var keys = Object.keys(fragment.props);
+        for(var i = 0; i < keys.length; i++){
+            var key = keys[i];
+            if (key !== 'children' && key !== 'key') {
+                error("Invalid prop `%s` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.", key);
+                break;
+            }
+        }
+        if (fragment.ref !== null) error('Invalid attribute `ref` supplied to `React.Fragment`.');
+        setCurrentlyValidatingElement(null);
+    }
+    function createElementWithValidation(type, props, children) {
+        var validType = isValidElementType(type); // We warn in this case but don't throw. We expect the element creation to
+        // succeed and there will likely be errors in render.
+        if (!validType) {
+            var info = '';
+            if (type === undefined || typeof type === 'object' && type !== null && Object.keys(type).length === 0) info += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.";
+            var sourceInfo = getSourceInfoErrorAddendumForProps(props);
+            if (sourceInfo) info += sourceInfo;
+            else info += getDeclarationErrorAddendum();
+            var typeString;
+            if (type === null) typeString = 'null';
+            else if (Array.isArray(type)) typeString = 'array';
+            else if (type !== undefined && type.$$typeof === REACT_ELEMENT_TYPE) {
+                typeString = "<" + (getComponentName(type.type) || 'Unknown') + " />";
+                info = ' Did you accidentally export a JSX literal instead of a component?';
+            } else typeString = typeof type;
+            error("React.createElement: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", typeString, info);
+        }
+        var element = createElement.apply(this, arguments); // The result can be nullish if a mock or a custom function is used.
+        // TODO: Drop this when these are no longer allowed as the type argument.
+        if (element == null) return element;
+         // Skip key warning if the type isn't valid since our key validation logic
+        // doesn't expect a non-string/function type and can throw confusing errors.
+        // We don't want exception behavior to differ between dev and prod.
+        // (Rendering will throw with a helpful message and as soon as the type is
+        // fixed, the key warnings will appear.)
+        if (validType) for(var i = 2; i < arguments.length; i++)validateChildKeys(arguments[i], type);
+        if (type === REACT_FRAGMENT_TYPE) validateFragmentProps(element);
+        else validatePropTypes(element);
+        return element;
+    }
+    var didWarnAboutDeprecatedCreateFactory = false;
+    function createFactoryWithValidation(type) {
+        var validatedFactory = createElementWithValidation.bind(null, type);
+        validatedFactory.type = type;
+        if (!didWarnAboutDeprecatedCreateFactory) {
+            didWarnAboutDeprecatedCreateFactory = true;
+            warn("React.createFactory() is deprecated and will be removed in a future major release. Consider using JSX or use React.createElement() directly instead.");
+        } // Legacy hook: remove it
+        Object.defineProperty(validatedFactory, 'type', {
+            enumerable: false,
+            get: function() {
+                warn("Factory.type is deprecated. Access the class directly before passing it to createFactory.");
+                Object.defineProperty(this, 'type', {
+                    value: type
+                });
+                return type;
+            }
+        });
+        return validatedFactory;
+    }
+    function cloneElementWithValidation(element, props, children) {
+        var newElement = cloneElement.apply(this, arguments);
+        for(var i = 2; i < arguments.length; i++)validateChildKeys(arguments[i], newElement.type);
+        validatePropTypes(newElement);
+        return newElement;
+    }
+    try {
+        var frozenObject = Object.freeze({
+        });
+        var testMap = new Map([
+            [
+                frozenObject,
+                null
+            ]
+        ]);
+        var testSet = new Set([
+            frozenObject
+        ]); // This is necessary for Rollup to not consider these unused.
+        // https://github.com/rollup/rollup/issues/1771
+        // TODO: we can remove these if Rollup fixes the bug.
+        testMap.set(0, 0);
+        testSet.add(0);
+    } catch (e) {
+    }
+    var createElement$1 = createElementWithValidation;
+    var cloneElement$1 = cloneElementWithValidation;
+    var createFactory = createFactoryWithValidation;
+    var Children = {
+        map: mapChildren,
+        forEach: forEachChildren,
+        count: countChildren,
+        toArray: toArray,
+        only: onlyChild
+    };
+    exports.Children = Children;
+    exports.Component = Component;
+    exports.Fragment = REACT_FRAGMENT_TYPE;
+    exports.Profiler = REACT_PROFILER_TYPE;
+    exports.PureComponent = PureComponent;
+    exports.StrictMode = REACT_STRICT_MODE_TYPE;
+    exports.Suspense = REACT_SUSPENSE_TYPE;
+    exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals;
+    exports.cloneElement = cloneElement$1;
+    exports.createContext = createContext;
+    exports.createElement = createElement$1;
+    exports.createFactory = createFactory;
+    exports.createRef = createRef;
+    exports.forwardRef = forwardRef;
+    exports.isValidElement = isValidElement;
+    exports.lazy = lazy;
+    exports.memo = memo;
+    exports.useCallback = useCallback;
+    exports.useContext = useContext;
+    exports.useDebugValue = useDebugValue;
+    exports.useEffect = useEffect;
+    exports.useImperativeHandle = useImperativeHandle;
+    exports.useLayoutEffect = useLayoutEffect;
+    exports.useMemo = useMemo;
+    exports.useReducer = useReducer;
+    exports.useRef = useRef;
+    exports.useState = useState;
+    exports.version = ReactVersion;
+})();
+
+},{"object-assign":"jzTFF","prop-types/checkPropTypes":"3evPV"}],"5V79J":[function(require,module,exports) {
 "use strict";
 var Refresh = require('react-refresh/runtime');
 function debounce(func, delay) {
@@ -24355,5074 +31709,6 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"fNmB3"}],"1vgou":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _moment = require("moment");
-var _momentDefault = parcelHelpers.interopDefault(_moment);
-var _reactMoment = require("react-moment");
-var _reactMomentDefault = parcelHelpers.interopDefault(_reactMoment);
-var defaultMinimizeIcon = 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABpwAAAacBqI98XwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAApSSURBVHic3Vt7cJTVFf+duxvy2AQIWDTKGwIoWh/gQJkONS1Oq8XWjibyECIJoFJ8oHa0Vu2OtkgViloF5ZWQEKFh1LFaOyPWALUWW1tRHgohEpIoUgrEPHaT7PedX//I7mYJgbz2y4K/mZ3Ze865Z3/n7Pd99373nitwGCwpcX9x4sKxAC4nORbAQAEGA0gk4AHEBugnWA2R44bYD8h+GNl10cfpn4hX1El+4oTTA68eGNDLsm6imB8BvAZA7y66qgZkO4Vvx6spTstKPxpFmgCimAB6aQ6OPjBVhAsATAHgipbvIAIUvG2Ua4fsG/V6tK6MbieAxXSVWWW3CvgogBGnMTskxA4K9gH8TEUOi0otFF8zjhRb+tIwxZBpgIwRYjQFEwEMafM3gU9BPlVdV1M0/vbxge7w71YC9heVTRHyOQAXt1IpgG0CbFTRv46aOerzrvgv3VQ6Qmz5AYnpACYDMK1MdsNwYfqM9G1d8Q90MQGfFB1KjVfrORC3tnJ2AiLPu8g1I2aPqOgqqbZQVlA22BaZC3IhgdQIFSEo6mWZu4bNGVbdWb+dTsDe/M8nG3ADgUERTqpVsMRYgRVjcsfUdtZnZ1C6obS3FTALIHgIQJ8IVbkaM23s7GEfdMZfpxKwN69sASjPAnAHRQRQZNt44LJ5w490xld3sSfv4AUGXEpiZoQ4APCeS3JGrOyonw4lgKTsWVu+DMCiiK7/M0T2JfOGvtXRH3MCu1aVTRVj8gH0jxA/funcYb/uSP92E0Avza608pUQzI8Qv0+xbrl8XnpV5+g6g13rDgyi5SoGMDEkE3DFpfOGLRQRnqlv66fqKfgkrWKZQuYrBc0fvFFX555ytgQPAJfljKxMbLCuUcorIZ42zYKPVx96vL2+Z7wCdq6sWETw9xGi/NL+g+dmZYndbdYOoMRLd9/zK9YAyA4LyYVXLhj6wun6nDYBH75QlSHQLQjO6Ai8Xnt00M0ZXrGiyDnqKC6ma/jRqk0C3hwUKYxeO+7Ooe+2Zd9mAj5cXp6mbtdOAQcERdv6svGH6XenNzpBOtooyTuYkFzr2gLBd4OiKhVzxYSFA4+1tm3zGUCXawUUA6gCqnxl29Yt50rwAJAxZ1iD2JpFNUeCMQw0yjVt2Z6SgB3Lq262bblRVaAqSpWZE+/t2TE+Ghi/aOhhpcxSFVUV2Lbc+MEzVVNb252UgD3ePb1UzZJg8FCVlRMWDWzz3jkXMPHei7aomtWheGzbPFPiPZgQaXNSAqqT+9xF5QgqQBtHGk3TIz1L2QGI/TAVR6kAlSPikuPujFSHE/DWc6Xxapv7w9lSeTRjUedfLs42TLpv0HGqPBaKi7a5b493T6+QPpwAT33KTFVJCxpW9m84sT42lKOPmsT6PFWpCsY28Fh8vxkhXTgBqrxDFVAFbFuWjvWObYoN3ejj+rvTG1VlaTg+xc9DOgMA7yw+fAlVrg4OGQ1ixRfEjq4z8Afi8qjiD8Y4/p3FR0cBoSsgYKaF59CQ1zK8qef8vd8a13v71yjMn0Jxiq3TgWAClHJdeOizzcuxpeoc1JaXW4ZEmQoApsT75XlUXNU8TCDQC9waY56Owe9DCRVWMNYr3vIe620am+ImqIoJZuafGd4BdbEm6hR++tS3alXxr2CsbmPZk4wNM75l5mfejzVJp0G6/h6K11Izzk3F6LBS8GksyfUEVPEZWtaIRrpJDCeb34pVsC9WxHoKVNnHlgSku21b0kIt2zCqa/lnI+wAD8GEl0EudJMS3mRI9LOmo47efKg61bJ4jaq427d2BgKom9aOG5af90VH+zTFSU2cJSEHyW4qPEEd677qV99hR43cCuDbwBkXXR0FAQTg+u8b878cdsOqC30d6vR5ah0HVhOAAJJilKLB2REzN6NDO64ERSkDW1aKY/rp549P8bTPuhmZm6EtMcPlpsJC806PKXzgSBKWot2rQCB8hSd+Rsg0MOrb4J2D4V+y/pDS4bqBwgeOJCU2JYQ417lJOQEgDQDcgeRkoP0EAMBNz6ZuB7C9s3xjDY+V0ttmeGG71pA4QgIkYDRwQSzJ9QTspqbzQ/GCOGaUUtEyE3SPbtfDOQ4b7tHhFyLKAUOavaSAFNDGNz4BUIwJxQuVUrda2CXheYFcHUtuPQGljEd4Kii7TcC43o/Y+JxcnMnYPtUdRImXbiUmhxdFXOY9M+fFxHIqKoLvyH0aUv3jY03UKVRU+K+mondzrFI2fUVSpQEAUt4M3RdqITPWRJ0CjWaF73/ibSC0Jki+FjIS4YwSL2M2v3cKJV66QZkeaivMJiCYgMRaTwmAyqAurbLSd13PU3QWFVW+HwtwfrBZWT4o4T0gmICszWITyAsZE/hlDDg6C+Khlq/I8wYrTcMbIy4XXgTQEGx+Z31ObUbPMnQO63PqpqClfsinqs+HdOEEzFrlOUxibbiXmKe/CUNicSZdEHkqLBCszclreXk6aXdYLHkSQGhVeJy/t+/2HmHpIPwp/gUArmxuSa2lWBKpPykB2QVJX4icZPDbgvn+wU6TdAp5t/mHivCJUFugv8ld5/ky0uaUChHbSlpGYG+w2ZeWbnxpPuMc5hp1vDSfccalmxgqp6V8llDjeaa13SkJmJMvDYbIBtBchi6YlGDXL2ltd7Yjwa5/GsCEYLPRkDOzNsspO95tFknNXuf5EOSvWiRyX/5c391OEHUC+bm+RYDc0yKRB2flef7Tlu1p6wQJSkFu/UZAbgmKFMLs7DXJG6LKNsooyK2bRUg+wn8u/zh7rWe6oO2S2dOWygqEiTWeOQC3h20pBetzfPdFmXPUsD7XtzAyeIFs/TrJk3264Jtt2sFL84/3SbDjSxAeSgBQliTWJj6StfnsKJktzqTL38f/JMhfRIg/anA1Zty+qt/XZ+rboXL54gVM9jX6XhXg2pae3GapzGg9rPQ0Cu6oHaABs+EkbsAOBOyp2QW9T6kMbY12q8UBIGuF1NFO+gmAV8NCyvfcwEfr59bdStCR43dnAkHJz6mbzYDZHRm8AK+onZTRkeCD9h2H10sztLL+QYE8jpZTIxDIVtvoojmrk3d2xl9XUTin/io1XA7I5AixRfCx8kGe33k7caSuS/9c4TzfJFUWARgaISaIPwOyOHtd0j+64rcjv0vlwwSux8ncy42RmbNWJ3W6vqHLl27BLHoY73sYxP0A4lupdwtYCJdr0+xVid3acS7K9Q+xYE8DZBaAsa3UjRAsk8akxbMLpcP7mpHo9r1bmNsw0ob1hEAy0eZpUe6nyLtG+QFoPnUlNO2fubLvibZ8Fd1ZnWo39BoF0YspMhHg9wFJb8PUArmZbvejt61KKOsO/6g9vNblNAx3iX1/8z/FlHbM6wnUCVALAARSBEgG0M4mp9QCLLTpWpazLqFLhzFP8RgNJ5EozmSiL8V/A4TTpfkMcXI3XdZBsEUoGxNqEt/M2iz+aPAMwdHhq8RLd+Uh/ziKThZjLieZDmAkgH6n6XIcwAERKVXqTqPmb4OGJP7byWM6/weHT/7dLYeppAAAAABJRU5ErkJggg==';
-var Header = function Header1(_ref) {
-    var title = _ref.title, minimize = _ref.minimize, headerAvatar = _ref.headerAvatar, headerStyle = _ref.headerStyle, titleColor = _ref.titleColor, minimizeIcon = _ref.minimizeIcon;
-    return _reactDefault.default.createElement("header", {
-        className: "chat-header",
-        style: headerStyle
-    }, _reactDefault.default.createElement("div", {
-        className: "d-flex align-items-center"
-    }, headerAvatar && _reactDefault.default.createElement("div", {
-        className: "chat-header__avatar"
-    }, _reactDefault.default.createElement("img", {
-        src: headerAvatar,
-        alt: "avatar"
-    })), _reactDefault.default.createElement("div", {
-        className: "chat-header__title",
-        style: {
-            color: titleColor
-        }
-    }, title ? title : 'Chat Demo')), _reactDefault.default.createElement("img", {
-        src: minimizeIcon ? minimizeIcon : defaultMinimizeIcon,
-        alt: "minimize",
-        className: "chat-header__minimize",
-        onClick: minimize
-    }));
-};
-function _extends() {
-    _extends = Object.assign || function(target) {
-        for(var i = 1; i < arguments.length; i++){
-            var source = arguments[i];
-            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
-        }
-        return target;
-    };
-    return _extends.apply(this, arguments);
-}
-var Bubble = function Bubble1(_ref) {
-    var message = _ref.message, position = _ref.position, style = _ref.style;
-    return _reactDefault.default.createElement("div", {
-        className: position === 'left' ? 'chat-bubble__wrapper chat-bubble--left' : 'chat-bubble__wrapper chat-bubble--right'
-    }, _reactDefault.default.createElement("div", {
-        className: "chat-bubble__content",
-        style: style
-    }, message.text));
-};
-var Timestamp = function Timestamp1(_ref) {
-    var date = _ref.date, style = _ref.style;
-    return _reactDefault.default.createElement("div", {
-        className: "chat-timestamp",
-        style: style
-    }, _reactDefault.default.createElement(_reactMomentDefault.default, {
-        format: "dd. o HH:mm"
-    }, _momentDefault.default(date)));
-};
-var Avatar = function Avatar1(_ref) {
-    var source = _ref.source;
-    return _reactDefault.default.createElement("div", {
-        className: "chat-message__avatar"
-    }, _reactDefault.default.createElement("img", {
-        src: source,
-        alt: "avatar"
-    }));
-};
-var TypingIndicator = function TypingIndicator1() {
-    return _reactDefault.default.createElement("div", {
-        className: "chat__typing-indicator"
-    }, _reactDefault.default.createElement("div", {
-        className: "chat__typing-indicator__content"
-    }, _reactDefault.default.createElement("div", {
-        className: "dot"
-    }), _reactDefault.default.createElement("div", {
-        className: "dot"
-    }), _reactDefault.default.createElement("div", {
-        className: "dot"
-    })));
-};
-var Body = function Body1(_ref) {
-    var messages = _ref.messages, user = _ref.user, isTyping = _ref.isTyping, leftBubbleStyle = _ref.leftBubbleStyle, rightBubbleStyle = _ref.rightBubbleStyle, backgroundColor = _ref.backgroundColor, timestampStyle = _ref.timestampStyle;
-    var el = _reactDefault.default.useRef();
-    var _useState = _react.useState(), typingUserAvatar = _useState[0], setTypingUserAvatar = _useState[1];
-    _react.useEffect(function() {
-        el.current.scrollIntoView();
-    }, [
-        messages,
-        isTyping
-    ]);
-    _react.useEffect(function() {
-        var _messages$find;
-        setTypingUserAvatar((_messages$find = messages.find(function(message) {
-            return message.user.id !== user.id;
-        })) == null ? void 0 : _messages$find.user.avatar);
-    }, [
-        messages,
-        user
-    ]);
-    var setStylesForBubbles = function setStylesForBubbles1(messages1, i, position) {
-        var currentMessage = messages1[i];
-        var previousMessage = messages1[i - 1];
-        var nextMessage = messages1[i + 1];
-        var corner1 = '0px';
-        var corner2 = '0px';
-        var corner3 = '0px';
-        var corner4 = '0px';
-        var topTimestamp = previousMessage && _momentDefault.default(currentMessage.createdAt).diff(_momentDefault.default(previousMessage.createdAt), 'minutes') > 5 ? true : false;
-        var bottomTimestamp = nextMessage && _momentDefault.default(nextMessage.createdAt).diff(_momentDefault.default(currentMessage.createdAt), 'minutes') > 5 ? true : false;
-        if (!topTimestamp) topTimestamp = !previousMessage ? true : false;
-        if (topTimestamp && !previousMessage) {
-            corner1 = '15px';
-            corner2 = '15px';
-        }
-        if (bottomTimestamp) {
-            corner3 = '15px';
-            corner4 = '15px';
-        }
-        if (topTimestamp) {
-            corner1 = '15px';
-            corner2 = '15px';
-        }
-        if (currentMessage.user.id !== (previousMessage == null ? void 0 : previousMessage.user.id)) {
-            corner1 = '15px';
-            corner2 = '15px';
-        }
-        if (!nextMessage) {
-            corner3 = '15px';
-            corner4 = '15px';
-        }
-        if (currentMessage.user.id !== (nextMessage == null ? void 0 : nextMessage.user.id)) {
-            corner3 = '15px';
-            corner4 = '15px';
-        }
-        if (currentMessage.user.id === (previousMessage == null ? void 0 : previousMessage.user.id)) corner2 = '15px';
-        if (currentMessage.user.id === (nextMessage == null ? void 0 : nextMessage.user.id)) corner3 = '15px';
-        if (position === 'left') return {
-            borderRadius: corner1 + " " + corner2 + " " + corner3 + " " + corner4
-        };
-        return {
-            borderRadius: corner2 + " " + corner1 + " " + corner4 + " " + corner3
-        };
-    };
-    return _reactDefault.default.createElement("div", {
-        className: "chat-body",
-        style: {
-            background: backgroundColor
-        }
-    }, messages.map(function(message, i) {
-        var previousMessage = messages[i - 1];
-        var nextMessage = messages[i + 1];
-        var position = 'left';
-        var style;
-        /* set style curves for bubbles */ if (message.user.id === user.id) {
-            position = 'right';
-            style = setStylesForBubbles(messages, i, 'right');
-        } else style = setStylesForBubbles(messages, i, 'left');
-        /* check if timestamp is needed */ var isTimeStamp = true;
-        if (previousMessage) {
-            var diff = _momentDefault.default(message.createdAt).diff(_momentDefault.default(previousMessage.createdAt), 'minutes');
-            if (diff < 5) isTimeStamp = false;
-        }
-        /* check if render avatar */ var isAvatarVisible = false;
-        if (position === 'left' && (nextMessage && message.user.id !== nextMessage.user.id || nextMessage && _momentDefault.default(nextMessage.createdAt).diff(_momentDefault.default(message.createdAt), 'minutes') > 5 || !nextMessage) && message.user.avatar) isAvatarVisible = true;
-        return _reactDefault.default.createElement("div", {
-            key: i,
-            style: nextMessage ? message.user.id !== nextMessage.user.id ? {
-                marginBottom: '8px'
-            } : {
-            } : {
-                marginBottom: '8px'
-            }
-        }, isTimeStamp && message.createdAt ? _reactDefault.default.createElement(Timestamp, {
-            date: message.createdAt,
-            style: timestampStyle
-        }) : null, _reactDefault.default.createElement("div", {
-            className: "chat-body__message"
-        }, message.user.avatar && isAvatarVisible && _reactDefault.default.createElement(Avatar, {
-            source: message.user.avatar
-        }), message.user.avatar && !isAvatarVisible && _reactDefault.default.createElement("div", {
-            style: {
-                marginLeft: '30px'
-            }
-        }), _reactDefault.default.createElement(Bubble, {
-            message: message,
-            position: position,
-            style: _extends({
-            }, style, position === 'left' ? leftBubbleStyle : rightBubbleStyle)
-        })));
-    }), isTyping && _reactDefault.default.createElement("div", {
-        className: "chat-body__typing-indicator"
-    }, typingUserAvatar !== undefined && _reactDefault.default.createElement(Avatar, {
-        source: typingUserAvatar
-    }), _reactDefault.default.createElement(TypingIndicator, null)), _reactDefault.default.createElement("div", {
-        ref: el
-    }));
-};
-var defaultSendIcon = 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAA3QAAAN0BcFOiBwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALdSURBVFiFxZfNa1RXGMZ/7z3nznXuTALdiCkIlsYIIVHB7tyoBNy5KNo/oLiwCKLiJsQYxCRFdFEIGT+yCVZ3Im1XbmytWEtppUYiKDOGIAQRJcYkJpOZe+/bRTJjk5I6n8mzu4f3Oc+Pw/l4r6gq6ylnXdMBC9D/nL2RckSEUCL+FmG4s5nXawEg59J6QODHFeMLwE0HBjub+b2uAL1pfQK0/k/NIxVSoc+Nnibmag7Ql9YJhU9LqH0nwnAUcOn0Np7VDKA3rX8CX5ThUYQ7QKrlc346BGE1AA7Cz2V6BKUD5VY6w3h/mu6z42yqFED60rpf4XalEywpD9xCSXVt5V5ZABdGNLHg8xZwq4QoaFQhFeb4vqeV2Y8CqCq9Ge4L7K4RQEEzAtdCuNTdzJPVihZvwvL3QSlqUDjqwGhvhrv9Gb66+vC/q1xYgT0Cv9QBYkUaL1GGiLja1cJEEWAggzcNU8CGukMsKlDlfLiVM1J4Dfsy3AH2rREAAArf2sJHR3Iu/5mXL8kYKtyd9RnLVXdwBA4WAabfz+wam86WZhSYCbI8mjFVAcQcs6UIcP2dZ+aC6iYsV3Fj/rIAx/6YbJyX6JO1ChagMRb7bfPOxj0WIIh7X2t2vu7B1nGipHXvu8acTLX7D2GpI8qH0Zf1DPatnYpbO9yUT3b17FzeU1iAhSjcUetQR0ST1o661um+3N6wsuP6APDNg9mNWRs01irYMybrW/cH38jx79oSrz5WbyXpHNbSTt+qEiDhui/ijrmY2pEcKMdrcxoeqDTYFSdMWPdX13VOpNoSjyuZwy4EQVu5Jt/YyXjMHWoyiTM9reQqCS4ChKolPUCOiDZYO+IZ2zm4PVFtB/UBQEQCYNUr0DNmPmHtTeKcvNLS8KZWwUWApOtenAzDrn8PLm2qcd+6/YPt/lCtQ5dlqSpHR9+fmsuFJ1SiyBMzEjPeqYH22NN6Bi8DWE+t+9/xP1kh8hlyxqRXAAAAAElFTkSuQmCC';
-var Input = function Input1(_ref) {
-    var user = _ref.user, onSend = _ref.onSend, onInputTextChanged = _ref.onInputTextChanged, inputToolbarStyle = _ref.inputToolbarStyle, inputStyle = _ref.inputStyle, sendIcon = _ref.sendIcon;
-    var _useState = _react.useState(''), value = _useState[0], setValue = _useState[1];
-    var _useState2 = _react.useState(), message = _useState2[0], setMessage = _useState2[1];
-    var el = _react.useRef();
-    _react.useEffect(function() {
-        onInputTextChanged && onInputTextChanged(value);
-        setMessage({
-            text: value,
-            createdAt: _momentDefault.default().format('YYYY-MM-DD HH:mm:ss'),
-            user: user
-        });
-    }, [
-        value,
-        onInputTextChanged
-    ]);
-    var send = function send1() {
-        if (message && onSend) onSend(message);
-        setValue('');
-        el.current.focus();
-    };
-    var handleKeyDown = function handleKeyDown1(e) {
-        if (e.key === 'Enter') send();
-    };
-    return _reactDefault.default.createElement("div", {
-        className: "chat-input",
-        style: inputToolbarStyle
-    }, _reactDefault.default.createElement("input", {
-        type: "text",
-        placeholder: "Type a message...",
-        value: value,
-        onChange: function onChange(e) {
-            return setValue(e.target.value);
-        },
-        onKeyDown: handleKeyDown,
-        ref: el,
-        style: inputStyle
-    }), value.length > 0 && _reactDefault.default.createElement("img", {
-        src: sendIcon ? sendIcon : defaultSendIcon,
-        alt: "send",
-        onClick: send
-    }));
-};
-var defaultChatIcon = 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAaUSURBVHic5ZtbbFzVFYa/tec4tuMxjhRsRy2JHZsSIkRADQUqtUhAKThclHIxREQQEzuJbVpUEIKqD+AHpLR9AAniOMThIgVxCUJpsWNkCQK8kCCCAAlxS2xoUgvil0Qej8fxzF48zMTy4EvmzOwzntDvKefo7LX/tTLn7LX2XhZV5f8ZM98C5hvPlaGrO/COVo5cbkWuEZF6VSrBVoGpBK1KPiXHwQ6DOS7CsKoeMarvLB0u/3D/Y8RdafGD5PIK1G2L1YgkblXhWtCrgPIsTY2AvC/K26qhNwbaS77LWpRPsgrA8s7RSxF9WKARh7+iFHGF11D512Bb2SeObU/DVwDqtkWuwvB34I/BSUqjH8sTA+3h94OaIKMALH2S0qKSyD+A+wEJSswsKPDMRCz8yNG/Muba+BkDULst+mtj7G5gpevJffKFtWb9t+0LP3ZpdM5lsL4r0mqMPcD8Ow+w0hh7oL4r0urS6Ky/gPquSKsqnS4nc4UIbUe2hLc7sTVTAOq7Ru5TlW7y/75niopo85Et5c/lamhaAJZ3Re4S5SUKP0u0Ktw9uCX8Si5G0gJwfufYUiuJz8k+ock3I0ZDFx1uKz2arYG0/2UrtpOzx3mA8pTmrJkMQF1XpBH0ptw15Ru9Kak9O0RV+dXTFCdCke8Qql1KyxvKD6FEuOabPzPud6gBSIQiN5+1zgMI1YlQ5OZshiZfAZF7nQqaD7L0QZbvjFQzocfIsKpbvcTw6BUeqyqDTRE+G1a2Hoxz6Hub6ZA4RXLeQHPZD37mMUzo7fgoafPhPMCqSuHRK3xV2l7KF18YCiPPd4VvXwxIjZ8BWw/G+Ww4+I3U06+AP/z5AuAhWoMPfw59b7nj36f8zpMfRH0HwKAsC0LLvJCFL4bCL3qypv1dws19sfvmesYAQ3nSEzzCf6dejo9GakW1e64geAJDCisyncNVHpDFOn9mVNK2042YWgVJBYHuhpJp+wdG0WN+5nCVB2SxzmeApgXAitSm/imi2t3SNzYtTzAC+x2rmE++mHohltqpl0BXy39G02oeIyK9QMa/Q1d5QHbr/JzEKZLX0+6Irkq7VhZTZLanP6JK3fbIB8CVLtXkH+kZaC2brAhb+yNV8Xjof8yQ5ouy7tkbS1+B1BKo8GLedAaFapoPiXhoHbPUOCo8tfkQRZAKwOJQeBfIYOAigyK5IfJm+i3WzzGiOnE8eiOkAvDRJiZQHg9OYcAY/jJ1N2hzz6kLgcvmHiRNyaEpBofLdgOBn8a6R3oGtoRfm3rHGvvQGUcpa1r7I1WTAdDHsEbtHcDJAFQGxYhR0zb1Rktv7PegGzMY68UT5ra0OuBw2zmHFd3gUmGAWBU2TT0TaNzDAsTuIMMTLVVZMa0QGmwt3wu86k5nIKiItvz0VKiiLPY3kIw3RQRqpx2N1XVGbkd4GfedH86Y6XB0Y8/oJcaYg0Bxxnbg07QAnAXOT4jwwDTn3xpfYax9D/xu7cvJSUfPAudnbJDY3Ddeb9S+jW/nAdQYKHjnFXh6IhZePc35ntgym3T+l1naHvLqd0TXFLDzszZJbd43erE1Zi/gex/wNAJDnlr7FIXl/JxtcgLS3Dv2AGK24uODNwvHPPCzJxwYaY2Sg7M0SjbtG13SLKEXEK53Maki+z3QZlSeRbjQhdE5iGbbKtu4h1DFwtg6T8yTqJ7rSI/1vHhvTq2yQdO4hwWLwtF7VeURoN6x+QM715T+tpDe/Una3yU8ER3bVBHmIVX5RRBzCMn9g4IIQEcHZmh19NJESP4gqteB/A4oCfDrNCjVC3dBHgNwTz9lxeOxKjytRrVahCrUVCO6Si/nGlQWi0JeOvNEHt+xmgnIIQCNewhVlEX7QK7L5PligBCpNUdIfnp0PtagT877sGQ3DcmLnD6CTXtPLPIWFB8ELnCjLWjkpIbksu7riw+fvpPTueDzaxedsMbcApzIWVseULEbpjoPDg5Gd91Q/JUVcyeQyNVWwLza3bBw709vOjkZ3tVQ3A886MJWgNw209GY00SouS+6VlR2Aq6yNdfEEdbtbCidPEFyngk27Rtd4hF6HvQGp4bdkRaEwFLh5r6x+0X5J1AayAS5MRmEQGuBlt5TK5HEM8DVFN7fHsRVdW1eiqGNveN1hsSGVDdnIfUkHclrNdjRgTn2m/FrwTYBfwJK8jb5zHw9b+Xw+j7OKdOxlQo1VllmoEaFGqAm2e+nFQFL+BKVTQW9H5APfrYtcpnyI9hplrO9B3HZAAAAAElFTkSuQmCC';
-var Widget = function Widget1(_ref) {
-    var onClick = _ref.onClick, icon = _ref.icon, style = _ref.style;
-    return _reactDefault.default.createElement("img", {
-        src: icon ? icon : defaultChatIcon,
-        alt: "chat",
-        className: "chat-widget",
-        onClick: onClick,
-        style: style
-    });
-};
-var Chat = function Chat1(_ref) {
-    var title = _ref.title, minimized = _ref.minimized, messages = _ref.messages, user = _ref.user, onSend = _ref.onSend, isTyping = _ref.isTyping, onInputTextChanged = _ref.onInputTextChanged, headerAvatar = _ref.headerAvatar, headerStyle = _ref.headerStyle, titleColor = _ref.titleColor, minimizeIcon = _ref.minimizeIcon, leftBubbleStyle = _ref.leftBubbleStyle, rightBubbleStyle = _ref.rightBubbleStyle, backgroundColor = _ref.backgroundColor, timestampStyle = _ref.timestampStyle, inputToolbarStyle = _ref.inputToolbarStyle, inputStyle = _ref.inputStyle, sendIcon = _ref.sendIcon, chatIcon = _ref.chatIcon, containerStyle = _ref.containerStyle, widgetStyle = _ref.widgetStyle;
-    var _useState = _react.useState(minimized), isMinimized = _useState[0], setIsMinimized = _useState[1];
-    return _reactDefault.default.createElement(_reactDefault.default.Fragment, null, isMinimized ? _reactDefault.default.createElement(Widget, {
-        onClick: function onClick() {
-            return setIsMinimized(false);
-        },
-        icon: chatIcon,
-        style: widgetStyle
-    }) : _reactDefault.default.createElement("div", {
-        className: "chat-container",
-        style: containerStyle
-    }, _reactDefault.default.createElement(Header, {
-        title: title,
-        minimize: function minimize() {
-            return setIsMinimized(true);
-        },
-        headerAvatar: headerAvatar,
-        headerStyle: headerStyle,
-        titleColor: titleColor,
-        minimizeIcon: minimizeIcon
-    }), _reactDefault.default.createElement(Body, {
-        user: user,
-        messages: messages,
-        isTyping: isTyping,
-        leftBubbleStyle: leftBubbleStyle,
-        rightBubbleStyle: rightBubbleStyle,
-        backgroundColor: backgroundColor,
-        timestampStyle: timestampStyle
-    }), _reactDefault.default.createElement(Input, {
-        user: user,
-        onSend: onSend,
-        onInputTextChanged: onInputTextChanged,
-        inputToolbarStyle: inputToolbarStyle,
-        inputStyle: inputStyle,
-        sendIcon: sendIcon
-    })));
-};
-exports.default = Chat;
-
-},{"react":"6TuXu","moment":"5Keig","react-moment":"d0UAd","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"5Keig":[function(require,module,exports) {
-(function(global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() : typeof define === 'function' && define.amd ? define(factory) : global.moment = factory();
-})(this, function() {
-    'use strict';
-    var hookCallback;
-    function hooks() {
-        return hookCallback.apply(null, arguments);
-    }
-    // This is done to register the method called with moment()
-    // without creating circular dependencies.
-    function setHookCallback(callback) {
-        hookCallback = callback;
-    }
-    function isArray(input) {
-        return input instanceof Array || Object.prototype.toString.call(input) === '[object Array]';
-    }
-    function isObject(input) {
-        // IE8 will treat undefined and null as object if it wasn't for
-        // input != null
-        return input != null && Object.prototype.toString.call(input) === '[object Object]';
-    }
-    function hasOwnProp(a, b) {
-        return Object.prototype.hasOwnProperty.call(a, b);
-    }
-    function isObjectEmpty(obj) {
-        if (Object.getOwnPropertyNames) return Object.getOwnPropertyNames(obj).length === 0;
-        else {
-            var k;
-            for(k in obj){
-                if (hasOwnProp(obj, k)) return false;
-            }
-            return true;
-        }
-    }
-    function isUndefined(input) {
-        return input === void 0;
-    }
-    function isNumber(input) {
-        return typeof input === 'number' || Object.prototype.toString.call(input) === '[object Number]';
-    }
-    function isDate(input) {
-        return input instanceof Date || Object.prototype.toString.call(input) === '[object Date]';
-    }
-    function map(arr, fn) {
-        var res = [], i;
-        for(i = 0; i < arr.length; ++i)res.push(fn(arr[i], i));
-        return res;
-    }
-    function extend(a, b) {
-        for(var i in b)if (hasOwnProp(b, i)) a[i] = b[i];
-        if (hasOwnProp(b, 'toString')) a.toString = b.toString;
-        if (hasOwnProp(b, 'valueOf')) a.valueOf = b.valueOf;
-        return a;
-    }
-    function createUTC(input, format, locale, strict) {
-        return createLocalOrUTC(input, format, locale, strict, true).utc();
-    }
-    function defaultParsingFlags() {
-        // We need to deep clone this object.
-        return {
-            empty: false,
-            unusedTokens: [],
-            unusedInput: [],
-            overflow: -2,
-            charsLeftOver: 0,
-            nullInput: false,
-            invalidEra: null,
-            invalidMonth: null,
-            invalidFormat: false,
-            userInvalidated: false,
-            iso: false,
-            parsedDateParts: [],
-            era: null,
-            meridiem: null,
-            rfc2822: false,
-            weekdayMismatch: false
-        };
-    }
-    function getParsingFlags(m) {
-        if (m._pf == null) m._pf = defaultParsingFlags();
-        return m._pf;
-    }
-    var some;
-    if (Array.prototype.some) some = Array.prototype.some;
-    else some = function(fun) {
-        var t = Object(this), len = t.length >>> 0, i;
-        for(i = 0; i < len; i++){
-            if (i in t && fun.call(this, t[i], i, t)) return true;
-        }
-        return false;
-    };
-    function isValid(m) {
-        if (m._isValid == null) {
-            var flags = getParsingFlags(m), parsedParts = some.call(flags.parsedDateParts, function(i) {
-                return i != null;
-            }), isNowValid = !isNaN(m._d.getTime()) && flags.overflow < 0 && !flags.empty && !flags.invalidEra && !flags.invalidMonth && !flags.invalidWeekday && !flags.weekdayMismatch && !flags.nullInput && !flags.invalidFormat && !flags.userInvalidated && (!flags.meridiem || flags.meridiem && parsedParts);
-            if (m._strict) isNowValid = isNowValid && flags.charsLeftOver === 0 && flags.unusedTokens.length === 0 && flags.bigHour === undefined;
-            if (Object.isFrozen == null || !Object.isFrozen(m)) m._isValid = isNowValid;
-            else return isNowValid;
-        }
-        return m._isValid;
-    }
-    function createInvalid(flags) {
-        var m = createUTC(NaN);
-        if (flags != null) extend(getParsingFlags(m), flags);
-        else getParsingFlags(m).userInvalidated = true;
-        return m;
-    }
-    // Plugins that add properties should also add the key here (null value),
-    // so we can properly clone ourselves.
-    var momentProperties = hooks.momentProperties = [], updateInProgress = false;
-    function copyConfig(to, from) {
-        var i, prop, val;
-        if (!isUndefined(from._isAMomentObject)) to._isAMomentObject = from._isAMomentObject;
-        if (!isUndefined(from._i)) to._i = from._i;
-        if (!isUndefined(from._f)) to._f = from._f;
-        if (!isUndefined(from._l)) to._l = from._l;
-        if (!isUndefined(from._strict)) to._strict = from._strict;
-        if (!isUndefined(from._tzm)) to._tzm = from._tzm;
-        if (!isUndefined(from._isUTC)) to._isUTC = from._isUTC;
-        if (!isUndefined(from._offset)) to._offset = from._offset;
-        if (!isUndefined(from._pf)) to._pf = getParsingFlags(from);
-        if (!isUndefined(from._locale)) to._locale = from._locale;
-        if (momentProperties.length > 0) for(i = 0; i < momentProperties.length; i++){
-            prop = momentProperties[i];
-            val = from[prop];
-            if (!isUndefined(val)) to[prop] = val;
-        }
-        return to;
-    }
-    // Moment prototype object
-    function Moment(config) {
-        copyConfig(this, config);
-        this._d = new Date(config._d != null ? config._d.getTime() : NaN);
-        if (!this.isValid()) this._d = new Date(NaN);
-        // Prevent infinite loop in case updateOffset creates new moment
-        // objects.
-        if (updateInProgress === false) {
-            updateInProgress = true;
-            hooks.updateOffset(this);
-            updateInProgress = false;
-        }
-    }
-    function isMoment(obj) {
-        return obj instanceof Moment || obj != null && obj._isAMomentObject != null;
-    }
-    function warn(msg) {
-        if (hooks.suppressDeprecationWarnings === false && typeof console !== 'undefined' && console.warn) console.warn('Deprecation warning: ' + msg);
-    }
-    function deprecate(msg, fn) {
-        var firstTime = true;
-        return extend(function() {
-            if (hooks.deprecationHandler != null) hooks.deprecationHandler(null, msg);
-            if (firstTime) {
-                var args = [], arg, i, key;
-                for(i = 0; i < arguments.length; i++){
-                    arg = '';
-                    if (typeof arguments[i] === 'object') {
-                        arg += '\n[' + i + '] ';
-                        for(key in arguments[0])if (hasOwnProp(arguments[0], key)) arg += key + ': ' + arguments[0][key] + ', ';
-                        arg = arg.slice(0, -2); // Remove trailing comma and space
-                    } else arg = arguments[i];
-                    args.push(arg);
-                }
-                warn(msg + '\nArguments: ' + Array.prototype.slice.call(args).join('') + '\n' + new Error().stack);
-                firstTime = false;
-            }
-            return fn.apply(this, arguments);
-        }, fn);
-    }
-    var deprecations = {
-    };
-    function deprecateSimple(name, msg) {
-        if (hooks.deprecationHandler != null) hooks.deprecationHandler(name, msg);
-        if (!deprecations[name]) {
-            warn(msg);
-            deprecations[name] = true;
-        }
-    }
-    hooks.suppressDeprecationWarnings = false;
-    hooks.deprecationHandler = null;
-    function isFunction(input) {
-        return typeof Function !== 'undefined' && input instanceof Function || Object.prototype.toString.call(input) === '[object Function]';
-    }
-    function set(config) {
-        var prop, i;
-        for(i in config)if (hasOwnProp(config, i)) {
-            prop = config[i];
-            if (isFunction(prop)) this[i] = prop;
-            else this['_' + i] = prop;
-        }
-        this._config = config;
-        // Lenient ordinal parsing accepts just a number in addition to
-        // number + (possibly) stuff coming from _dayOfMonthOrdinalParse.
-        // TODO: Remove "ordinalParse" fallback in next major release.
-        this._dayOfMonthOrdinalParseLenient = new RegExp((this._dayOfMonthOrdinalParse.source || this._ordinalParse.source) + '|' + /\d{1,2}/.source);
-    }
-    function mergeConfigs(parentConfig, childConfig) {
-        var res = extend({
-        }, parentConfig), prop;
-        for(prop in childConfig)if (hasOwnProp(childConfig, prop)) {
-            if (isObject(parentConfig[prop]) && isObject(childConfig[prop])) {
-                res[prop] = {
-                };
-                extend(res[prop], parentConfig[prop]);
-                extend(res[prop], childConfig[prop]);
-            } else if (childConfig[prop] != null) res[prop] = childConfig[prop];
-            else delete res[prop];
-        }
-        for(prop in parentConfig)if (hasOwnProp(parentConfig, prop) && !hasOwnProp(childConfig, prop) && isObject(parentConfig[prop])) // make sure changes to properties don't modify parent config
-        res[prop] = extend({
-        }, res[prop]);
-        return res;
-    }
-    function Locale(config) {
-        if (config != null) this.set(config);
-    }
-    var keys;
-    if (Object.keys) keys = Object.keys;
-    else keys = function(obj) {
-        var i, res = [];
-        for(i in obj)if (hasOwnProp(obj, i)) res.push(i);
-        return res;
-    };
-    var defaultCalendar = {
-        sameDay: '[Today at] LT',
-        nextDay: '[Tomorrow at] LT',
-        nextWeek: 'dddd [at] LT',
-        lastDay: '[Yesterday at] LT',
-        lastWeek: '[Last] dddd [at] LT',
-        sameElse: 'L'
-    };
-    function calendar(key, mom, now) {
-        var output = this._calendar[key] || this._calendar['sameElse'];
-        return isFunction(output) ? output.call(mom, now) : output;
-    }
-    function zeroFill(number, targetLength, forceSign) {
-        var absNumber = '' + Math.abs(number), zerosToFill = targetLength - absNumber.length, sign = number >= 0;
-        return (sign ? forceSign ? '+' : '' : '-') + Math.pow(10, Math.max(0, zerosToFill)).toString().substr(1) + absNumber;
-    }
-    var formattingTokens = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|N{1,5}|YYYYYY|YYYYY|YYYY|YY|y{2,4}|yo?|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g, localFormattingTokens = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g, formatFunctions = {
-    }, formatTokenFunctions = {
-    };
-    // token:    'M'
-    // padded:   ['MM', 2]
-    // ordinal:  'Mo'
-    // callback: function () { this.month() + 1 }
-    function addFormatToken(token, padded, ordinal, callback) {
-        var func = callback;
-        if (typeof callback === 'string') func = function() {
-            return this[callback]();
-        };
-        if (token) formatTokenFunctions[token] = func;
-        if (padded) formatTokenFunctions[padded[0]] = function() {
-            return zeroFill(func.apply(this, arguments), padded[1], padded[2]);
-        };
-        if (ordinal) formatTokenFunctions[ordinal] = function() {
-            return this.localeData().ordinal(func.apply(this, arguments), token);
-        };
-    }
-    function removeFormattingTokens(input) {
-        if (input.match(/\[[\s\S]/)) return input.replace(/^\[|\]$/g, '');
-        return input.replace(/\\/g, '');
-    }
-    function makeFormatFunction(format) {
-        var array = format.match(formattingTokens), i, length;
-        for(i = 0, length = array.length; i < length; i++)if (formatTokenFunctions[array[i]]) array[i] = formatTokenFunctions[array[i]];
-        else array[i] = removeFormattingTokens(array[i]);
-        return function(mom) {
-            var output = '', i1;
-            for(i1 = 0; i1 < length; i1++)output += isFunction(array[i1]) ? array[i1].call(mom, format) : array[i1];
-            return output;
-        };
-    }
-    // format date using native date object
-    function formatMoment(m, format) {
-        if (!m.isValid()) return m.localeData().invalidDate();
-        format = expandFormat(format, m.localeData());
-        formatFunctions[format] = formatFunctions[format] || makeFormatFunction(format);
-        return formatFunctions[format](m);
-    }
-    function expandFormat(format, locale) {
-        var i = 5;
-        function replaceLongDateFormatTokens(input) {
-            return locale.longDateFormat(input) || input;
-        }
-        localFormattingTokens.lastIndex = 0;
-        while(i >= 0 && localFormattingTokens.test(format)){
-            format = format.replace(localFormattingTokens, replaceLongDateFormatTokens);
-            localFormattingTokens.lastIndex = 0;
-            i -= 1;
-        }
-        return format;
-    }
-    var defaultLongDateFormat = {
-        LTS: 'h:mm:ss A',
-        LT: 'h:mm A',
-        L: 'MM/DD/YYYY',
-        LL: 'MMMM D, YYYY',
-        LLL: 'MMMM D, YYYY h:mm A',
-        LLLL: 'dddd, MMMM D, YYYY h:mm A'
-    };
-    function longDateFormat(key) {
-        var format = this._longDateFormat[key], formatUpper = this._longDateFormat[key.toUpperCase()];
-        if (format || !formatUpper) return format;
-        this._longDateFormat[key] = formatUpper.match(formattingTokens).map(function(tok) {
-            if (tok === 'MMMM' || tok === 'MM' || tok === 'DD' || tok === 'dddd') return tok.slice(1);
-            return tok;
-        }).join('');
-        return this._longDateFormat[key];
-    }
-    var defaultInvalidDate = 'Invalid date';
-    function invalidDate() {
-        return this._invalidDate;
-    }
-    var defaultOrdinal = '%d', defaultDayOfMonthOrdinalParse = /\d{1,2}/;
-    function ordinal(number) {
-        return this._ordinal.replace('%d', number);
-    }
-    var defaultRelativeTime = {
-        future: 'in %s',
-        past: '%s ago',
-        s: 'a few seconds',
-        ss: '%d seconds',
-        m: 'a minute',
-        mm: '%d minutes',
-        h: 'an hour',
-        hh: '%d hours',
-        d: 'a day',
-        dd: '%d days',
-        w: 'a week',
-        ww: '%d weeks',
-        M: 'a month',
-        MM: '%d months',
-        y: 'a year',
-        yy: '%d years'
-    };
-    function relativeTime(number, withoutSuffix, string, isFuture) {
-        var output = this._relativeTime[string];
-        return isFunction(output) ? output(number, withoutSuffix, string, isFuture) : output.replace(/%d/i, number);
-    }
-    function pastFuture(diff, output) {
-        var format = this._relativeTime[diff > 0 ? 'future' : 'past'];
-        return isFunction(format) ? format(output) : format.replace(/%s/i, output);
-    }
-    var aliases = {
-    };
-    function addUnitAlias(unit, shorthand) {
-        var lowerCase = unit.toLowerCase();
-        aliases[lowerCase] = aliases[lowerCase + 's'] = aliases[shorthand] = unit;
-    }
-    function normalizeUnits(units) {
-        return typeof units === 'string' ? aliases[units] || aliases[units.toLowerCase()] : undefined;
-    }
-    function normalizeObjectUnits(inputObject) {
-        var normalizedInput = {
-        }, normalizedProp, prop;
-        for(prop in inputObject)if (hasOwnProp(inputObject, prop)) {
-            normalizedProp = normalizeUnits(prop);
-            if (normalizedProp) normalizedInput[normalizedProp] = inputObject[prop];
-        }
-        return normalizedInput;
-    }
-    var priorities = {
-    };
-    function addUnitPriority(unit, priority) {
-        priorities[unit] = priority;
-    }
-    function getPrioritizedUnits(unitsObj) {
-        var units = [], u;
-        for(u in unitsObj)if (hasOwnProp(unitsObj, u)) units.push({
-            unit: u,
-            priority: priorities[u]
-        });
-        units.sort(function(a, b) {
-            return a.priority - b.priority;
-        });
-        return units;
-    }
-    function isLeapYear(year) {
-        return year % 4 === 0 && year % 100 !== 0 || year % 400 === 0;
-    }
-    function absFloor(number) {
-        if (number < 0) // -0 -> 0
-        return Math.ceil(number) || 0;
-        else return Math.floor(number);
-    }
-    function toInt(argumentForCoercion) {
-        var coercedNumber = +argumentForCoercion, value = 0;
-        if (coercedNumber !== 0 && isFinite(coercedNumber)) value = absFloor(coercedNumber);
-        return value;
-    }
-    function makeGetSet(unit, keepTime) {
-        return function(value) {
-            if (value != null) {
-                set$1(this, unit, value);
-                hooks.updateOffset(this, keepTime);
-                return this;
-            } else return get(this, unit);
-        };
-    }
-    function get(mom, unit) {
-        return mom.isValid() ? mom._d['get' + (mom._isUTC ? 'UTC' : '') + unit]() : NaN;
-    }
-    function set$1(mom, unit, value) {
-        if (mom.isValid() && !isNaN(value)) {
-            if (unit === 'FullYear' && isLeapYear(mom.year()) && mom.month() === 1 && mom.date() === 29) {
-                value = toInt(value);
-                mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value, mom.month(), daysInMonth(value, mom.month()));
-            } else mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value);
-        }
-    }
-    // MOMENTS
-    function stringGet(units) {
-        units = normalizeUnits(units);
-        if (isFunction(this[units])) return this[units]();
-        return this;
-    }
-    function stringSet(units, value) {
-        if (typeof units === 'object') {
-            units = normalizeObjectUnits(units);
-            var prioritized = getPrioritizedUnits(units), i;
-            for(i = 0; i < prioritized.length; i++)this[prioritized[i].unit](units[prioritized[i].unit]);
-        } else {
-            units = normalizeUnits(units);
-            if (isFunction(this[units])) return this[units](value);
-        }
-        return this;
-    }
-    var match1 = /\d/, match2 = /\d\d/, match3 = /\d{3}/, match4 = /\d{4}/, match6 = /[+-]?\d{6}/, match1to2 = /\d\d?/, match3to4 = /\d\d\d\d?/, match5to6 = /\d\d\d\d\d\d?/, match1to3 = /\d{1,3}/, match1to4 = /\d{1,4}/, match1to6 = /[+-]?\d{1,6}/, matchUnsigned = /\d+/, matchSigned = /[+-]?\d+/, matchOffset = /Z|[+-]\d\d:?\d\d/gi, matchShortOffset = /Z|[+-]\d\d(?::?\d\d)?/gi, matchTimestamp = /[+-]?\d+(\.\d{1,3})?/, // any word (or two) characters or numbers including two/three word month in arabic.
-    // includes scottish gaelic two word and hyphenated months
-    matchWord = /[0-9]{0,256}['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFF07\uFF10-\uFFEF]{1,256}|[\u0600-\u06FF\/]{1,256}(\s*?[\u0600-\u06FF]{1,256}){1,2}/i, regexes;
-    regexes = {
-    };
-    function addRegexToken(token, regex, strictRegex) {
-        regexes[token] = isFunction(regex) ? regex : function(isStrict, localeData) {
-            return isStrict && strictRegex ? strictRegex : regex;
-        };
-    }
-    function getParseRegexForToken(token, config) {
-        if (!hasOwnProp(regexes, token)) return new RegExp(unescapeFormat(token));
-        return regexes[token](config._strict, config._locale);
-    }
-    // Code from http://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
-    function unescapeFormat(s) {
-        return regexEscape(s.replace('\\', '').replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function(matched, p1, p2, p3, p4) {
-            return p1 || p2 || p3 || p4;
-        }));
-    }
-    function regexEscape(s) {
-        return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-    }
-    var tokens = {
-    };
-    function addParseToken(token, callback) {
-        var i, func = callback;
-        if (typeof token === 'string') token = [
-            token
-        ];
-        if (isNumber(callback)) func = function(input, array) {
-            array[callback] = toInt(input);
-        };
-        for(i = 0; i < token.length; i++)tokens[token[i]] = func;
-    }
-    function addWeekParseToken(token, callback) {
-        addParseToken(token, function(input, array, config, token1) {
-            config._w = config._w || {
-            };
-            callback(input, config._w, config, token1);
-        });
-    }
-    function addTimeToArrayFromToken(token, input, config) {
-        if (input != null && hasOwnProp(tokens, token)) tokens[token](input, config._a, config, token);
-    }
-    var YEAR = 0, MONTH = 1, DATE = 2, HOUR = 3, MINUTE = 4, SECOND = 5, MILLISECOND = 6, WEEK = 7, WEEKDAY = 8;
-    function mod(n, x) {
-        return (n % x + x) % x;
-    }
-    var indexOf;
-    if (Array.prototype.indexOf) indexOf = Array.prototype.indexOf;
-    else indexOf = function(o) {
-        // I know
-        var i;
-        for(i = 0; i < this.length; ++i){
-            if (this[i] === o) return i;
-        }
-        return -1;
-    };
-    function daysInMonth(year, month) {
-        if (isNaN(year) || isNaN(month)) return NaN;
-        var modMonth = mod(month, 12);
-        year += (month - modMonth) / 12;
-        return modMonth === 1 ? isLeapYear(year) ? 29 : 28 : 31 - modMonth % 7 % 2;
-    }
-    // FORMATTING
-    addFormatToken('M', [
-        'MM',
-        2
-    ], 'Mo', function() {
-        return this.month() + 1;
-    });
-    addFormatToken('MMM', 0, 0, function(format) {
-        return this.localeData().monthsShort(this, format);
-    });
-    addFormatToken('MMMM', 0, 0, function(format) {
-        return this.localeData().months(this, format);
-    });
-    // ALIASES
-    addUnitAlias('month', 'M');
-    // PRIORITY
-    addUnitPriority('month', 8);
-    // PARSING
-    addRegexToken('M', match1to2);
-    addRegexToken('MM', match1to2, match2);
-    addRegexToken('MMM', function(isStrict, locale) {
-        return locale.monthsShortRegex(isStrict);
-    });
-    addRegexToken('MMMM', function(isStrict, locale) {
-        return locale.monthsRegex(isStrict);
-    });
-    addParseToken([
-        'M',
-        'MM'
-    ], function(input, array) {
-        array[MONTH] = toInt(input) - 1;
-    });
-    addParseToken([
-        'MMM',
-        'MMMM'
-    ], function(input, array, config, token) {
-        var month = config._locale.monthsParse(input, token, config._strict);
-        // if we didn't find a month name, mark the date as invalid.
-        if (month != null) array[MONTH] = month;
-        else getParsingFlags(config).invalidMonth = input;
-    });
-    // LOCALES
-    var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_'), defaultLocaleMonthsShort = 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_'), MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/, defaultMonthsShortRegex = matchWord, defaultMonthsRegex = matchWord;
-    function localeMonths(m, format) {
-        if (!m) return isArray(this._months) ? this._months : this._months['standalone'];
-        return isArray(this._months) ? this._months[m.month()] : this._months[(this._months.isFormat || MONTHS_IN_FORMAT).test(format) ? 'format' : 'standalone'][m.month()];
-    }
-    function localeMonthsShort(m, format) {
-        if (!m) return isArray(this._monthsShort) ? this._monthsShort : this._monthsShort['standalone'];
-        return isArray(this._monthsShort) ? this._monthsShort[m.month()] : this._monthsShort[MONTHS_IN_FORMAT.test(format) ? 'format' : 'standalone'][m.month()];
-    }
-    function handleStrictParse(monthName, format, strict) {
-        var i, ii, mom, llc = monthName.toLocaleLowerCase();
-        if (!this._monthsParse) {
-            // this is not used
-            this._monthsParse = [];
-            this._longMonthsParse = [];
-            this._shortMonthsParse = [];
-            for(i = 0; i < 12; ++i){
-                mom = createUTC([
-                    2000,
-                    i
-                ]);
-                this._shortMonthsParse[i] = this.monthsShort(mom, '').toLocaleLowerCase();
-                this._longMonthsParse[i] = this.months(mom, '').toLocaleLowerCase();
-            }
-        }
-        if (strict) {
-            if (format === 'MMM') {
-                ii = indexOf.call(this._shortMonthsParse, llc);
-                return ii !== -1 ? ii : null;
-            } else {
-                ii = indexOf.call(this._longMonthsParse, llc);
-                return ii !== -1 ? ii : null;
-            }
-        } else if (format === 'MMM') {
-            ii = indexOf.call(this._shortMonthsParse, llc);
-            if (ii !== -1) return ii;
-            ii = indexOf.call(this._longMonthsParse, llc);
-            return ii !== -1 ? ii : null;
-        } else {
-            ii = indexOf.call(this._longMonthsParse, llc);
-            if (ii !== -1) return ii;
-            ii = indexOf.call(this._shortMonthsParse, llc);
-            return ii !== -1 ? ii : null;
-        }
-    }
-    function localeMonthsParse(monthName, format, strict) {
-        var i, mom, regex;
-        if (this._monthsParseExact) return handleStrictParse.call(this, monthName, format, strict);
-        if (!this._monthsParse) {
-            this._monthsParse = [];
-            this._longMonthsParse = [];
-            this._shortMonthsParse = [];
-        }
-        // TODO: add sorting
-        // Sorting makes sure if one month (or abbr) is a prefix of another
-        // see sorting in computeMonthsParse
-        for(i = 0; i < 12; i++){
-            // make the regex if we don't have it already
-            mom = createUTC([
-                2000,
-                i
-            ]);
-            if (strict && !this._longMonthsParse[i]) {
-                this._longMonthsParse[i] = new RegExp('^' + this.months(mom, '').replace('.', '') + '$', 'i');
-                this._shortMonthsParse[i] = new RegExp('^' + this.monthsShort(mom, '').replace('.', '') + '$', 'i');
-            }
-            if (!strict && !this._monthsParse[i]) {
-                regex = '^' + this.months(mom, '') + '|^' + this.monthsShort(mom, '');
-                this._monthsParse[i] = new RegExp(regex.replace('.', ''), 'i');
-            }
-            // test the regex
-            if (strict && format === 'MMMM' && this._longMonthsParse[i].test(monthName)) return i;
-            else if (strict && format === 'MMM' && this._shortMonthsParse[i].test(monthName)) return i;
-            else if (!strict && this._monthsParse[i].test(monthName)) return i;
-        }
-    }
-    // MOMENTS
-    function setMonth(mom, value) {
-        var dayOfMonth;
-        if (!mom.isValid()) // No op
-        return mom;
-        if (typeof value === 'string') {
-            if (/^\d+$/.test(value)) value = toInt(value);
-            else {
-                value = mom.localeData().monthsParse(value);
-                // TODO: Another silent failure?
-                if (!isNumber(value)) return mom;
-            }
-        }
-        dayOfMonth = Math.min(mom.date(), daysInMonth(mom.year(), value));
-        mom._d['set' + (mom._isUTC ? 'UTC' : '') + 'Month'](value, dayOfMonth);
-        return mom;
-    }
-    function getSetMonth(value) {
-        if (value != null) {
-            setMonth(this, value);
-            hooks.updateOffset(this, true);
-            return this;
-        } else return get(this, 'Month');
-    }
-    function getDaysInMonth() {
-        return daysInMonth(this.year(), this.month());
-    }
-    function monthsShortRegex(isStrict) {
-        if (this._monthsParseExact) {
-            if (!hasOwnProp(this, '_monthsRegex')) computeMonthsParse.call(this);
-            if (isStrict) return this._monthsShortStrictRegex;
-            else return this._monthsShortRegex;
-        } else {
-            if (!hasOwnProp(this, '_monthsShortRegex')) this._monthsShortRegex = defaultMonthsShortRegex;
-            return this._monthsShortStrictRegex && isStrict ? this._monthsShortStrictRegex : this._monthsShortRegex;
-        }
-    }
-    function monthsRegex(isStrict) {
-        if (this._monthsParseExact) {
-            if (!hasOwnProp(this, '_monthsRegex')) computeMonthsParse.call(this);
-            if (isStrict) return this._monthsStrictRegex;
-            else return this._monthsRegex;
-        } else {
-            if (!hasOwnProp(this, '_monthsRegex')) this._monthsRegex = defaultMonthsRegex;
-            return this._monthsStrictRegex && isStrict ? this._monthsStrictRegex : this._monthsRegex;
-        }
-    }
-    function computeMonthsParse() {
-        function cmpLenRev(a, b) {
-            return b.length - a.length;
-        }
-        var shortPieces = [], longPieces = [], mixedPieces = [], i, mom;
-        for(i = 0; i < 12; i++){
-            // make the regex if we don't have it already
-            mom = createUTC([
-                2000,
-                i
-            ]);
-            shortPieces.push(this.monthsShort(mom, ''));
-            longPieces.push(this.months(mom, ''));
-            mixedPieces.push(this.months(mom, ''));
-            mixedPieces.push(this.monthsShort(mom, ''));
-        }
-        // Sorting makes sure if one month (or abbr) is a prefix of another it
-        // will match the longer piece.
-        shortPieces.sort(cmpLenRev);
-        longPieces.sort(cmpLenRev);
-        mixedPieces.sort(cmpLenRev);
-        for(i = 0; i < 12; i++){
-            shortPieces[i] = regexEscape(shortPieces[i]);
-            longPieces[i] = regexEscape(longPieces[i]);
-        }
-        for(i = 0; i < 24; i++)mixedPieces[i] = regexEscape(mixedPieces[i]);
-        this._monthsRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
-        this._monthsShortRegex = this._monthsRegex;
-        this._monthsStrictRegex = new RegExp('^(' + longPieces.join('|') + ')', 'i');
-        this._monthsShortStrictRegex = new RegExp('^(' + shortPieces.join('|') + ')', 'i');
-    }
-    // FORMATTING
-    addFormatToken('Y', 0, 0, function() {
-        var y = this.year();
-        return y <= 9999 ? zeroFill(y, 4) : '+' + y;
-    });
-    addFormatToken(0, [
-        'YY',
-        2
-    ], 0, function() {
-        return this.year() % 100;
-    });
-    addFormatToken(0, [
-        'YYYY',
-        4
-    ], 0, 'year');
-    addFormatToken(0, [
-        'YYYYY',
-        5
-    ], 0, 'year');
-    addFormatToken(0, [
-        'YYYYYY',
-        6,
-        true
-    ], 0, 'year');
-    // ALIASES
-    addUnitAlias('year', 'y');
-    // PRIORITIES
-    addUnitPriority('year', 1);
-    // PARSING
-    addRegexToken('Y', matchSigned);
-    addRegexToken('YY', match1to2, match2);
-    addRegexToken('YYYY', match1to4, match4);
-    addRegexToken('YYYYY', match1to6, match6);
-    addRegexToken('YYYYYY', match1to6, match6);
-    addParseToken([
-        'YYYYY',
-        'YYYYYY'
-    ], YEAR);
-    addParseToken('YYYY', function(input, array) {
-        array[YEAR] = input.length === 2 ? hooks.parseTwoDigitYear(input) : toInt(input);
-    });
-    addParseToken('YY', function(input, array) {
-        array[YEAR] = hooks.parseTwoDigitYear(input);
-    });
-    addParseToken('Y', function(input, array) {
-        array[YEAR] = parseInt(input, 10);
-    });
-    // HELPERS
-    function daysInYear(year) {
-        return isLeapYear(year) ? 366 : 365;
-    }
-    // HOOKS
-    hooks.parseTwoDigitYear = function(input) {
-        return toInt(input) + (toInt(input) > 68 ? 1900 : 2000);
-    };
-    // MOMENTS
-    var getSetYear = makeGetSet('FullYear', true);
-    function getIsLeapYear() {
-        return isLeapYear(this.year());
-    }
-    function createDate(y, m, d, h, M, s, ms) {
-        // can't just apply() to create a date:
-        // https://stackoverflow.com/q/181348
-        var date;
-        // the date constructor remaps years 0-99 to 1900-1999
-        if (y < 100 && y >= 0) {
-            // preserve leap years using a full 400 year cycle, then reset
-            date = new Date(y + 400, m, d, h, M, s, ms);
-            if (isFinite(date.getFullYear())) date.setFullYear(y);
-        } else date = new Date(y, m, d, h, M, s, ms);
-        return date;
-    }
-    function createUTCDate(y) {
-        var date, args;
-        // the Date.UTC function remaps years 0-99 to 1900-1999
-        if (y < 100 && y >= 0) {
-            args = Array.prototype.slice.call(arguments);
-            // preserve leap years using a full 400 year cycle, then reset
-            args[0] = y + 400;
-            date = new Date(Date.UTC.apply(null, args));
-            if (isFinite(date.getUTCFullYear())) date.setUTCFullYear(y);
-        } else date = new Date(Date.UTC.apply(null, arguments));
-        return date;
-    }
-    // start-of-first-week - start-of-year
-    function firstWeekOffset(year, dow, doy) {
-        var fwd = 7 + dow - doy, // first-week day local weekday -- which local weekday is fwd
-        fwdlw = (7 + createUTCDate(year, 0, fwd).getUTCDay() - dow) % 7;
-        return -fwdlw + fwd - 1;
-    }
-    // https://en.wikipedia.org/wiki/ISO_week_date#Calculating_a_date_given_the_year.2C_week_number_and_weekday
-    function dayOfYearFromWeeks(year, week, weekday, dow, doy) {
-        var localWeekday = (7 + weekday - dow) % 7, weekOffset = firstWeekOffset(year, dow, doy), dayOfYear = 1 + 7 * (week - 1) + localWeekday + weekOffset, resYear, resDayOfYear;
-        if (dayOfYear <= 0) {
-            resYear = year - 1;
-            resDayOfYear = daysInYear(resYear) + dayOfYear;
-        } else if (dayOfYear > daysInYear(year)) {
-            resYear = year + 1;
-            resDayOfYear = dayOfYear - daysInYear(year);
-        } else {
-            resYear = year;
-            resDayOfYear = dayOfYear;
-        }
-        return {
-            year: resYear,
-            dayOfYear: resDayOfYear
-        };
-    }
-    function weekOfYear(mom, dow, doy) {
-        var weekOffset = firstWeekOffset(mom.year(), dow, doy), week = Math.floor((mom.dayOfYear() - weekOffset - 1) / 7) + 1, resWeek, resYear;
-        if (week < 1) {
-            resYear = mom.year() - 1;
-            resWeek = week + weeksInYear(resYear, dow, doy);
-        } else if (week > weeksInYear(mom.year(), dow, doy)) {
-            resWeek = week - weeksInYear(mom.year(), dow, doy);
-            resYear = mom.year() + 1;
-        } else {
-            resYear = mom.year();
-            resWeek = week;
-        }
-        return {
-            week: resWeek,
-            year: resYear
-        };
-    }
-    function weeksInYear(year, dow, doy) {
-        var weekOffset = firstWeekOffset(year, dow, doy), weekOffsetNext = firstWeekOffset(year + 1, dow, doy);
-        return (daysInYear(year) - weekOffset + weekOffsetNext) / 7;
-    }
-    // FORMATTING
-    addFormatToken('w', [
-        'ww',
-        2
-    ], 'wo', 'week');
-    addFormatToken('W', [
-        'WW',
-        2
-    ], 'Wo', 'isoWeek');
-    // ALIASES
-    addUnitAlias('week', 'w');
-    addUnitAlias('isoWeek', 'W');
-    // PRIORITIES
-    addUnitPriority('week', 5);
-    addUnitPriority('isoWeek', 5);
-    // PARSING
-    addRegexToken('w', match1to2);
-    addRegexToken('ww', match1to2, match2);
-    addRegexToken('W', match1to2);
-    addRegexToken('WW', match1to2, match2);
-    addWeekParseToken([
-        'w',
-        'ww',
-        'W',
-        'WW'
-    ], function(input, week, config, token) {
-        week[token.substr(0, 1)] = toInt(input);
-    });
-    // HELPERS
-    // LOCALES
-    function localeWeek(mom) {
-        return weekOfYear(mom, this._week.dow, this._week.doy).week;
-    }
-    var defaultLocaleWeek = {
-        dow: 0,
-        doy: 6
-    };
-    function localeFirstDayOfWeek() {
-        return this._week.dow;
-    }
-    function localeFirstDayOfYear() {
-        return this._week.doy;
-    }
-    // MOMENTS
-    function getSetWeek(input) {
-        var week = this.localeData().week(this);
-        return input == null ? week : this.add((input - week) * 7, 'd');
-    }
-    function getSetISOWeek(input) {
-        var week = weekOfYear(this, 1, 4).week;
-        return input == null ? week : this.add((input - week) * 7, 'd');
-    }
-    // FORMATTING
-    addFormatToken('d', 0, 'do', 'day');
-    addFormatToken('dd', 0, 0, function(format) {
-        return this.localeData().weekdaysMin(this, format);
-    });
-    addFormatToken('ddd', 0, 0, function(format) {
-        return this.localeData().weekdaysShort(this, format);
-    });
-    addFormatToken('dddd', 0, 0, function(format) {
-        return this.localeData().weekdays(this, format);
-    });
-    addFormatToken('e', 0, 0, 'weekday');
-    addFormatToken('E', 0, 0, 'isoWeekday');
-    // ALIASES
-    addUnitAlias('day', 'd');
-    addUnitAlias('weekday', 'e');
-    addUnitAlias('isoWeekday', 'E');
-    // PRIORITY
-    addUnitPriority('day', 11);
-    addUnitPriority('weekday', 11);
-    addUnitPriority('isoWeekday', 11);
-    // PARSING
-    addRegexToken('d', match1to2);
-    addRegexToken('e', match1to2);
-    addRegexToken('E', match1to2);
-    addRegexToken('dd', function(isStrict, locale) {
-        return locale.weekdaysMinRegex(isStrict);
-    });
-    addRegexToken('ddd', function(isStrict, locale) {
-        return locale.weekdaysShortRegex(isStrict);
-    });
-    addRegexToken('dddd', function(isStrict, locale) {
-        return locale.weekdaysRegex(isStrict);
-    });
-    addWeekParseToken([
-        'dd',
-        'ddd',
-        'dddd'
-    ], function(input, week, config, token) {
-        var weekday = config._locale.weekdaysParse(input, token, config._strict);
-        // if we didn't get a weekday name, mark the date as invalid
-        if (weekday != null) week.d = weekday;
-        else getParsingFlags(config).invalidWeekday = input;
-    });
-    addWeekParseToken([
-        'd',
-        'e',
-        'E'
-    ], function(input, week, config, token) {
-        week[token] = toInt(input);
-    });
-    // HELPERS
-    function parseWeekday(input, locale) {
-        if (typeof input !== 'string') return input;
-        if (!isNaN(input)) return parseInt(input, 10);
-        input = locale.weekdaysParse(input);
-        if (typeof input === 'number') return input;
-        return null;
-    }
-    function parseIsoWeekday(input, locale) {
-        if (typeof input === 'string') return locale.weekdaysParse(input) % 7 || 7;
-        return isNaN(input) ? null : input;
-    }
-    // LOCALES
-    function shiftWeekdays(ws, n) {
-        return ws.slice(n, 7).concat(ws.slice(0, n));
-    }
-    var defaultLocaleWeekdays = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_'), defaultLocaleWeekdaysShort = 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_'), defaultLocaleWeekdaysMin = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_'), defaultWeekdaysRegex = matchWord, defaultWeekdaysShortRegex = matchWord, defaultWeekdaysMinRegex = matchWord;
-    function localeWeekdays(m, format) {
-        var weekdays = isArray(this._weekdays) ? this._weekdays : this._weekdays[m && m !== true && this._weekdays.isFormat.test(format) ? 'format' : 'standalone'];
-        return m === true ? shiftWeekdays(weekdays, this._week.dow) : m ? weekdays[m.day()] : weekdays;
-    }
-    function localeWeekdaysShort(m) {
-        return m === true ? shiftWeekdays(this._weekdaysShort, this._week.dow) : m ? this._weekdaysShort[m.day()] : this._weekdaysShort;
-    }
-    function localeWeekdaysMin(m) {
-        return m === true ? shiftWeekdays(this._weekdaysMin, this._week.dow) : m ? this._weekdaysMin[m.day()] : this._weekdaysMin;
-    }
-    function handleStrictParse$1(weekdayName, format, strict) {
-        var i, ii, mom, llc = weekdayName.toLocaleLowerCase();
-        if (!this._weekdaysParse) {
-            this._weekdaysParse = [];
-            this._shortWeekdaysParse = [];
-            this._minWeekdaysParse = [];
-            for(i = 0; i < 7; ++i){
-                mom = createUTC([
-                    2000,
-                    1
-                ]).day(i);
-                this._minWeekdaysParse[i] = this.weekdaysMin(mom, '').toLocaleLowerCase();
-                this._shortWeekdaysParse[i] = this.weekdaysShort(mom, '').toLocaleLowerCase();
-                this._weekdaysParse[i] = this.weekdays(mom, '').toLocaleLowerCase();
-            }
-        }
-        if (strict) {
-            if (format === 'dddd') {
-                ii = indexOf.call(this._weekdaysParse, llc);
-                return ii !== -1 ? ii : null;
-            } else if (format === 'ddd') {
-                ii = indexOf.call(this._shortWeekdaysParse, llc);
-                return ii !== -1 ? ii : null;
-            } else {
-                ii = indexOf.call(this._minWeekdaysParse, llc);
-                return ii !== -1 ? ii : null;
-            }
-        } else {
-            if (format === 'dddd') {
-                ii = indexOf.call(this._weekdaysParse, llc);
-                if (ii !== -1) return ii;
-                ii = indexOf.call(this._shortWeekdaysParse, llc);
-                if (ii !== -1) return ii;
-                ii = indexOf.call(this._minWeekdaysParse, llc);
-                return ii !== -1 ? ii : null;
-            } else if (format === 'ddd') {
-                ii = indexOf.call(this._shortWeekdaysParse, llc);
-                if (ii !== -1) return ii;
-                ii = indexOf.call(this._weekdaysParse, llc);
-                if (ii !== -1) return ii;
-                ii = indexOf.call(this._minWeekdaysParse, llc);
-                return ii !== -1 ? ii : null;
-            } else {
-                ii = indexOf.call(this._minWeekdaysParse, llc);
-                if (ii !== -1) return ii;
-                ii = indexOf.call(this._weekdaysParse, llc);
-                if (ii !== -1) return ii;
-                ii = indexOf.call(this._shortWeekdaysParse, llc);
-                return ii !== -1 ? ii : null;
-            }
-        }
-    }
-    function localeWeekdaysParse(weekdayName, format, strict) {
-        var i, mom, regex;
-        if (this._weekdaysParseExact) return handleStrictParse$1.call(this, weekdayName, format, strict);
-        if (!this._weekdaysParse) {
-            this._weekdaysParse = [];
-            this._minWeekdaysParse = [];
-            this._shortWeekdaysParse = [];
-            this._fullWeekdaysParse = [];
-        }
-        for(i = 0; i < 7; i++){
-            // make the regex if we don't have it already
-            mom = createUTC([
-                2000,
-                1
-            ]).day(i);
-            if (strict && !this._fullWeekdaysParse[i]) {
-                this._fullWeekdaysParse[i] = new RegExp('^' + this.weekdays(mom, '').replace('.', '\\.?') + '$', 'i');
-                this._shortWeekdaysParse[i] = new RegExp('^' + this.weekdaysShort(mom, '').replace('.', '\\.?') + '$', 'i');
-                this._minWeekdaysParse[i] = new RegExp('^' + this.weekdaysMin(mom, '').replace('.', '\\.?') + '$', 'i');
-            }
-            if (!this._weekdaysParse[i]) {
-                regex = '^' + this.weekdays(mom, '') + '|^' + this.weekdaysShort(mom, '') + '|^' + this.weekdaysMin(mom, '');
-                this._weekdaysParse[i] = new RegExp(regex.replace('.', ''), 'i');
-            }
-            // test the regex
-            if (strict && format === 'dddd' && this._fullWeekdaysParse[i].test(weekdayName)) return i;
-            else if (strict && format === 'ddd' && this._shortWeekdaysParse[i].test(weekdayName)) return i;
-            else if (strict && format === 'dd' && this._minWeekdaysParse[i].test(weekdayName)) return i;
-            else if (!strict && this._weekdaysParse[i].test(weekdayName)) return i;
-        }
-    }
-    // MOMENTS
-    function getSetDayOfWeek(input) {
-        if (!this.isValid()) return input != null ? this : NaN;
-        var day = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
-        if (input != null) {
-            input = parseWeekday(input, this.localeData());
-            return this.add(input - day, 'd');
-        } else return day;
-    }
-    function getSetLocaleDayOfWeek(input) {
-        if (!this.isValid()) return input != null ? this : NaN;
-        var weekday = (this.day() + 7 - this.localeData()._week.dow) % 7;
-        return input == null ? weekday : this.add(input - weekday, 'd');
-    }
-    function getSetISODayOfWeek(input) {
-        if (!this.isValid()) return input != null ? this : NaN;
-        // behaves the same as moment#day except
-        // as a getter, returns 7 instead of 0 (1-7 range instead of 0-6)
-        // as a setter, sunday should belong to the previous week.
-        if (input != null) {
-            var weekday = parseIsoWeekday(input, this.localeData());
-            return this.day(this.day() % 7 ? weekday : weekday - 7);
-        } else return this.day() || 7;
-    }
-    function weekdaysRegex(isStrict) {
-        if (this._weekdaysParseExact) {
-            if (!hasOwnProp(this, '_weekdaysRegex')) computeWeekdaysParse.call(this);
-            if (isStrict) return this._weekdaysStrictRegex;
-            else return this._weekdaysRegex;
-        } else {
-            if (!hasOwnProp(this, '_weekdaysRegex')) this._weekdaysRegex = defaultWeekdaysRegex;
-            return this._weekdaysStrictRegex && isStrict ? this._weekdaysStrictRegex : this._weekdaysRegex;
-        }
-    }
-    function weekdaysShortRegex(isStrict) {
-        if (this._weekdaysParseExact) {
-            if (!hasOwnProp(this, '_weekdaysRegex')) computeWeekdaysParse.call(this);
-            if (isStrict) return this._weekdaysShortStrictRegex;
-            else return this._weekdaysShortRegex;
-        } else {
-            if (!hasOwnProp(this, '_weekdaysShortRegex')) this._weekdaysShortRegex = defaultWeekdaysShortRegex;
-            return this._weekdaysShortStrictRegex && isStrict ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex;
-        }
-    }
-    function weekdaysMinRegex(isStrict) {
-        if (this._weekdaysParseExact) {
-            if (!hasOwnProp(this, '_weekdaysRegex')) computeWeekdaysParse.call(this);
-            if (isStrict) return this._weekdaysMinStrictRegex;
-            else return this._weekdaysMinRegex;
-        } else {
-            if (!hasOwnProp(this, '_weekdaysMinRegex')) this._weekdaysMinRegex = defaultWeekdaysMinRegex;
-            return this._weekdaysMinStrictRegex && isStrict ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex;
-        }
-    }
-    function computeWeekdaysParse() {
-        function cmpLenRev(a, b) {
-            return b.length - a.length;
-        }
-        var minPieces = [], shortPieces = [], longPieces = [], mixedPieces = [], i, mom, minp, shortp, longp;
-        for(i = 0; i < 7; i++){
-            // make the regex if we don't have it already
-            mom = createUTC([
-                2000,
-                1
-            ]).day(i);
-            minp = regexEscape(this.weekdaysMin(mom, ''));
-            shortp = regexEscape(this.weekdaysShort(mom, ''));
-            longp = regexEscape(this.weekdays(mom, ''));
-            minPieces.push(minp);
-            shortPieces.push(shortp);
-            longPieces.push(longp);
-            mixedPieces.push(minp);
-            mixedPieces.push(shortp);
-            mixedPieces.push(longp);
-        }
-        // Sorting makes sure if one weekday (or abbr) is a prefix of another it
-        // will match the longer piece.
-        minPieces.sort(cmpLenRev);
-        shortPieces.sort(cmpLenRev);
-        longPieces.sort(cmpLenRev);
-        mixedPieces.sort(cmpLenRev);
-        this._weekdaysRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
-        this._weekdaysShortRegex = this._weekdaysRegex;
-        this._weekdaysMinRegex = this._weekdaysRegex;
-        this._weekdaysStrictRegex = new RegExp('^(' + longPieces.join('|') + ')', 'i');
-        this._weekdaysShortStrictRegex = new RegExp('^(' + shortPieces.join('|') + ')', 'i');
-        this._weekdaysMinStrictRegex = new RegExp('^(' + minPieces.join('|') + ')', 'i');
-    }
-    // FORMATTING
-    function hFormat() {
-        return this.hours() % 12 || 12;
-    }
-    function kFormat() {
-        return this.hours() || 24;
-    }
-    addFormatToken('H', [
-        'HH',
-        2
-    ], 0, 'hour');
-    addFormatToken('h', [
-        'hh',
-        2
-    ], 0, hFormat);
-    addFormatToken('k', [
-        'kk',
-        2
-    ], 0, kFormat);
-    addFormatToken('hmm', 0, 0, function() {
-        return '' + hFormat.apply(this) + zeroFill(this.minutes(), 2);
-    });
-    addFormatToken('hmmss', 0, 0, function() {
-        return '' + hFormat.apply(this) + zeroFill(this.minutes(), 2) + zeroFill(this.seconds(), 2);
-    });
-    addFormatToken('Hmm', 0, 0, function() {
-        return '' + this.hours() + zeroFill(this.minutes(), 2);
-    });
-    addFormatToken('Hmmss', 0, 0, function() {
-        return '' + this.hours() + zeroFill(this.minutes(), 2) + zeroFill(this.seconds(), 2);
-    });
-    function meridiem(token, lowercase) {
-        addFormatToken(token, 0, 0, function() {
-            return this.localeData().meridiem(this.hours(), this.minutes(), lowercase);
-        });
-    }
-    meridiem('a', true);
-    meridiem('A', false);
-    // ALIASES
-    addUnitAlias('hour', 'h');
-    // PRIORITY
-    addUnitPriority('hour', 13);
-    // PARSING
-    function matchMeridiem(isStrict, locale) {
-        return locale._meridiemParse;
-    }
-    addRegexToken('a', matchMeridiem);
-    addRegexToken('A', matchMeridiem);
-    addRegexToken('H', match1to2);
-    addRegexToken('h', match1to2);
-    addRegexToken('k', match1to2);
-    addRegexToken('HH', match1to2, match2);
-    addRegexToken('hh', match1to2, match2);
-    addRegexToken('kk', match1to2, match2);
-    addRegexToken('hmm', match3to4);
-    addRegexToken('hmmss', match5to6);
-    addRegexToken('Hmm', match3to4);
-    addRegexToken('Hmmss', match5to6);
-    addParseToken([
-        'H',
-        'HH'
-    ], HOUR);
-    addParseToken([
-        'k',
-        'kk'
-    ], function(input, array, config) {
-        var kInput = toInt(input);
-        array[HOUR] = kInput === 24 ? 0 : kInput;
-    });
-    addParseToken([
-        'a',
-        'A'
-    ], function(input, array, config) {
-        config._isPm = config._locale.isPM(input);
-        config._meridiem = input;
-    });
-    addParseToken([
-        'h',
-        'hh'
-    ], function(input, array, config) {
-        array[HOUR] = toInt(input);
-        getParsingFlags(config).bigHour = true;
-    });
-    addParseToken('hmm', function(input, array, config) {
-        var pos = input.length - 2;
-        array[HOUR] = toInt(input.substr(0, pos));
-        array[MINUTE] = toInt(input.substr(pos));
-        getParsingFlags(config).bigHour = true;
-    });
-    addParseToken('hmmss', function(input, array, config) {
-        var pos1 = input.length - 4, pos2 = input.length - 2;
-        array[HOUR] = toInt(input.substr(0, pos1));
-        array[MINUTE] = toInt(input.substr(pos1, 2));
-        array[SECOND] = toInt(input.substr(pos2));
-        getParsingFlags(config).bigHour = true;
-    });
-    addParseToken('Hmm', function(input, array, config) {
-        var pos = input.length - 2;
-        array[HOUR] = toInt(input.substr(0, pos));
-        array[MINUTE] = toInt(input.substr(pos));
-    });
-    addParseToken('Hmmss', function(input, array, config) {
-        var pos1 = input.length - 4, pos2 = input.length - 2;
-        array[HOUR] = toInt(input.substr(0, pos1));
-        array[MINUTE] = toInt(input.substr(pos1, 2));
-        array[SECOND] = toInt(input.substr(pos2));
-    });
-    // LOCALES
-    function localeIsPM(input) {
-        // IE8 Quirks Mode & IE7 Standards Mode do not allow accessing strings like arrays
-        // Using charAt should be more compatible.
-        return (input + '').toLowerCase().charAt(0) === 'p';
-    }
-    var defaultLocaleMeridiemParse = /[ap]\.?m?\.?/i, // Setting the hour should keep the time, because the user explicitly
-    // specified which hour they want. So trying to maintain the same hour (in
-    // a new timezone) makes sense. Adding/subtracting hours does not follow
-    // this rule.
-    getSetHour = makeGetSet('Hours', true);
-    function localeMeridiem(hours, minutes, isLower) {
-        if (hours > 11) return isLower ? 'pm' : 'PM';
-        else return isLower ? 'am' : 'AM';
-    }
-    var baseConfig = {
-        calendar: defaultCalendar,
-        longDateFormat: defaultLongDateFormat,
-        invalidDate: defaultInvalidDate,
-        ordinal: defaultOrdinal,
-        dayOfMonthOrdinalParse: defaultDayOfMonthOrdinalParse,
-        relativeTime: defaultRelativeTime,
-        months: defaultLocaleMonths,
-        monthsShort: defaultLocaleMonthsShort,
-        week: defaultLocaleWeek,
-        weekdays: defaultLocaleWeekdays,
-        weekdaysMin: defaultLocaleWeekdaysMin,
-        weekdaysShort: defaultLocaleWeekdaysShort,
-        meridiemParse: defaultLocaleMeridiemParse
-    };
-    // internal storage for locale config files
-    var locales = {
-    }, localeFamilies = {
-    }, globalLocale;
-    function commonPrefix(arr1, arr2) {
-        var i, minl = Math.min(arr1.length, arr2.length);
-        for(i = 0; i < minl; i += 1){
-            if (arr1[i] !== arr2[i]) return i;
-        }
-        return minl;
-    }
-    function normalizeLocale(key) {
-        return key ? key.toLowerCase().replace('_', '-') : key;
-    }
-    // pick the locale from the array
-    // try ['en-au', 'en-gb'] as 'en-au', 'en-gb', 'en', as in move through the list trying each
-    // substring from most specific to least, but move to the next array item if it's a more specific variant than the current root
-    function chooseLocale(names) {
-        var i = 0, j, next, locale, split;
-        while(i < names.length){
-            split = normalizeLocale(names[i]).split('-');
-            j = split.length;
-            next = normalizeLocale(names[i + 1]);
-            next = next ? next.split('-') : null;
-            while(j > 0){
-                locale = loadLocale(split.slice(0, j).join('-'));
-                if (locale) return locale;
-                if (next && next.length >= j && commonPrefix(split, next) >= j - 1) break;
-                j--;
-            }
-            i++;
-        }
-        return globalLocale;
-    }
-    function loadLocale(name) {
-        var oldLocale = null, aliasedRequire;
-        // TODO: Find a better way to register and load all the locales in Node
-        if (locales[name] === undefined && typeof module !== 'undefined' && module && module.exports) try {
-            oldLocale = globalLocale._abbr;
-            aliasedRequire = undefined;
-            aliasedRequire('./locale/' + name);
-            getSetGlobalLocale(oldLocale);
-        } catch (e) {
-            // mark as not found to avoid repeating expensive file require call causing high CPU
-            // when trying to find en-US, en_US, en-us for every format call
-            locales[name] = null; // null means not found
-        }
-        return locales[name];
-    }
-    // This function will load locale and then set the global locale.  If
-    // no arguments are passed in, it will simply return the current global
-    // locale key.
-    function getSetGlobalLocale(key, values) {
-        var data;
-        if (key) {
-            if (isUndefined(values)) data = getLocale(key);
-            else data = defineLocale(key, values);
-            if (data) // moment.duration._locale = moment._locale = data;
-            globalLocale = data;
-            else if (typeof console !== 'undefined' && console.warn) //warn user if arguments are passed but the locale could not be set
-            console.warn('Locale ' + key + ' not found. Did you forget to load it?');
-        }
-        return globalLocale._abbr;
-    }
-    function defineLocale(name, config) {
-        if (config !== null) {
-            var locale, parentConfig = baseConfig;
-            config.abbr = name;
-            if (locales[name] != null) {
-                deprecateSimple('defineLocaleOverride', "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info.");
-                parentConfig = locales[name]._config;
-            } else if (config.parentLocale != null) {
-                if (locales[config.parentLocale] != null) parentConfig = locales[config.parentLocale]._config;
-                else {
-                    locale = loadLocale(config.parentLocale);
-                    if (locale != null) parentConfig = locale._config;
-                    else {
-                        if (!localeFamilies[config.parentLocale]) localeFamilies[config.parentLocale] = [];
-                        localeFamilies[config.parentLocale].push({
-                            name: name,
-                            config: config
-                        });
-                        return null;
-                    }
-                }
-            }
-            locales[name] = new Locale(mergeConfigs(parentConfig, config));
-            if (localeFamilies[name]) localeFamilies[name].forEach(function(x) {
-                defineLocale(x.name, x.config);
-            });
-            // backwards compat for now: also set the locale
-            // make sure we set the locale AFTER all child locales have been
-            // created, so we won't end up with the child locale set.
-            getSetGlobalLocale(name);
-            return locales[name];
-        } else {
-            // useful for testing
-            delete locales[name];
-            return null;
-        }
-    }
-    function updateLocale(name, config) {
-        if (config != null) {
-            var locale, tmpLocale, parentConfig = baseConfig;
-            if (locales[name] != null && locales[name].parentLocale != null) // Update existing child locale in-place to avoid memory-leaks
-            locales[name].set(mergeConfigs(locales[name]._config, config));
-            else {
-                // MERGE
-                tmpLocale = loadLocale(name);
-                if (tmpLocale != null) parentConfig = tmpLocale._config;
-                config = mergeConfigs(parentConfig, config);
-                if (tmpLocale == null) // updateLocale is called for creating a new locale
-                // Set abbr so it will have a name (getters return
-                // undefined otherwise).
-                config.abbr = name;
-                locale = new Locale(config);
-                locale.parentLocale = locales[name];
-                locales[name] = locale;
-            }
-            // backwards compat for now: also set the locale
-            getSetGlobalLocale(name);
-        } else // pass null for config to unupdate, useful for tests
-        if (locales[name] != null) {
-            if (locales[name].parentLocale != null) {
-                locales[name] = locales[name].parentLocale;
-                if (name === getSetGlobalLocale()) getSetGlobalLocale(name);
-            } else if (locales[name] != null) delete locales[name];
-        }
-        return locales[name];
-    }
-    // returns locale data
-    function getLocale(key) {
-        var locale;
-        if (key && key._locale && key._locale._abbr) key = key._locale._abbr;
-        if (!key) return globalLocale;
-        if (!isArray(key)) {
-            //short-circuit everything else
-            locale = loadLocale(key);
-            if (locale) return locale;
-            key = [
-                key
-            ];
-        }
-        return chooseLocale(key);
-    }
-    function listLocales() {
-        return keys(locales);
-    }
-    function checkOverflow(m) {
-        var overflow, a = m._a;
-        if (a && getParsingFlags(m).overflow === -2) {
-            overflow = a[MONTH] < 0 || a[MONTH] > 11 ? MONTH : a[DATE] < 1 || a[DATE] > daysInMonth(a[YEAR], a[MONTH]) ? DATE : a[HOUR] < 0 || a[HOUR] > 24 || a[HOUR] === 24 && (a[MINUTE] !== 0 || a[SECOND] !== 0 || a[MILLISECOND] !== 0) ? HOUR : a[MINUTE] < 0 || a[MINUTE] > 59 ? MINUTE : a[SECOND] < 0 || a[SECOND] > 59 ? SECOND : a[MILLISECOND] < 0 || a[MILLISECOND] > 999 ? MILLISECOND : -1;
-            if (getParsingFlags(m)._overflowDayOfYear && (overflow < YEAR || overflow > DATE)) overflow = DATE;
-            if (getParsingFlags(m)._overflowWeeks && overflow === -1) overflow = WEEK;
-            if (getParsingFlags(m)._overflowWeekday && overflow === -1) overflow = WEEKDAY;
-            getParsingFlags(m).overflow = overflow;
-        }
-        return m;
-    }
-    // iso 8601 regex
-    // 0000-00-00 0000-W00 or 0000-W00-0 + T + 00 or 00:00 or 00:00:00 or 00:00:00.000 + +00:00 or +0000 or +00)
-    var extendedIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/, basicIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d|))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/, tzRegex = /Z|[+-]\d\d(?::?\d\d)?/, isoDates = [
-        [
-            'YYYYYY-MM-DD',
-            /[+-]\d{6}-\d\d-\d\d/
-        ],
-        [
-            'YYYY-MM-DD',
-            /\d{4}-\d\d-\d\d/
-        ],
-        [
-            'GGGG-[W]WW-E',
-            /\d{4}-W\d\d-\d/
-        ],
-        [
-            'GGGG-[W]WW',
-            /\d{4}-W\d\d/,
-            false
-        ],
-        [
-            'YYYY-DDD',
-            /\d{4}-\d{3}/
-        ],
-        [
-            'YYYY-MM',
-            /\d{4}-\d\d/,
-            false
-        ],
-        [
-            'YYYYYYMMDD',
-            /[+-]\d{10}/
-        ],
-        [
-            'YYYYMMDD',
-            /\d{8}/
-        ],
-        [
-            'GGGG[W]WWE',
-            /\d{4}W\d{3}/
-        ],
-        [
-            'GGGG[W]WW',
-            /\d{4}W\d{2}/,
-            false
-        ],
-        [
-            'YYYYDDD',
-            /\d{7}/
-        ],
-        [
-            'YYYYMM',
-            /\d{6}/,
-            false
-        ],
-        [
-            'YYYY',
-            /\d{4}/,
-            false
-        ], 
-    ], // iso time formats and regexes
-    isoTimes = [
-        [
-            'HH:mm:ss.SSSS',
-            /\d\d:\d\d:\d\d\.\d+/
-        ],
-        [
-            'HH:mm:ss,SSSS',
-            /\d\d:\d\d:\d\d,\d+/
-        ],
-        [
-            'HH:mm:ss',
-            /\d\d:\d\d:\d\d/
-        ],
-        [
-            'HH:mm',
-            /\d\d:\d\d/
-        ],
-        [
-            'HHmmss.SSSS',
-            /\d\d\d\d\d\d\.\d+/
-        ],
-        [
-            'HHmmss,SSSS',
-            /\d\d\d\d\d\d,\d+/
-        ],
-        [
-            'HHmmss',
-            /\d\d\d\d\d\d/
-        ],
-        [
-            'HHmm',
-            /\d\d\d\d/
-        ],
-        [
-            'HH',
-            /\d\d/
-        ], 
-    ], aspNetJsonRegex = /^\/?Date\((-?\d+)/i, // RFC 2822 regex: For details see https://tools.ietf.org/html/rfc2822#section-3.3
-    rfc2822 = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/, obsOffsets = {
-        UT: 0,
-        GMT: 0,
-        EDT: -240,
-        EST: -300,
-        CDT: -300,
-        CST: -360,
-        MDT: -360,
-        MST: -420,
-        PDT: -420,
-        PST: -480
-    };
-    // date from iso format
-    function configFromISO(config) {
-        var i, l, string = config._i, match = extendedIsoRegex.exec(string) || basicIsoRegex.exec(string), allowTime, dateFormat, timeFormat, tzFormat;
-        if (match) {
-            getParsingFlags(config).iso = true;
-            for(i = 0, l = isoDates.length; i < l; i++)if (isoDates[i][1].exec(match[1])) {
-                dateFormat = isoDates[i][0];
-                allowTime = isoDates[i][2] !== false;
-                break;
-            }
-            if (dateFormat == null) {
-                config._isValid = false;
-                return;
-            }
-            if (match[3]) {
-                for(i = 0, l = isoTimes.length; i < l; i++)if (isoTimes[i][1].exec(match[3])) {
-                    // match[2] should be 'T' or space
-                    timeFormat = (match[2] || ' ') + isoTimes[i][0];
-                    break;
-                }
-                if (timeFormat == null) {
-                    config._isValid = false;
-                    return;
-                }
-            }
-            if (!allowTime && timeFormat != null) {
-                config._isValid = false;
-                return;
-            }
-            if (match[4]) {
-                if (tzRegex.exec(match[4])) tzFormat = 'Z';
-                else {
-                    config._isValid = false;
-                    return;
-                }
-            }
-            config._f = dateFormat + (timeFormat || '') + (tzFormat || '');
-            configFromStringAndFormat(config);
-        } else config._isValid = false;
-    }
-    function extractFromRFC2822Strings(yearStr, monthStr, dayStr, hourStr, minuteStr, secondStr) {
-        var result = [
-            untruncateYear(yearStr),
-            defaultLocaleMonthsShort.indexOf(monthStr),
-            parseInt(dayStr, 10),
-            parseInt(hourStr, 10),
-            parseInt(minuteStr, 10), 
-        ];
-        if (secondStr) result.push(parseInt(secondStr, 10));
-        return result;
-    }
-    function untruncateYear(yearStr) {
-        var year = parseInt(yearStr, 10);
-        if (year <= 49) return 2000 + year;
-        else if (year <= 999) return 1900 + year;
-        return year;
-    }
-    function preprocessRFC2822(s) {
-        // Remove comments and folding whitespace and replace multiple-spaces with a single space
-        return s.replace(/\([^)]*\)|[\n\t]/g, ' ').replace(/(\s\s+)/g, ' ').replace(/^\s\s*/, '').replace(/\s\s*$/, '');
-    }
-    function checkWeekday(weekdayStr, parsedInput, config) {
-        if (weekdayStr) {
-            // TODO: Replace the vanilla JS Date object with an independent day-of-week check.
-            var weekdayProvided = defaultLocaleWeekdaysShort.indexOf(weekdayStr), weekdayActual = new Date(parsedInput[0], parsedInput[1], parsedInput[2]).getDay();
-            if (weekdayProvided !== weekdayActual) {
-                getParsingFlags(config).weekdayMismatch = true;
-                config._isValid = false;
-                return false;
-            }
-        }
-        return true;
-    }
-    function calculateOffset(obsOffset, militaryOffset, numOffset) {
-        if (obsOffset) return obsOffsets[obsOffset];
-        else if (militaryOffset) // the only allowed military tz is Z
-        return 0;
-        else {
-            var hm = parseInt(numOffset, 10), m = hm % 100, h = (hm - m) / 100;
-            return h * 60 + m;
-        }
-    }
-    // date and time from ref 2822 format
-    function configFromRFC2822(config) {
-        var match = rfc2822.exec(preprocessRFC2822(config._i)), parsedArray;
-        if (match) {
-            parsedArray = extractFromRFC2822Strings(match[4], match[3], match[2], match[5], match[6], match[7]);
-            if (!checkWeekday(match[1], parsedArray, config)) return;
-            config._a = parsedArray;
-            config._tzm = calculateOffset(match[8], match[9], match[10]);
-            config._d = createUTCDate.apply(null, config._a);
-            config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
-            getParsingFlags(config).rfc2822 = true;
-        } else config._isValid = false;
-    }
-    // date from 1) ASP.NET, 2) ISO, 3) RFC 2822 formats, or 4) optional fallback if parsing isn't strict
-    function configFromString(config) {
-        var matched = aspNetJsonRegex.exec(config._i);
-        if (matched !== null) {
-            config._d = new Date(+matched[1]);
-            return;
-        }
-        configFromISO(config);
-        if (config._isValid === false) delete config._isValid;
-        else return;
-        configFromRFC2822(config);
-        if (config._isValid === false) delete config._isValid;
-        else return;
-        if (config._strict) config._isValid = false;
-        else // Final attempt, use Input Fallback
-        hooks.createFromInputFallback(config);
-    }
-    hooks.createFromInputFallback = deprecate("value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.", function(config) {
-        config._d = new Date(config._i + (config._useUTC ? ' UTC' : ''));
-    });
-    // Pick the first defined of two or three arguments.
-    function defaults(a, b, c) {
-        if (a != null) return a;
-        if (b != null) return b;
-        return c;
-    }
-    function currentDateArray(config) {
-        // hooks is actually the exported moment object
-        var nowValue = new Date(hooks.now());
-        if (config._useUTC) return [
-            nowValue.getUTCFullYear(),
-            nowValue.getUTCMonth(),
-            nowValue.getUTCDate(), 
-        ];
-        return [
-            nowValue.getFullYear(),
-            nowValue.getMonth(),
-            nowValue.getDate()
-        ];
-    }
-    // convert an array to a date.
-    // the array should mirror the parameters below
-    // note: all values past the year are optional and will default to the lowest possible value.
-    // [year, month, day , hour, minute, second, millisecond]
-    function configFromArray(config) {
-        var i, date, input = [], currentDate, expectedWeekday, yearToUse;
-        if (config._d) return;
-        currentDate = currentDateArray(config);
-        //compute day of the year from weeks and weekdays
-        if (config._w && config._a[DATE] == null && config._a[MONTH] == null) dayOfYearFromWeekInfo(config);
-        //if the day of the year is set, figure out what it is
-        if (config._dayOfYear != null) {
-            yearToUse = defaults(config._a[YEAR], currentDate[YEAR]);
-            if (config._dayOfYear > daysInYear(yearToUse) || config._dayOfYear === 0) getParsingFlags(config)._overflowDayOfYear = true;
-            date = createUTCDate(yearToUse, 0, config._dayOfYear);
-            config._a[MONTH] = date.getUTCMonth();
-            config._a[DATE] = date.getUTCDate();
-        }
-        // Default to current date.
-        // * if no year, month, day of month are given, default to today
-        // * if day of month is given, default month and year
-        // * if month is given, default only year
-        // * if year is given, don't default anything
-        for(i = 0; i < 3 && config._a[i] == null; ++i)config._a[i] = input[i] = currentDate[i];
-        // Zero out whatever was not defaulted, including time
-        for(; i < 7; i++)config._a[i] = input[i] = config._a[i] == null ? i === 2 ? 1 : 0 : config._a[i];
-        // Check for 24:00:00.000
-        if (config._a[HOUR] === 24 && config._a[MINUTE] === 0 && config._a[SECOND] === 0 && config._a[MILLISECOND] === 0) {
-            config._nextDay = true;
-            config._a[HOUR] = 0;
-        }
-        config._d = (config._useUTC ? createUTCDate : createDate).apply(null, input);
-        expectedWeekday = config._useUTC ? config._d.getUTCDay() : config._d.getDay();
-        // Apply timezone offset from input. The actual utcOffset can be changed
-        // with parseZone.
-        if (config._tzm != null) config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
-        if (config._nextDay) config._a[HOUR] = 24;
-        // check for mismatching day of week
-        if (config._w && typeof config._w.d !== 'undefined' && config._w.d !== expectedWeekday) getParsingFlags(config).weekdayMismatch = true;
-    }
-    function dayOfYearFromWeekInfo(config) {
-        var w, weekYear, week, weekday, dow, doy, temp, weekdayOverflow, curWeek;
-        w = config._w;
-        if (w.GG != null || w.W != null || w.E != null) {
-            dow = 1;
-            doy = 4;
-            // TODO: We need to take the current isoWeekYear, but that depends on
-            // how we interpret now (local, utc, fixed offset). So create
-            // a now version of current config (take local/utc/offset flags, and
-            // create now).
-            weekYear = defaults(w.GG, config._a[YEAR], weekOfYear(createLocal(), 1, 4).year);
-            week = defaults(w.W, 1);
-            weekday = defaults(w.E, 1);
-            if (weekday < 1 || weekday > 7) weekdayOverflow = true;
-        } else {
-            dow = config._locale._week.dow;
-            doy = config._locale._week.doy;
-            curWeek = weekOfYear(createLocal(), dow, doy);
-            weekYear = defaults(w.gg, config._a[YEAR], curWeek.year);
-            // Default to current week.
-            week = defaults(w.w, curWeek.week);
-            if (w.d != null) {
-                // weekday -- low day numbers are considered next week
-                weekday = w.d;
-                if (weekday < 0 || weekday > 6) weekdayOverflow = true;
-            } else if (w.e != null) {
-                // local weekday -- counting starts from beginning of week
-                weekday = w.e + dow;
-                if (w.e < 0 || w.e > 6) weekdayOverflow = true;
-            } else // default to beginning of week
-            weekday = dow;
-        }
-        if (week < 1 || week > weeksInYear(weekYear, dow, doy)) getParsingFlags(config)._overflowWeeks = true;
-        else if (weekdayOverflow != null) getParsingFlags(config)._overflowWeekday = true;
-        else {
-            temp = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy);
-            config._a[YEAR] = temp.year;
-            config._dayOfYear = temp.dayOfYear;
-        }
-    }
-    // constant that refers to the ISO standard
-    hooks.ISO_8601 = function() {
-    };
-    // constant that refers to the RFC 2822 form
-    hooks.RFC_2822 = function() {
-    };
-    // date from string and format string
-    function configFromStringAndFormat(config) {
-        // TODO: Move this to another part of the creation flow to prevent circular deps
-        if (config._f === hooks.ISO_8601) {
-            configFromISO(config);
-            return;
-        }
-        if (config._f === hooks.RFC_2822) {
-            configFromRFC2822(config);
-            return;
-        }
-        config._a = [];
-        getParsingFlags(config).empty = true;
-        // This array is used to make a Date, either with `new Date` or `Date.UTC`
-        var string = '' + config._i, i, parsedInput, tokens1, token, skipped, stringLength = string.length, totalParsedInputLength = 0, era;
-        tokens1 = expandFormat(config._f, config._locale).match(formattingTokens) || [];
-        for(i = 0; i < tokens1.length; i++){
-            token = tokens1[i];
-            parsedInput = (string.match(getParseRegexForToken(token, config)) || [])[0];
-            if (parsedInput) {
-                skipped = string.substr(0, string.indexOf(parsedInput));
-                if (skipped.length > 0) getParsingFlags(config).unusedInput.push(skipped);
-                string = string.slice(string.indexOf(parsedInput) + parsedInput.length);
-                totalParsedInputLength += parsedInput.length;
-            }
-            // don't parse if it's not a known token
-            if (formatTokenFunctions[token]) {
-                if (parsedInput) getParsingFlags(config).empty = false;
-                else getParsingFlags(config).unusedTokens.push(token);
-                addTimeToArrayFromToken(token, parsedInput, config);
-            } else if (config._strict && !parsedInput) getParsingFlags(config).unusedTokens.push(token);
-        }
-        // add remaining unparsed input length to the string
-        getParsingFlags(config).charsLeftOver = stringLength - totalParsedInputLength;
-        if (string.length > 0) getParsingFlags(config).unusedInput.push(string);
-        // clear _12h flag if hour is <= 12
-        if (config._a[HOUR] <= 12 && getParsingFlags(config).bigHour === true && config._a[HOUR] > 0) getParsingFlags(config).bigHour = undefined;
-        getParsingFlags(config).parsedDateParts = config._a.slice(0);
-        getParsingFlags(config).meridiem = config._meridiem;
-        // handle meridiem
-        config._a[HOUR] = meridiemFixWrap(config._locale, config._a[HOUR], config._meridiem);
-        // handle era
-        era = getParsingFlags(config).era;
-        if (era !== null) config._a[YEAR] = config._locale.erasConvertYear(era, config._a[YEAR]);
-        configFromArray(config);
-        checkOverflow(config);
-    }
-    function meridiemFixWrap(locale, hour, meridiem1) {
-        var isPm;
-        if (meridiem1 == null) // nothing to do
-        return hour;
-        if (locale.meridiemHour != null) return locale.meridiemHour(hour, meridiem1);
-        else if (locale.isPM != null) {
-            // Fallback
-            isPm = locale.isPM(meridiem1);
-            if (isPm && hour < 12) hour += 12;
-            if (!isPm && hour === 12) hour = 0;
-            return hour;
-        } else // this is not supposed to happen
-        return hour;
-    }
-    // date from string and array of format strings
-    function configFromStringAndArray(config) {
-        var tempConfig, bestMoment, scoreToBeat, i, currentScore, validFormatFound, bestFormatIsValid = false;
-        if (config._f.length === 0) {
-            getParsingFlags(config).invalidFormat = true;
-            config._d = new Date(NaN);
-            return;
-        }
-        for(i = 0; i < config._f.length; i++){
-            currentScore = 0;
-            validFormatFound = false;
-            tempConfig = copyConfig({
-            }, config);
-            if (config._useUTC != null) tempConfig._useUTC = config._useUTC;
-            tempConfig._f = config._f[i];
-            configFromStringAndFormat(tempConfig);
-            if (isValid(tempConfig)) validFormatFound = true;
-            // if there is any input that was not parsed add a penalty for that format
-            currentScore += getParsingFlags(tempConfig).charsLeftOver;
-            //or tokens
-            currentScore += getParsingFlags(tempConfig).unusedTokens.length * 10;
-            getParsingFlags(tempConfig).score = currentScore;
-            if (!bestFormatIsValid) {
-                if (scoreToBeat == null || currentScore < scoreToBeat || validFormatFound) {
-                    scoreToBeat = currentScore;
-                    bestMoment = tempConfig;
-                    if (validFormatFound) bestFormatIsValid = true;
-                }
-            } else if (currentScore < scoreToBeat) {
-                scoreToBeat = currentScore;
-                bestMoment = tempConfig;
-            }
-        }
-        extend(config, bestMoment || tempConfig);
-    }
-    function configFromObject(config) {
-        if (config._d) return;
-        var i = normalizeObjectUnits(config._i), dayOrDate = i.day === undefined ? i.date : i.day;
-        config._a = map([
-            i.year,
-            i.month,
-            dayOrDate,
-            i.hour,
-            i.minute,
-            i.second,
-            i.millisecond
-        ], function(obj) {
-            return obj && parseInt(obj, 10);
-        });
-        configFromArray(config);
-    }
-    function createFromConfig(config) {
-        var res = new Moment(checkOverflow(prepareConfig(config)));
-        if (res._nextDay) {
-            // Adding is smart enough around DST
-            res.add(1, 'd');
-            res._nextDay = undefined;
-        }
-        return res;
-    }
-    function prepareConfig(config) {
-        var input = config._i, format = config._f;
-        config._locale = config._locale || getLocale(config._l);
-        if (input === null || format === undefined && input === '') return createInvalid({
-            nullInput: true
-        });
-        if (typeof input === 'string') config._i = input = config._locale.preparse(input);
-        if (isMoment(input)) return new Moment(checkOverflow(input));
-        else if (isDate(input)) config._d = input;
-        else if (isArray(format)) configFromStringAndArray(config);
-        else if (format) configFromStringAndFormat(config);
-        else configFromInput(config);
-        if (!isValid(config)) config._d = null;
-        return config;
-    }
-    function configFromInput(config) {
-        var input = config._i;
-        if (isUndefined(input)) config._d = new Date(hooks.now());
-        else if (isDate(input)) config._d = new Date(input.valueOf());
-        else if (typeof input === 'string') configFromString(config);
-        else if (isArray(input)) {
-            config._a = map(input.slice(0), function(obj) {
-                return parseInt(obj, 10);
-            });
-            configFromArray(config);
-        } else if (isObject(input)) configFromObject(config);
-        else if (isNumber(input)) // from milliseconds
-        config._d = new Date(input);
-        else hooks.createFromInputFallback(config);
-    }
-    function createLocalOrUTC(input, format, locale, strict, isUTC) {
-        var c = {
-        };
-        if (format === true || format === false) {
-            strict = format;
-            format = undefined;
-        }
-        if (locale === true || locale === false) {
-            strict = locale;
-            locale = undefined;
-        }
-        if (isObject(input) && isObjectEmpty(input) || isArray(input) && input.length === 0) input = undefined;
-        // object construction must be done this way.
-        // https://github.com/moment/moment/issues/1423
-        c._isAMomentObject = true;
-        c._useUTC = c._isUTC = isUTC;
-        c._l = locale;
-        c._i = input;
-        c._f = format;
-        c._strict = strict;
-        return createFromConfig(c);
-    }
-    function createLocal(input, format, locale, strict) {
-        return createLocalOrUTC(input, format, locale, strict, false);
-    }
-    var prototypeMin = deprecate('moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/', function() {
-        var other = createLocal.apply(null, arguments);
-        if (this.isValid() && other.isValid()) return other < this ? this : other;
-        else return createInvalid();
-    }), prototypeMax = deprecate('moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/', function() {
-        var other = createLocal.apply(null, arguments);
-        if (this.isValid() && other.isValid()) return other > this ? this : other;
-        else return createInvalid();
-    });
-    // Pick a moment m from moments so that m[fn](other) is true for all
-    // other. This relies on the function fn to be transitive.
-    //
-    // moments should either be an array of moment objects or an array, whose
-    // first element is an array of moment objects.
-    function pickBy(fn, moments) {
-        var res, i;
-        if (moments.length === 1 && isArray(moments[0])) moments = moments[0];
-        if (!moments.length) return createLocal();
-        res = moments[0];
-        for(i = 1; i < moments.length; ++i)if (!moments[i].isValid() || moments[i][fn](res)) res = moments[i];
-        return res;
-    }
-    // TODO: Use [].sort instead?
-    function min() {
-        var args = [].slice.call(arguments, 0);
-        return pickBy('isBefore', args);
-    }
-    function max() {
-        var args = [].slice.call(arguments, 0);
-        return pickBy('isAfter', args);
-    }
-    var now = function() {
-        return Date.now ? Date.now() : +new Date();
-    };
-    var ordering = [
-        'year',
-        'quarter',
-        'month',
-        'week',
-        'day',
-        'hour',
-        'minute',
-        'second',
-        'millisecond', 
-    ];
-    function isDurationValid(m) {
-        var key, unitHasDecimal = false, i;
-        for(key in m){
-            if (hasOwnProp(m, key) && !(indexOf.call(ordering, key) !== -1 && (m[key] == null || !isNaN(m[key])))) return false;
-        }
-        for(i = 0; i < ordering.length; ++i)if (m[ordering[i]]) {
-            if (unitHasDecimal) return false; // only allow non-integers for smallest unit
-            if (parseFloat(m[ordering[i]]) !== toInt(m[ordering[i]])) unitHasDecimal = true;
-        }
-        return true;
-    }
-    function isValid$1() {
-        return this._isValid;
-    }
-    function createInvalid$1() {
-        return createDuration(NaN);
-    }
-    function Duration(duration) {
-        var normalizedInput = normalizeObjectUnits(duration), years = normalizedInput.year || 0, quarters = normalizedInput.quarter || 0, months = normalizedInput.month || 0, weeks = normalizedInput.week || normalizedInput.isoWeek || 0, days = normalizedInput.day || 0, hours = normalizedInput.hour || 0, minutes = normalizedInput.minute || 0, seconds = normalizedInput.second || 0, milliseconds = normalizedInput.millisecond || 0;
-        this._isValid = isDurationValid(normalizedInput);
-        // representation for dateAddRemove
-        this._milliseconds = +milliseconds + seconds * 1000 + minutes * 60000 + hours * 3600000; //using 1000 * 60 * 60 instead of 36e5 to avoid floating point rounding errors https://github.com/moment/moment/issues/2978
-        // Because of dateAddRemove treats 24 hours as different from a
-        // day when working around DST, we need to store them separately
-        this._days = +days + weeks * 7;
-        // It is impossible to translate months into days without knowing
-        // which months you are are talking about, so we have to store
-        // it separately.
-        this._months = +months + quarters * 3 + years * 12;
-        this._data = {
-        };
-        this._locale = getLocale();
-        this._bubble();
-    }
-    function isDuration(obj) {
-        return obj instanceof Duration;
-    }
-    function absRound(number) {
-        if (number < 0) return Math.round(-1 * number) * -1;
-        else return Math.round(number);
-    }
-    // compare two arrays, return the number of differences
-    function compareArrays(array1, array2, dontConvert) {
-        var len = Math.min(array1.length, array2.length), lengthDiff = Math.abs(array1.length - array2.length), diffs = 0, i;
-        for(i = 0; i < len; i++)if (dontConvert && array1[i] !== array2[i] || !dontConvert && toInt(array1[i]) !== toInt(array2[i])) diffs++;
-        return diffs + lengthDiff;
-    }
-    // FORMATTING
-    function offset(token, separator) {
-        addFormatToken(token, 0, 0, function() {
-            var offset1 = this.utcOffset(), sign = '+';
-            if (offset1 < 0) {
-                offset1 = -offset1;
-                sign = '-';
-            }
-            return sign + zeroFill(~~(offset1 / 60), 2) + separator + zeroFill(~~offset1 % 60, 2);
-        });
-    }
-    offset('Z', ':');
-    offset('ZZ', '');
-    // PARSING
-    addRegexToken('Z', matchShortOffset);
-    addRegexToken('ZZ', matchShortOffset);
-    addParseToken([
-        'Z',
-        'ZZ'
-    ], function(input, array, config) {
-        config._useUTC = true;
-        config._tzm = offsetFromString(matchShortOffset, input);
-    });
-    // HELPERS
-    // timezone chunker
-    // '+10:00' > ['10',  '00']
-    // '-1530'  > ['-15', '30']
-    var chunkOffset = /([\+\-]|\d\d)/gi;
-    function offsetFromString(matcher, string) {
-        var matches = (string || '').match(matcher), chunk, parts, minutes;
-        if (matches === null) return null;
-        chunk = matches[matches.length - 1] || [];
-        parts = (chunk + '').match(chunkOffset) || [
-            '-',
-            0,
-            0
-        ];
-        minutes = +(parts[1] * 60) + toInt(parts[2]);
-        return minutes === 0 ? 0 : parts[0] === '+' ? minutes : -minutes;
-    }
-    // Return a moment from input, that is local/utc/zone equivalent to model.
-    function cloneWithOffset(input, model) {
-        var res, diff;
-        if (model._isUTC) {
-            res = model.clone();
-            diff = (isMoment(input) || isDate(input) ? input.valueOf() : createLocal(input).valueOf()) - res.valueOf();
-            // Use low-level api, because this fn is low-level api.
-            res._d.setTime(res._d.valueOf() + diff);
-            hooks.updateOffset(res, false);
-            return res;
-        } else return createLocal(input).local();
-    }
-    function getDateOffset(m) {
-        // On Firefox.24 Date#getTimezoneOffset returns a floating point.
-        // https://github.com/moment/moment/pull/1871
-        return -Math.round(m._d.getTimezoneOffset());
-    }
-    // HOOKS
-    // This function will be called whenever a moment is mutated.
-    // It is intended to keep the offset in sync with the timezone.
-    hooks.updateOffset = function() {
-    };
-    // MOMENTS
-    // keepLocalTime = true means only change the timezone, without
-    // affecting the local hour. So 5:31:26 +0300 --[utcOffset(2, true)]-->
-    // 5:31:26 +0200 It is possible that 5:31:26 doesn't exist with offset
-    // +0200, so we adjust the time as needed, to be valid.
-    //
-    // Keeping the time actually adds/subtracts (one hour)
-    // from the actual represented time. That is why we call updateOffset
-    // a second time. In case it wants us to change the offset again
-    // _changeInProgress == true case, then we have to adjust, because
-    // there is no such time in the given timezone.
-    function getSetOffset(input, keepLocalTime, keepMinutes) {
-        var offset1 = this._offset || 0, localAdjust;
-        if (!this.isValid()) return input != null ? this : NaN;
-        if (input != null) {
-            if (typeof input === 'string') {
-                input = offsetFromString(matchShortOffset, input);
-                if (input === null) return this;
-            } else if (Math.abs(input) < 16 && !keepMinutes) input = input * 60;
-            if (!this._isUTC && keepLocalTime) localAdjust = getDateOffset(this);
-            this._offset = input;
-            this._isUTC = true;
-            if (localAdjust != null) this.add(localAdjust, 'm');
-            if (offset1 !== input) {
-                if (!keepLocalTime || this._changeInProgress) addSubtract(this, createDuration(input - offset1, 'm'), 1, false);
-                else if (!this._changeInProgress) {
-                    this._changeInProgress = true;
-                    hooks.updateOffset(this, true);
-                    this._changeInProgress = null;
-                }
-            }
-            return this;
-        } else return this._isUTC ? offset1 : getDateOffset(this);
-    }
-    function getSetZone(input, keepLocalTime) {
-        if (input != null) {
-            if (typeof input !== 'string') input = -input;
-            this.utcOffset(input, keepLocalTime);
-            return this;
-        } else return -this.utcOffset();
-    }
-    function setOffsetToUTC(keepLocalTime) {
-        return this.utcOffset(0, keepLocalTime);
-    }
-    function setOffsetToLocal(keepLocalTime) {
-        if (this._isUTC) {
-            this.utcOffset(0, keepLocalTime);
-            this._isUTC = false;
-            if (keepLocalTime) this.subtract(getDateOffset(this), 'm');
-        }
-        return this;
-    }
-    function setOffsetToParsedOffset() {
-        if (this._tzm != null) this.utcOffset(this._tzm, false, true);
-        else if (typeof this._i === 'string') {
-            var tZone = offsetFromString(matchOffset, this._i);
-            if (tZone != null) this.utcOffset(tZone);
-            else this.utcOffset(0, true);
-        }
-        return this;
-    }
-    function hasAlignedHourOffset(input) {
-        if (!this.isValid()) return false;
-        input = input ? createLocal(input).utcOffset() : 0;
-        return (this.utcOffset() - input) % 60 === 0;
-    }
-    function isDaylightSavingTime() {
-        return this.utcOffset() > this.clone().month(0).utcOffset() || this.utcOffset() > this.clone().month(5).utcOffset();
-    }
-    function isDaylightSavingTimeShifted() {
-        if (!isUndefined(this._isDSTShifted)) return this._isDSTShifted;
-        var c = {
-        }, other;
-        copyConfig(c, this);
-        c = prepareConfig(c);
-        if (c._a) {
-            other = c._isUTC ? createUTC(c._a) : createLocal(c._a);
-            this._isDSTShifted = this.isValid() && compareArrays(c._a, other.toArray()) > 0;
-        } else this._isDSTShifted = false;
-        return this._isDSTShifted;
-    }
-    function isLocal() {
-        return this.isValid() ? !this._isUTC : false;
-    }
-    function isUtcOffset() {
-        return this.isValid() ? this._isUTC : false;
-    }
-    function isUtc() {
-        return this.isValid() ? this._isUTC && this._offset === 0 : false;
-    }
-    // ASP.NET json date format regex
-    var aspNetRegex = /^(-|\+)?(?:(\d*)[. ])?(\d+):(\d+)(?::(\d+)(\.\d*)?)?$/, // from http://docs.closure-library.googlecode.com/git/closure_goog_date_date.js.source.html
-    // somewhat more in line with 4.4.3.2 2004 spec, but allows decimal anywhere
-    // and further modified to allow for strings containing both week and day
-    isoRegex = /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;
-    function createDuration(input, key) {
-        var duration = input, // matching against regexp is expensive, do it on demand
-        match = null, sign, ret, diffRes;
-        if (isDuration(input)) duration = {
-            ms: input._milliseconds,
-            d: input._days,
-            M: input._months
-        };
-        else if (isNumber(input) || !isNaN(+input)) {
-            duration = {
-            };
-            if (key) duration[key] = +input;
-            else duration.milliseconds = +input;
-        } else if (match = aspNetRegex.exec(input)) {
-            sign = match[1] === '-' ? -1 : 1;
-            duration = {
-                y: 0,
-                d: toInt(match[DATE]) * sign,
-                h: toInt(match[HOUR]) * sign,
-                m: toInt(match[MINUTE]) * sign,
-                s: toInt(match[SECOND]) * sign,
-                ms: toInt(absRound(match[MILLISECOND] * 1000)) * sign
-            };
-        } else if (match = isoRegex.exec(input)) {
-            sign = match[1] === '-' ? -1 : 1;
-            duration = {
-                y: parseIso(match[2], sign),
-                M: parseIso(match[3], sign),
-                w: parseIso(match[4], sign),
-                d: parseIso(match[5], sign),
-                h: parseIso(match[6], sign),
-                m: parseIso(match[7], sign),
-                s: parseIso(match[8], sign)
-            };
-        } else if (duration == null) // checks for null or undefined
-        duration = {
-        };
-        else if (typeof duration === 'object' && ('from' in duration || 'to' in duration)) {
-            diffRes = momentsDifference(createLocal(duration.from), createLocal(duration.to));
-            duration = {
-            };
-            duration.ms = diffRes.milliseconds;
-            duration.M = diffRes.months;
-        }
-        ret = new Duration(duration);
-        if (isDuration(input) && hasOwnProp(input, '_locale')) ret._locale = input._locale;
-        if (isDuration(input) && hasOwnProp(input, '_isValid')) ret._isValid = input._isValid;
-        return ret;
-    }
-    createDuration.fn = Duration.prototype;
-    createDuration.invalid = createInvalid$1;
-    function parseIso(inp, sign) {
-        // We'd normally use ~~inp for this, but unfortunately it also
-        // converts floats to ints.
-        // inp may be undefined, so careful calling replace on it.
-        var res = inp && parseFloat(inp.replace(',', '.'));
-        // apply sign while we're at it
-        return (isNaN(res) ? 0 : res) * sign;
-    }
-    function positiveMomentsDifference(base, other) {
-        var res = {
-        };
-        res.months = other.month() - base.month() + (other.year() - base.year()) * 12;
-        if (base.clone().add(res.months, 'M').isAfter(other)) --res.months;
-        res.milliseconds = +other - +base.clone().add(res.months, 'M');
-        return res;
-    }
-    function momentsDifference(base, other) {
-        var res;
-        if (!(base.isValid() && other.isValid())) return {
-            milliseconds: 0,
-            months: 0
-        };
-        other = cloneWithOffset(other, base);
-        if (base.isBefore(other)) res = positiveMomentsDifference(base, other);
-        else {
-            res = positiveMomentsDifference(other, base);
-            res.milliseconds = -res.milliseconds;
-            res.months = -res.months;
-        }
-        return res;
-    }
-    // TODO: remove 'name' arg after deprecation is removed
-    function createAdder(direction, name) {
-        return function(val, period) {
-            var dur, tmp;
-            //invert the arguments, but complain about it
-            if (period !== null && !isNaN(+period)) {
-                deprecateSimple(name, 'moment().' + name + '(period, number) is deprecated. Please use moment().' + name + '(number, period). ' + 'See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info.');
-                tmp = val;
-                val = period;
-                period = tmp;
-            }
-            dur = createDuration(val, period);
-            addSubtract(this, dur, direction);
-            return this;
-        };
-    }
-    function addSubtract(mom, duration, isAdding, updateOffset) {
-        var milliseconds = duration._milliseconds, days = absRound(duration._days), months = absRound(duration._months);
-        if (!mom.isValid()) // No op
-        return;
-        updateOffset = updateOffset == null ? true : updateOffset;
-        if (months) setMonth(mom, get(mom, 'Month') + months * isAdding);
-        if (days) set$1(mom, 'Date', get(mom, 'Date') + days * isAdding);
-        if (milliseconds) mom._d.setTime(mom._d.valueOf() + milliseconds * isAdding);
-        if (updateOffset) hooks.updateOffset(mom, days || months);
-    }
-    var add = createAdder(1, 'add'), subtract = createAdder(-1, 'subtract');
-    function isString(input) {
-        return typeof input === 'string' || input instanceof String;
-    }
-    // type MomentInput = Moment | Date | string | number | (number | string)[] | MomentInputObject | void; // null | undefined
-    function isMomentInput(input) {
-        return isMoment(input) || isDate(input) || isString(input) || isNumber(input) || isNumberOrStringArray(input) || isMomentInputObject(input) || input === null || input === undefined;
-    }
-    function isMomentInputObject(input) {
-        var objectTest = isObject(input) && !isObjectEmpty(input), propertyTest = false, properties = [
-            'years',
-            'year',
-            'y',
-            'months',
-            'month',
-            'M',
-            'days',
-            'day',
-            'd',
-            'dates',
-            'date',
-            'D',
-            'hours',
-            'hour',
-            'h',
-            'minutes',
-            'minute',
-            'm',
-            'seconds',
-            'second',
-            's',
-            'milliseconds',
-            'millisecond',
-            'ms', 
-        ], i, property;
-        for(i = 0; i < properties.length; i += 1){
-            property = properties[i];
-            propertyTest = propertyTest || hasOwnProp(input, property);
-        }
-        return objectTest && propertyTest;
-    }
-    function isNumberOrStringArray(input) {
-        var arrayTest = isArray(input), dataTypeTest = false;
-        if (arrayTest) dataTypeTest = input.filter(function(item) {
-            return !isNumber(item) && isString(input);
-        }).length === 0;
-        return arrayTest && dataTypeTest;
-    }
-    function isCalendarSpec(input) {
-        var objectTest = isObject(input) && !isObjectEmpty(input), propertyTest = false, properties = [
-            'sameDay',
-            'nextDay',
-            'lastDay',
-            'nextWeek',
-            'lastWeek',
-            'sameElse', 
-        ], i, property;
-        for(i = 0; i < properties.length; i += 1){
-            property = properties[i];
-            propertyTest = propertyTest || hasOwnProp(input, property);
-        }
-        return objectTest && propertyTest;
-    }
-    function getCalendarFormat(myMoment, now1) {
-        var diff = myMoment.diff(now1, 'days', true);
-        return diff < -6 ? 'sameElse' : diff < -1 ? 'lastWeek' : diff < 0 ? 'lastDay' : diff < 1 ? 'sameDay' : diff < 2 ? 'nextDay' : diff < 7 ? 'nextWeek' : 'sameElse';
-    }
-    function calendar$1(time, formats) {
-        // Support for single parameter, formats only overload to the calendar function
-        if (arguments.length === 1) {
-            if (!arguments[0]) {
-                time = undefined;
-                formats = undefined;
-            } else if (isMomentInput(arguments[0])) {
-                time = arguments[0];
-                formats = undefined;
-            } else if (isCalendarSpec(arguments[0])) {
-                formats = arguments[0];
-                time = undefined;
-            }
-        }
-        // We want to compare the start of today, vs this.
-        // Getting start-of-today depends on whether we're local/utc/offset or not.
-        var now1 = time || createLocal(), sod = cloneWithOffset(now1, this).startOf('day'), format = hooks.calendarFormat(this, sod) || 'sameElse', output = formats && (isFunction(formats[format]) ? formats[format].call(this, now1) : formats[format]);
-        return this.format(output || this.localeData().calendar(format, this, createLocal(now1)));
-    }
-    function clone() {
-        return new Moment(this);
-    }
-    function isAfter(input, units) {
-        var localInput = isMoment(input) ? input : createLocal(input);
-        if (!(this.isValid() && localInput.isValid())) return false;
-        units = normalizeUnits(units) || 'millisecond';
-        if (units === 'millisecond') return this.valueOf() > localInput.valueOf();
-        else return localInput.valueOf() < this.clone().startOf(units).valueOf();
-    }
-    function isBefore(input, units) {
-        var localInput = isMoment(input) ? input : createLocal(input);
-        if (!(this.isValid() && localInput.isValid())) return false;
-        units = normalizeUnits(units) || 'millisecond';
-        if (units === 'millisecond') return this.valueOf() < localInput.valueOf();
-        else return this.clone().endOf(units).valueOf() < localInput.valueOf();
-    }
-    function isBetween(from, to, units, inclusivity) {
-        var localFrom = isMoment(from) ? from : createLocal(from), localTo = isMoment(to) ? to : createLocal(to);
-        if (!(this.isValid() && localFrom.isValid() && localTo.isValid())) return false;
-        inclusivity = inclusivity || '()';
-        return (inclusivity[0] === '(' ? this.isAfter(localFrom, units) : !this.isBefore(localFrom, units)) && (inclusivity[1] === ')' ? this.isBefore(localTo, units) : !this.isAfter(localTo, units));
-    }
-    function isSame(input, units) {
-        var localInput = isMoment(input) ? input : createLocal(input), inputMs;
-        if (!(this.isValid() && localInput.isValid())) return false;
-        units = normalizeUnits(units) || 'millisecond';
-        if (units === 'millisecond') return this.valueOf() === localInput.valueOf();
-        else {
-            inputMs = localInput.valueOf();
-            return this.clone().startOf(units).valueOf() <= inputMs && inputMs <= this.clone().endOf(units).valueOf();
-        }
-    }
-    function isSameOrAfter(input, units) {
-        return this.isSame(input, units) || this.isAfter(input, units);
-    }
-    function isSameOrBefore(input, units) {
-        return this.isSame(input, units) || this.isBefore(input, units);
-    }
-    function diff(input, units, asFloat) {
-        var that, zoneDelta, output;
-        if (!this.isValid()) return NaN;
-        that = cloneWithOffset(input, this);
-        if (!that.isValid()) return NaN;
-        zoneDelta = (that.utcOffset() - this.utcOffset()) * 60000;
-        units = normalizeUnits(units);
-        switch(units){
-            case 'year':
-                output = monthDiff(this, that) / 12;
-                break;
-            case 'month':
-                output = monthDiff(this, that);
-                break;
-            case 'quarter':
-                output = monthDiff(this, that) / 3;
-                break;
-            case 'second':
-                output = (this - that) / 1000;
-                break; // 1000
-            case 'minute':
-                output = (this - that) / 60000;
-                break; // 1000 * 60
-            case 'hour':
-                output = (this - that) / 3600000;
-                break; // 1000 * 60 * 60
-            case 'day':
-                output = (this - that - zoneDelta) / 86400000;
-                break; // 1000 * 60 * 60 * 24, negate dst
-            case 'week':
-                output = (this - that - zoneDelta) / 604800000;
-                break; // 1000 * 60 * 60 * 24 * 7, negate dst
-            default:
-                output = this - that;
-        }
-        return asFloat ? output : absFloor(output);
-    }
-    function monthDiff(a, b) {
-        if (a.date() < b.date()) // end-of-month calculations work correct when the start month has more
-        // days than the end month.
-        return -monthDiff(b, a);
-        // difference in months
-        var wholeMonthDiff = (b.year() - a.year()) * 12 + (b.month() - a.month()), // b is in (anchor - 1 month, anchor + 1 month)
-        anchor = a.clone().add(wholeMonthDiff, 'months'), anchor2, adjust;
-        if (b - anchor < 0) {
-            anchor2 = a.clone().add(wholeMonthDiff - 1, 'months');
-            // linear across the month
-            adjust = (b - anchor) / (anchor - anchor2);
-        } else {
-            anchor2 = a.clone().add(wholeMonthDiff + 1, 'months');
-            // linear across the month
-            adjust = (b - anchor) / (anchor2 - anchor);
-        }
-        //check for negative zero, return zero if negative zero
-        return -(wholeMonthDiff + adjust) || 0;
-    }
-    hooks.defaultFormat = 'YYYY-MM-DDTHH:mm:ssZ';
-    hooks.defaultFormatUtc = 'YYYY-MM-DDTHH:mm:ss[Z]';
-    function toString() {
-        return this.clone().locale('en').format('ddd MMM DD YYYY HH:mm:ss [GMT]ZZ');
-    }
-    function toISOString(keepOffset) {
-        if (!this.isValid()) return null;
-        var utc = keepOffset !== true, m = utc ? this.clone().utc() : this;
-        if (m.year() < 0 || m.year() > 9999) return formatMoment(m, utc ? 'YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]' : 'YYYYYY-MM-DD[T]HH:mm:ss.SSSZ');
-        if (isFunction(Date.prototype.toISOString)) {
-            // native implementation is ~50x faster, use it when we can
-            if (utc) return this.toDate().toISOString();
-            else return new Date(this.valueOf() + this.utcOffset() * 60000).toISOString().replace('Z', formatMoment(m, 'Z'));
-        }
-        return formatMoment(m, utc ? 'YYYY-MM-DD[T]HH:mm:ss.SSS[Z]' : 'YYYY-MM-DD[T]HH:mm:ss.SSSZ');
-    }
-    /**
-     * Return a human readable representation of a moment that can
-     * also be evaluated to get a new moment which is the same
-     *
-     * @link https://nodejs.org/dist/latest/docs/api/util.html#util_custom_inspect_function_on_objects
-     */ function inspect() {
-        if (!this.isValid()) return 'moment.invalid(/* ' + this._i + ' */)';
-        var func = 'moment', zone = '', prefix, year, datetime, suffix;
-        if (!this.isLocal()) {
-            func = this.utcOffset() === 0 ? 'moment.utc' : 'moment.parseZone';
-            zone = 'Z';
-        }
-        prefix = '[' + func + '("]';
-        year = 0 <= this.year() && this.year() <= 9999 ? 'YYYY' : 'YYYYYY';
-        datetime = '-MM-DD[T]HH:mm:ss.SSS';
-        suffix = zone + '[")]';
-        return this.format(prefix + year + datetime + suffix);
-    }
-    function format(inputString) {
-        if (!inputString) inputString = this.isUtc() ? hooks.defaultFormatUtc : hooks.defaultFormat;
-        var output = formatMoment(this, inputString);
-        return this.localeData().postformat(output);
-    }
-    function from(time, withoutSuffix) {
-        if (this.isValid() && (isMoment(time) && time.isValid() || createLocal(time).isValid())) return createDuration({
-            to: this,
-            from: time
-        }).locale(this.locale()).humanize(!withoutSuffix);
-        else return this.localeData().invalidDate();
-    }
-    function fromNow(withoutSuffix) {
-        return this.from(createLocal(), withoutSuffix);
-    }
-    function to(time, withoutSuffix) {
-        if (this.isValid() && (isMoment(time) && time.isValid() || createLocal(time).isValid())) return createDuration({
-            from: this,
-            to: time
-        }).locale(this.locale()).humanize(!withoutSuffix);
-        else return this.localeData().invalidDate();
-    }
-    function toNow(withoutSuffix) {
-        return this.to(createLocal(), withoutSuffix);
-    }
-    // If passed a locale key, it will set the locale for this
-    // instance.  Otherwise, it will return the locale configuration
-    // variables for this instance.
-    function locale(key) {
-        var newLocaleData;
-        if (key === undefined) return this._locale._abbr;
-        else {
-            newLocaleData = getLocale(key);
-            if (newLocaleData != null) this._locale = newLocaleData;
-            return this;
-        }
-    }
-    var lang = deprecate('moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.', function(key) {
-        if (key === undefined) return this.localeData();
-        else return this.locale(key);
-    });
-    function localeData() {
-        return this._locale;
-    }
-    var MS_PER_SECOND = 1000, MS_PER_MINUTE = 60 * MS_PER_SECOND, MS_PER_HOUR = 60 * MS_PER_MINUTE, MS_PER_400_YEARS = 3506328 * MS_PER_HOUR;
-    // actual modulo - handles negative numbers (for dates before 1970):
-    function mod$1(dividend, divisor) {
-        return (dividend % divisor + divisor) % divisor;
-    }
-    function localStartOfDate(y, m, d) {
-        // the date constructor remaps years 0-99 to 1900-1999
-        if (y < 100 && y >= 0) // preserve leap years using a full 400 year cycle, then reset
-        return new Date(y + 400, m, d) - MS_PER_400_YEARS;
-        else return new Date(y, m, d).valueOf();
-    }
-    function utcStartOfDate(y, m, d) {
-        // Date.UTC remaps years 0-99 to 1900-1999
-        if (y < 100 && y >= 0) // preserve leap years using a full 400 year cycle, then reset
-        return Date.UTC(y + 400, m, d) - MS_PER_400_YEARS;
-        else return Date.UTC(y, m, d);
-    }
-    function startOf(units) {
-        var time, startOfDate;
-        units = normalizeUnits(units);
-        if (units === undefined || units === 'millisecond' || !this.isValid()) return this;
-        startOfDate = this._isUTC ? utcStartOfDate : localStartOfDate;
-        switch(units){
-            case 'year':
-                time = startOfDate(this.year(), 0, 1);
-                break;
-            case 'quarter':
-                time = startOfDate(this.year(), this.month() - this.month() % 3, 1);
-                break;
-            case 'month':
-                time = startOfDate(this.year(), this.month(), 1);
-                break;
-            case 'week':
-                time = startOfDate(this.year(), this.month(), this.date() - this.weekday());
-                break;
-            case 'isoWeek':
-                time = startOfDate(this.year(), this.month(), this.date() - (this.isoWeekday() - 1));
-                break;
-            case 'day':
-            case 'date':
-                time = startOfDate(this.year(), this.month(), this.date());
-                break;
-            case 'hour':
-                time = this._d.valueOf();
-                time -= mod$1(time + (this._isUTC ? 0 : this.utcOffset() * MS_PER_MINUTE), MS_PER_HOUR);
-                break;
-            case 'minute':
-                time = this._d.valueOf();
-                time -= mod$1(time, MS_PER_MINUTE);
-                break;
-            case 'second':
-                time = this._d.valueOf();
-                time -= mod$1(time, MS_PER_SECOND);
-                break;
-        }
-        this._d.setTime(time);
-        hooks.updateOffset(this, true);
-        return this;
-    }
-    function endOf(units) {
-        var time, startOfDate;
-        units = normalizeUnits(units);
-        if (units === undefined || units === 'millisecond' || !this.isValid()) return this;
-        startOfDate = this._isUTC ? utcStartOfDate : localStartOfDate;
-        switch(units){
-            case 'year':
-                time = startOfDate(this.year() + 1, 0, 1) - 1;
-                break;
-            case 'quarter':
-                time = startOfDate(this.year(), this.month() - this.month() % 3 + 3, 1) - 1;
-                break;
-            case 'month':
-                time = startOfDate(this.year(), this.month() + 1, 1) - 1;
-                break;
-            case 'week':
-                time = startOfDate(this.year(), this.month(), this.date() - this.weekday() + 7) - 1;
-                break;
-            case 'isoWeek':
-                time = startOfDate(this.year(), this.month(), this.date() - (this.isoWeekday() - 1) + 7) - 1;
-                break;
-            case 'day':
-            case 'date':
-                time = startOfDate(this.year(), this.month(), this.date() + 1) - 1;
-                break;
-            case 'hour':
-                time = this._d.valueOf();
-                time += MS_PER_HOUR - mod$1(time + (this._isUTC ? 0 : this.utcOffset() * MS_PER_MINUTE), MS_PER_HOUR) - 1;
-                break;
-            case 'minute':
-                time = this._d.valueOf();
-                time += MS_PER_MINUTE - mod$1(time, MS_PER_MINUTE) - 1;
-                break;
-            case 'second':
-                time = this._d.valueOf();
-                time += MS_PER_SECOND - mod$1(time, MS_PER_SECOND) - 1;
-                break;
-        }
-        this._d.setTime(time);
-        hooks.updateOffset(this, true);
-        return this;
-    }
-    function valueOf() {
-        return this._d.valueOf() - (this._offset || 0) * 60000;
-    }
-    function unix() {
-        return Math.floor(this.valueOf() / 1000);
-    }
-    function toDate() {
-        return new Date(this.valueOf());
-    }
-    function toArray() {
-        var m = this;
-        return [
-            m.year(),
-            m.month(),
-            m.date(),
-            m.hour(),
-            m.minute(),
-            m.second(),
-            m.millisecond(), 
-        ];
-    }
-    function toObject() {
-        var m = this;
-        return {
-            years: m.year(),
-            months: m.month(),
-            date: m.date(),
-            hours: m.hours(),
-            minutes: m.minutes(),
-            seconds: m.seconds(),
-            milliseconds: m.milliseconds()
-        };
-    }
-    function toJSON() {
-        // new Date(NaN).toJSON() === null
-        return this.isValid() ? this.toISOString() : null;
-    }
-    function isValid$2() {
-        return isValid(this);
-    }
-    function parsingFlags() {
-        return extend({
-        }, getParsingFlags(this));
-    }
-    function invalidAt() {
-        return getParsingFlags(this).overflow;
-    }
-    function creationData() {
-        return {
-            input: this._i,
-            format: this._f,
-            locale: this._locale,
-            isUTC: this._isUTC,
-            strict: this._strict
-        };
-    }
-    addFormatToken('N', 0, 0, 'eraAbbr');
-    addFormatToken('NN', 0, 0, 'eraAbbr');
-    addFormatToken('NNN', 0, 0, 'eraAbbr');
-    addFormatToken('NNNN', 0, 0, 'eraName');
-    addFormatToken('NNNNN', 0, 0, 'eraNarrow');
-    addFormatToken('y', [
-        'y',
-        1
-    ], 'yo', 'eraYear');
-    addFormatToken('y', [
-        'yy',
-        2
-    ], 0, 'eraYear');
-    addFormatToken('y', [
-        'yyy',
-        3
-    ], 0, 'eraYear');
-    addFormatToken('y', [
-        'yyyy',
-        4
-    ], 0, 'eraYear');
-    addRegexToken('N', matchEraAbbr);
-    addRegexToken('NN', matchEraAbbr);
-    addRegexToken('NNN', matchEraAbbr);
-    addRegexToken('NNNN', matchEraName);
-    addRegexToken('NNNNN', matchEraNarrow);
-    addParseToken([
-        'N',
-        'NN',
-        'NNN',
-        'NNNN',
-        'NNNNN'
-    ], function(input, array, config, token) {
-        var era = config._locale.erasParse(input, token, config._strict);
-        if (era) getParsingFlags(config).era = era;
-        else getParsingFlags(config).invalidEra = input;
-    });
-    addRegexToken('y', matchUnsigned);
-    addRegexToken('yy', matchUnsigned);
-    addRegexToken('yyy', matchUnsigned);
-    addRegexToken('yyyy', matchUnsigned);
-    addRegexToken('yo', matchEraYearOrdinal);
-    addParseToken([
-        'y',
-        'yy',
-        'yyy',
-        'yyyy'
-    ], YEAR);
-    addParseToken([
-        'yo'
-    ], function(input, array, config, token) {
-        var match;
-        if (config._locale._eraYearOrdinalRegex) match = input.match(config._locale._eraYearOrdinalRegex);
-        if (config._locale.eraYearOrdinalParse) array[YEAR] = config._locale.eraYearOrdinalParse(input, match);
-        else array[YEAR] = parseInt(input, 10);
-    });
-    function localeEras(m, format1) {
-        var i, l, date, eras = this._eras || getLocale('en')._eras;
-        for(i = 0, l = eras.length; i < l; ++i){
-            switch(typeof eras[i].since){
-                case 'string':
-                    // truncate time
-                    date = hooks(eras[i].since).startOf('day');
-                    eras[i].since = date.valueOf();
-                    break;
-            }
-            switch(typeof eras[i].until){
-                case 'undefined':
-                    eras[i].until = Infinity;
-                    break;
-                case 'string':
-                    // truncate time
-                    date = hooks(eras[i].until).startOf('day').valueOf();
-                    eras[i].until = date.valueOf();
-                    break;
-            }
-        }
-        return eras;
-    }
-    function localeErasParse(eraName, format1, strict) {
-        var i, l, eras = this.eras(), name, abbr, narrow;
-        eraName = eraName.toUpperCase();
-        for(i = 0, l = eras.length; i < l; ++i){
-            name = eras[i].name.toUpperCase();
-            abbr = eras[i].abbr.toUpperCase();
-            narrow = eras[i].narrow.toUpperCase();
-            if (strict) switch(format1){
-                case 'N':
-                case 'NN':
-                case 'NNN':
-                    if (abbr === eraName) return eras[i];
-                    break;
-                case 'NNNN':
-                    if (name === eraName) return eras[i];
-                    break;
-                case 'NNNNN':
-                    if (narrow === eraName) return eras[i];
-                    break;
-            }
-            else if ([
-                name,
-                abbr,
-                narrow
-            ].indexOf(eraName) >= 0) return eras[i];
-        }
-    }
-    function localeErasConvertYear(era, year) {
-        var dir = era.since <= era.until ? 1 : -1;
-        if (year === undefined) return hooks(era.since).year();
-        else return hooks(era.since).year() + (year - era.offset) * dir;
-    }
-    function getEraName() {
-        var i, l, val, eras = this.localeData().eras();
-        for(i = 0, l = eras.length; i < l; ++i){
-            // truncate time
-            val = this.clone().startOf('day').valueOf();
-            if (eras[i].since <= val && val <= eras[i].until) return eras[i].name;
-            if (eras[i].until <= val && val <= eras[i].since) return eras[i].name;
-        }
-        return '';
-    }
-    function getEraNarrow() {
-        var i, l, val, eras = this.localeData().eras();
-        for(i = 0, l = eras.length; i < l; ++i){
-            // truncate time
-            val = this.clone().startOf('day').valueOf();
-            if (eras[i].since <= val && val <= eras[i].until) return eras[i].narrow;
-            if (eras[i].until <= val && val <= eras[i].since) return eras[i].narrow;
-        }
-        return '';
-    }
-    function getEraAbbr() {
-        var i, l, val, eras = this.localeData().eras();
-        for(i = 0, l = eras.length; i < l; ++i){
-            // truncate time
-            val = this.clone().startOf('day').valueOf();
-            if (eras[i].since <= val && val <= eras[i].until) return eras[i].abbr;
-            if (eras[i].until <= val && val <= eras[i].since) return eras[i].abbr;
-        }
-        return '';
-    }
-    function getEraYear() {
-        var i, l, dir, val, eras = this.localeData().eras();
-        for(i = 0, l = eras.length; i < l; ++i){
-            dir = eras[i].since <= eras[i].until ? 1 : -1;
-            // truncate time
-            val = this.clone().startOf('day').valueOf();
-            if (eras[i].since <= val && val <= eras[i].until || eras[i].until <= val && val <= eras[i].since) return (this.year() - hooks(eras[i].since).year()) * dir + eras[i].offset;
-        }
-        return this.year();
-    }
-    function erasNameRegex(isStrict) {
-        if (!hasOwnProp(this, '_erasNameRegex')) computeErasParse.call(this);
-        return isStrict ? this._erasNameRegex : this._erasRegex;
-    }
-    function erasAbbrRegex(isStrict) {
-        if (!hasOwnProp(this, '_erasAbbrRegex')) computeErasParse.call(this);
-        return isStrict ? this._erasAbbrRegex : this._erasRegex;
-    }
-    function erasNarrowRegex(isStrict) {
-        if (!hasOwnProp(this, '_erasNarrowRegex')) computeErasParse.call(this);
-        return isStrict ? this._erasNarrowRegex : this._erasRegex;
-    }
-    function matchEraAbbr(isStrict, locale1) {
-        return locale1.erasAbbrRegex(isStrict);
-    }
-    function matchEraName(isStrict, locale1) {
-        return locale1.erasNameRegex(isStrict);
-    }
-    function matchEraNarrow(isStrict, locale1) {
-        return locale1.erasNarrowRegex(isStrict);
-    }
-    function matchEraYearOrdinal(isStrict, locale1) {
-        return locale1._eraYearOrdinalRegex || matchUnsigned;
-    }
-    function computeErasParse() {
-        var abbrPieces = [], namePieces = [], narrowPieces = [], mixedPieces = [], i, l, eras = this.eras();
-        for(i = 0, l = eras.length; i < l; ++i){
-            namePieces.push(regexEscape(eras[i].name));
-            abbrPieces.push(regexEscape(eras[i].abbr));
-            narrowPieces.push(regexEscape(eras[i].narrow));
-            mixedPieces.push(regexEscape(eras[i].name));
-            mixedPieces.push(regexEscape(eras[i].abbr));
-            mixedPieces.push(regexEscape(eras[i].narrow));
-        }
-        this._erasRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
-        this._erasNameRegex = new RegExp('^(' + namePieces.join('|') + ')', 'i');
-        this._erasAbbrRegex = new RegExp('^(' + abbrPieces.join('|') + ')', 'i');
-        this._erasNarrowRegex = new RegExp('^(' + narrowPieces.join('|') + ')', 'i');
-    }
-    // FORMATTING
-    addFormatToken(0, [
-        'gg',
-        2
-    ], 0, function() {
-        return this.weekYear() % 100;
-    });
-    addFormatToken(0, [
-        'GG',
-        2
-    ], 0, function() {
-        return this.isoWeekYear() % 100;
-    });
-    function addWeekYearFormatToken(token, getter) {
-        addFormatToken(0, [
-            token,
-            token.length
-        ], 0, getter);
-    }
-    addWeekYearFormatToken('gggg', 'weekYear');
-    addWeekYearFormatToken('ggggg', 'weekYear');
-    addWeekYearFormatToken('GGGG', 'isoWeekYear');
-    addWeekYearFormatToken('GGGGG', 'isoWeekYear');
-    // ALIASES
-    addUnitAlias('weekYear', 'gg');
-    addUnitAlias('isoWeekYear', 'GG');
-    // PRIORITY
-    addUnitPriority('weekYear', 1);
-    addUnitPriority('isoWeekYear', 1);
-    // PARSING
-    addRegexToken('G', matchSigned);
-    addRegexToken('g', matchSigned);
-    addRegexToken('GG', match1to2, match2);
-    addRegexToken('gg', match1to2, match2);
-    addRegexToken('GGGG', match1to4, match4);
-    addRegexToken('gggg', match1to4, match4);
-    addRegexToken('GGGGG', match1to6, match6);
-    addRegexToken('ggggg', match1to6, match6);
-    addWeekParseToken([
-        'gggg',
-        'ggggg',
-        'GGGG',
-        'GGGGG'
-    ], function(input, week, config, token) {
-        week[token.substr(0, 2)] = toInt(input);
-    });
-    addWeekParseToken([
-        'gg',
-        'GG'
-    ], function(input, week, config, token) {
-        week[token] = hooks.parseTwoDigitYear(input);
-    });
-    // MOMENTS
-    function getSetWeekYear(input) {
-        return getSetWeekYearHelper.call(this, input, this.week(), this.weekday(), this.localeData()._week.dow, this.localeData()._week.doy);
-    }
-    function getSetISOWeekYear(input) {
-        return getSetWeekYearHelper.call(this, input, this.isoWeek(), this.isoWeekday(), 1, 4);
-    }
-    function getISOWeeksInYear() {
-        return weeksInYear(this.year(), 1, 4);
-    }
-    function getISOWeeksInISOWeekYear() {
-        return weeksInYear(this.isoWeekYear(), 1, 4);
-    }
-    function getWeeksInYear() {
-        var weekInfo = this.localeData()._week;
-        return weeksInYear(this.year(), weekInfo.dow, weekInfo.doy);
-    }
-    function getWeeksInWeekYear() {
-        var weekInfo = this.localeData()._week;
-        return weeksInYear(this.weekYear(), weekInfo.dow, weekInfo.doy);
-    }
-    function getSetWeekYearHelper(input, week, weekday, dow, doy) {
-        var weeksTarget;
-        if (input == null) return weekOfYear(this, dow, doy).year;
-        else {
-            weeksTarget = weeksInYear(input, dow, doy);
-            if (week > weeksTarget) week = weeksTarget;
-            return setWeekAll.call(this, input, week, weekday, dow, doy);
-        }
-    }
-    function setWeekAll(weekYear, week, weekday, dow, doy) {
-        var dayOfYearData = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy), date = createUTCDate(dayOfYearData.year, 0, dayOfYearData.dayOfYear);
-        this.year(date.getUTCFullYear());
-        this.month(date.getUTCMonth());
-        this.date(date.getUTCDate());
-        return this;
-    }
-    // FORMATTING
-    addFormatToken('Q', 0, 'Qo', 'quarter');
-    // ALIASES
-    addUnitAlias('quarter', 'Q');
-    // PRIORITY
-    addUnitPriority('quarter', 7);
-    // PARSING
-    addRegexToken('Q', match1);
-    addParseToken('Q', function(input, array) {
-        array[MONTH] = (toInt(input) - 1) * 3;
-    });
-    // MOMENTS
-    function getSetQuarter(input) {
-        return input == null ? Math.ceil((this.month() + 1) / 3) : this.month((input - 1) * 3 + this.month() % 3);
-    }
-    // FORMATTING
-    addFormatToken('D', [
-        'DD',
-        2
-    ], 'Do', 'date');
-    // ALIASES
-    addUnitAlias('date', 'D');
-    // PRIORITY
-    addUnitPriority('date', 9);
-    // PARSING
-    addRegexToken('D', match1to2);
-    addRegexToken('DD', match1to2, match2);
-    addRegexToken('Do', function(isStrict, locale1) {
-        // TODO: Remove "ordinalParse" fallback in next major release.
-        return isStrict ? locale1._dayOfMonthOrdinalParse || locale1._ordinalParse : locale1._dayOfMonthOrdinalParseLenient;
-    });
-    addParseToken([
-        'D',
-        'DD'
-    ], DATE);
-    addParseToken('Do', function(input, array) {
-        array[DATE] = toInt(input.match(match1to2)[0]);
-    });
-    // MOMENTS
-    var getSetDayOfMonth = makeGetSet('Date', true);
-    // FORMATTING
-    addFormatToken('DDD', [
-        'DDDD',
-        3
-    ], 'DDDo', 'dayOfYear');
-    // ALIASES
-    addUnitAlias('dayOfYear', 'DDD');
-    // PRIORITY
-    addUnitPriority('dayOfYear', 4);
-    // PARSING
-    addRegexToken('DDD', match1to3);
-    addRegexToken('DDDD', match3);
-    addParseToken([
-        'DDD',
-        'DDDD'
-    ], function(input, array, config) {
-        config._dayOfYear = toInt(input);
-    });
-    // HELPERS
-    // MOMENTS
-    function getSetDayOfYear(input) {
-        var dayOfYear = Math.round((this.clone().startOf('day') - this.clone().startOf('year')) / 86400000) + 1;
-        return input == null ? dayOfYear : this.add(input - dayOfYear, 'd');
-    }
-    // FORMATTING
-    addFormatToken('m', [
-        'mm',
-        2
-    ], 0, 'minute');
-    // ALIASES
-    addUnitAlias('minute', 'm');
-    // PRIORITY
-    addUnitPriority('minute', 14);
-    // PARSING
-    addRegexToken('m', match1to2);
-    addRegexToken('mm', match1to2, match2);
-    addParseToken([
-        'm',
-        'mm'
-    ], MINUTE);
-    // MOMENTS
-    var getSetMinute = makeGetSet('Minutes', false);
-    // FORMATTING
-    addFormatToken('s', [
-        'ss',
-        2
-    ], 0, 'second');
-    // ALIASES
-    addUnitAlias('second', 's');
-    // PRIORITY
-    addUnitPriority('second', 15);
-    // PARSING
-    addRegexToken('s', match1to2);
-    addRegexToken('ss', match1to2, match2);
-    addParseToken([
-        's',
-        'ss'
-    ], SECOND);
-    // MOMENTS
-    var getSetSecond = makeGetSet('Seconds', false);
-    // FORMATTING
-    addFormatToken('S', 0, 0, function() {
-        return ~~(this.millisecond() / 100);
-    });
-    addFormatToken(0, [
-        'SS',
-        2
-    ], 0, function() {
-        return ~~(this.millisecond() / 10);
-    });
-    addFormatToken(0, [
-        'SSS',
-        3
-    ], 0, 'millisecond');
-    addFormatToken(0, [
-        'SSSS',
-        4
-    ], 0, function() {
-        return this.millisecond() * 10;
-    });
-    addFormatToken(0, [
-        'SSSSS',
-        5
-    ], 0, function() {
-        return this.millisecond() * 100;
-    });
-    addFormatToken(0, [
-        'SSSSSS',
-        6
-    ], 0, function() {
-        return this.millisecond() * 1000;
-    });
-    addFormatToken(0, [
-        'SSSSSSS',
-        7
-    ], 0, function() {
-        return this.millisecond() * 10000;
-    });
-    addFormatToken(0, [
-        'SSSSSSSS',
-        8
-    ], 0, function() {
-        return this.millisecond() * 100000;
-    });
-    addFormatToken(0, [
-        'SSSSSSSSS',
-        9
-    ], 0, function() {
-        return this.millisecond() * 1000000;
-    });
-    // ALIASES
-    addUnitAlias('millisecond', 'ms');
-    // PRIORITY
-    addUnitPriority('millisecond', 16);
-    // PARSING
-    addRegexToken('S', match1to3, match1);
-    addRegexToken('SS', match1to3, match2);
-    addRegexToken('SSS', match1to3, match3);
-    var token, getSetMillisecond;
-    for(token = 'SSSS'; token.length <= 9; token += 'S')addRegexToken(token, matchUnsigned);
-    function parseMs(input, array) {
-        array[MILLISECOND] = toInt(('0.' + input) * 1000);
-    }
-    for(token = 'S'; token.length <= 9; token += 'S')addParseToken(token, parseMs);
-    getSetMillisecond = makeGetSet('Milliseconds', false);
-    // FORMATTING
-    addFormatToken('z', 0, 0, 'zoneAbbr');
-    addFormatToken('zz', 0, 0, 'zoneName');
-    // MOMENTS
-    function getZoneAbbr() {
-        return this._isUTC ? 'UTC' : '';
-    }
-    function getZoneName() {
-        return this._isUTC ? 'Coordinated Universal Time' : '';
-    }
-    var proto = Moment.prototype;
-    proto.add = add;
-    proto.calendar = calendar$1;
-    proto.clone = clone;
-    proto.diff = diff;
-    proto.endOf = endOf;
-    proto.format = format;
-    proto.from = from;
-    proto.fromNow = fromNow;
-    proto.to = to;
-    proto.toNow = toNow;
-    proto.get = stringGet;
-    proto.invalidAt = invalidAt;
-    proto.isAfter = isAfter;
-    proto.isBefore = isBefore;
-    proto.isBetween = isBetween;
-    proto.isSame = isSame;
-    proto.isSameOrAfter = isSameOrAfter;
-    proto.isSameOrBefore = isSameOrBefore;
-    proto.isValid = isValid$2;
-    proto.lang = lang;
-    proto.locale = locale;
-    proto.localeData = localeData;
-    proto.max = prototypeMax;
-    proto.min = prototypeMin;
-    proto.parsingFlags = parsingFlags;
-    proto.set = stringSet;
-    proto.startOf = startOf;
-    proto.subtract = subtract;
-    proto.toArray = toArray;
-    proto.toObject = toObject;
-    proto.toDate = toDate;
-    proto.toISOString = toISOString;
-    proto.inspect = inspect;
-    if (typeof Symbol !== 'undefined' && Symbol.for != null) proto[Symbol.for('nodejs.util.inspect.custom')] = function() {
-        return 'Moment<' + this.format() + '>';
-    };
-    proto.toJSON = toJSON;
-    proto.toString = toString;
-    proto.unix = unix;
-    proto.valueOf = valueOf;
-    proto.creationData = creationData;
-    proto.eraName = getEraName;
-    proto.eraNarrow = getEraNarrow;
-    proto.eraAbbr = getEraAbbr;
-    proto.eraYear = getEraYear;
-    proto.year = getSetYear;
-    proto.isLeapYear = getIsLeapYear;
-    proto.weekYear = getSetWeekYear;
-    proto.isoWeekYear = getSetISOWeekYear;
-    proto.quarter = proto.quarters = getSetQuarter;
-    proto.month = getSetMonth;
-    proto.daysInMonth = getDaysInMonth;
-    proto.week = proto.weeks = getSetWeek;
-    proto.isoWeek = proto.isoWeeks = getSetISOWeek;
-    proto.weeksInYear = getWeeksInYear;
-    proto.weeksInWeekYear = getWeeksInWeekYear;
-    proto.isoWeeksInYear = getISOWeeksInYear;
-    proto.isoWeeksInISOWeekYear = getISOWeeksInISOWeekYear;
-    proto.date = getSetDayOfMonth;
-    proto.day = proto.days = getSetDayOfWeek;
-    proto.weekday = getSetLocaleDayOfWeek;
-    proto.isoWeekday = getSetISODayOfWeek;
-    proto.dayOfYear = getSetDayOfYear;
-    proto.hour = proto.hours = getSetHour;
-    proto.minute = proto.minutes = getSetMinute;
-    proto.second = proto.seconds = getSetSecond;
-    proto.millisecond = proto.milliseconds = getSetMillisecond;
-    proto.utcOffset = getSetOffset;
-    proto.utc = setOffsetToUTC;
-    proto.local = setOffsetToLocal;
-    proto.parseZone = setOffsetToParsedOffset;
-    proto.hasAlignedHourOffset = hasAlignedHourOffset;
-    proto.isDST = isDaylightSavingTime;
-    proto.isLocal = isLocal;
-    proto.isUtcOffset = isUtcOffset;
-    proto.isUtc = isUtc;
-    proto.isUTC = isUtc;
-    proto.zoneAbbr = getZoneAbbr;
-    proto.zoneName = getZoneName;
-    proto.dates = deprecate('dates accessor is deprecated. Use date instead.', getSetDayOfMonth);
-    proto.months = deprecate('months accessor is deprecated. Use month instead', getSetMonth);
-    proto.years = deprecate('years accessor is deprecated. Use year instead', getSetYear);
-    proto.zone = deprecate('moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/', getSetZone);
-    proto.isDSTShifted = deprecate('isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information', isDaylightSavingTimeShifted);
-    function createUnix(input) {
-        return createLocal(input * 1000);
-    }
-    function createInZone() {
-        return createLocal.apply(null, arguments).parseZone();
-    }
-    function preParsePostFormat(string) {
-        return string;
-    }
-    var proto$1 = Locale.prototype;
-    proto$1.calendar = calendar;
-    proto$1.longDateFormat = longDateFormat;
-    proto$1.invalidDate = invalidDate;
-    proto$1.ordinal = ordinal;
-    proto$1.preparse = preParsePostFormat;
-    proto$1.postformat = preParsePostFormat;
-    proto$1.relativeTime = relativeTime;
-    proto$1.pastFuture = pastFuture;
-    proto$1.set = set;
-    proto$1.eras = localeEras;
-    proto$1.erasParse = localeErasParse;
-    proto$1.erasConvertYear = localeErasConvertYear;
-    proto$1.erasAbbrRegex = erasAbbrRegex;
-    proto$1.erasNameRegex = erasNameRegex;
-    proto$1.erasNarrowRegex = erasNarrowRegex;
-    proto$1.months = localeMonths;
-    proto$1.monthsShort = localeMonthsShort;
-    proto$1.monthsParse = localeMonthsParse;
-    proto$1.monthsRegex = monthsRegex;
-    proto$1.monthsShortRegex = monthsShortRegex;
-    proto$1.week = localeWeek;
-    proto$1.firstDayOfYear = localeFirstDayOfYear;
-    proto$1.firstDayOfWeek = localeFirstDayOfWeek;
-    proto$1.weekdays = localeWeekdays;
-    proto$1.weekdaysMin = localeWeekdaysMin;
-    proto$1.weekdaysShort = localeWeekdaysShort;
-    proto$1.weekdaysParse = localeWeekdaysParse;
-    proto$1.weekdaysRegex = weekdaysRegex;
-    proto$1.weekdaysShortRegex = weekdaysShortRegex;
-    proto$1.weekdaysMinRegex = weekdaysMinRegex;
-    proto$1.isPM = localeIsPM;
-    proto$1.meridiem = localeMeridiem;
-    function get$1(format1, index, field, setter) {
-        var locale1 = getLocale(), utc = createUTC().set(setter, index);
-        return locale1[field](utc, format1);
-    }
-    function listMonthsImpl(format1, index, field) {
-        if (isNumber(format1)) {
-            index = format1;
-            format1 = undefined;
-        }
-        format1 = format1 || '';
-        if (index != null) return get$1(format1, index, field, 'month');
-        var i, out = [];
-        for(i = 0; i < 12; i++)out[i] = get$1(format1, i, field, 'month');
-        return out;
-    }
-    // ()
-    // (5)
-    // (fmt, 5)
-    // (fmt)
-    // (true)
-    // (true, 5)
-    // (true, fmt, 5)
-    // (true, fmt)
-    function listWeekdaysImpl(localeSorted, format1, index, field) {
-        if (typeof localeSorted === 'boolean') {
-            if (isNumber(format1)) {
-                index = format1;
-                format1 = undefined;
-            }
-            format1 = format1 || '';
-        } else {
-            format1 = localeSorted;
-            index = format1;
-            localeSorted = false;
-            if (isNumber(format1)) {
-                index = format1;
-                format1 = undefined;
-            }
-            format1 = format1 || '';
-        }
-        var locale1 = getLocale(), shift = localeSorted ? locale1._week.dow : 0, i, out = [];
-        if (index != null) return get$1(format1, (index + shift) % 7, field, 'day');
-        for(i = 0; i < 7; i++)out[i] = get$1(format1, (i + shift) % 7, field, 'day');
-        return out;
-    }
-    function listMonths(format1, index) {
-        return listMonthsImpl(format1, index, 'months');
-    }
-    function listMonthsShort(format1, index) {
-        return listMonthsImpl(format1, index, 'monthsShort');
-    }
-    function listWeekdays(localeSorted, format1, index) {
-        return listWeekdaysImpl(localeSorted, format1, index, 'weekdays');
-    }
-    function listWeekdaysShort(localeSorted, format1, index) {
-        return listWeekdaysImpl(localeSorted, format1, index, 'weekdaysShort');
-    }
-    function listWeekdaysMin(localeSorted, format1, index) {
-        return listWeekdaysImpl(localeSorted, format1, index, 'weekdaysMin');
-    }
-    getSetGlobalLocale('en', {
-        eras: [
-            {
-                since: '0001-01-01',
-                until: Infinity,
-                offset: 1,
-                name: 'Anno Domini',
-                narrow: 'AD',
-                abbr: 'AD'
-            },
-            {
-                since: '0000-12-31',
-                until: -Infinity,
-                offset: 1,
-                name: 'Before Christ',
-                narrow: 'BC',
-                abbr: 'BC'
-            }, 
-        ],
-        dayOfMonthOrdinalParse: /\d{1,2}(th|st|nd|rd)/,
-        ordinal: function(number) {
-            var b = number % 10, output = toInt(number % 100 / 10) === 1 ? 'th' : b === 1 ? 'st' : b === 2 ? 'nd' : b === 3 ? 'rd' : 'th';
-            return number + output;
-        }
-    });
-    // Side effect imports
-    hooks.lang = deprecate('moment.lang is deprecated. Use moment.locale instead.', getSetGlobalLocale);
-    hooks.langData = deprecate('moment.langData is deprecated. Use moment.localeData instead.', getLocale);
-    var mathAbs = Math.abs;
-    function abs() {
-        var data = this._data;
-        this._milliseconds = mathAbs(this._milliseconds);
-        this._days = mathAbs(this._days);
-        this._months = mathAbs(this._months);
-        data.milliseconds = mathAbs(data.milliseconds);
-        data.seconds = mathAbs(data.seconds);
-        data.minutes = mathAbs(data.minutes);
-        data.hours = mathAbs(data.hours);
-        data.months = mathAbs(data.months);
-        data.years = mathAbs(data.years);
-        return this;
-    }
-    function addSubtract$1(duration, input, value, direction) {
-        var other = createDuration(input, value);
-        duration._milliseconds += direction * other._milliseconds;
-        duration._days += direction * other._days;
-        duration._months += direction * other._months;
-        return duration._bubble();
-    }
-    // supports only 2.0-style add(1, 's') or add(duration)
-    function add$1(input, value) {
-        return addSubtract$1(this, input, value, 1);
-    }
-    // supports only 2.0-style subtract(1, 's') or subtract(duration)
-    function subtract$1(input, value) {
-        return addSubtract$1(this, input, value, -1);
-    }
-    function absCeil(number) {
-        if (number < 0) return Math.floor(number);
-        else return Math.ceil(number);
-    }
-    function bubble() {
-        var milliseconds = this._milliseconds, days = this._days, months = this._months, data = this._data, seconds, minutes, hours, years, monthsFromDays;
-        // if we have a mix of positive and negative values, bubble down first
-        // check: https://github.com/moment/moment/issues/2166
-        if (!(milliseconds >= 0 && days >= 0 && months >= 0 || milliseconds <= 0 && days <= 0 && months <= 0)) {
-            milliseconds += absCeil(monthsToDays(months) + days) * 86400000;
-            days = 0;
-            months = 0;
-        }
-        // The following code bubbles up values, see the tests for
-        // examples of what that means.
-        data.milliseconds = milliseconds % 1000;
-        seconds = absFloor(milliseconds / 1000);
-        data.seconds = seconds % 60;
-        minutes = absFloor(seconds / 60);
-        data.minutes = minutes % 60;
-        hours = absFloor(minutes / 60);
-        data.hours = hours % 24;
-        days += absFloor(hours / 24);
-        // convert days to months
-        monthsFromDays = absFloor(daysToMonths(days));
-        months += monthsFromDays;
-        days -= absCeil(monthsToDays(monthsFromDays));
-        // 12 months -> 1 year
-        years = absFloor(months / 12);
-        months %= 12;
-        data.days = days;
-        data.months = months;
-        data.years = years;
-        return this;
-    }
-    function daysToMonths(days) {
-        // 400 years have 146097 days (taking into account leap year rules)
-        // 400 years have 12 months === 4800
-        return days * 4800 / 146097;
-    }
-    function monthsToDays(months) {
-        // the reverse of daysToMonths
-        return months * 146097 / 4800;
-    }
-    function as(units) {
-        if (!this.isValid()) return NaN;
-        var days, months, milliseconds = this._milliseconds;
-        units = normalizeUnits(units);
-        if (units === 'month' || units === 'quarter' || units === 'year') {
-            days = this._days + milliseconds / 86400000;
-            months = this._months + daysToMonths(days);
-            switch(units){
-                case 'month':
-                    return months;
-                case 'quarter':
-                    return months / 3;
-                case 'year':
-                    return months / 12;
-            }
-        } else {
-            // handle milliseconds separately because of floating point math errors (issue #1867)
-            days = this._days + Math.round(monthsToDays(this._months));
-            switch(units){
-                case 'week':
-                    return days / 7 + milliseconds / 604800000;
-                case 'day':
-                    return days + milliseconds / 86400000;
-                case 'hour':
-                    return days * 24 + milliseconds / 3600000;
-                case 'minute':
-                    return days * 1440 + milliseconds / 60000;
-                case 'second':
-                    return days * 86400 + milliseconds / 1000;
-                // Math.floor prevents floating point math errors here
-                case 'millisecond':
-                    return Math.floor(days * 86400000) + milliseconds;
-                default:
-                    throw new Error('Unknown unit ' + units);
-            }
-        }
-    }
-    // TODO: Use this.as('ms')?
-    function valueOf$1() {
-        if (!this.isValid()) return NaN;
-        return this._milliseconds + this._days * 86400000 + this._months % 12 * 2592000000 + toInt(this._months / 12) * 31536000000;
-    }
-    function makeAs(alias) {
-        return function() {
-            return this.as(alias);
-        };
-    }
-    var asMilliseconds = makeAs('ms'), asSeconds = makeAs('s'), asMinutes = makeAs('m'), asHours = makeAs('h'), asDays = makeAs('d'), asWeeks = makeAs('w'), asMonths = makeAs('M'), asQuarters = makeAs('Q'), asYears = makeAs('y');
-    function clone$1() {
-        return createDuration(this);
-    }
-    function get$2(units) {
-        units = normalizeUnits(units);
-        return this.isValid() ? this[units + 's']() : NaN;
-    }
-    function makeGetter(name) {
-        return function() {
-            return this.isValid() ? this._data[name] : NaN;
-        };
-    }
-    var milliseconds = makeGetter('milliseconds'), seconds = makeGetter('seconds'), minutes = makeGetter('minutes'), hours = makeGetter('hours'), days = makeGetter('days'), months = makeGetter('months'), years = makeGetter('years');
-    function weeks() {
-        return absFloor(this.days() / 7);
-    }
-    var round = Math.round, thresholds = {
-        ss: 44,
-        s: 45,
-        m: 45,
-        h: 22,
-        d: 26,
-        w: null,
-        M: 11
-    };
-    // helper function for moment.fn.from, moment.fn.fromNow, and moment.duration.fn.humanize
-    function substituteTimeAgo(string, number, withoutSuffix, isFuture, locale1) {
-        return locale1.relativeTime(number || 1, !!withoutSuffix, string, isFuture);
-    }
-    function relativeTime$1(posNegDuration, withoutSuffix, thresholds1, locale1) {
-        var duration = createDuration(posNegDuration).abs(), seconds1 = round(duration.as('s')), minutes1 = round(duration.as('m')), hours1 = round(duration.as('h')), days1 = round(duration.as('d')), months1 = round(duration.as('M')), weeks1 = round(duration.as('w')), years1 = round(duration.as('y')), a = seconds1 <= thresholds1.ss && [
-            's',
-            seconds1
-        ] || seconds1 < thresholds1.s && [
-            'ss',
-            seconds1
-        ] || minutes1 <= 1 && [
-            'm'
-        ] || minutes1 < thresholds1.m && [
-            'mm',
-            minutes1
-        ] || hours1 <= 1 && [
-            'h'
-        ] || hours1 < thresholds1.h && [
-            'hh',
-            hours1
-        ] || days1 <= 1 && [
-            'd'
-        ] || days1 < thresholds1.d && [
-            'dd',
-            days1
-        ];
-        if (thresholds1.w != null) a = a || weeks1 <= 1 && [
-            'w'
-        ] || weeks1 < thresholds1.w && [
-            'ww',
-            weeks1
-        ];
-        a = a || months1 <= 1 && [
-            'M'
-        ] || months1 < thresholds1.M && [
-            'MM',
-            months1
-        ] || years1 <= 1 && [
-            'y'
-        ] || [
-            'yy',
-            years1
-        ];
-        a[2] = withoutSuffix;
-        a[3] = +posNegDuration > 0;
-        a[4] = locale1;
-        return substituteTimeAgo.apply(null, a);
-    }
-    // This function allows you to set the rounding function for relative time strings
-    function getSetRelativeTimeRounding(roundingFunction) {
-        if (roundingFunction === undefined) return round;
-        if (typeof roundingFunction === 'function') {
-            round = roundingFunction;
-            return true;
-        }
-        return false;
-    }
-    // This function allows you to set a threshold for relative time strings
-    function getSetRelativeTimeThreshold(threshold, limit) {
-        if (thresholds[threshold] === undefined) return false;
-        if (limit === undefined) return thresholds[threshold];
-        thresholds[threshold] = limit;
-        if (threshold === 's') thresholds.ss = limit - 1;
-        return true;
-    }
-    function humanize(argWithSuffix, argThresholds) {
-        if (!this.isValid()) return this.localeData().invalidDate();
-        var withSuffix = false, th = thresholds, locale1, output;
-        if (typeof argWithSuffix === 'object') {
-            argThresholds = argWithSuffix;
-            argWithSuffix = false;
-        }
-        if (typeof argWithSuffix === 'boolean') withSuffix = argWithSuffix;
-        if (typeof argThresholds === 'object') {
-            th = Object.assign({
-            }, thresholds, argThresholds);
-            if (argThresholds.s != null && argThresholds.ss == null) th.ss = argThresholds.s - 1;
-        }
-        locale1 = this.localeData();
-        output = relativeTime$1(this, !withSuffix, th, locale1);
-        if (withSuffix) output = locale1.pastFuture(+this, output);
-        return locale1.postformat(output);
-    }
-    var abs$1 = Math.abs;
-    function sign(x) {
-        return (x > 0) - (x < 0) || +x;
-    }
-    function toISOString$1() {
-        // for ISO strings we do not use the normal bubbling rules:
-        //  * milliseconds bubble up until they become hours
-        //  * days do not bubble at all
-        //  * months bubble up until they become years
-        // This is because there is no context-free conversion between hours and days
-        // (think of clock changes)
-        // and also not between days and months (28-31 days per month)
-        if (!this.isValid()) return this.localeData().invalidDate();
-        var seconds1 = abs$1(this._milliseconds) / 1000, days1 = abs$1(this._days), months1 = abs$1(this._months), minutes1, hours1, years1, s, total = this.asSeconds(), totalSign, ymSign, daysSign, hmsSign;
-        if (!total) // this is the same as C#'s (Noda) and python (isodate)...
-        // but not other JS (goog.date)
-        return 'P0D';
-        // 3600 seconds -> 60 minutes -> 1 hour
-        minutes1 = absFloor(seconds1 / 60);
-        hours1 = absFloor(minutes1 / 60);
-        seconds1 %= 60;
-        minutes1 %= 60;
-        // 12 months -> 1 year
-        years1 = absFloor(months1 / 12);
-        months1 %= 12;
-        // inspired by https://github.com/dordille/moment-isoduration/blob/master/moment.isoduration.js
-        s = seconds1 ? seconds1.toFixed(3).replace(/\.?0+$/, '') : '';
-        totalSign = total < 0 ? '-' : '';
-        ymSign = sign(this._months) !== sign(total) ? '-' : '';
-        daysSign = sign(this._days) !== sign(total) ? '-' : '';
-        hmsSign = sign(this._milliseconds) !== sign(total) ? '-' : '';
-        return totalSign + 'P' + (years1 ? ymSign + years1 + 'Y' : '') + (months1 ? ymSign + months1 + 'M' : '') + (days1 ? daysSign + days1 + 'D' : '') + (hours1 || minutes1 || seconds1 ? 'T' : '') + (hours1 ? hmsSign + hours1 + 'H' : '') + (minutes1 ? hmsSign + minutes1 + 'M' : '') + (seconds1 ? hmsSign + s + 'S' : '');
-    }
-    var proto$2 = Duration.prototype;
-    proto$2.isValid = isValid$1;
-    proto$2.abs = abs;
-    proto$2.add = add$1;
-    proto$2.subtract = subtract$1;
-    proto$2.as = as;
-    proto$2.asMilliseconds = asMilliseconds;
-    proto$2.asSeconds = asSeconds;
-    proto$2.asMinutes = asMinutes;
-    proto$2.asHours = asHours;
-    proto$2.asDays = asDays;
-    proto$2.asWeeks = asWeeks;
-    proto$2.asMonths = asMonths;
-    proto$2.asQuarters = asQuarters;
-    proto$2.asYears = asYears;
-    proto$2.valueOf = valueOf$1;
-    proto$2._bubble = bubble;
-    proto$2.clone = clone$1;
-    proto$2.get = get$2;
-    proto$2.milliseconds = milliseconds;
-    proto$2.seconds = seconds;
-    proto$2.minutes = minutes;
-    proto$2.hours = hours;
-    proto$2.days = days;
-    proto$2.weeks = weeks;
-    proto$2.months = months;
-    proto$2.years = years;
-    proto$2.humanize = humanize;
-    proto$2.toISOString = toISOString$1;
-    proto$2.toString = toISOString$1;
-    proto$2.toJSON = toISOString$1;
-    proto$2.locale = locale;
-    proto$2.localeData = localeData;
-    proto$2.toIsoString = deprecate('toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)', toISOString$1);
-    proto$2.lang = lang;
-    // FORMATTING
-    addFormatToken('X', 0, 0, 'unix');
-    addFormatToken('x', 0, 0, 'valueOf');
-    // PARSING
-    addRegexToken('x', matchSigned);
-    addRegexToken('X', matchTimestamp);
-    addParseToken('X', function(input, array, config) {
-        config._d = new Date(parseFloat(input) * 1000);
-    });
-    addParseToken('x', function(input, array, config) {
-        config._d = new Date(toInt(input));
-    });
-    //! moment.js
-    hooks.version = '2.29.1';
-    setHookCallback(createLocal);
-    hooks.fn = proto;
-    hooks.min = min;
-    hooks.max = max;
-    hooks.now = now;
-    hooks.utc = createUTC;
-    hooks.unix = createUnix;
-    hooks.months = listMonths;
-    hooks.isDate = isDate;
-    hooks.locale = getSetGlobalLocale;
-    hooks.invalid = createInvalid;
-    hooks.duration = createDuration;
-    hooks.isMoment = isMoment;
-    hooks.weekdays = listWeekdays;
-    hooks.parseZone = createInZone;
-    hooks.localeData = getLocale;
-    hooks.isDuration = isDuration;
-    hooks.monthsShort = listMonthsShort;
-    hooks.weekdaysMin = listWeekdaysMin;
-    hooks.defineLocale = defineLocale;
-    hooks.updateLocale = updateLocale;
-    hooks.locales = listLocales;
-    hooks.weekdaysShort = listWeekdaysShort;
-    hooks.normalizeUnits = normalizeUnits;
-    hooks.relativeTimeRounding = getSetRelativeTimeRounding;
-    hooks.relativeTimeThreshold = getSetRelativeTimeThreshold;
-    hooks.calendarFormat = getCalendarFormat;
-    hooks.prototype = proto;
-    // currently HTML5 input type only supports 24-hour formats
-    hooks.HTML5_FMT = {
-        DATETIME_LOCAL: 'YYYY-MM-DDTHH:mm',
-        DATETIME_LOCAL_SECONDS: 'YYYY-MM-DDTHH:mm:ss',
-        DATETIME_LOCAL_MS: 'YYYY-MM-DDTHH:mm:ss.SSS',
-        DATE: 'YYYY-MM-DD',
-        TIME: 'HH:mm',
-        TIME_SECONDS: 'HH:mm:ss',
-        TIME_MS: 'HH:mm:ss.SSS',
-        WEEK: 'GGGG-[W]WW',
-        MONTH: 'YYYY-MM'
-    };
-    return hooks;
-});
-
-},{}],"d0UAd":[function(require,module,exports) {
-!function(e, t) {
-    "object" == typeof exports && "object" == typeof module ? module.exports = t(require("moment"), require("react")) : "function" == typeof define && define.amd ? define([
-        "moment",
-        "react"
-    ], t) : "object" == typeof exports ? exports["react-moment"] = t(require("moment"), require("react")) : e["react-moment"] = t(e.moment, e.react);
-}(this, function(e, t) {
-    return (function(e1) {
-        var t1 = {
-        };
-        function n(r) {
-            if (t1[r]) return t1[r].exports;
-            var o = t1[r] = {
-                i: r,
-                l: !1,
-                exports: {
-                }
-            };
-            return e1[r].call(o.exports, o, o.exports, n), o.l = !0, o.exports;
-        }
-        return n.m = e1, n.c = t1, n.d = function(e2, t2, r) {
-            n.o(e2, t2) || Object.defineProperty(e2, t2, {
-                enumerable: !0,
-                get: r
-            });
-        }, n.r = function(e2) {
-            "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e2, Symbol.toStringTag, {
-                value: "Module"
-            }), Object.defineProperty(e2, "__esModule", {
-                value: !0
-            });
-        }, n.t = function(e2, t2) {
-            if (1 & t2 && (e2 = n(e2)), 8 & t2) return e2;
-            if (4 & t2 && "object" == typeof e2 && e2 && e2.__esModule) return e2;
-            var r = Object.create(null);
-            if (n.r(r), Object.defineProperty(r, "default", {
-                enumerable: !0,
-                value: e2
-            }), 2 & t2 && "string" != typeof e2) for(var o in e2)n.d(r, o, (function(t3) {
-                return e2[t3];
-            }).bind(null, o));
-            return r;
-        }, n.n = function(e2) {
-            var t2 = e2 && e2.__esModule ? function() {
-                return e2.default;
-            } : function() {
-                return e2;
-            };
-            return n.d(t2, "a", t2), t2;
-        }, n.o = function(e2, t2) {
-            return Object.prototype.hasOwnProperty.call(e2, t2);
-        }, n.p = "", n(n.s = 6);
-    })([
-        function(e1, t1, n) {
-            e1.exports = n(3)();
-        },
-        function(t1, n) {
-            t1.exports = e;
-        },
-        function(e1, n) {
-            e1.exports = t;
-        },
-        function(e1, t1, n) {
-            "use strict";
-            var r = n(4);
-            function o() {
-            }
-            function i() {
-            }
-            i.resetWarningCache = o, e1.exports = function() {
-                function e2(e3, t2, n1, o1, i1, a) {
-                    if (a !== r) {
-                        var l = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-                        throw l.name = "Invariant Violation", l;
-                    }
-                }
-                function t2() {
-                    return e2;
-                }
-                e2.isRequired = e2;
-                var n1 = {
-                    array: e2,
-                    bool: e2,
-                    func: e2,
-                    number: e2,
-                    object: e2,
-                    string: e2,
-                    symbol: e2,
-                    any: e2,
-                    arrayOf: t2,
-                    element: e2,
-                    elementType: e2,
-                    instanceOf: t2,
-                    node: e2,
-                    objectOf: t2,
-                    oneOf: t2,
-                    oneOfType: t2,
-                    shape: t2,
-                    exact: t2,
-                    checkPropTypes: i,
-                    resetWarningCache: o
-                };
-                return n1.PropTypes = n1, n1;
-            };
-        },
-        function(e1, t1, n) {
-            "use strict";
-            e1.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
-        },
-        function(e1, t1, n) {
-            var r, o, i, a, l;
-            /*! Moment Duration Format v2.2.2
- *  https://github.com/jsmreese/moment-duration-format
- *  Date: 2018-02-16
- *
- *  Duration format plugin function for the Moment.js library
- *  http://momentjs.com/
- *
- *  Copyright 2018 John Madhavan-Reese
- *  Released under the MIT license
- */ a = this, l = function(e2) {
-                var t2 = !1, n1 = !1, r1 = !1, o1 = !1, i1 = "escape years months weeks days hours minutes seconds milliseconds general".split(" "), a1 = [
-                    {
-                        type: "seconds",
-                        targets: [
-                            {
-                                type: "minutes",
-                                value: 60
-                            },
-                            {
-                                type: "hours",
-                                value: 3600
-                            },
-                            {
-                                type: "days",
-                                value: 86400
-                            },
-                            {
-                                type: "weeks",
-                                value: 604800
-                            },
-                            {
-                                type: "months",
-                                value: 2678400
-                            },
-                            {
-                                type: "years",
-                                value: 31536000
-                            }
-                        ]
-                    },
-                    {
-                        type: "minutes",
-                        targets: [
-                            {
-                                type: "hours",
-                                value: 60
-                            },
-                            {
-                                type: "days",
-                                value: 1440
-                            },
-                            {
-                                type: "weeks",
-                                value: 10080
-                            },
-                            {
-                                type: "months",
-                                value: 44640
-                            },
-                            {
-                                type: "years",
-                                value: 525600
-                            }
-                        ]
-                    },
-                    {
-                        type: "hours",
-                        targets: [
-                            {
-                                type: "days",
-                                value: 24
-                            },
-                            {
-                                type: "weeks",
-                                value: 168
-                            },
-                            {
-                                type: "months",
-                                value: 744
-                            },
-                            {
-                                type: "years",
-                                value: 8760
-                            }
-                        ]
-                    },
-                    {
-                        type: "days",
-                        targets: [
-                            {
-                                type: "weeks",
-                                value: 7
-                            },
-                            {
-                                type: "months",
-                                value: 31
-                            },
-                            {
-                                type: "years",
-                                value: 365
-                            }
-                        ]
-                    },
-                    {
-                        type: "months",
-                        targets: [
-                            {
-                                type: "years",
-                                value: 12
-                            }
-                        ]
-                    }
-                ];
-                function l1(e3, t3) {
-                    return !(t3.length > e3.length) && -1 !== e3.indexOf(t3);
-                }
-                function u(e3) {
-                    for(var t3 = ""; e3;)t3 += "0", e3 -= 1;
-                    return t3;
-                }
-                function s(e3, t3) {
-                    var n2 = e3 + "+" + v(V(t3).sort(), function(e4) {
-                        return e4 + ":" + t3[e4];
-                    }).join(",");
-                    return s.cache[n2] || (s.cache[n2] = Intl.NumberFormat(e3, t3)), s.cache[n2];
-                }
-                function c(e3, t3, i2) {
-                    var a2, l2, f, m = t3.useToLocaleString, p = t3.useGrouping, g = p && t3.grouping.slice(), y = t3.maximumSignificantDigits, h = t3.minimumIntegerDigits || 1, d = t3.fractionDigits || 0, v = t3.groupingSeparator, b = t3.decimalSeparator;
-                    if (m && i2) {
-                        var w, S = {
-                            minimumIntegerDigits: h,
-                            useGrouping: p
-                        };
-                        return d && (S.maximumFractionDigits = d, S.minimumFractionDigits = d), y && e3 > 0 && (S.maximumSignificantDigits = y), r1 ? (o1 || ((w = x({
-                        }, t3)).useGrouping = !1, w.decimalSeparator = ".", e3 = parseFloat(c(e3, w), 10)), s(i2, S).format(e3)) : (n1 || ((w = x({
-                        }, t3)).useGrouping = !1, w.decimalSeparator = ".", e3 = parseFloat(c(e3, w), 10)), e3.toLocaleString(i2, S));
-                    }
-                    var T = (y ? e3.toPrecision(y + 1) : e3.toFixed(d + 1)).split("e");
-                    f = T[1] || "", l2 = (T = T[0].split("."))[1] || "";
-                    var O = (a2 = T[0] || "").length, _ = l2.length, V = O + _, D = a2 + l2;
-                    (y && V === y + 1 || !y && _ === d + 1) && ((D = (function(e4) {
-                        for(var t4 = e4.split("").reverse(), n2 = 0, r2 = !0; r2 && n2 < t4.length;)n2 ? "9" === t4[n2] ? t4[n2] = "0" : (t4[n2] = (parseInt(t4[n2], 10) + 1).toString(), r2 = !1) : (parseInt(t4[n2], 10) < 5 && (r2 = !1), t4[n2] = "0"), n2 += 1;
-                        return r2 && t4.push("1"), t4.reverse().join("");
-                    })(D)).length === V + 1 && (O += 1), _ && (D = D.slice(0, -1)), a2 = D.slice(0, O), l2 = D.slice(O)), y && (l2 = l2.replace(/0*$/, ""));
-                    var j = parseInt(f, 10);
-                    j > 0 ? l2.length <= j ? (a2 += l2 += u(j - l2.length), l2 = "") : (a2 += l2.slice(0, j), l2 = l2.slice(j)) : j < 0 && (l2 = u(Math.abs(j) - a2.length) + a2 + l2, a2 = "0"), y || ((l2 = l2.slice(0, d)).length < d && (l2 += u(d - l2.length)), a2.length < h && (a2 = u(h - a2.length) + a2));
-                    var M, P = "";
-                    if (p) for(T = a2; T.length;)g.length && (M = g.shift()), P && (P = v + P), P = T.slice(-M) + P, T = T.slice(0, -M);
-                    else P = a2;
-                    return l2 && (P = P + b + l2), P;
-                }
-                function f(e3, t3) {
-                    return e3.label.length > t3.label.length ? -1 : e3.label.length < t3.label.length ? 1 : 0;
-                }
-                function m(e3, t3) {
-                    var n2 = [];
-                    return d(V(t3), function(r2) {
-                        if ("_durationLabels" === r2.slice(0, 15)) {
-                            var o2 = r2.slice(15).toLowerCase();
-                            d(V(t3[r2]), function(i2) {
-                                i2.slice(0, 1) === e3 && n2.push({
-                                    type: o2,
-                                    key: i2,
-                                    label: t3[r2][i2]
-                                });
-                            });
-                        }
-                    }), n2;
-                }
-                s.cache = {
-                };
-                var p = {
-                    durationLabelsStandard: {
-                        S: "millisecond",
-                        SS: "milliseconds",
-                        s: "second",
-                        ss: "seconds",
-                        m: "minute",
-                        mm: "minutes",
-                        h: "hour",
-                        hh: "hours",
-                        d: "day",
-                        dd: "days",
-                        w: "week",
-                        ww: "weeks",
-                        M: "month",
-                        MM: "months",
-                        y: "year",
-                        yy: "years"
-                    },
-                    durationLabelsShort: {
-                        S: "msec",
-                        SS: "msecs",
-                        s: "sec",
-                        ss: "secs",
-                        m: "min",
-                        mm: "mins",
-                        h: "hr",
-                        hh: "hrs",
-                        d: "dy",
-                        dd: "dys",
-                        w: "wk",
-                        ww: "wks",
-                        M: "mo",
-                        MM: "mos",
-                        y: "yr",
-                        yy: "yrs"
-                    },
-                    durationTimeTemplates: {
-                        HMS: "h:mm:ss",
-                        HM: "h:mm",
-                        MS: "m:ss"
-                    },
-                    durationLabelTypes: [
-                        {
-                            type: "standard",
-                            string: "__"
-                        },
-                        {
-                            type: "short",
-                            string: "_"
-                        }
-                    ],
-                    durationPluralKey: function(e3, t3, n2) {
-                        return 1 === t3 && null === n2 ? e3 : e3 + e3;
-                    }
-                };
-                function g(e3) {
-                    return "[object Array]" === Object.prototype.toString.call(e3);
-                }
-                function y(e3) {
-                    return "[object Object]" === Object.prototype.toString.call(e3);
-                }
-                function h(e3, t3) {
-                    var n2, r2 = 0, o3 = e3 && e3.length || 0;
-                    for("function" != typeof t3 && (n2 = t3, t3 = function(e4) {
-                        return e4 === n2;
-                    }); r2 < o3;){
-                        if (t3(e3[r2])) return e3[r2];
-                        r2 += 1;
-                    }
-                }
-                function d(e3, t3) {
-                    var n2 = 0, r2 = e3.length;
-                    if (e3 && r2) for(; n2 < r2;){
-                        if (!1 === t3(e3[n2], n2)) return;
-                        n2 += 1;
-                    }
-                }
-                function v(e3, t3) {
-                    var n2 = 0, r2 = e3.length, o3 = [];
-                    if (!e3 || !r2) return o3;
-                    for(; n2 < r2;)o3[n2] = t3(e3[n2], n2), n2 += 1;
-                    return o3;
-                }
-                function b(e3, t3) {
-                    return v(e3, function(e4) {
-                        return e4[t3];
-                    });
-                }
-                function w(e3) {
-                    var t3 = [];
-                    return d(e3, function(e4) {
-                        e4 && t3.push(e4);
-                    }), t3;
-                }
-                function S(e3) {
-                    var t3 = [];
-                    return d(e3, function(e4) {
-                        h(t3, e4) || t3.push(e4);
-                    }), t3;
-                }
-                function T(e3, t3) {
-                    var n2 = [];
-                    return d(e3, function(e4) {
-                        d(t3, function(t4) {
-                            e4 === t4 && n2.push(e4);
-                        });
-                    }), S(n2);
-                }
-                function O(e3, t3) {
-                    var n2 = [];
-                    return d(e3, function(r2, o3) {
-                        if (!t3(r2)) return n2 = e3.slice(o3), !1;
-                    }), n2;
-                }
-                function _(e3, t3) {
-                    return O(e3.slice().reverse(), t3).reverse();
-                }
-                function x(e3, t3) {
-                    for(var n2 in t3)t3.hasOwnProperty(n2) && (e3[n2] = t3[n2]);
-                    return e3;
-                }
-                function V(e3) {
-                    var t3 = [];
-                    for(var n2 in e3)e3.hasOwnProperty(n2) && t3.push(n2);
-                    return t3;
-                }
-                function D(e3, t3) {
-                    var n2 = 0, r2 = e3.length;
-                    if (!e3 || !r2) return !1;
-                    for(; n2 < r2;){
-                        if (!0 === t3(e3[n2], n2)) return !0;
-                        n2 += 1;
-                    }
-                    return !1;
-                }
-                function j(e3) {
-                    var t3 = [];
-                    return d(e3, function(e4) {
-                        t3 = t3.concat(e4);
-                    }), t3;
-                }
-                function M(e3) {
-                    return "3.6" === e3(3.55, "en", {
-                        useGrouping: !1,
-                        minimumIntegerDigits: 1,
-                        minimumFractionDigits: 1,
-                        maximumFractionDigits: 1
-                    });
-                }
-                function P(e3) {
-                    var t3 = !0;
-                    return !!((t3 = (t3 = (t3 = t3 && "1" === e3(1, "en", {
-                        minimumIntegerDigits: 1
-                    })) && "01" === e3(1, "en", {
-                        minimumIntegerDigits: 2
-                    })) && "001" === e3(1, "en", {
-                        minimumIntegerDigits: 3
-                    })) && (t3 = (t3 = (t3 = (t3 = t3 && "100" === e3(99.99, "en", {
-                        maximumFractionDigits: 0,
-                        minimumFractionDigits: 0
-                    })) && "100.0" === e3(99.99, "en", {
-                        maximumFractionDigits: 1,
-                        minimumFractionDigits: 1
-                    })) && "99.99" === e3(99.99, "en", {
-                        maximumFractionDigits: 2,
-                        minimumFractionDigits: 2
-                    })) && "99.990" === e3(99.99, "en", {
-                        maximumFractionDigits: 3,
-                        minimumFractionDigits: 3
-                    })) && (t3 = (t3 = (t3 = (t3 = (t3 = t3 && "100" === e3(99.99, "en", {
-                        maximumSignificantDigits: 1
-                    })) && "100" === e3(99.99, "en", {
-                        maximumSignificantDigits: 2
-                    })) && "100" === e3(99.99, "en", {
-                        maximumSignificantDigits: 3
-                    })) && "99.99" === e3(99.99, "en", {
-                        maximumSignificantDigits: 4
-                    })) && "99.99" === e3(99.99, "en", {
-                        maximumSignificantDigits: 5
-                    })) && (t3 = (t3 = t3 && "1,000" === e3(1000, "en", {
-                        useGrouping: !0
-                    })) && "1000" === e3(1000, "en", {
-                        useGrouping: !1
-                    })));
-                }
-                function k() {
-                    var e3, t3 = [].slice.call(arguments), n2 = {
-                    };
-                    if (d(t3, function(t4, r2) {
-                        if (!r2) {
-                            if (!g(t4)) throw "Expected array as the first argument to durationsFormat.";
-                            e3 = t4;
-                        }
-                        "string" != typeof t4 && "function" != typeof t4 ? "number" != typeof t4 ? y(t4) && x(n2, t4) : n2.precision = t4 : n2.template = t4;
-                    }), !e3 || !e3.length) return [];
-                    n2.returnMomentTypes = !0;
-                    var r2 = v(e3, function(e4) {
-                        return e4.format(n2);
-                    }), o3 = T(i1, S(b(j(r2), "type"))), a2 = n2.largest;
-                    return a2 && (o3 = o3.slice(0, a2)), n2.returnMomentTypes = !1, n2.outputTypes = o3, v(e3, function(e4) {
-                        return e4.format(n2);
-                    });
-                }
-                function E() {
-                    var n2 = [].slice.call(arguments), o3 = x({
-                    }, this.format.defaults), u1 = this.asMilliseconds(), s1 = this.asMonths();
-                    "function" == typeof this.isValid && !1 === this.isValid() && (u1 = 0, s1 = 0);
-                    var j1 = u1 < 0, M1 = e2.duration(Math.abs(u1), "milliseconds"), P1 = e2.duration(Math.abs(s1), "months");
-                    d(n2, function(e3) {
-                        "string" != typeof e3 && "function" != typeof e3 ? "number" != typeof e3 ? y(e3) && x(o3, e3) : o3.precision = e3 : o3.template = e3;
-                    });
-                    var k1 = {
-                        years: "y",
-                        months: "M",
-                        weeks: "w",
-                        days: "d",
-                        hours: "h",
-                        minutes: "m",
-                        seconds: "s",
-                        milliseconds: "S"
-                    }, E1 = {
-                        escape: /\[(.+?)\]/,
-                        years: /\*?[Yy]+/,
-                        months: /\*?M+/,
-                        weeks: /\*?[Ww]+/,
-                        days: /\*?[Dd]+/,
-                        hours: /\*?[Hh]+/,
-                        minutes: /\*?m+/,
-                        seconds: /\*?s+/,
-                        milliseconds: /\*?S+/,
-                        general: /.+?/
-                    };
-                    o3.types = i1;
-                    var L = function(e3) {
-                        return h(i1, function(t3) {
-                            return E1[t3].test(e3);
-                        });
-                    }, F = new RegExp(v(i1, function(e3) {
-                        return E1[e3].source;
-                    }).join("|"), "g");
-                    o3.duration = this;
-                    var I = "function" == typeof o3.template ? o3.template.apply(o3) : o3.template, N = o3.outputTypes, C = o3.returnMomentTypes, R = o3.largest, G = [];
-                    N || (g(o3.stopTrim) && (o3.stopTrim = o3.stopTrim.join("")), o3.stopTrim && d(o3.stopTrim.match(F), function(e3) {
-                        var t3 = L(e3);
-                        "escape" !== t3 && "general" !== t3 && G.push(t3);
-                    }));
-                    var U = e2.localeData();
-                    U || (U = {
-                    }), d(V(p), function(e3) {
-                        "function" != typeof p[e3] ? U["_" + e3] || (U["_" + e3] = p[e3]) : U[e3] || (U[e3] = p[e3]);
-                    }), d(V(U._durationTimeTemplates), function(e3) {
-                        I = I.replace("_" + e3 + "_", U._durationTimeTemplates[e3]);
-                    });
-                    var q = o3.userLocale || e2.locale(), z = o3.useLeftUnits, H = o3.usePlural, W = o3.precision, $ = o3.forceLength, A = o3.useGrouping, B = o3.trunc, K = o3.useSignificantDigits && W > 0, Y = K ? o3.precision : 0, J = Y, Q = o3.minValue, X = !1, Z = o3.maxValue, ee = !1, te = o3.useToLocaleString, ne = o3.groupingSeparator, re = o3.decimalSeparator, oe = o3.grouping;
-                    te = te && (t2 || r1);
-                    var ie = o3.trim;
-                    g(ie) && (ie = ie.join(" ")), null === ie && (R || Z || K) && (ie = "all"), null !== ie && !0 !== ie && "left" !== ie && "right" !== ie || (ie = "large"), !1 === ie && (ie = "");
-                    var ae = function(e3) {
-                        return e3.test(ie);
-                    }, le = /large/, ue = /small/, se = /both/, ce = /mid/, fe = /^all|[^sm]all/, me = /final/, pe = R > 0 || D([
-                        le,
-                        se,
-                        fe
-                    ], ae), ge = D([
-                        ue,
-                        se,
-                        fe
-                    ], ae), ye = D([
-                        ce,
-                        fe
-                    ], ae), he = D([
-                        me,
-                        fe
-                    ], ae), de = v(I.match(F), function(e3, t3) {
-                        var n3 = L(e3);
-                        return "*" === e3.slice(0, 1) && (e3 = e3.slice(1), "escape" !== n3 && "general" !== n3 && G.push(n3)), {
-                            index: t3,
-                            length: e3.length,
-                            text: "",
-                            token: "escape" === n3 ? e3.replace(E1.escape, "$1") : e3,
-                            type: "escape" === n3 || "general" === n3 ? null : n3
-                        };
-                    }), ve = {
-                        index: 0,
-                        length: 0,
-                        token: "",
-                        text: "",
-                        type: null
-                    }, be = [];
-                    z && de.reverse(), d(de, function(e3) {
-                        if (e3.type) return (ve.type || ve.text) && be.push(ve), void (ve = e3);
-                        z ? ve.text = e3.token + ve.text : ve.text += e3.token;
-                    }), (ve.type || ve.text) && be.push(ve), z && be.reverse();
-                    var we = T(i1, S(w(b(be, "type"))));
-                    if (!we.length) return b(be, "text").join("");
-                    we = v(we, function(e3, t3) {
-                        var n3, r2 = t3 + 1 === we.length, i2 = !t3;
-                        n3 = "years" === e3 || "months" === e3 ? P1.as(e3) : M1.as(e3);
-                        var a2 = Math.floor(n3), l2 = n3 - a2, u2 = h(be, function(t4) {
-                            return e3 === t4.type;
-                        });
-                        return i2 && Z && n3 > Z && (ee = !0), r2 && Q && Math.abs(o3.duration.as(e3)) < Q && (X = !0), i2 && null === $ && u2.length > 1 && ($ = !0), M1.subtract(a2, e3), P1.subtract(a2, e3), {
-                            rawValue: n3,
-                            wholeValue: a2,
-                            decimalValue: r2 ? l2 : 0,
-                            isSmallest: r2,
-                            isLargest: i2,
-                            type: e3,
-                            tokenLength: u2.length
-                        };
-                    });
-                    var Se = B ? Math.floor : Math.round, Te = function(e3, t3) {
-                        var n3 = Math.pow(10, t3);
-                        return Se(e3 * n3) / n3;
-                    }, Oe = !1, _e = !1, xe = function(e3, t3) {
-                        var n3 = {
-                            useGrouping: A,
-                            groupingSeparator: ne,
-                            decimalSeparator: re,
-                            grouping: oe,
-                            useToLocaleString: te
-                        };
-                        return K && (Y <= 0 ? (e3.rawValue = 0, e3.wholeValue = 0, e3.decimalValue = 0) : (n3.maximumSignificantDigits = Y, e3.significantDigits = Y)), ee && !_e && (e3.isLargest ? (e3.wholeValue = Z, e3.decimalValue = 0) : (e3.wholeValue = 0, e3.decimalValue = 0)), X && !_e && (e3.isSmallest ? (e3.wholeValue = Q, e3.decimalValue = 0) : (e3.wholeValue = 0, e3.decimalValue = 0)), e3.isSmallest || e3.significantDigits && e3.significantDigits - e3.wholeValue.toString().length <= 0 ? W < 0 ? e3.value = Te(e3.wholeValue, W) : 0 === W ? e3.value = Se(e3.wholeValue + e3.decimalValue) : K ? (e3.value = B ? Te(e3.rawValue, Y - e3.wholeValue.toString().length) : e3.rawValue, e3.wholeValue && (Y -= e3.wholeValue.toString().length)) : (n3.fractionDigits = W, e3.value = B ? e3.wholeValue + Te(e3.decimalValue, W) : e3.wholeValue + e3.decimalValue) : K && e3.wholeValue ? (e3.value = Math.round(Te(e3.wholeValue, e3.significantDigits - e3.wholeValue.toString().length)), Y -= e3.wholeValue.toString().length) : e3.value = e3.wholeValue, e3.tokenLength > 1 && ($ || Oe) && (n3.minimumIntegerDigits = e3.tokenLength, _e && n3.maximumSignificantDigits < e3.tokenLength && delete n3.maximumSignificantDigits), !Oe && (e3.value > 0 || "" === ie || h(G, e3.type) || h(N, e3.type)) && (Oe = !0), e3.formattedValue = c(e3.value, n3, q), n3.useGrouping = !1, n3.decimalSeparator = ".", e3.formattedValueEn = c(e3.value, n3, "en"), 2 === e3.tokenLength && "milliseconds" === e3.type && (e3.formattedValueMS = c(e3.value, {
-                            minimumIntegerDigits: 3,
-                            useGrouping: !1
-                        }, "en").slice(0, 2)), e3;
-                    };
-                    if ((we = w(we = v(we, xe))).length > 1) {
-                        var Ve = function(e3) {
-                            return h(we, function(t3) {
-                                return t3.type === e3;
-                            });
-                        }, De = function(e3) {
-                            var t3 = Ve(e3.type);
-                            t3 && d(e3.targets, function(e4) {
-                                var n3 = Ve(e4.type);
-                                n3 && parseInt(t3.formattedValueEn, 10) === e4.value && (t3.rawValue = 0, t3.wholeValue = 0, t3.decimalValue = 0, n3.rawValue += 1, n3.wholeValue += 1, n3.decimalValue = 0, n3.formattedValueEn = n3.wholeValue.toString(), _e = !0);
-                            });
-                        };
-                        d(a1, De);
-                    }
-                    return _e && (Oe = !1, Y = J, we = w(we = v(we, xe))), !N || ee && !o3.trim ? (pe && (we = O(we, function(e3) {
-                        return !e3.isSmallest && !e3.wholeValue && !h(G, e3.type);
-                    })), R && we.length && (we = we.slice(0, R)), ge && we.length > 1 && (we = _(we, function(e3) {
-                        return !e3.wholeValue && !h(G, e3.type) && !e3.isLargest;
-                    })), ye && (we = w(we = v(we, function(e3, t3) {
-                        return t3 > 0 && t3 < we.length - 1 && !e3.wholeValue ? null : e3;
-                    }))), !he || 1 !== we.length || we[0].wholeValue || !B && we[0].isSmallest && we[0].rawValue < Q || (we = [])) : we = w(we = v(we, function(e3) {
-                        return h(N, function(t3) {
-                            return e3.type === t3;
-                        }) ? e3 : null;
-                    })), C ? we : (d(be, function(e3) {
-                        var t3 = k1[e3.type], n3 = h(we, function(t4) {
-                            return t4.type === e3.type;
-                        });
-                        if (t3 && n3) {
-                            var r2 = n3.formattedValueEn.split(".");
-                            r2[0] = parseInt(r2[0], 10), r2[1] ? r2[1] = parseFloat("0." + r2[1], 10) : r2[1] = null;
-                            var o4 = U.durationPluralKey(t3, r2[0], r2[1]), i2 = m(t3, U), a2 = !1, u2 = {
-                            };
-                            d(U._durationLabelTypes, function(t4) {
-                                var n4 = h(i2, function(e4) {
-                                    return e4.type === t4.type && e4.key === o4;
-                                });
-                                n4 && (u2[n4.type] = n4.label, l1(e3.text, t4.string) && (e3.text = e3.text.replace(t4.string, n4.label), a2 = !0));
-                            }), H && !a2 && (i2.sort(f), d(i2, function(t4) {
-                                return u2[t4.type] === t4.label ? !l1(e3.text, t4.label) && void 0 : l1(e3.text, t4.label) ? (e3.text = e3.text.replace(t4.label, u2[t4.type]), !1) : void 0;
-                            }));
-                        }
-                    }), (be = v(be, function(e3) {
-                        if (!e3.type) return e3.text;
-                        var t3 = h(we, function(t4) {
-                            return t4.type === e3.type;
-                        });
-                        if (!t3) return "";
-                        var n3 = "";
-                        return z && (n3 += e3.text), (j1 && ee || !j1 && X) && (n3 += "< ", ee = !1, X = !1), (j1 && X || !j1 && ee) && (n3 += "> ", ee = !1, X = !1), j1 && (t3.value > 0 || "" === ie || h(G, t3.type) || h(N, t3.type)) && (n3 += "-", j1 = !1), "milliseconds" === e3.type && t3.formattedValueMS ? n3 += t3.formattedValueMS : n3 += t3.formattedValue, z || (n3 += e3.text), n3;
-                    })).join("").replace(/(,| |:|\.)*$/, "").replace(/^(,| |:|\.)*/, ""));
-                }
-                function L() {
-                    var e3 = this.duration, t3 = function(t4) {
-                        return e3._data[t4];
-                    }, n2 = h(this.types, t3), r3 = function(e4, t4) {
-                        for(var n3 = e4.length; n3 -= 1;)if (t4(e4[n3])) return e4[n3];
-                    }(this.types, t3);
-                    switch(n2){
-                        case "milliseconds":
-                            return "S __";
-                        case "seconds":
-                        case "minutes":
-                            return "*_MS_";
-                        case "hours":
-                            return "_HMS_";
-                        case "days":
-                            if (n2 === r3) return "d __";
-                        case "weeks":
-                            return n2 === r3 ? "w __" : (null === this.trim && (this.trim = "both"), "w __, d __, h __");
-                        case "months":
-                            if (n2 === r3) return "M __";
-                        case "years":
-                            return n2 === r3 ? "y __" : (null === this.trim && (this.trim = "both"), "y __, M __, d __");
-                        default:
-                            return null === this.trim && (this.trim = "both"), "y __, d __, h __, m __, s __";
-                    }
-                }
-                function F(e3) {
-                    if (!e3) throw "Moment Duration Format init cannot find moment instance.";
-                    e3.duration.format = k, e3.duration.fn.format = E, e3.duration.fn.format.defaults = {
-                        trim: null,
-                        stopTrim: null,
-                        largest: null,
-                        maxValue: null,
-                        minValue: null,
-                        precision: 0,
-                        trunc: !1,
-                        forceLength: null,
-                        userLocale: null,
-                        usePlural: !0,
-                        useLeftUnits: !1,
-                        useGrouping: !0,
-                        useSignificantDigits: !1,
-                        template: L,
-                        useToLocaleString: !0,
-                        groupingSeparator: ",",
-                        decimalSeparator: ".",
-                        grouping: [
-                            3
-                        ]
-                    }, e3.updateLocale("en", p);
-                }
-                var I = function(e3, t3, n2) {
-                    return e3.toLocaleString(t3, n2);
-                };
-                t2 = (function() {
-                    try {
-                        0..toLocaleString("i");
-                    } catch (e3) {
-                        return "RangeError" === e3.name;
-                    }
-                    return !1;
-                })() && P(I), n1 = t2 && M(I);
-                var N = function(e3, t3, n2) {
-                    if ("undefined" != typeof window && window && window.Intl && window.Intl.NumberFormat) return window.Intl.NumberFormat(t3, n2).format(e3);
-                };
-                return r1 = P(N), o1 = r1 && M(N), F(e2), F;
-            }, o = [
-                n(1)
-            ], (void 0) === (i = "function" == typeof (r = l) ? r.apply(t1, o) : r) || (e1.exports = i), a && (a.momentDurationFormatSetup = a.moment ? l(a.moment) : l);
-        },
-        function(e1, t1, n1) {
-            "use strict";
-            n1.r(t1), n1.d(t1, "default", function() {
-                return _;
-            });
-            var r1 = n1(2), o1 = n1.n(r1), i1 = n1(0), a1 = n1.n(i1), l = n1(1), u1 = n1.n(l);
-            n1(5);
-            function s(e2) {
-                return (s = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e3) {
-                    return typeof e3;
-                } : function(e3) {
-                    return e3 && "function" == typeof Symbol && e3.constructor === Symbol && e3 !== Symbol.prototype ? "symbol" : typeof e3;
-                })(e2);
-            }
-            function c(e2, t2) {
-                var n1 = Object.keys(e2);
-                if (Object.getOwnPropertySymbols) {
-                    var r3 = Object.getOwnPropertySymbols(e2);
-                    t2 && (r3 = r3.filter(function(t3) {
-                        return Object.getOwnPropertyDescriptor(e2, t3).enumerable;
-                    })), n1.push.apply(n1, r3);
-                }
-                return n1;
-            }
-            function f(e2, t2) {
-                if (null == e2) return {
-                };
-                var n1, r4, o3 = function(e3, t3) {
-                    if (null == e3) return {
-                    };
-                    var n2, r5, o5 = {
-                    }, i3 = Object.keys(e3);
-                    for(r5 = 0; r5 < i3.length; r5++)n2 = i3[r5], t3.indexOf(n2) >= 0 || (o5[n2] = e3[n2]);
-                    return o5;
-                }(e2, t2);
-                if (Object.getOwnPropertySymbols) {
-                    var i3 = Object.getOwnPropertySymbols(e2);
-                    for(r4 = 0; r4 < i3.length; r4++)n1 = i3[r4], t2.indexOf(n1) >= 0 || Object.prototype.propertyIsEnumerable.call(e2, n1) && (o3[n1] = e2[n1]);
-                }
-                return o3;
-            }
-            function m(e2, t2) {
-                for(var n1 = 0; n1 < t2.length; n1++){
-                    var r4 = t2[n1];
-                    r4.enumerable = r4.enumerable || !1, r4.configurable = !0, "value" in r4 && (r4.writable = !0), Object.defineProperty(e2, r4.key, r4);
-                }
-            }
-            function p(e2, t2, n1) {
-                return t2 && m(e2.prototype, t2), n1 && m(e2, n1), e2;
-            }
-            function g(e2, t2) {
-                return (g = Object.setPrototypeOf || function(e3, t3) {
-                    return e3.__proto__ = t3, e3;
-                })(e2, t2);
-            }
-            function y(e2) {
-                var t2 = function() {
-                    if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
-                    if (Reflect.construct.sham) return !1;
-                    if ("function" == typeof Proxy) return !0;
-                    try {
-                        return Date.prototype.toString.call(Reflect.construct(Date, [], function() {
-                        })), !0;
-                    } catch (e3) {
-                        return !1;
-                    }
-                }();
-                return function() {
-                    var n1, r5 = v(e2);
-                    if (t2) {
-                        var o3 = v(this).constructor;
-                        n1 = Reflect.construct(r5, arguments, o3);
-                    } else n1 = r5.apply(this, arguments);
-                    return h(this, n1);
-                };
-            }
-            function h(e2, t2) {
-                return !t2 || "object" !== s(t2) && "function" != typeof t2 ? d(e2) : t2;
-            }
-            function d(e2) {
-                if ((void 0) === e2) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                return e2;
-            }
-            function v(e2) {
-                return (v = Object.setPrototypeOf ? Object.getPrototypeOf : function(e3) {
-                    return e3.__proto__ || Object.getPrototypeOf(e3);
-                })(e2);
-            }
-            function b(e2, t2, n1) {
-                return t2 in e2 ? Object.defineProperty(e2, t2, {
-                    value: n1,
-                    enumerable: !0,
-                    configurable: !0,
-                    writable: !0
-                }) : e2[t2] = n1, e2;
-            }
-            var w = [
-                a1.a.string,
-                a1.a.number,
-                a1.a.array,
-                a1.a.object
-            ], S = [
-                a1.a.string,
-                a1.a.array
-            ], T = [
-                a1.a.object,
-                a1.a.bool
-            ], O = [
-                a1.a.string,
-                a1.a.bool
-            ], _ = function(e2) {
-                !function(e3, t2) {
-                    if ("function" != typeof t2 && null !== t2) throw new TypeError("Super expression must either be null or a function");
-                    e3.prototype = Object.create(t2 && t2.prototype, {
-                        constructor: {
-                            value: e3,
-                            writable: !0,
-                            configurable: !0
-                        }
-                    }), t2 && g(e3, t2);
-                }(n2, e2);
-                var t2 = y(n2);
-                function n2(e3) {
-                    var r5;
-                    return (function(e4, t3) {
-                        if (!(e4 instanceof t3)) throw new TypeError("Cannot call a class as a function");
-                    })(this, n2), b(d(r5 = t2.call(this, e3)), "setTimer", function() {
-                        var e4 = r5.props.interval;
-                        r5.clearTimer(), n2.pooledTimer || 0 === e4 || (r5.timer = setInterval(function() {
-                            r5.update(r5.props);
-                        }, e4));
-                    }), b(d(r5), "getTitle", function() {
-                        var e4 = r5.props.titleFormat, t3 = n2.getDatetime(r5.props), o5 = e4 || n2.globalFormat;
-                        return t3.format(o5);
-                    }), b(d(r5), "clearTimer", function() {
-                        !n2.pooledTimer && r5.timer && (clearInterval(r5.timer), r5.timer = null), n2.pooledTimer && !r5.timer && n2.removePooledElement(d(r5));
-                    }), n2.globalMoment || (n2.globalMoment = u1.a), r5.state = {
-                        content: ""
-                    }, r5.timer = null, r5;
-                }
-                return p(n2, null, [
-                    {
-                        key: "startPooledTimer",
-                        value: function() {
-                            var e3 = arguments.length > 0 && (void 0) !== arguments[0] ? arguments[0] : 60000;
-                            n2.clearPooledTimer(), n2.pooledTimer = setInterval(function() {
-                                n2.pooledElements.forEach(function(e4) {
-                                    0 !== e4.props.interval && e4.update();
-                                });
-                            }, e3);
-                        }
-                    },
-                    {
-                        key: "clearPooledTimer",
-                        value: function() {
-                            n2.pooledTimer && (clearInterval(n2.pooledTimer), n2.pooledTimer = null, n2.pooledElements = []);
-                        }
-                    },
-                    {
-                        key: "pushPooledElement",
-                        value: function(e3) {
-                            e3 instanceof n2 ? -1 === n2.pooledElements.indexOf(e3) && n2.pooledElements.push(e3) : console.error("Element not an instance of Moment.");
-                        }
-                    },
-                    {
-                        key: "removePooledElement",
-                        value: function(e3) {
-                            var t3 = n2.pooledElements.indexOf(e3);
-                            -1 !== t3 && n2.pooledElements.splice(t3, 1);
-                        }
-                    },
-                    {
-                        key: "getDatetime",
-                        value: function(e3) {
-                            var t3 = e3.utc, r5 = e3.unix, o5 = e3.date, i4 = e3.locale, a3 = e3.parse, l1 = e3.tz, u3 = e3.local;
-                            o5 = o5 || e3.children, a3 = a3 || n2.globalParse, u3 = u3 || n2.globalLocal, l1 = l1 || n2.globalTimezone, i4 = n2.globalLocale ? n2.globalLocale : i4 || n2.globalMoment.locale();
-                            var s1 = null;
-                            return s1 = t3 ? n2.globalMoment.utc(o5, a3, i4) : r5 ? n2.globalMoment(1000 * o5, a3, i4) : n2.globalMoment(o5, a3, i4), l1 ? s1 = s1.tz(l1) : u3 && (s1 = s1.local()), s1;
-                        }
-                    },
-                    {
-                        key: "getContent",
-                        value: function(e3) {
-                            var t3 = e3.fromNow, r5 = e3.fromNowDuring, o5 = e3.from, i4 = e3.add, a3 = e3.subtract, l1 = e3.toNow, s1 = e3.to, c1 = e3.ago, f1 = e3.calendar, m1 = e3.diff, p1 = e3.duration, g1 = e3.durationFromNow, y1 = e3.unit, h1 = e3.decimal, d1 = e3.trim, v1 = e3.format;
-                            v1 = v1 || n2.globalFormat;
-                            var b1 = n2.getDatetime(e3);
-                            i4 && b1.add(i4), a3 && b1.subtract(a3);
-                            var w1 = Boolean(r5) && -b1.diff(u1()()) < r5, S1 = "";
-                            return S1 = !v1 || w1 || g1 || p1 ? o5 ? b1.from(o5, c1) : t3 || w1 ? b1.fromNow(c1) : s1 ? b1.to(s1, c1) : l1 ? b1.toNow(c1) : f1 ? b1.calendar(null, f1) : m1 ? b1.diff(m1, y1, h1) : p1 ? b1.diff(p1) : g1 ? u1()().diff(b1) : b1.toString() : b1.format(v1), (p1 || g1) && (S1 = (S1 = u1.a.duration(S1)).format(v1, {
-                                trim: d1
-                            })), S1 = (n2.globalFilter || e3.filter)(S1);
-                        }
-                    }
-                ]), p(n2, [
-                    {
-                        key: "componentDidMount",
-                        value: function() {
-                            this.setTimer(), n2.pooledTimer && n2.pushPooledElement(this);
-                        }
-                    },
-                    {
-                        key: "componentDidUpdate",
-                        value: function(e3) {
-                            var t3 = this.props.interval;
-                            e3.interval !== t3 && this.setTimer();
-                        }
-                    },
-                    {
-                        key: "componentWillUnmount",
-                        value: function() {
-                            this.clearTimer();
-                        }
-                    },
-                    {
-                        key: "update",
-                        value: function(e3) {
-                            var t3 = e3 || this.props, r5 = t3.onChange, o5 = n2.getContent(t3);
-                            this.setState({
-                                content: o5
-                            }, function() {
-                                r5(o5);
-                            });
-                        }
-                    },
-                    {
-                        key: "render",
-                        value: function() {
-                            var e3, t3, r5, i4, a3 = this.props, l1 = a3.withTitle, u3 = a3.element, s1 = f(a3, [
-                                "withTitle",
-                                "element"
-                            ]), m1 = this.state.content, p1 = (e3 = s1, t3 = n2.propTypes, r5 = Object.keys(t3), i4 = Object.assign({
-                            }, e3), Object.keys(i4).filter(function(e4) {
-                                return -1 !== r5.indexOf(e4);
-                            }).forEach(function(e4) {
-                                return delete i4[e4];
-                            }), i4);
-                            return l1 && (p1.title = this.getTitle()), o1.a.createElement(u3 || n2.globalElement, function(e4) {
-                                for(var t4 = 1; t4 < arguments.length; t4++){
-                                    var n3 = null != arguments[t4] ? arguments[t4] : {
-                                    };
-                                    t4 % 2 ? c(Object(n3), !0).forEach(function(t5) {
-                                        b(e4, t5, n3[t5]);
-                                    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e4, Object.getOwnPropertyDescriptors(n3)) : c(Object(n3)).forEach(function(t5) {
-                                        Object.defineProperty(e4, t5, Object.getOwnPropertyDescriptor(n3, t5));
-                                    });
-                                }
-                                return e4;
-                            }({
-                                dateTime: n2.getDatetime(this.props)
-                            }, p1), m1);
-                        }
-                    }
-                ], [
-                    {
-                        key: "getDerivedStateFromProps",
-                        value: function(e3) {
-                            return {
-                                content: n2.getContent(e3)
-                            };
-                        }
-                    }
-                ]), n2;
-            }(o1.a.Component);
-            b(_, "propTypes", {
-                element: a1.a.any,
-                date: a1.a.oneOfType(w),
-                parse: a1.a.oneOfType(S),
-                format: a1.a.string,
-                add: a1.a.object,
-                subtract: a1.a.object,
-                ago: a1.a.bool,
-                fromNow: a1.a.bool,
-                fromNowDuring: a1.a.number,
-                from: a1.a.oneOfType(w),
-                toNow: a1.a.bool,
-                to: a1.a.oneOfType(w),
-                calendar: a1.a.oneOfType(T),
-                unix: a1.a.bool,
-                utc: a1.a.bool,
-                local: a1.a.bool,
-                tz: a1.a.string,
-                withTitle: a1.a.bool,
-                titleFormat: a1.a.string,
-                locale: a1.a.string,
-                interval: a1.a.number,
-                diff: a1.a.oneOfType(w),
-                duration: a1.a.oneOfType(w),
-                durationFromNow: a1.a.bool,
-                trim: a1.a.oneOfType(O),
-                unit: a1.a.string,
-                decimal: a1.a.bool,
-                filter: a1.a.func,
-                onChange: a1.a.func
-            }), b(_, "defaultProps", {
-                element: null,
-                fromNow: !1,
-                toNow: !1,
-                calendar: !1,
-                ago: !1,
-                unix: !1,
-                utc: !1,
-                local: !1,
-                unit: null,
-                withTitle: !1,
-                trim: !1,
-                decimal: !1,
-                titleFormat: "",
-                interval: 60000,
-                filter: function(e2) {
-                    return e2;
-                },
-                onChange: function() {
-                }
-            }), b(_, "globalMoment", null), b(_, "globalLocale", null), b(_, "globalLocal", null), b(_, "globalFormat", null), b(_, "globalParse", null), b(_, "globalFilter", null), b(_, "globalElement", "time"), b(_, "globalTimezone", null), b(_, "pooledElements", []), b(_, "pooledTimer", null);
-        }
-    ]);
-});
-
-},{"moment":"5Keig","react":"6TuXu"}],"jqOG8":[function() {},{}]},["2rAXy","8Ye98","6cF5V"], "6cF5V", "parcelRequire04ad")
+},{"react-refresh/runtime":"fNmB3"}],"1dfYM":[function() {},{}]},["2rAXy","8Ye98","6cF5V"], "6cF5V", "parcelRequire04ad")
 
 //# sourceMappingURL=index.5cb7de60.js.map

@@ -40,8 +40,6 @@ form {
     width: 100%;
 }
 
-input .chatbox {
-    width: 90%;
-    margin: 1% auto;
-    height: 80%;
+.chat-header {
+    background-color: #F2A900;
 }

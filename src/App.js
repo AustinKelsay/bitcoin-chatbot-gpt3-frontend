@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react"
 import axios from "axios"
-import Chat, { Message } from 'react-simple-chat';
-import 'react-simple-chat/src/components/index.css';
+import ThemedExample from "./chatbot";
 import './index.css'
 
 const App = () => {
@@ -17,12 +16,11 @@ const App = () => {
             }
         }
     ]);
-
-    const headers = {
-        'Content-Type': 'application/json',
-        "Access-Control-Allow-Origin": "*"
-      };
     useEffect(() => {
+        const headers = {
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "*"
+          };
         axios.get("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/", {headers})
         .then(response => {
             setBotStatus(response.data)
@@ -31,6 +29,8 @@ const App = () => {
             console.log(error)
         })
     })
+
+     
     return (
         <div className='App'>
             <header className='header'>
@@ -39,15 +39,10 @@ const App = () => {
                 <span>{botStatus}</span>
             </header>
             <div className='body'>
-                <Chat
-                title="Jane Doe"
-                user={{ id: 1 }}
-                messages={messages}
-                onSend={message => setMessages([...messages, message])}
-                />
+                <ThemedExample />
             </div>
         </div>
         )
 }
 
-export default App
+export default App;

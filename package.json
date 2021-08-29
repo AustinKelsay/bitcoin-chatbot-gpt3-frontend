@@ -20,7 +20,7 @@
     "axios": "^0.21.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-simple-chat": "^1.1.4"
+    "react-simple-chatbot": "^0.5.0"
   },
   "devDependencies": {
     "parcel": "^2.0.0-rc.0"
