@@ -1,13 +1,35 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* https://coolors.co/404e5c-4f6272-f9f8f8-f2a900-d00000 */
+/* 
+Red: #D00000
+Orange: #F2A900
+White: #F9F8F8
+Dark-coral: #4F6272
+Charcoal: 404E5C
+*/
+
+.App {
+  margin: 1% auto;
+  background-color: #F9F8F8;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+  width: 90%;
+  margin: 1% auto;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #D00000;
+  border-radius: 5px;
+}
+
+span {
+  text-decoration: underline;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
