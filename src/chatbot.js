@@ -25,7 +25,7 @@ const steps = [
 
 const ThemedExample = () => (
   <ThemeProvider theme={theme}>
-    <ChatBot steps={steps} />;
+    <ChatBot steps={steps} />
   </ThemeProvider>
 );
 
