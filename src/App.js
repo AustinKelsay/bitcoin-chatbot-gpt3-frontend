@@ -5,6 +5,17 @@ import './App.css';
 
 function App() {
   const [botStatus, setBotStatus] = useState('Offline');
+  const [steps, setSteps] = useState([{
+    id: '1',
+    message: 'Hello World!',
+    trigger: '2'
+  },
+{
+    id: '2',
+    message: "I'm Bitcoin Chatbot",
+    end: true
+}
+]);
   useEffect(() => {
     const headers = {
         'Content-Type': 'application/json',
@@ -27,7 +38,7 @@ return (
             Status:
             <span>{botStatus}</span>
         </header>
-        <ThemedExample />
+        <ThemedExample steps={steps} />
     </div>
     )
 }

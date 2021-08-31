@@ -1,16 +1,17 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import ChatBot from 'react-simple-chatbot';
+import { v4 as uuidv4 } from 'uuid';
 
 // all available props
 const theme = {
   margin: '1% auto',
   background: '#f5f8fb',
   fontFamily: 'Helvetica Neue',
-  headerBgColor: '#EF6C00',
+  headerBgColor: '#F2A900',
   headerFontColor: '#fff',
   headerFontSize: '15px',
-  botBubbleColor: '#EF6C00',
+  botBubbleColor: '#F2A900',
   botFontColor: '#fff',
   userBubbleColor: '#fff',
   userFontColor: '#4a4a4a',
@@ -22,15 +23,7 @@ const styles = {
   'marginTop': '10%'
 }
 
-const steps = [
-  {
-    id: '1',
-    message: 'Hello World',
-    end: true,
-  },
-];
-
-const ThemedExample = () => (
+const ThemedExample = ({steps}) => (
   <ThemeProvider theme={theme}>
     <ChatBot 
       style={styles}
