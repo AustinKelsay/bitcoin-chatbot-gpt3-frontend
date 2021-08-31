@@ -1,5 +1,37 @@
+/* https://coolors.co/404e5c-4f6272-f9f8f8-f2a900-d00000 */
+/* 
+Red: #D00000
+Orange: #F2A900
+White: #F9F8F8
+Dark-coral: #4F6272
+Charcoal: 404E5C
+*/
+
 .App {
-  text-align: center;
+  margin: 1% auto;
+  background-color: #F9F8F8;
   font-family: 'Azeret Mono', monospace;
   font-family: 'Exo 2', sans-serif;
+  text-align: center;
+}
+
+.header {
+  width: 50%;
+  margin: 1% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 10px solid #F2A900;
+  border-radius: 10px;
+}
+
+span {
+  text-decoration: underline;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
