@@ -9,7 +9,6 @@ Charcoal: 404E5C
 
 .App {
   margin: 1% auto;
-  background-color: #F9F8F8;
   text-align: center;
 }
 
@@ -21,6 +20,7 @@ Charcoal: 404E5C
   align-items: center;
   border: 10px solid #F2A900;
   border-radius: 10px;
+  padding-bottom: 0.5%;
 }
 
 span {
