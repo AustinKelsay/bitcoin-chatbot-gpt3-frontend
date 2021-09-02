@@ -5,16 +5,28 @@ import './App.css';
 
 function App() {
   const [botStatus, setBotStatus] = useState('Offline');
-  const [steps, setSteps] = useState([{
-    id: '1',
-    message: 'Hello World!',
-    trigger: '2'
-  },
-{
-    id: '2',
-    message: "I'm Bitcoin Chatbot",
-    end: true
-}
+  const [steps, setSteps] = useState(
+    [
+        {
+            id: '1',
+            message: 'Hello World!',
+            trigger: '2'
+        },
+        {
+            id: '2',
+            message: "I'm Bitcoin Chatbot",
+            trigger: '3'
+        },
+        {
+            id: '3',
+            user: true,
+            trigger: '4',
+        },
+        {
+            id: '4',
+            message: "I'm a little poopy actually",
+            end: true
+        }
 ]);
   useEffect(() => {
     const headers = {
