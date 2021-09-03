@@ -48,7 +48,7 @@ return (
         <header className='header'>
             <h1>Bitcoin Chatbot</h1>
             Status:
-            <span>{botStatus}</span>
+            <span style={botStatus == 'Offline' ? {color: "red"} : {color: "green"}}>{botStatus}</span>
         </header>
         <ThemedExample steps={steps} />
     </div>
