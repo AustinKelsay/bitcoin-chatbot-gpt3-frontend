@@ -48,7 +48,11 @@ return (
         <header className='header'>
             <h1>Bitcoin Chatbot</h1>
             Status:
-            <span style={botStatus == 'Offline' ? {color: "red"} : {color: "green"}}>{botStatus}</span>
+            <span style={botStatus === 'Offline' ? {color: "red"} : {color: "green"}}>{botStatus}</span>
+            <div className="intro">
+                <p>Bitcoin chatbot is a lorem ipsum lorem ipsum lorem ipsum</p>
+                <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+            </div>
         </header>
         <ThemedExample steps={steps} />
     </div>

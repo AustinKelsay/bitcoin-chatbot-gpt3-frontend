@@ -19,8 +19,7 @@ const theme = {
 
 const styles = {
   'margin': '1% auto',
-  'marginBottom': '0%',
-  'marginTop': '10%'
+  'margin-top': '2%'
 }
 
 const ThemedExample = ({steps}) => (

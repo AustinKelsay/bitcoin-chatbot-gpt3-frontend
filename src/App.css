@@ -4,7 +4,7 @@ Red: #D00000
 Orange: #F2A900
 White: #F9F8F8
 Dark-coral: #4F6272
-Charcoal: 404E5C
+Charcoal: #404E5C
 */
 
 .App {
@@ -15,6 +15,7 @@ Charcoal: 404E5C
 .header {
   width: 50%;
   margin: 1% auto;
+  margin-bottom: 0%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,4 +33,11 @@ span {
   flex-direction: column;
   align-items: center;
   width: 100%;
+}
+
+.intro {
+  width: 80%;
+  margin: 1% auto;
+  border-top: 2px solid #404E5C;
+  margin-bottom: 0%;
 }
