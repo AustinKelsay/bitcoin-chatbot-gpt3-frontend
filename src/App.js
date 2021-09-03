@@ -50,8 +50,8 @@ return (
             Status:
             <span style={botStatus === 'Offline' ? {color: "red"} : {color: "green"}}>{botStatus}</span>
             <div className="intro">
-                <p>Bitcoin chatbot is a lorem ipsum lorem ipsum lorem ipsum</p>
-                <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+                <p>Bitcoin Chatbot is a natural language processing bot powered by GPT-3 and trained on an open source dataset of established Bitcoin knowledge</p>
+                <p>Here you can see the exact materials that Bitcoin Chatbot was trained on along with the source code</p>
             </div>
         </header>
         <ThemedExample steps={steps} />
