@@ -36,40 +36,18 @@ function App() {
     .catch(error => {
         console.log(error)
     })
-})
-
-const botStep = (response) => {
-    setStepId(stepId + 1)
-    setSteps([...steps, {
-        id: stepId,
-        message: response,
-        trigger: stepId + 1
-    }])
-}
-
-const userStep = () => {
-    setStepId(stepId + 1)
-    setSteps([...steps, {
-        id: stepId,
-        user: true,
-        trigger: stepId + 1
-    },
-    {
-        id: stepId + 1,
-        message: ({previousValue, steps}) => `${previousValue}`,
-        end: true
-    }
-])
-}
+});
 
 const dod = () => {
     let step_copy = steps
-    let popped = step_copy.pop()
-    setSteps([...step_copy, {
+    step_copy.pop()
+    let new_step = {
         id: 3,
-        message: "I'm Bitcoin Chatbot!!!!!!",
+        message: "This is step 3",
         end: true
-    }])
+    }
+    step_copy.push(new_step)
+    setSteps(step_copy)
     console.log(steps)
 }
  
