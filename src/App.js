@@ -38,12 +38,12 @@ function App() {
     })
 });
 
-const dod = () => {
+const dod = (newStepText) => {
     let step_copy = steps
-    step_copy.pop()
+    let last_step = step_copy.pop()
     let new_step = {
-        id: 3,
-        message: "This is step 3",
+        id: last_step.id,
+        message: newStepText,
         end: true
     }
     step_copy.push(new_step)
@@ -60,7 +60,7 @@ return (
             <div className="intro">
                 <p>Bitcoin Chatbot is a natural language processing bot powered by GPT-3 and trained on an open source dataset of established Bitcoin knowledge</p>
                 <p>Here you can see the exact materials that Bitcoin Chatbot was trained on along with the source code</p>
-                <button onClick={()=> {dod()}}>Reset</button>
+                <button onClick={()=> {dod("testing bitch")}}>Reset</button>
             </div>
         </header>
         <ThemedExample steps={steps} />
