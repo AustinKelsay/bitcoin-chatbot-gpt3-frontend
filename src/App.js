@@ -5,26 +5,22 @@ import './App.css';
 
 function App() {
   const [botStatus, setBotStatus] = useState('Offline');
+  const [stepId, setStepId] = useState(3);
   const [steps, setSteps] = useState(
     [
         {
-            id: '1',
+            id: 1,
             message: 'Hello World!',
-            trigger: '2'
+            trigger: 2
         },
         {
-            id: '2',
+            id: 2,
             message: "I'm Bitcoin Chatbot",
-            trigger: '3'
+            trigger: 3
         },
         {
-            id: '3',
-            user: true,
-            trigger: '4',
-        },
-        {
-            id: '4',
-            message: "I'm a little poopy actually",
+            id: 3,
+            message: "What can I answer for you?",
             end: true
         }
 ]);
@@ -42,6 +38,40 @@ function App() {
     })
 })
 
+const botStep = (response) => {
+    setStepId(stepId + 1)
+    setSteps([...steps, {
+        id: stepId,
+        message: response,
+        trigger: stepId + 1
+    }])
+}
+
+const userStep = () => {
+    setStepId(stepId + 1)
+    setSteps([...steps, {
+        id: stepId,
+        user: true,
+        trigger: stepId + 1
+    },
+    {
+        id: stepId + 1,
+        message: ({previousValue, steps}) => `${previousValue}`,
+        end: true
+    }
+])
+}
+
+const dod = () => {
+    let step_copy = steps
+    let popped = step_copy.pop()
+    setSteps([...step_copy, {
+        id: 3,
+        message: "I'm Bitcoin Chatbot!!!!!!",
+        end: true
+    }])
+    console.log(steps)
+}
  
 return (
     <div className='App'>
@@ -52,6 +82,7 @@ return (
             <div className="intro">
                 <p>Bitcoin Chatbot is a natural language processing bot powered by GPT-3 and trained on an open source dataset of established Bitcoin knowledge</p>
                 <p>Here you can see the exact materials that Bitcoin Chatbot was trained on along with the source code</p>
+                <button onClick={()=> {dod()}}>Reset</button>
             </div>
         </header>
         <ThemedExample steps={steps} />
