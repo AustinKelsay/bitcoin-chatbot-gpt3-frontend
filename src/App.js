@@ -39,20 +39,7 @@ function App() {
     })
 });
 
-const dod = (newStepText) => {
-    let step_copy = steps
-    let last_step = step_copy.pop()
-    let new_step = {
-        id: last_step.id,
-        message: newStepText,
-        end: true
-    }
-    step_copy.push(new_step)
-    setSteps(step_copy)
-    console.log(steps)
-}
-
-const stepCreator = (newStepText) => {
+const stepCreator = (newStepText, user=false) => {
     // Edit the previous last step to trigger the new step we will create
     let step_copy = steps
     let last_step = step_copy.pop()
@@ -61,13 +48,28 @@ const stepCreator = (newStepText) => {
         message: last_step.message,
         trigger: last_step.id + 1
     }
-    const new_step = {
-        id: last_step.id + 1,
-        message: newStepText,
-        end: true
+
+    // Create the new step depending on if it is the users turn or not
+    let newStep = {}
+    if (user === true) {
+        newStep = {
+            id: last_step.id + 1,
+            user: true,
+            end: true,
+        }
     }
+    else {
+        new_step = {
+            id: last_step.id + 1,
+            message: newStepText,
+            end: true
+        }
+    }
+    // Add the last step that we edited to the step_copy array
     step_copy.push(last_step)
+    // Add the new step that we created to the step_copy array
     step_copy.push(new_step)
+    // Add the step_copy array to the state
     setSteps(step_copy)
     console.log(steps)
 }
@@ -81,7 +83,6 @@ return (
             <div className="intro">
                 <p>Bitcoin Chatbot is a natural language processing bot powered by GPT-3 and trained on an open source dataset of established Bitcoin knowledge</p>
                 <p>Here you can see the exact materials that Bitcoin Chatbot was trained on along with the source code</p>
-                <button onClick={()=> {stepCreator("testing bitch")}}>Reset</button>
             </div>
         </header>
         <ThemedExample steps={steps} />
