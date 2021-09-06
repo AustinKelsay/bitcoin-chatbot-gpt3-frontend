@@ -6,7 +6,7 @@ import StepCreator from './stepCreator';
 
 function App() {
   const [botStatus, setBotStatus] = useState('Offline');
-  const [stepId, setStepId] = useState(3);
+  const [userMessage, setUserMessage] = useState('');
   const [steps, setSteps] = useState(
     [
         {
@@ -22,6 +22,19 @@ function App() {
         {
             id: 3,
             message: "What can I answer for you?",
+            trigger: 4
+        },
+        {
+            id: 4,
+            user: true,
+            trigger: 5
+        },
+        {
+            id: 5,
+            message: ({ previousValue, steps }) => {
+                setUserMessage(previousValue);
+                console.log(previousValue);
+            },
             end: true
         }
 ]);
@@ -38,6 +51,21 @@ function App() {
         console.log(error)
     })
 });
+
+const postSteps = () => {
+    const promptFromSteps = steps.map(step => step.message);
+    const headers = {
+        'Content-Type': 'application/json',
+        "Access-Control-Allow-Origin": "*"
+      };
+    axios.post("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/", {promptFromSteps}, {headers})
+    .then(response => {
+        console.log(response)
+        })
+    .catch(error => {
+        console.log(error)
+    })
+}
 
 const stepCreator = (newStepText, user=false) => {
     // Edit the previous last step to trigger the new step we will create
@@ -59,7 +87,7 @@ const stepCreator = (newStepText, user=false) => {
         }
     }
     else {
-        new_step = {
+        newStep = {
             id: last_step.id + 1,
             message: newStepText,
             end: true
@@ -68,7 +96,7 @@ const stepCreator = (newStepText, user=false) => {
     // Add the last step that we edited to the step_copy array
     step_copy.push(last_step)
     // Add the new step that we created to the step_copy array
-    step_copy.push(new_step)
+    step_copy.push(newStep)
     // Add the step_copy array to the state
     setSteps(step_copy)
     console.log(steps)
