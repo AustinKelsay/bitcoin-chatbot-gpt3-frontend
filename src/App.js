@@ -34,6 +34,7 @@ function App() {
             message: ({ previousValue, steps }) => {
                 setUserMessage(previousValue);
                 console.log(previousValue);
+                console.log(steps);
             },
             end: true
         }
@@ -58,7 +59,7 @@ const postSteps = () => {
         'Content-Type': 'application/json',
         "Access-Control-Allow-Origin": "*"
       };
-    axios.post("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/", {promptFromSteps}, {headers})
+    axios.post("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/ask", {promptFromSteps}, {headers})
     .then(response => {
         console.log(response)
         })
@@ -66,6 +67,10 @@ const postSteps = () => {
         console.log(error)
     })
 }
+
+// Step creation:
+// If type is user, then create user step with a step afterwords that passes steps into postSteps
+// If type is bot, then create bot step by invoking stepCreator from the response of postSteps and then create an empty user step right after
 
 const stepCreator = (newStepText, user=false) => {
     // Edit the previous last step to trigger the new step we will create
@@ -83,7 +88,12 @@ const stepCreator = (newStepText, user=false) => {
         newStep = {
             id: last_step.id + 1,
             user: true,
-            end: true,
+            trigger: last_step.id + 2,
+        }
+        let getUserMessage = {
+            id: last_step.id + 2,
+            message: ({}),
+            end: true
         }
     }
     else {
