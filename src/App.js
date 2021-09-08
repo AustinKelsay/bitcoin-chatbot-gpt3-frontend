@@ -70,7 +70,7 @@ const postSteps = () => {
 
 // Step creation:
 // If type is user, then create user step with a step afterwords that passes steps into postSteps
-// If type is bot, then create bot step by invoking stepCreator from the response of postSteps and then create an empty user step right after
+// If type is bot, then create bot step by invoking stepCreator from the response of postSteps and then invoke stepCreator again with user true
 
 const stepCreator = (newStepText, user=false) => {
     // Edit the previous last step to trigger the new step we will create
@@ -120,7 +120,15 @@ return (
             <span style={botStatus === 'Offline' ? {color: "red"} : {color: "green"}}>{botStatus}</span>
             <div className="intro">
                 <p>Bitcoin Chatbot is a question & answer AI bot powered by GPT-3 and trained on an open source dataset of established Bitcoin knowledge</p>
-                <p>Here you can see the exact materials that Bitcoin Chatbot was trained on along with the source code</p>
+                <p>Here you can see the exact data that Bitcoin Chatbot was trained on along with the source code</p>
+                <section className="header-section">
+                <div class="content__item">
+					<button class="button button--pandora"><span>code</span></button>
+				</div>
+                <div class="content__item">
+					<button class="button button--pandora"><span>dataset</span></button>
+				</div>
+                </section>
             </div>
         </header>
         <ThemedExample steps={steps} />
