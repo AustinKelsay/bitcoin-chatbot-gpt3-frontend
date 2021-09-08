@@ -35,9 +35,9 @@ Charcoal: #404E5C
 .button {
 	pointer-events: auto;
 	cursor: pointer;
-	background: #e7e7e7;
+	background: #F2A900;
 	border: none;
-	padding: 1.5rem 3rem;
+	padding: 0.5rem 2rem;
 	margin: 0;
 	font-family: inherit;
 	font-size: inherit;
@@ -55,7 +55,8 @@ Charcoal: #404E5C
 }
 
 .button--pandora {
-	background: #000;
+	background: lightgrey;
+  opacity: 0.5;
 	font-weight: 700;
 	padding: 0;
 	border-radius: 5px;
@@ -63,9 +64,9 @@ Charcoal: #404E5C
 
 .button--pandora span {
 	display: block;
-	background: #a7a7a7;
-	padding: 1.5rem 2rem;
-	border: 1px solid #000;
+	background: #F2A900;
+	padding: 0.5rem 1rem;
+	border: 1px solid #D00000;
 	border-radius: 5px;
 	transform: translate3d(-4px, -4px, 0);
 	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
