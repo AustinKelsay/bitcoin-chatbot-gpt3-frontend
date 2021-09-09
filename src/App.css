@@ -31,6 +31,10 @@ Charcoal: #404E5C
   justify-content: space-around;
 }
 
+span {
+  text-decoration: underline;
+}
+
 /* Button styles start */
 .button {
 	pointer-events: auto;
@@ -55,8 +59,7 @@ Charcoal: #404E5C
 }
 
 .button--pandora {
-	background: lightgrey;
-  opacity: 0.5;
+	background: grey;
 	font-weight: 700;
 	padding: 0;
 	border-radius: 5px;
@@ -64,12 +67,13 @@ Charcoal: #404E5C
 
 .button--pandora span {
 	display: block;
-	background: #F2A900;
 	padding: 0.5rem 1rem;
-	border: 1px solid #D00000;
+	border: 2px solid black;
 	border-radius: 5px;
 	transform: translate3d(-4px, -4px, 0);
 	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+	background: #F2A900;
+  text-decoration: none;
 }
 
 .button--pandora:hover span {
@@ -77,10 +81,6 @@ Charcoal: #404E5C
 }
 
 /* Button styles end */
-
-span {
-  text-decoration: underline;
-}
 
 .body {
   display: flex;
