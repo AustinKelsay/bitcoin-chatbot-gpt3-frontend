@@ -32,9 +32,7 @@ function App() {
         {
             id: 5,
             message: ({ previousValue, steps }) => {
-                setUserMessage(previousValue);
-                console.log(previousValue);
-                console.log(steps);
+                
             },
             end: true
         }
@@ -71,6 +69,26 @@ const postSteps = () => {
 // Step creation:
 // If type is user, then create user step with a step afterwords that passes steps into postSteps
 // If type is bot, then create bot step by invoking stepCreator from the response of postSteps and then invoke stepCreator again with user true
+
+const createStep = (newStepText, user=false) => {
+    if (user === true) {
+        let step_copy = steps
+        let last_step = step_copy.pop()
+        let userStep = {
+            id: last_step.id + 1,
+            message: newStepText,
+            trigger: last_step.id + 2
+        }
+        let lastStep = {
+            id: last_step.id + 2,
+            message: ({ previousValue, steps }) => {
+                setSteps(steps)
+                postSteps()
+            },
+            end: true
+        }
+    }
+}
 
 const stepCreator = (newStepText, user=false) => {
     // Edit the previous last step to trigger the new step we will create
