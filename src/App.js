@@ -6,7 +6,7 @@ import StepCreator from './stepCreator';
 
 function App() {
   const [botStatus, setBotStatus] = useState('Offline');
-  const [userMessage, setUserMessage] = useState('');
+  const [chatLog, setChatLog] = useState('');
   const [steps, setSteps] = useState(
     [
         {
@@ -32,7 +32,10 @@ function App() {
         {
             id: 5,
             message: ({ previousValue, steps }) => {
-                
+                setChatLog(`Human: ${previousValue}`)
+                postSteps(chatLog)
+                // Set chatlog from previous value
+                // pass prev value into func that will remove this step and create a new bot step followed by a uesr step to respond
             },
             end: true
         }
@@ -51,13 +54,13 @@ function App() {
     })
 });
 
-const postSteps = () => {
-    const promptFromSteps = steps.map(step => step.message);
+const postSteps = (chat) => {
     const headers = {
         'Content-Type': 'application/json',
         "Access-Control-Allow-Origin": "*"
       };
-    axios.post("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/ask", {promptFromSteps}, {headers})
+    console.log(chat)
+    axios.post("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/ask", {question: chat}, {headers})
     .then(response => {
         console.log(response)
         })
@@ -70,23 +73,13 @@ const postSteps = () => {
 // If type is user, then create user step with a step afterwords that passes steps into postSteps
 // If type is bot, then create bot step by invoking stepCreator from the response of postSteps and then invoke stepCreator again with user true
 
-const createStep = (newStepText, user=false) => {
-    if (user === true) {
-        let step_copy = steps
-        let last_step = step_copy.pop()
-        let userStep = {
-            id: last_step.id + 1,
-            message: newStepText,
-            trigger: last_step.id + 2
-        }
-        let lastStep = {
-            id: last_step.id + 2,
-            message: ({ previousValue, steps }) => {
-                setSteps(steps)
-                postSteps()
-            },
-            end: true
-        }
+const createStep = (newStepText) => {
+    let step_copy = steps
+    let last_step = step_copy.pop()
+    last_step = {
+        id: last_step.id,
+        message: last_step.message,
+        trigger: last_step.id + 1
     }
 }
 
