@@ -32,8 +32,9 @@ function App() {
         {
             id: 5,
             message: ({ previousValue, steps }) => {
-                setChatLog(`Human: ${previousValue}`)
-                postSteps(chatLog)
+                setTimeout(() => {
+                    postSteps(previousValue)
+                }, 1000)
                 // Set chatlog from previous value
                 // pass prev value into func that will remove this step and create a new bot step followed by a uesr step to respond
             },
@@ -48,7 +49,6 @@ function App() {
     axios.get("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/", {headers})
     .then(response => {
         setBotStatus(response.data)
-        console.log(response)
     })
     .catch(error => {
         console.log(error)
@@ -63,8 +63,9 @@ const postSteps = (chat) => {
     console.log(chat)
     axios.post("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/ask", {question: chat}, {headers})
     .then(response => {
-        console.log(response)
-        createStep("test")
+        if (response.data != null) {
+            createStep(response.data)
+            }
         })
     .catch(error => {
         console.log(error)
@@ -89,6 +90,8 @@ const createStep = (newStepText) => {
         end: true
     }
     setSteps([...steps, bot_Step, following_user_step])
+
+    return 
 }
  
 return (
