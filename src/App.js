@@ -63,6 +63,7 @@ const postSteps = (chat) => {
     axios.post("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/ask", {question: chat}, {headers})
     .then(response => {
         console.log(response)
+        createStep(response.data)
         })
     .catch(error => {
         console.log(error)
@@ -76,11 +77,17 @@ const postSteps = (chat) => {
 const createStep = (newStepText) => {
     let step_copy = steps
     let last_step = step_copy.pop()
-    last_step = {
-        id: last_step.id,
-        message: last_step.message,
-        trigger: last_step.id + 1
+    const bot_Step = {
+        id: last_step.id + 1,
+        message: newStepText,
+        trigger: last_step.id + 2
     }
+    const following_user_step = {
+        id: last_step.id + 2,
+        user: true,
+        end: true
+    }
+    setSteps(...steps, bot_Step, following_user_step)
 }
 
 const stepCreator = (newStepText, user=false) => {
