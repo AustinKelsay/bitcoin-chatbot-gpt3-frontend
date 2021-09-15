@@ -48,6 +48,7 @@ function App() {
     axios.get("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/", {headers})
     .then(response => {
         setBotStatus(response.data)
+        console.log(response)
     })
     .catch(error => {
         console.log(error)
@@ -63,7 +64,7 @@ const postSteps = (chat) => {
     axios.post("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/ask", {question: chat}, {headers})
     .then(response => {
         console.log(response)
-        createStep(response.data)
+        createStep("test")
         })
     .catch(error => {
         console.log(error)
@@ -87,47 +88,7 @@ const createStep = (newStepText) => {
         user: true,
         end: true
     }
-    setSteps(...steps, bot_Step, following_user_step)
-}
-
-const stepCreator = (newStepText, user=false) => {
-    // Edit the previous last step to trigger the new step we will create
-    let step_copy = steps
-    let last_step = step_copy.pop()
-    last_step = {
-        id: last_step.id,
-        message: last_step.message,
-        trigger: last_step.id + 1
-    }
-
-    // Create the new step depending on if it is the users turn or not
-    let newStep = {}
-    if (user === true) {
-        newStep = {
-            id: last_step.id + 1,
-            user: true,
-            trigger: last_step.id + 2,
-        }
-        let getUserMessage = {
-            id: last_step.id + 2,
-            message: ({}),
-            end: true
-        }
-    }
-    else {
-        newStep = {
-            id: last_step.id + 1,
-            message: newStepText,
-            end: true
-        }
-    }
-    // Add the last step that we edited to the step_copy array
-    step_copy.push(last_step)
-    // Add the new step that we created to the step_copy array
-    step_copy.push(newStep)
-    // Add the step_copy array to the state
-    setSteps(step_copy)
-    console.log(steps)
+    setSteps([...steps, bot_Step, following_user_step])
 }
  
 return (
