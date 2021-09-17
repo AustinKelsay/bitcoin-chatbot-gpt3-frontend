@@ -22,8 +22,9 @@ const styles = {
   'margin-top': '2%'
 }
 
-const ThemedExample = ({steps}) => (
+const ThemedWidget = ({steps}) => (
   <ThemeProvider theme={theme}>
+    {console.log(steps)}
     <ChatBot 
       style={styles}
       width={'90%'}
@@ -62,7 +63,6 @@ const Chatbot = () => {
                 // Set chatlog from previous value
                 // pass prev value into func that will remove this step and create a new bot step followed by a uesr step to respond
             },
-            delay: 5000,
             end: true
         }
   ]);
@@ -82,7 +82,6 @@ const Chatbot = () => {
   }
 
   const createStep = (newStepText) => {
-    console.log(newStepText)
     let step_copy = steps
     let last_step = step_copy.pop()
     const bot_Step = {
@@ -100,7 +99,7 @@ const Chatbot = () => {
     setSteps(newSteps)
   }
 
-  return <ThemedExample steps={steps} />
+  return <ThemedWidget steps={steps} />
 }
 
 export default Chatbot;
