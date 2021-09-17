@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { ThemeProvider } from 'styled-components';
-import ChatBot from 'react-simple-chatbot';
+import ThemedWidget from "./themedWidget"
 import axios from 'axios'
 
 // all available props
@@ -21,17 +20,6 @@ const styles = {
   'margin': '1% auto',
   'margin-top': '2%'
 }
-
-const ThemedWidget = ({steps}) => (
-  <ThemeProvider theme={theme}>
-    {console.log(steps)}
-    <ChatBot 
-      style={styles}
-      width={'90%'}
-      steps={steps} 
-    />
-  </ThemeProvider>
-);
 
 const Chatbot = () => {
   const [steps, setSteps] = useState(
@@ -54,15 +42,15 @@ const Chatbot = () => {
         {
             id: 4,
             user: true,
+            validator: (value) => {
+              postSteps(value)
+                return true
+            },
             trigger: 5
         },
         {
             id: 5,
-            message: ({ previousValue, steps }) => {
-                postSteps(previousValue)
-                // Set chatlog from previous value
-                // pass prev value into func that will remove this step and create a new bot step followed by a uesr step to respond
-            },
+            message: 'Let me answer that',
             end: true
         }
   ]);
@@ -99,7 +87,11 @@ const Chatbot = () => {
     setSteps(newSteps)
   }
 
-  return <ThemedWidget steps={steps} />
+  return (
+    <div>
+      <ThemedWidget steps={steps} />
+    </div>
+  )
 }
 
 export default Chatbot;
