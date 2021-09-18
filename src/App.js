@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Chatbot from './chatbot';
 import './App.css';
-import StepCreator from './stepCreator';
 
 function App() {
   const [botStatus, setBotStatus] = useState('Offline');
