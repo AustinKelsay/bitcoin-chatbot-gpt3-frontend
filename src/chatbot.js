@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useRef} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios'
-import './App.css'
+import './Chatbot.css'
 
 // all available props
 const theme = {
@@ -16,11 +16,6 @@ const theme = {
   userBubbleColor: '#fff',
   userFontColor: '#4a4a4a',
 };
-
-const styles = {
-  'margin': '1% auto',
-  'margin-top': '2%'
-}
 
 const Chatbot = () => {
   const inputRef = useRef();
@@ -91,8 +86,8 @@ const Chatbot = () => {
   };
 
   return (
-    <div>
-      <ul>
+    <div className="chat-window">
+      <ul className="message-list">
         {messages.map((message) => {
           return(
           <li>
