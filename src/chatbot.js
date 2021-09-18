@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import ThemedWidget from "./themedWidget"
 import axios from 'axios'
 
 // all available props
@@ -22,38 +21,22 @@ const styles = {
 }
 
 const Chatbot = () => {
-  const [steps, setSteps] = useState(
-    [
-        {
-            id: 1,
-            message: 'Hello World!',
-            trigger: 2
-        },
-        {
-            id: 2,
-            message: "I'm Bitcoin Chatbot",
-            trigger: 3
-        },
-        {
-            id: 3,
-            message: "What can I answer for you?",
-            trigger: 4
-        },
-        {
-            id: 4,
-            user: true,
-            validator: (value) => {
-              postSteps(value)
-                return true
-            },
-            trigger: 5
-        },
-        {
-            id: 5,
-            message: 'Let me answer that',
-            end: true
-        }
-  ]);
+  const [messages, setMessages] = useState([
+    {
+        id: 1,
+        text: 'Hello World!',
+        name: "Bot"
+    },
+    {
+        id: 2,
+        text: "I'm Bitcoin Chatbot",
+        name: "Bot"
+    },
+    {
+        id: 3,
+        text: "What can I answer for you?",
+        name: "Bot"
+    }])
 
   const postSteps = (chat) => {
     const headers = {
@@ -62,34 +45,28 @@ const Chatbot = () => {
       };
     axios.post("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/ask", {question: chat}, {headers})
     .then(response => {
-      createStep(response.data)
+      setTimeout(() => {
+        return response.data
+      }, 3000)
     })
     .catch(error => {
         console.log(error)
     })
   }
 
-  const createStep = (newStepText) => {
-    let step_copy = steps
-    let last_step = step_copy.pop()
-    const bot_Step = {
-        id: last_step.id + 1,
-        message: newStepText,
-        trigger: last_step.id + 2
-    }
-    const following_user_step = {
-        id: last_step.id + 2,
-        user: true,
-        end: true
-    }
-
-    const newSteps = [...step_copy, bot_Step, following_user_step]
-    setSteps(newSteps)
-  }
-
   return (
     <div>
-      <ThemedWidget steps={steps} />
+      {messages.map((message) => {
+        return(
+        <div>
+          <h3>{message.name}</h3>
+          <h4>{message.text}</h4>
+        </div>
+        )
+      })}
+      <form>
+
+      </form>
     </div>
   )
 }
