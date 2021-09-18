@@ -1,4 +1,5 @@
 import React, {useEffect, useState, useRef} from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios'
 import './App.css'
 
@@ -27,17 +28,17 @@ const Chatbot = () => {
   const [newMessage, setNewMessage] = useState('')
   const [messages, setMessages] = useState([
     {
-        id: 1,
+        id: uuidv4(),
         text: 'Hello World!',
         name: "Bot"
     },
     {
-        id: 2,
+        id: uuidv4(),
         text: "I'm Bitcoin Chatbot",
         name: "Bot"
     },
     {
-        id: 3,
+        id: uuidv4(),
         text: "What can I answer for you?",
         name: "Bot"
     }
@@ -49,25 +50,41 @@ const Chatbot = () => {
     }
   }, [inputRef]);
 
+  useEffect(() => {
+    const lastMessage = messages[messages.length - 1];
+    if (lastMessage && lastMessage.name === 'User') {
+      const headers = {
+        'Content-Type': 'application/json',
+        "Access-Control-Allow-Origin": "*"
+      };
+      axios.post("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/ask", {question: newMessage}, {headers})
+      .then(response => {
+        setTimeout(() => {
+          console.log(messages)
+          setMessages([...messages, {
+            id: uuidv4(),
+            text: response.data,
+            name: "Bot"
+          }])
+        }, 3000)
+      })
+      .catch(error => {
+          console.log(error)
+      })
+    }
+  }, [messages])
+
   const handleOnSubmit = e => {
     e.preventDefault();
-    // Post user message
-    const headers = {
-      'Content-Type': 'application/json',
-      "Access-Control-Allow-Origin": "*"
-    };
-    axios.post("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/ask", {question: newMessage}, {headers})
-    .then(response => {
-      console.log(response)
-    })
-    .catch(error => {
-        console.log(error)
-    })
-    // Clear input field
-    setNewMessage('');
-    // Scroll down to the bottom of the list
-    bottomListRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
+    // create user message from prompt
+    const userMessage = {
+      id: uuidv4(),
+      text: newMessage,
+      name: "User"
+    }
+    // add user message to messages
+    setMessages([...messages, userMessage])
+  }
 
   const handleOnChange = e => {
     setNewMessage(e.target.value);
@@ -95,6 +112,7 @@ const Chatbot = () => {
           onChange={handleOnChange}
           placeholder="Type your message here..."
           className='chat-input'
+          ref={inputRef}
         />
         <div class="content__item">
           <button
