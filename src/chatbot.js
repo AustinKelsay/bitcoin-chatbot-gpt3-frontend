@@ -90,7 +90,7 @@ const Chatbot = () => {
       <ul className="message-list">
         {messages.map((message) => {
           return(
-          <li>
+          <li className="chat-text">
             <h3>{message.name}</h3>
             <h4>{message.text}</h4>
           </li>
@@ -100,25 +100,30 @@ const Chatbot = () => {
       </ul>
       <form
         onSubmit={handleOnSubmit}
+        className="chat-form"
+        disabled={!newMessage}
       >
-        <input 
-          type='text'
-          value={newMessage}
-          onChange={handleOnChange}
-          placeholder="Type your message here..."
-          className='chat-input'
-          ref={inputRef}
-        />
-        <div class="content__item">
-          <button
-            type="submit"
-            disabled={!newMessage}
-            className="button button--pandora">
-              <span>
-                send
-              </span>
-          </button>
-        </div>
+        <section className='chat-button-container'>
+          <input 
+            type='text'
+            value={newMessage}
+            onChange={handleOnChange}
+            placeholder="Type your message here..."
+            className='chat-input'
+            ref={inputRef}
+            />
+          <div
+            class="content__item"
+            >
+            <button
+              type="submit"
+              className="button button--pandora">
+                <span>
+                  send
+                </span>
+            </button>
+          </div>
+        </section>
       </form>
     </div>
   )
