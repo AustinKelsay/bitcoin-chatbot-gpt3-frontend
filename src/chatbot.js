@@ -21,19 +21,20 @@ const Chatbot = () => {
   const inputRef = useRef();
   const bottomListRef = useRef()
   const [newMessage, setNewMessage] = useState('')
+  const [id, setId] = useState(4)
   const [messages, setMessages] = useState([
     {
-        id: uuidv4(),
+        id: 1,
         text: 'Hello World!',
         name: "Bot"
     },
     {
-        id: uuidv4(),
+        id: 2,
         text: "I'm Bitcoin Chatbot",
         name: "Bot"
     },
     {
-        id: uuidv4(),
+        id: 3,
         text: "What can I answer for you?",
         name: "Bot"
     }
@@ -72,8 +73,9 @@ const Chatbot = () => {
   const handleOnSubmit = e => {
     e.preventDefault();
     // create user message from prompt
+    setId(id + 1)
     const userMessage = {
-      id: uuidv4(),
+      id: id,
       text: newMessage,
       name: "User"
     }
@@ -90,7 +92,7 @@ const Chatbot = () => {
       <ul className="message-list">
         {messages.map((message) => {
           return(
-          <li className="chat-text">
+          <li key={uuidv4()} className="chat-text">
             <h3>{message.name}</h3>
             <h4>{message.text}</h4>
           </li>
