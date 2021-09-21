@@ -50,7 +50,8 @@ Charcoal: #404E5C
     flex-direction: column;
     align-items: flex-start;
     color: white;
-    padding-left: 15%;
+    width: 85%;
+    padding-left: 10%;
 }
 
 .chat-text {
@@ -61,4 +62,17 @@ Charcoal: #404E5C
 .chat-text h3 {
     margin-top: 0.5%;
     margin-bottom: 0.5%;
+}
+
+.infinite-scroll-component::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.infinite-scroll-component::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.infinite-scroll-component::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
 }

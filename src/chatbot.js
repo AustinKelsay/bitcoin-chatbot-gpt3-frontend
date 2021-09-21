@@ -1,4 +1,5 @@
 import React, {useEffect, useState, useRef} from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios'
 import './Chatbot.css'
@@ -37,6 +38,26 @@ const Chatbot = () => {
         id: 3,
         text: "What can I answer for you?",
         name: "Bot"
+    },
+    {
+      id: 4,
+      text: "What can I answer for you?",
+      name: "Bot"
+    },
+    {
+      id: 5,
+      text: "What can I answer for you?",
+      name: "Bot"
+    },
+    {
+      id: 6,
+      text: "What can I answer for you?",
+      name: "Bot"
+    },
+    {
+      id: 7,
+      text: "What can I answer for you?",
+      name: "Bot"
     }
   ])
 
@@ -87,19 +108,30 @@ const Chatbot = () => {
     setNewMessage(e.target.value);
   };
 
+  const scrollComponentStyles = {
+    marginRight: '10%'
+  }
+
   return (
     <div className="chat-window">
-      <ul className="message-list">
-        {messages.map((message) => {
-          return(
-          <li key={uuidv4()} className="chat-text">
-            <h3>{message.name}</h3>
-            <h4>{message.text}</h4>
-          </li>
-          )
-        })}
-        <div ref={bottomListRef} />
-      </ul>
+        <InfiniteScroll
+          dataLength={messages.length} //This is important field to render the next data
+          loader={<h4>Loading...</h4>}
+          height={400}
+          style={scrollComponentStyles}
+        >
+          <ul className="message-list">
+            {messages.map((message) => {
+              return(
+                <li key={uuidv4()} className="chat-text">
+                <h3>{message.name}</h3>
+                <h4>{message.text}</h4>
+              </li>
+              )
+            })}
+            <div ref={bottomListRef} />
+          </ul>
+        </InfiniteScroll>
       <form
         onSubmit={handleOnSubmit}
         className="chat-form"
