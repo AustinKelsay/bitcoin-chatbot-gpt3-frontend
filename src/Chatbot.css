@@ -67,6 +67,8 @@ Charcoal: #404E5C
     margin: 0.5%;
     padding-left: 1%;
     padding-right: 1%;
+    max-width: 60%;
+    opacity: 0.9;
 }
 .chat-text h3 {
     margin-top: 0.5%;
@@ -88,12 +90,14 @@ Charcoal: #404E5C
     align-items: flex-start;
     align-self: flex-end;
     border: 2px solid white;
-    background-color: #F2A900;
-    background-image: linear-gradient(326deg, #F2A900 0%, #FA709A 100%);
+    background-color: #21D4FD;
+    background-image: linear-gradient(315deg, #21D4FD 0%, #B721FF 100%);
     border-radius: 10px;
     margin: 0.5%;
     padding-left: 1%;
     padding-right: 1%;
+    max-width: 60%;
+    opacity: 0.9;
 }
 
 .chat-text-user h3 {
