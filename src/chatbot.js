@@ -38,26 +38,6 @@ const Chatbot = () => {
         id: 3,
         text: "What can I answer for you?",
         name: "Bot"
-    },
-    {
-      id: 4,
-      text: "What can I answer for you?",
-      name: "Bot"
-    },
-    {
-      id: 5,
-      text: "What can I answer for you?",
-      name: "Bot"
-    },
-    {
-      id: 6,
-      text: "What can I answer for you?",
-      name: "Bot"
-    },
-    {
-      id: 7,
-      text: "What can I answer for you?",
-      name: "Bot"
     }
   ])
 
@@ -124,9 +104,9 @@ const Chatbot = () => {
             {messages.map((message) => {
               return(
                 <li key={uuidv4()} className="chat-text">
-                <h3>{message.name}</h3>
-                <h4>{message.text}</h4>
-              </li>
+                  <h3>{message.name}</h3>
+                  <h4>{message.text}</h4>
+                </li>
               )
             })}
             <div ref={bottomListRef} />
