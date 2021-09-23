@@ -103,7 +103,7 @@ const Chatbot = () => {
           <ul className="message-list">
             {messages.map((message) => {
               return(
-                <li key={uuidv4()} className="chat-text">
+                <li key={uuidv4()} className={message.name == "User" ? "chat-text-user" : "chat-text"}>
                   <h3>{message.name}</h3>
                   <h4>{message.text}</h4>
                 </li>

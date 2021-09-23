@@ -10,7 +10,7 @@ Charcoal: #404E5C
 .chat-window {
     margin: 1% auto;
     border: 4px solid #F2A900;
-    border-top: 35px solid #F2A900;
+    border-top: 45px solid #F2A900;
     border-radius: 25px;
     background: #4F6272;
     padding: 0.5%;
@@ -61,8 +61,8 @@ Charcoal: #404E5C
     flex-direction: column;
     align-items: flex-start;
     border: 2px solid white;
-    background-color: #FFE53B;
-    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+    background-color: #F2A900;
+    background-image: linear-gradient(326deg, #F2A900 0%, #FA709A 100%);
     border-radius: 10px;
     margin: 0.5%;
     padding-left: 1%;
@@ -73,6 +73,34 @@ Charcoal: #404E5C
     margin-bottom: 0%;
 }
 .chat-text h4 {
+    margin-top: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 0;
+    text-align: start;
+}
+
+ /* User chat messeages */
+
+.chat-text-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-self: flex-end;
+    border: 2px solid white;
+    background-color: #F2A900;
+    background-image: linear-gradient(326deg, #F2A900 0%, #FA709A 100%);
+    border-radius: 10px;
+    margin: 0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.chat-text-user h3 {
+    margin-top: 0.5%;
+    margin-bottom: 0%;
+}
+.chat-text-user h4 {
     margin-top: 4%;
     padding-bottom: 2%;
     margin-bottom: 0;
