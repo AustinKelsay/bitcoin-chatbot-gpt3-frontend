@@ -63,6 +63,8 @@ const Chatbot = () => {
             text: response.data,
             name: "Bot"
           }])
+          // Scroll down to the bottom of the list
+          bottomListRef.current.scrollIntoView({ behavior: 'smooth' });
         }, 3000)
       })
       .catch(error => {
@@ -81,7 +83,13 @@ const Chatbot = () => {
       name: "User"
     }
     // add user message to messages
-    setMessages([...messages, userMessage])
+    setTimeout(() => {
+      setMessages([...messages, userMessage])
+      // Scroll down to the bottom of the list
+      bottomListRef.current.scrollIntoView({ behavior: 'smooth' });
+    }, 1000)
+    // Clear input field
+    setNewMessage('');
   }
 
   const handleOnChange = e => {
@@ -103,14 +111,14 @@ const Chatbot = () => {
           <ul className="message-list">
             {messages.map((message) => {
               return(
-                <li key={uuidv4()} className={message.name == "User" ? "chat-text-user" : "chat-text"}>
+                <li key={uuidv4()} className={message.name == "User" ? "chat-message-user" : "chat-message"}>
                   <h3>{message.name}</h3>
-                  <h4>{message.text}</h4>
+                  <p className='chat-text'>{message.text}</p>
                 </li>
               )
             })}
-            <div ref={bottomListRef} />
           </ul>
+          <div ref={bottomListRef} />
         </InfiniteScroll>
       <form
         onSubmit={handleOnSubmit}
