@@ -4,20 +4,6 @@ import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios'
 import './Chatbot.css'
 
-// all available props
-const theme = {
-  margin: '1% auto',
-  background: '#f5f8fb',
-  fontFamily: 'Helvetica Neue',
-  headerBgColor: '#F2A900',
-  headerFontColor: '#fff',
-  headerFontSize: '15px',
-  botBubbleColor: '#F2A900',
-  botFontColor: '#fff',
-  userBubbleColor: '#fff',
-  userFontColor: '#4a4a4a',
-};
-
 const Chatbot = () => {
   const inputRef = useRef();
   const bottomListRef = useRef()
@@ -53,6 +39,7 @@ const Chatbot = () => {
       if (message.id > 3) {
         chatLog += `${message.name}: ${message.text}\n`
       }
+      return null
     })
     console.log(chatLog)
     return chatLog
@@ -123,7 +110,7 @@ const Chatbot = () => {
           <ul className="message-list">
             {messages.map((message) => {
               return(
-                <li key={uuidv4()} className={message.name == "User" ? "chat-message-user" : "chat-message"}>
+                <li key={uuidv4()} className={message.name === "User" ? "chat-message-user" : "chat-message"}>
                   <h3>{message.name}</h3>
                   <p className='chat-text'>{message.text}</p>
                 </li>
@@ -147,7 +134,7 @@ const Chatbot = () => {
             ref={inputRef}
             />
           <div
-            class="content__item"
+            className="content__item"
             >
             <button
               type="submit"

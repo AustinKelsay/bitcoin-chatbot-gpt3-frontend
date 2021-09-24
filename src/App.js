@@ -22,7 +22,6 @@ function App() {
  
 return (
     <div className='App'>
-        {console.log('here')}
         <header className='header'>
             <h1>Bitcoin Chatbot</h1>
             Status:
@@ -31,11 +30,11 @@ return (
                 <p>Bitcoin Chatbot is a question & answer AI bot powered by GPT-3 and trained on an open source dataset of established Bitcoin knowledge</p>
                 <p>Here you can see the exact data that Bitcoin Chatbot was trained on along with the source code</p>
                 <section className="header-section">
-                <div class="content__item">
-					<button class="button button--pandora"><span>code</span></button>
+                <div className="content__item">
+					<button className="button button--pandora"><span>code</span></button>
 				</div>
-                <div class="content__item">
-					<button class="button button--pandora"><span>dataset</span></button>
+                <div className="content__item">
+					<button className="button button--pandora"><span>dataset</span></button>
 				</div>
                 </section>
             </div>
