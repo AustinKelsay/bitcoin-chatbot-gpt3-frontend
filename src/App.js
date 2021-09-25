@@ -28,7 +28,6 @@ return (
             <span style={botStatus === 'Offline' ? {color: "red"} : {color: "green"}}>{botStatus}</span>
             <div className="intro">
                 <p>Bitcoin Chatbot is a question & answer AI bot powered by GPT-3 and trained on an open source dataset of established Bitcoin knowledge</p>
-                <p>Here you can see the exact data that Bitcoin Chatbot was trained on along with the source code</p>
                 <section className="header-section">
                 <div className="content__item">
 					<button className="button button--pandora"><span>code</span></button>
