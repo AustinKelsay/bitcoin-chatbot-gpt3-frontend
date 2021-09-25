@@ -1,5 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import ReactLoading from 'react-loading';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios'
 import './Chatbot.css'
@@ -8,6 +9,7 @@ const Chatbot = () => {
   const inputRef = useRef();
   const bottomListRef = useRef()
   const [newMessage, setNewMessage] = useState('')
+  const [typing, setTyping] = useState(false)
   const [id, setId] = useState(4)
   const [messages, setMessages] = useState([
     {
@@ -48,6 +50,7 @@ const Chatbot = () => {
   useEffect(() => {
     const lastMessage = messages[messages.length - 1];
     if (lastMessage && lastMessage.name === 'User') {
+      setTyping(true)
       const headers = {
         'Content-Type': 'application/json',
         "Access-Control-Allow-Origin": "*"
@@ -62,6 +65,7 @@ const Chatbot = () => {
             text: response.data,
             name: "Bot"
           }])
+          setTyping(false)
           // Scroll down to the bottom of the list
           bottomListRef.current.scrollIntoView({ behavior: 'smooth' });
         }, 3000)
@@ -117,6 +121,9 @@ const Chatbot = () => {
               )
             })}
           </ul>
+          <div className='chat-bubbles'>
+              {typing === true ? <ReactLoading type={'bubbles'} color={'#f2a900'} height={'7%'} width={'7%'} /> : null}
+          </div>
           <div ref={bottomListRef} />
         </InfiniteScroll>
       <form

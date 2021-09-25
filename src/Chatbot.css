@@ -114,6 +114,11 @@ Charcoal: #404E5C
     text-align: start;
 }
 
+.chat-bubbles {
+    display: flex;
+    padding-left: 13%;
+}
+
 .infinite-scroll-component::-webkit-scrollbar {
     width: 0.5em;
 }

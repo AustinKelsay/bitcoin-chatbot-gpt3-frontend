@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Chatbot from './Chatbot';
+import ReactLoading from 'react-loading';
 import './App.css';
 
 function App() {
