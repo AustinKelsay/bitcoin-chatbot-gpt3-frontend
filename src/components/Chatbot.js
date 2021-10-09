@@ -53,7 +53,7 @@ const Chatbot = () => {
         'Content-Type': 'application/json',
         "Access-Control-Allow-Origin": "*"
       };
-      axios.post("https://bitcoin-chatbot-gpt3-1.koie11.repl.co/ask", {question: newMessage, chat_log: formatChatLog()}, {headers})
+      axios.post("https://bitcoin-chatbot-gpt3.herokuapp.com/ask", {question: newMessage, chat_log: formatChatLog()}, {headers})
       .then(response => {
         setTimeout(() => {
           console.log(messages)
