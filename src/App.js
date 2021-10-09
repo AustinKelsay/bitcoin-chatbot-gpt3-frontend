@@ -7,13 +7,8 @@ function App() {
   const [botStatus, setBotStatus] = useState('Offline');
   
   useEffect(() => {
-    const headers = {
-        'Content-Type': 'application/json',
-        "Access-Control-Allow-Origin": "*"
-      };
-    axios.get("https://bitcoin-chatbot-gpt3.herokuapp.com/", {headers})
+    axios.get("https://bitcoin-chatbot-gpt3.herokuapp.com/")
     .then(response => {
-        console.log(response.data);
         setBotStatus(response.data)
     })
     .catch(error => {

@@ -49,11 +49,7 @@ const Chatbot = () => {
     const lastMessage = messages[messages.length - 1];
     if (lastMessage && lastMessage.name === 'User') {
       setTyping(true)
-      const headers = {
-        'Content-Type': 'application/json',
-        "Access-Control-Allow-Origin": "*"
-      };
-      axios.post("https://bitcoin-chatbot-gpt3.herokuapp.com/ask", {question: newMessage, chat_log: formatChatLog()}, {headers})
+      axios.post("https://bitcoin-chatbot-gpt3.herokuapp.com/ask", {question: newMessage, chat_log: formatChatLog()})
       .then(response => {
         setTimeout(() => {
           console.log(messages)
