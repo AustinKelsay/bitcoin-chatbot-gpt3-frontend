@@ -33,14 +33,17 @@ const Chatbot = () => {
     }
   }, [inputRef]);
 
-  const formatChatLog = () => {
+  const formatChatLog = (newMessage) => {
     let chatLog = ''
     messages.map(message => {
+      // Skip over the bot greeting
       if (message.id > 3) {
         chatLog += `${message.name}: ${message.text}\n`
       }
       return null
     })
+    // Now add the user's new message
+    chatLog += `${newMessage.name}: ${newMessage.text}\n`
     console.log(chatLog)
     return chatLog
   }
@@ -49,7 +52,7 @@ const Chatbot = () => {
     const lastMessage = messages[messages.length - 1];
     if (lastMessage && lastMessage.name === 'User') {
       setTyping(true)
-      axios.post("https://bitcoin-chatbot-gpt3.herokuapp.com/ask", {question: newMessage, chat_log: formatChatLog()})
+      axios.post("https://bitcoin-chatbot-gpt3.herokuapp.com/ask", {chat_log: formatChatLog(newMessage)})
       .then(response => {
         setTimeout(() => {
           console.log(messages)
