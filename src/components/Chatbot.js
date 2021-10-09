@@ -44,7 +44,6 @@ const Chatbot = () => {
     })
     // Now add the user's new message
     chatLog += `${newMessage.name}: ${newMessage.text}\n`
-    console.log(chatLog)
     return chatLog
   }
 
@@ -55,7 +54,6 @@ const Chatbot = () => {
       axios.post("https://bitcoin-chatbot-gpt3.herokuapp.com/ask", {chat_log: formatChatLog(newMessage)})
       .then(response => {
         setTimeout(() => {
-          console.log(messages)
           setId(id + 1)
           setMessages([...messages, {
             id: id,
