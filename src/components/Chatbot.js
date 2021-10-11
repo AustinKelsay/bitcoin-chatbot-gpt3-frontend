@@ -111,7 +111,7 @@ const Chatbot = () => {
             className='chat-input'
             ref={inputRef}
             />
-          <div
+          {/* <div
             className="content__item"
             >
             <button
@@ -121,7 +121,8 @@ const Chatbot = () => {
                   send
                 </span>
             </button>
-          </div>
+          </div> */}
+          <button className='chat-button'>send</button>
         </section>
       </form>
     </div>

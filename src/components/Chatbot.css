@@ -45,6 +45,43 @@ Charcoal: #404E5C
     border-radius: 10px;
 }
 
+/* .chat-button {
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background: #F2A900;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.chat-button:hover {
+    cursor: pointer;
+    -webkit-box-shadow:0px 0px 110px 0px rgba(242,169,0,1);
+    -moz-box-shadow: 0px 0px 110px 0px rgba(242,169,0,1);
+    box-shadow: 0px 0px 110px 0px rgba(242,169,0,1);
+} */
+    
+.chat-button {
+    width: 8%;
+    padding: 1%;
+    cursor: pointer;
+    transition: all .5s ease;
+    color: #F2A900;
+    border: 3px solid black;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : transparent;
+    outline: none;
+    border-radius: 4px;
+}
+.chat-button:hover {
+    color: #001F3F;
+    background-color: #F2A900;
+}
+
 .message-list {
     list-style-type: none;
     width: 80%;
