@@ -26,10 +26,10 @@ return (
                 <p>Bitcoin Chatbot is a question & answer AI bot powered by GPT-3 and trained on an open source dataset of established Bitcoin knowledge</p>
                 <section className="header-section">
                 <div className="content__item">
-                <a href="https://github.com/AustinKelsay/bitcoin-chatbot-gpt3" target="_blank"><button className="button button--pandora"><span>code</span></button></a>
+                <a href="https://github.com/AustinKelsay/bitcoin-chatbot-gpt3" target="_blank" rel="noreferrer"><button className="button button--pandora"><span>code</span></button></a>
 				</div>
                 <div className="content__item">
-                <a href="https://github.com/AustinKelsay/bitcoin-chatbot-gpt3/tree/main/datasets" target="_blank"><button className="button button--pandora"><span>dataset</span></button></a>
+                <a href="https://github.com/AustinKelsay/bitcoin-chatbot-gpt3/tree/main/datasets" target="_blank" rel="noreferrer"><button className="button button--pandora"><span>dataset</span></button></a>
 				</div>
                 </section>
             </div>
