@@ -38,12 +38,12 @@ const Chatbot = () => {
     messages.map(message => {
       // Skip over the bot greeting
       if (message.id > 3) {
-        chatLog += `${message.name}: ${message.text}\n`
+        chatLog += `${message.name}: ${message.text}\n\n###\n\n`
       }
       return null
     })
     // Now add the user's new message
-    chatLog += `${newMessage.name}: ${newMessage.text}\n`
+    chatLog += `${newMessage.name}: ${newMessage.text}\n\n###\n\n`
     return chatLog
   }
 
