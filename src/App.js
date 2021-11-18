@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import Styled from 'styled-components';
 import axios from 'axios';
 import Chatbot from './components/Chatbot';
 import './App.css';
@@ -18,7 +19,7 @@ function App() {
  
 return (
     <div className='App'>
-        <header className='header'>
+        <Header className='header'>
             <h1>Bitcoin Chatbot</h1>
             Status:
             <span style={botStatus === 'Offline' ? {color: "red"} : {color: "green"}}>{botStatus}</span>
@@ -33,10 +34,22 @@ return (
 				</div>
                 </section>
             </div>
-        </header>
+        </Header>
         <Chatbot />
     </div>
     )
 }
 
 export default App;
+
+const Header = Styled.header`
+    width: 50%;
+    margin: 1% auto;
+    margin-bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 10px solid #F2A900;
+    border-radius: 10px;
+    padding-bottom: 0.5%;
+`;
