@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Styled from 'styled-components';
+import media from './utils/ComponentBreakpoints'
 import axios from 'axios';
 import Chatbot from './components/Chatbot';
 import './App.css';
@@ -52,4 +53,7 @@ const Header = Styled.header`
     border: 10px solid #F2A900;
     border-radius: 10px;
     padding-bottom: 0.5%;
+    ${media.tablet`
+        width: 80%;
+    `}
 `;
