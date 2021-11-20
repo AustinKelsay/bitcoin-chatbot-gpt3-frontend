@@ -3,7 +3,9 @@ const sizes = {
   uhd: 1980,
   widescreen: 1366,
   desktop: 1024,
-  tablet: 768,
+  laptop: 768,
+  tablet: 480,
+  phone: 320,
 }
 export default Object.keys(sizes).reduce((acc, label) => {
   acc[label] = (...args) => css`

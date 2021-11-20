@@ -49,7 +49,6 @@ const AppContainer = Styled.div`
 `;
 
 const Header = Styled.header`
-    width: 50%;
     margin: 1% auto;
     margin-bottom: 0%;
     display: flex;
@@ -58,8 +57,23 @@ const Header = Styled.header`
     border: 10px solid #F2A900;
     border-radius: 10px;
     padding-bottom: 0.5%;
+    ${media.phone`
+        width: 98%;
+    `}
     ${media.tablet`
+        width: 95%;
+    `}
+    ${media.laptop`
+        width: 90%;
+    `}
+    ${media.desktop`
         width: 80%;
+    `}
+    ${media.widescreen`
+        width: 70%;
+    `}
+    ${media.uhd`
+        width: 60%;
     `}
 `;
 
