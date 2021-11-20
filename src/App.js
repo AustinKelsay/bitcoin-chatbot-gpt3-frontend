@@ -21,7 +21,7 @@ function App() {
 return (
     <AppContainer>
         <Header>
-            <h1>Bitcoin Chatbot</h1>
+            <HeaderTitle>Bitcoin Chatbot</HeaderTitle>
             Status:
             <span style={botStatus === 'Offline' ? {color: "red", textDecoration: "underline"} : {color: "green", textDecoration: "underline"}}>{botStatus}</span>
             <HeaderBody>
@@ -86,7 +86,12 @@ const HeaderBody = Styled.div`
 
 const HeaderSection = Styled.div`
     width: 70%;
-    margin: 1% auto;
+    margin: 0% auto;
     display: flex;
     justify-content: space-around;
+`;
+
+const HeaderTitle = Styled.h1`
+    margin-top: 0.5%;
+    margin-bottom: 2%;
 `;
