@@ -43,8 +43,6 @@ const Chatbot = () => {
       }
       return null
     })
-    // Now add the user's new message
-    chatLog += `${newMessage.name}: ${newMessage.text}\n\n###\n\n`
     return chatLog
   }
 
