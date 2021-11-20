@@ -120,7 +120,8 @@ const Chatbot = () => {
 export default Chatbot;
 
 const ChatWindow = Styled.div`
-    margin: 1% auto;
+    margin: 0% auto;
+    margin-top: 0.5%;
     border: 4px solid #F2A900;
     border-top: 45px solid #F2A900;
     border-radius: 25px;
@@ -128,7 +129,7 @@ const ChatWindow = Styled.div`
     padding: 0.5%;
     padding-left: 0%;
     padding-right: 0%;
-    width: 70%;
+    width: 80%;
 `;
 
 const ChatForm = Styled.form`

@@ -7,14 +7,14 @@ import './Chatbot.css'
 
 const MessageList = ({messages, bottomListRef, typing}) => {
     const scrollComponentStyles = {
-        marginRight: '10%'
+        marginRight: '10%',
     }
 
     return (
         <InfiniteScroll
           dataLength={messages.length} //This is important field to render the next data
           loader={<h4>Loading...</h4>}
-          height={400}
+          height={300}
           style={scrollComponentStyles}
         >
           <MessageListContainer>

@@ -3,6 +3,7 @@ import Styled from 'styled-components';
 import media from './utils/ComponentBreakpoints'
 import axios from 'axios';
 import Chatbot from './components/Chatbot';
+import ArticleSuggestion from './components/ArticleSuggestion';
 import './index.css';
 
 function App() {
@@ -37,6 +38,7 @@ return (
             </HeaderBody>
         </Header>
         <Chatbot />
+        <ArticleSuggestion />
     </AppContainer>
     )
 }
@@ -44,12 +46,13 @@ return (
 export default App;
 
 const AppContainer = Styled.div`
-    margin: 1% auto;
+    margin: 0% auto;
     text-align: center;
+    overflow: false;
 `;
 
 const Header = Styled.header`
-    margin: 1% auto;
+    margin: 0% auto;
     margin-bottom: 0%;
     display: flex;
     flex-direction: column;
