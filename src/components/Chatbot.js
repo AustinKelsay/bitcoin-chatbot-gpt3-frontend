@@ -51,7 +51,7 @@ const Chatbot = () => {
     if (lastMessage && lastMessage.name === 'User') {
       setTyping(true)
       const log = formatChatLog()
-      axios.post("http://127.0.0.1:8000/ask", {chat_log: log})
+      axios.post("https://bitcoin-chatbot-gpt3.herokuapp.com/ask", {chat_log: log})
       .then(response => {
         setTimeout(() => {
           setId(id + 1)
