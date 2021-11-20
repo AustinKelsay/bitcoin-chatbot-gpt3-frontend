@@ -1,4 +1,5 @@
 import React, {useEffect, useState, useRef} from 'react';
+import Styled from 'styled-components'
 import MessageList from './MessageList';
 import axios from 'axios'
 import './Chatbot.css'
@@ -95,38 +96,82 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="chat-window">
+    <ChatWindow>
       <MessageList messages={messages} bottomListRef={bottomListRef} typing={typing} />
-      <form
+      <ChatForm
         onSubmit={handleOnSubmit}
-        className="chat-form"
         disabled={!newMessage}
       >
-        <section className='chat-button-container'>
-          <input 
+        <ChatButtonContainer>
+          <ChatInput 
             type='text'
             value={newMessage}
             onChange={handleOnChange}
             placeholder="Type your message here..."
-            className='chat-input'
             ref={inputRef}
             />
-          {/* <div
-            className="content__item"
-            >
-            <button
-              type="submit"
-              className="button button--pandora">
-                <span>
-                  send
-                </span>
-            </button>
-          </div> */}
-          <button className='chat-button'>send</button>
-        </section>
-      </form>
-    </div>
+          <ChatButton>send</ChatButton>
+        </ChatButtonContainer>
+      </ChatForm>
+    </ChatWindow>
   )
 }
 
 export default Chatbot;
+
+const ChatWindow = Styled.div`
+    margin: 1% auto;
+    border: 4px solid #F2A900;
+    border-top: 45px solid #F2A900;
+    border-radius: 25px;
+    background: #4F6272;
+    padding: 0.5%;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 70%;
+`;
+
+const ChatForm = Styled.form`
+    width: 100%;
+    margin: 1% auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 4px solid #F2A900;
+    border-radius: 35px;
+    padding-top: 1%;
+`;
+
+const ChatInput = Styled.input`
+    margin: 0% auto;
+	  width: 85%;
+	  padding: 0.5%;
+    border: 1px solid white;
+    border-radius: 10px;
+`;
+
+const ChatButtonContainer = Styled.section`
+    width: 80%;
+    margin: 0.2% auto;
+    display: flex;
+    flex-direction: row;
+`;
+
+const ChatButton = Styled.button`
+    width: 8%;
+    padding: 1%;
+    cursor: pointer;
+    transition: all .5s ease;
+    color: #F2A900;
+    border: 3px solid black;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : transparent;
+    outline: none;
+    border-radius: 4px;
+    &:hover {
+      color: #001F3F;
+      background-color: #F2A900;
+    }
+`;
