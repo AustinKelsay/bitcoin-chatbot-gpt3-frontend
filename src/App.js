@@ -3,7 +3,7 @@ import Styled from 'styled-components';
 import media from './utils/ComponentBreakpoints'
 import axios from 'axios';
 import Chatbot from './components/Chatbot';
-import './App.css';
+import './index.css';
 
 function App() {
   const [botStatus, setBotStatus] = useState('Offline');
@@ -19,29 +19,34 @@ function App() {
 },[]);
  
 return (
-    <div className='App'>
-        <Header className='header'>
+    <AppContainer>
+        <Header>
             <h1>Bitcoin Chatbot</h1>
             Status:
-            <span style={botStatus === 'Offline' ? {color: "red"} : {color: "green"}}>{botStatus}</span>
-            <div className="intro">
+            <span style={botStatus === 'Offline' ? {color: "red", textDecoration: "underline"} : {color: "green", textDecoration: "underline"}}>{botStatus}</span>
+            <HeaderBody>
                 <p>Bitcoin Chatbot is a question & answer AI bot powered by GPT-3 and trained on an open source dataset of established Bitcoin knowledge</p>
-                <section className="header-section">
-                <div className="content__item">
-                <a href="https://github.com/AustinKelsay/bitcoin-chatbot-gpt3" target="_blank" rel="noreferrer"><button className="button button--pandora"><span>code</span></button></a>
-				</div>
-                <div className="content__item">
-                <a href="https://github.com/AustinKelsay/bitcoin-chatbot-gpt3/tree/main/datasets" target="_blank" rel="noreferrer"><button className="button button--pandora"><span>dataset</span></button></a>
-				</div>
-                </section>
-            </div>
+                <HeaderSection>
+                    <div className="content__item">
+                        <a href="https://github.com/AustinKelsay/bitcoin-chatbot-gpt3" target="_blank" rel="noreferrer"><button className="button button--pandora"><span>code</span></button></a>
+                    </div>
+                    <div className="content__item">
+                        <a href="https://github.com/AustinKelsay/bitcoin-chatbot-gpt3/tree/main/datasets" target="_blank" rel="noreferrer"><button className="button button--pandora"><span>dataset</span></button></a>
+                    </div>
+                </HeaderSection>
+            </HeaderBody>
         </Header>
         <Chatbot />
-    </div>
+    </AppContainer>
     )
 }
 
 export default App;
+
+const AppContainer = Styled.div`
+    margin: 1% auto;
+    text-align: center;
+`;
 
 const Header = Styled.header`
     width: 50%;
@@ -56,4 +61,18 @@ const Header = Styled.header`
     ${media.tablet`
         width: 80%;
     `}
+`;
+
+const HeaderBody = Styled.div`
+    width: 80%;
+    margin: 1% auto;
+    border-top: 2px solid #404E5C;
+    margin-bottom: 0%;
+`;
+
+const HeaderSection = Styled.div`
+    width: 70%;
+    margin: 1% auto;
+    display: flex;
+    justify-content: space-around;
 `;
