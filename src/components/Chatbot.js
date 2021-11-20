@@ -34,7 +34,7 @@ const Chatbot = () => {
     }
   }, [inputRef]);
 
-  const formatChatLog = (newMessage) => {
+  const formatChatLog = () => {
     let chatLog = ''
     messages.map(message => {
       // Skip over the bot greeting
@@ -50,7 +50,8 @@ const Chatbot = () => {
     const lastMessage = messages[messages.length - 1];
     if (lastMessage && lastMessage.name === 'User') {
       setTyping(true)
-      axios.post("https://bitcoin-chatbot-gpt3.herokuapp.com/ask", {chat_log: formatChatLog(newMessage)})
+      const log = formatChatLog()
+      axios.post("http://127.0.0.1:8000/ask", {chat_log: log})
       .then(response => {
         setTimeout(() => {
           setId(id + 1)
