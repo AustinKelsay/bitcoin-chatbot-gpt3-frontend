@@ -82,18 +82,6 @@ Charcoal: #404E5C
     background-color: #F2A900;
 }
 
-.message-list {
-    list-style-type: none;
-    width: 80%;
-    margin: 1% auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    color: white;
-    padding-left: 10%;
-    padding-right: 5%;
-}
-
 .chat-message {
     display: flex;
     flex-direction: column;
@@ -110,11 +98,6 @@ Charcoal: #404E5C
     opacity: 0.9;
     display: inline-block;
     word-wrap: break-word;
-}
-.chat-message h3 {
-    margin-top: 0.5%;
-    margin-bottom: 0%;
-    text-align: start;
 }
  /* User chat messeages */
 
@@ -136,24 +119,6 @@ Charcoal: #404E5C
     opacity: 0.9;
     display: inline-block;
     word-wrap: break-word;
-}
-
-.chat-message-user h3 {
-    margin-top: 0.5%;
-    margin-bottom: 0%;
-    text-align: start;
-}
-
-.chat-text {
-    margin-top: 4%;
-    padding-bottom: 2%;
-    margin-bottom: 0;
-    text-align: start;
-}
-
-.chat-bubbles {
-    display: flex;
-    padding-left: 13%;
 }
 
 .infinite-scroll-component::-webkit-scrollbar {

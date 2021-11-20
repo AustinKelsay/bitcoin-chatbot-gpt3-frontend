@@ -1,5 +1,6 @@
 import React from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import Styled from 'styled-components';
 import ReactLoading from 'react-loading';
 import { v4 as uuidv4 } from 'uuid';
 import './Chatbot.css'
@@ -16,22 +17,52 @@ const MessageList = ({messages, bottomListRef, typing}) => {
           height={400}
           style={scrollComponentStyles}
         >
-          <ul className="message-list">
+          <MessageListContainer>
             {messages.map((message) => {
               return(
                 <li key={uuidv4()} className={message.name === "User" ? "chat-message-user" : "chat-message"}>
-                  <h3>{message.name}</h3>
-                  <p className='chat-text'>{message.text}</p>
+                  <ChatUser>{message.name}</ChatUser>
+                  <ChatMessage>{message.text}</ChatMessage>
                 </li>
               )
             })}
-          </ul>
-          <div className='chat-bubbles'>
+          </MessageListContainer>
+          <ChatBubbles>
               {typing === true ? <ReactLoading type={'bubbles'} color={'#f2a900'} height={'7%'} width={'7%'} /> : null}
-          </div>
+          </ChatBubbles>
           <div ref={bottomListRef} />
         </InfiniteScroll>
     )
 }
 
 export default MessageList;
+
+const MessageListContainer = Styled.ul`
+    list-style-type: none;
+    width: 80%;
+    margin: 1% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    padding-left: 10%;
+    padding-right: 5%;
+`;
+
+const ChatBubbles = Styled.div`
+    display: flex;
+    padding-left: 13%;
+`;
+
+const ChatMessage = Styled.div`
+    margin-top: 4%;
+    padding-bottom: 2%;
+    margin-bottom: 0;
+    text-align: start;
+`;
+
+const ChatUser = Styled.div`
+    margin-top: 0.5%;
+    margin-bottom: 0%;
+    text-align: start;
+`;
