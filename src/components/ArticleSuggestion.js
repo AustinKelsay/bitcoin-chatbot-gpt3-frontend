@@ -16,9 +16,9 @@ const ArticleSuggestion = () => {
     return (
         <ArticleContainer>
             <Article>
-                <h3>{article.title}</h3>
-                <h4>{article.text}</h4>
-                <button><a href={article.link} target="_blank" rel="noreferrer">Read more</a></button>
+                <ArticleTitle>{article.title}</ArticleTitle>
+                <ArticleText>"{article.text}"</ArticleText>
+                <ArticleAnchor href={article.link} target="_blank" rel="noreferrer">read</ArticleAnchor>
             </Article>
         </ArticleContainer>
     )
@@ -34,30 +34,47 @@ const ArticleContainer = Styled.div`
     padding: 0.5%;
     padding-left: 0%;
     padding-right: 0%;
-    width: 70%;
-
+    width: 80%;
 `;
 
 const Article = Styled.div`
     display: flex;
+    align-items: center;
+    align-content: space-between;
+    border-top: 2px solid #F2A900;
+    border-bottom: 2px solid #F2A900;
     margin: 1% auto;
     padding: 1%;
 `;
 
-const ChatBubbles = Styled.div`
-    display: flex;
-    padding-left: 13%;
+const ArticleTitle = Styled.h3`
+    font-size: 1.2rem;
 `;
 
-const ChatMessage = Styled.div`
-    margin-top: 4%;
-    padding-bottom: 2%;
-    margin-bottom: 0;
-    text-align: start;
+const ArticleText = Styled.p`
+    border-left: 2px solid #F2A900;
+    border-right: 2px solid #F2A900;
+    padding: 1%;
 `;
 
-const ChatUser = Styled.div`
-    margin-top: 0.5%;
-    margin-bottom: 0%;
-    text-align: start;
+const ArticleAnchor = Styled.a`
+    width: 8%;
+    text-decoration: none;
+    margin: 1% auto;
+    margin-left: 1%;
+    padding: 1%;
+    cursor: pointer;
+    transition: all .5s ease;
+    color: #F2A900;
+    border: 3px solid black;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : transparent;
+    outline: none;
+    border-radius: 4px;
+    &:hover {
+    color: #001F3F;
+    background-color: #F2A900;
+    }
 `;
