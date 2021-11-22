@@ -1,7 +1,6 @@
 import React from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Styled from 'styled-components';
-import ReactLoading from 'react-loading';
 import { v4 as uuidv4 } from 'uuid';
 import './Chatbot.css'
 
@@ -36,10 +35,11 @@ const ArticleSuggestion = () => {
             height={150}
             style={scrollComponentStyles}
             >
+                article suggestion coming soon...
                 {
                 articles.map((article) => {
                     return(
-                    <Article>
+                    <Article key={uuidv4()}>
                         <ArticleTitle>{article.title}</ArticleTitle>
                         <ArticleText>"{article.text}"</ArticleText>
                         <ArticleAnchor href={article.link} target="_blank" rel="noreferrer">read</ArticleAnchor>
