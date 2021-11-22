@@ -7,10 +7,19 @@ import './Chatbot.css'
 
 const ArticleSuggestion = () => {
 
+    const article = {
+        link: 'https://nakamotoinstitute.org/bitcoin/',
+        title: 'Bitcoin: A Peer-to-Peer Electronic Cash System',
+        text: "To compensate for increasing hardware speed and varying interest in running nodes over time, the proof-of-work difficulty is determined by a moving average targeting an average number of blocks per hour. If they're generated too fast, the difficulty increases."
+    }
+
     return (
         <ArticleContainer>
-            <h1>Article Suggestion</h1>
-            <h1>Coming soon...</h1>
+            <Article>
+                <h3>{article.title}</h3>
+                <h4>{article.text}</h4>
+                <button><a href={article.link} target="_blank" rel="noreferrer">Read more</a></button>
+            </Article>
         </ArticleContainer>
     )
 }
@@ -27,6 +36,12 @@ const ArticleContainer = Styled.div`
     padding-right: 0%;
     width: 70%;
 
+`;
+
+const Article = Styled.div`
+    display: flex;
+    margin: 1% auto;
+    padding: 1%;
 `;
 
 const ChatBubbles = Styled.div`
