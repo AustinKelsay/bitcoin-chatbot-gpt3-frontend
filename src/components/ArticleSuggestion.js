@@ -6,20 +6,48 @@ import { v4 as uuidv4 } from 'uuid';
 import './Chatbot.css'
 
 const ArticleSuggestion = () => {
-
-    const article = {
-        link: 'https://nakamotoinstitute.org/bitcoin/',
-        title: 'Bitcoin: A Peer-to-Peer Electronic Cash System',
-        text: "To compensate for increasing hardware speed and varying interest in running nodes over time, the proof-of-work difficulty is determined by a moving average targeting an average number of blocks per hour. If they're generated too fast, the difficulty increases."
+    const scrollComponentStyles = {
+        paddingRight: '1%',
     }
+
+    const articles = [
+        {
+            link: 'https://nakamotoinstitute.org/bitcoin/',
+            title: 'Bitcoin: A Peer-to-Peer Electronic Cash System',
+            text: "To compensate for increasing hardware speed and varying interest in running nodes over time, the proof-of-work difficulty is determined by a moving average targeting an average number of blocks per hour. If they're generated too fast, the difficulty increases."
+        },
+        {
+            link: 'https://nakamotoinstitute.org/bitcoin/',
+            title: 'Bitcoin: A Peer-to-Peer Electronic Cash System',
+            text: "To compensate for increasing hardware speed and varying interest in running nodes over time, the proof-of-work difficulty is determined by a moving average targeting an average number of blocks per hour. If they're generated too fast, the difficulty increases."
+        },
+        {
+            link: 'https://nakamotoinstitute.org/bitcoin/',
+            title: 'Bitcoin: A Peer-to-Peer Electronic Cash System',
+            text: "To compensate for increasing hardware speed and varying interest in running nodes over time, the proof-of-work difficulty is determined by a moving average targeting an average number of blocks per hour. If they're generated too fast, the difficulty increases."
+        }
+    ]
 
     return (
         <ArticleContainer>
-            <Article>
-                <ArticleTitle>{article.title}</ArticleTitle>
-                <ArticleText>"{article.text}"</ArticleText>
-                <ArticleAnchor href={article.link} target="_blank" rel="noreferrer">read</ArticleAnchor>
-            </Article>
+            <InfiniteScroll
+            dataLength={articles.length} //This is important field to render the next data
+            loader={<h4>Loading...</h4>}
+            height={150}
+            style={scrollComponentStyles}
+            >
+                {
+                articles.map((article) => {
+                    return(
+                    <Article>
+                        <ArticleTitle>{article.title}</ArticleTitle>
+                        <ArticleText>"{article.text}"</ArticleText>
+                        <ArticleAnchor href={article.link} target="_blank" rel="noreferrer">read</ArticleAnchor>
+                    </Article>
+                    )
+                    })
+                }
+            </InfiniteScroll>
         </ArticleContainer>
     )
 }
@@ -32,8 +60,8 @@ const ArticleContainer = Styled.div`
     border-radius: 25px;
     background: #4F6272;
     padding: 0.5%;
-    padding-left: 0%;
-    padding-right: 0%;
+    padding-left: 1%;
+    padding-right: 1%;
     width: 80%;
 `;
 
