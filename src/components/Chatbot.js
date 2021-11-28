@@ -133,13 +133,13 @@ const ChatWindow = Styled.div`
 
 const ChatForm = Styled.form`
     width: 100%;
-    margin: 1% auto;
+    margin: 0% auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-top: 4px solid #F2A900;
     border-radius: 35px;
-    padding-top: 1%;
+    padding-top: 0.5%;
 `;
 
 const ChatInput = Styled.input`
