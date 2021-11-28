@@ -32,7 +32,7 @@ const ArticleSuggestion = () => {
             <InfiniteScroll
             dataLength={articles.length} //This is important field to render the next data
             loader={<h4>Loading...</h4>}
-            height={200}
+            height={180}
             style={scrollComponentStyles}
             >
                 article suggestion coming soon...
@@ -59,7 +59,7 @@ const ArticleContainer = Styled.div`
     border: 4px solid #F2A900;
     border-radius: 25px;
     background: #4F6272;
-    padding: 0.5%;
+    padding: 0.1%;
     padding-left: 1%;
     padding-right: 1%;
     width: 75%;
@@ -77,10 +77,10 @@ const Article = Styled.div`
 const ArticleTitle = Styled.h3`
     color: white;
     font-size: 1.2rem;
-    padding: 1%;
+    padding: 0.5%;
     margin-top: 0;
     margin-bottom: 0;
-    width: 30%;
+    width: 20%;
 `;
 
 const ArticleText = Styled.p`
