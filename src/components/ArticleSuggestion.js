@@ -68,7 +68,6 @@ const ArticleContainer = Styled.div`
 const Article = Styled.div`
     display: flex;
     align-items: center;
-    align-content: space-between;
     border: 2px solid white;
     border-radius: 10px;
     background-image: linear-gradient(135deg, #f2a900 0%, #FF6A88 86%, #FF99AC 100%);
@@ -81,6 +80,7 @@ const ArticleTitle = Styled.h3`
     padding: 1%;
     margin-top: 0;
     margin-bottom: 0;
+    width: 30%;
 `;
 
 const ArticleText = Styled.p`
@@ -88,6 +88,7 @@ const ArticleText = Styled.p`
     border-left: 2px solid white;
     border-right: 2px solid white;
     padding: 1%;
+    width: 70%;
 `;
 
 const ArticleAnchor = Styled.a`
