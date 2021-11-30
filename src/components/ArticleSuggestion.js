@@ -1,6 +1,7 @@
 import React from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Styled from 'styled-components';
+import media from "../utils/ComponentBreakpoints";
 import { v4 as uuidv4 } from 'uuid';
 import './Chatbot.css'
 
@@ -26,13 +27,13 @@ const ArticleSuggestion = () => {
             text: "Have you ever had a financial advisor (or maybe even a parent) tell you that you need to make your money grow? This idea has been so hardwired in the minds of hard-working people all over the world that it has become practically second nature to the very idea of work."
         }
     ]
-
+    console.log(window.innerWidth)
     return (
         <ArticleContainer>
             <InfiniteScroll
             dataLength={articles.length} //This is important field to render the next data
             loader={<h4>Loading...</h4>}
-            height={180}
+            height={window.innerWidth > 800 ? 180: 300}
             style={scrollComponentStyles}
             >
                 article suggestion coming soon...
@@ -62,7 +63,21 @@ const ArticleContainer = Styled.div`
     padding: 0.1%;
     padding-left: 1%;
     padding-right: 1%;
-    width: 75%;
+    ${media.phone`
+        width: 99%;
+    `}
+    ${media.tablet`
+        width: 90%;
+    `}
+    ${media.laptop`
+        width: 85%;
+    `}
+    ${media.desktop`
+        width: 80%;
+    `}
+    ${media.widescreen`
+        width: 75%;
+    `}
 `;
 
 const Article = Styled.div`
