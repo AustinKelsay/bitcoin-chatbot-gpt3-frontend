@@ -75,9 +75,6 @@ const Header = Styled.header`
     ${media.widescreen`
         width: 70%;
     `}
-    ${media.uhd`
-        width: 60%;
-    `}
 `;
 
 const HeaderBody = Styled.div`

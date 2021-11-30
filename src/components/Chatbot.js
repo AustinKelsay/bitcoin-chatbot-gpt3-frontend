@@ -1,6 +1,7 @@
 import React, {useEffect, useState, useRef} from 'react';
 import Styled from 'styled-components'
 import MessageList from './MessageList';
+import media from '../utils/ComponentBreakpoints'
 import axios from 'axios'
 import './Chatbot.css'
 
@@ -128,7 +129,21 @@ const ChatWindow = Styled.div`
     padding: 0.5%;
     padding-left: 0%;
     padding-right: 0%;
-    width: 80%;
+    ${media.phone`
+        width: 98%;
+    `}
+    ${media.tablet`
+        width: 98%;
+    `}
+    ${media.laptop`
+        width: 90%;
+    `}
+    ${media.desktop`
+        width: 85%;
+    `}
+    ${media.widescreen`
+        width: 80%;
+    `}
 `;
 
 const ChatForm = Styled.form`
