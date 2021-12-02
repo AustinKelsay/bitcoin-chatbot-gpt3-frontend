@@ -61,19 +61,9 @@ const Header = Styled.header`
     border-radius: 10px;
     padding-bottom: 0.5%;
     ${media.phone`
-        width: 98%;
-    `}
-    ${media.tablet`
-        width: 95%;
-    `}
-    ${media.laptop`
-        width: 90%;
-    `}
-    ${media.desktop`
-        width: 80%;
-    `}
-    ${media.widescreen`
-        width: 70%;
+        width: 99%;
+        margin: 0% auto;
+        border-radius: 0px;
     `}
 `;
 

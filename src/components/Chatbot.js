@@ -120,6 +120,7 @@ const Chatbot = () => {
 export default Chatbot;
 
 const ChatWindow = Styled.div`
+    width: 80%;
     margin: 0% auto;
     margin-top: 0.5%;
     border: 4px solid #F2A900;
@@ -130,19 +131,9 @@ const ChatWindow = Styled.div`
     padding-left: 0%;
     padding-right: 0%;
     ${media.phone`
-        width: 98%;
-    `}
-    ${media.tablet`
-        width: 98%;
-    `}
-    ${media.laptop`
-        width: 90%;
-    `}
-    ${media.desktop`
-        width: 85%;
-    `}
-    ${media.widescreen`
-        width: 80%;
+        width: 99%;
+        margin: 0% auto;
+        border-radius: 0px;
     `}
 `;
 
