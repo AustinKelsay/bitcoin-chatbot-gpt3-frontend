@@ -131,7 +131,12 @@ const ChatWindow = Styled.div`
     padding-left: 0%;
     padding-right: 0%;
     ${media.phone`
-        width: 99%;
+        width: 100%;
+        margin: 0% auto;
+        border-radius: 0px;
+    `}
+    ${media.tablet`
+        width: 100%;
         margin: 0% auto;
         border-radius: 0px;
     `}
@@ -161,6 +166,9 @@ const ChatButtonContainer = Styled.section`
     margin: 0.2% auto;
     display: flex;
     flex-direction: row;
+    ${media.tablet`
+        width: 90%;
+    `}
 `;
 
 const ChatButton = Styled.button`
@@ -180,4 +188,12 @@ const ChatButton = Styled.button`
       color: #001F3F;
       background-color: #F2A900;
     }
+    ${media.phone`
+        width: 20%;
+        margin-left: 5%;
+    `}
+    ${media.tablet`
+        width: 20%;
+        margin-left: 5%;
+    `}
 `;

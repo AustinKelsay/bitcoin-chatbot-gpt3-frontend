@@ -55,6 +55,7 @@ const ArticleSuggestion = () => {
 export default ArticleSuggestion;
 
 const ArticleContainer = Styled.div`
+    width: 80%;
     margin: 1% auto;
     border: 4px solid #F2A900;
     border-radius: 25px;
@@ -63,15 +64,19 @@ const ArticleContainer = Styled.div`
     padding-left: 1%;
     padding-right: 1%;
     ${media.tiny`
-        width: 100%;
+        width: 98%;
+        margin: 0% auto;
+        border-radius: 0px;
     `}
     ${media.phone`
-        width: 100%;
+        width: 98%;
         margin: 0% auto;
         border-radius: 0px;
     `}
     ${media.tablet`
-        width: 99%;
+        width: 98%;
+        margin: 0% auto;
+        border-radius: 0px;
     `}
 `;
 
@@ -91,6 +96,12 @@ const ArticleTitle = Styled.h3`
     margin-top: 0;
     margin-bottom: 0;
     width: 20%;
+    ${media.phone`
+        font-size: 1rem;
+    `}
+    ${media.tablet`
+        font-size: 1rem;
+    `}
 `;
 
 const ArticleText = Styled.p`

@@ -61,9 +61,12 @@ const Header = Styled.header`
     border-radius: 10px;
     padding-bottom: 0.5%;
     ${media.phone`
-        width: 99%;
-        margin: 0% auto;
-        border-radius: 0px;
+        width: 96%;
+        margin: 1% auto;
+        `}
+    ${media.tablet`
+        width: 96%;
+        margin: 1% auto;
     `}
 `;
 
