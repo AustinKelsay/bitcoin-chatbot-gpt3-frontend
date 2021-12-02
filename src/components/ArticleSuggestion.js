@@ -27,7 +27,6 @@ const ArticleSuggestion = () => {
             text: "Have you ever had a financial advisor (or maybe even a parent) tell you that you need to make your money grow? This idea has been so hardwired in the minds of hard-working people all over the world that it has become practically second nature to the very idea of work."
         }
     ]
-    console.log(window.innerWidth)
     return (
         <ArticleContainer>
             <InfiniteScroll
@@ -63,20 +62,16 @@ const ArticleContainer = Styled.div`
     padding: 0.1%;
     padding-left: 1%;
     padding-right: 1%;
+    ${media.tiny`
+        width: 100%;
+    `}
     ${media.phone`
-        width: 99%;
+        width: 100%;
+        margin: 0% auto;
+        border-radius: 0px;
     `}
     ${media.tablet`
-        width: 90%;
-    `}
-    ${media.laptop`
-        width: 85%;
-    `}
-    ${media.desktop`
-        width: 80%;
-    `}
-    ${media.widescreen`
-        width: 75%;
+        width: 99%;
     `}
 `;
 
