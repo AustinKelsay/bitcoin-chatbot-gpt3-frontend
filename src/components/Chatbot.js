@@ -169,6 +169,9 @@ const ChatButtonContainer = Styled.section`
     ${media.tablet`
         width: 90%;
     `}
+    ${media.laptop`
+        width: 90%;
+    `}
 `;
 
 const ChatButton = Styled.button`
@@ -193,6 +196,10 @@ const ChatButton = Styled.button`
         margin-left: 5%;
     `}
     ${media.tablet`
+        width: 20%;
+        margin-left: 5%;
+    `}
+    ${media.laptop`
         width: 20%;
         margin-left: 5%;
     `}
