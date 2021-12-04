@@ -32,7 +32,7 @@ const ArticleSuggestion = () => {
             <InfiniteScroll
             dataLength={articles.length} //This is important field to render the next data
             loader={<h4>Loading...</h4>}
-            height={window.innerWidth > 800 ? 180: 300}
+            height={window.innerWidth > 800 ? 230: 350}
             style={scrollComponentStyles}
             >
                 article suggestion coming soon...
