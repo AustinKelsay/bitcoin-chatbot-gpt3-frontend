@@ -55,7 +55,7 @@ const ArticleSuggestion = () => {
 export default ArticleSuggestion;
 
 const ArticleContainer = Styled.div`
-    width: 80%;
+    width: 78%;
     margin: 1% auto;
     border: 4px solid #F2A900;
     border-radius: 25px;

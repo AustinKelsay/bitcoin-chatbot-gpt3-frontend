@@ -52,7 +52,7 @@ const AppContainer = Styled.div`
 `;
 
 const Header = Styled.header`
-    width: 85%;
+    width: 70%;
     margin: 0% auto;
     margin-bottom: 0%;
     display: flex;
