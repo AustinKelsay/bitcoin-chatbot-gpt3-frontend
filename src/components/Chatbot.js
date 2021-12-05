@@ -168,9 +168,11 @@ const ChatButtonContainer = Styled.section`
     flex-direction: row;
     ${media.tablet`
         width: 90%;
+        padding: 1%;
     `}
     ${media.laptop`
         width: 90%;
+        padding: 1%;
     `}
 `;
 
