@@ -49,6 +49,10 @@ const AppContainer = Styled.div`
     margin: 0% auto;
     text-align: center;
     overflow: false;
+    ${media.phone`
+        padding: 0.5%;
+        padding-right: 1%;
+    `}
 `;
 
 const Header = Styled.header`
