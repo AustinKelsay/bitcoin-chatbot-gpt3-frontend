@@ -87,14 +87,6 @@ const Article = Styled.div`
     border-radius: 10px;
     background-image: linear-gradient(135deg, #f2a900 0%, #FF6A88 86%, #FF99AC 100%);
     margin: 1% auto;
-    ${media.phone`
-        border: none;
-        flex-direction: column;
-    `}
-    ${media.tablet`
-        border: none;
-        flex-direction: column;
-    `}
 `;
 
 const ArticleTitle = Styled.h3`
@@ -106,15 +98,9 @@ const ArticleTitle = Styled.h3`
     width: 20%;
     ${media.phone`
         font-size: 1rem;
-        padding: 1%;
-        width: 90%;
-        margin-top: 1%;
     `}
     ${media.tablet`
         font-size: 1rem;
-        padding: 1%;
-        width: 90%;
-        margin-top: 1%;
     `}
 `;
 
@@ -124,22 +110,6 @@ const ArticleText = Styled.p`
     border-right: 2px solid white;
     padding: 1%;
     width: 70%;
-    ${media.phone`
-        padding: 2%;
-        border-top: 2px solid white;
-        border-bottom: 2px solid white;
-        border-left: none;
-        border-right: none;
-        width: 90%;
-    `}
-    ${media.tablet`
-        padding: 2%;
-        border-top: 2px solid white;
-        border-bottom: 2px solid white;
-        border-left: none;
-        border-right: none;
-        width: 90%;
-    `}
 `;
 
 const ArticleAnchor = Styled.a`
@@ -155,17 +125,10 @@ const ArticleAnchor = Styled.a`
     border: 3px solid black;
     text-align: center;
     line-height: 1;
+    font-size: 17px;
     background-color : transparent;
     outline: none;
     border-radius: 4px;
-    ${media.phone`
-        padding: 2%;
-        width: 20%;
-    `}
-    ${media.tablet`
-        padding: 2%;
-        width: 20%;
-    `}
     &:hover {
     color: #001F3F;
     background-color: #F2A900;

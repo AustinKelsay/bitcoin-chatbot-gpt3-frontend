@@ -10,7 +10,7 @@ function App() {
   const [botStatus, setBotStatus] = useState('Offline');
   
   useEffect(() => {
-    axios.get("https://bitcoin-chatbot-gpt3.herokuapp.com/")
+    axios.get("https://bitcoin-knowledge-bot.herokuapp.com/")
     .then(response => {
         setBotStatus(response.data)
     })
@@ -49,10 +49,6 @@ const AppContainer = Styled.div`
     margin: 0% auto;
     text-align: center;
     overflow: false;
-    ${media.phone`
-        padding: 0.5%;
-        padding-right: 1%;
-    `}
 `;
 
 const Header = Styled.header`
