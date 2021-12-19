@@ -1,1 +1,1 @@
-# Bitcoin Knowledge Bot
+# Bitcoin Knowledge Bot Frontend
