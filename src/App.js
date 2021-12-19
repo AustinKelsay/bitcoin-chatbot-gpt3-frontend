@@ -22,17 +22,17 @@ function App() {
 return (
     <AppContainer>
         <Header>
-            <HeaderTitle>Bitcoin Chatbot</HeaderTitle>
+            <HeaderTitle>Bitcoin Knowledge Bot</HeaderTitle>
             Status:
             <span style={botStatus === 'Offline' ? {color: "red", textDecoration: "underline"} : {color: "green", textDecoration: "underline"}}>{botStatus}</span>
             <HeaderBody>
-                <p>Bitcoin Chatbot is a question & answer AI bot powered by GPT-3 and trained on an open source dataset of established Bitcoin knowledge</p>
+                <p>A question & answer AI bot that also suggests articles/podcasts <br/> Powered by GPT-3 and trained on an open source dataset of established Bitcoin knowledge</p>
                 <HeaderSection>
                     <div className="content__item">
                         <a href="https://github.com/AustinKelsay/bitcoin-chatbot-gpt3" target="_blank" rel="noreferrer"><button className="button button--pandora"><span>code</span></button></a>
                     </div>
                     <div className="content__item">
-                        <a href="https://github.com/AustinKelsay/bitcoin-chatbot-gpt3/tree/main/datasets" target="_blank" rel="noreferrer"><button className="button button--pandora"><span>dataset</span></button></a>
+                        <a href="https://github.com/AustinKelsay/bitcoin-chatbot-gpt3/tree/main/datasets" target="_blank" rel="noreferrer"><button className="button button--pandora"><span>datasets</span></button></a>
                     </div>
                 </HeaderSection>
             </HeaderBody>
@@ -52,7 +52,7 @@ const AppContainer = Styled.div`
 `;
 
 const Header = Styled.header`
-    width: 70%;
+    width: 60%;
     margin: 0% auto;
     margin-bottom: 0%;
     display: flex;
@@ -87,5 +87,5 @@ const HeaderSection = Styled.div`
 
 const HeaderTitle = Styled.h1`
     margin-top: 0.5%;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 `;
