@@ -3,7 +3,6 @@ import Styled from 'styled-components';
 import media from './utils/ComponentBreakpoints'
 import axios from 'axios';
 import Chatbot from './components/Chatbot';
-import ArticleSuggestion from './components/ArticleSuggestion';
 import './index.css';
 
 function App() {
@@ -38,7 +37,6 @@ return (
             </HeaderBody>
         </Header>
         <Chatbot />
-        <ArticleSuggestion />
     </AppContainer>
     )
 }

@@ -2,10 +2,11 @@ import React from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Styled from 'styled-components';
 import media from "../utils/ComponentBreakpoints";
+import ReactLoading from 'react-loading';
 import { v4 as uuidv4 } from 'uuid';
 import './Chatbot.css'
 
-const ArticleSuggestion = () => {
+const ArticleSuggestion = ({typing}) => {
     const scrollComponentStyles = {
         paddingRight: '1%',
     }
@@ -37,6 +38,12 @@ const ArticleSuggestion = () => {
             >
                 article suggestion coming soon...
                 {
+                typing 
+                ?
+                <ChatBubbles>
+                    <ReactLoading type={'bubbles'} color={'#f2a900'} height={'10%'} width={'10%'} />
+                </ChatBubbles>
+                :
                 articles.map((article) => {
                     return(
                     <Article key={uuidv4()}>
@@ -133,4 +140,9 @@ const ArticleAnchor = Styled.a`
     color: #001F3F;
     background-color: #F2A900;
     }
+`;
+
+const ChatBubbles = Styled.div`
+    display: flex;
+    justify-content: center;
 `;
