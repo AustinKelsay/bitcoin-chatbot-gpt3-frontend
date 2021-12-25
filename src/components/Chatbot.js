@@ -3,6 +3,7 @@ import Styled from 'styled-components'
 import MessageList from './MessageList';
 import media from '../utils/ComponentBreakpoints'
 import axios from 'axios'
+import ArticleSuggestion from './ArticleSuggestion';
 import './Chatbot.css'
 
 const Chatbot = () => {
@@ -96,12 +97,13 @@ const Chatbot = () => {
   };
 
   return (
+    <div>
     <ChatWindow>
       <MessageList messages={messages} bottomListRef={bottomListRef} typing={typing} />
       <ChatForm
         onSubmit={handleOnSubmit}
         disabled={!newMessage}
-      >
+        >
         <ChatButtonContainer>
           <ChatInput 
             type='text'
@@ -114,6 +116,8 @@ const Chatbot = () => {
         </ChatButtonContainer>
       </ChatForm>
     </ChatWindow>
+    <ArticleSuggestion typing={typing} />
+    </div>
   )
 }
 
