@@ -30,6 +30,11 @@ const ArticleSuggestion = ({typing}) => {
     ]
     return (
         <ArticleContainer>
+            <ArticleContainerHeader>
+                <ArticleCollapse>
+                    test
+                </ArticleCollapse>
+            </ArticleContainerHeader>
             <InfiniteScroll
             dataLength={articles.length} //This is important field to render the next data
             loader={<h4>Loading...</h4>}
@@ -67,9 +72,6 @@ const ArticleContainer = Styled.div`
     border: 4px solid #F2A900;
     border-radius: 25px;
     background: #4F6272;
-    padding: 0.1%;
-    padding-left: 1%;
-    padding-right: 1%;
     ${media.tiny`
         width: 98%;
         margin: 0% auto;
@@ -87,6 +89,25 @@ const ArticleContainer = Styled.div`
     `}
 `;
 
+const ArticleContainerHeader = Styled.div`
+    width: 100%;
+    margin: 0% auto;
+    margin-top: 0;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    display: flex;
+    border-top: 5px solid #F2A900;
+    border-left: 2px solid #F2A900;
+    border-right: 2px solid #F2A900;
+    border-bottom: 2px solid #F2A900;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+`;
+
+const ArticleCollapse = Styled.button`
+    curosr: pointer;
+    margin: 0.5%;
+`;
+
 const Article = Styled.div`
     display: flex;
     align-items: center;
@@ -94,6 +115,7 @@ const Article = Styled.div`
     border-radius: 10px;
     background-image: linear-gradient(135deg, #f2a900 0%, #FF6A88 86%, #FF99AC 100%);
     margin: 1% auto;
+    margin-left: 1.5%;
 `;
 
 const ArticleTitle = Styled.h3`
