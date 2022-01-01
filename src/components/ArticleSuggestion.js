@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Styled from 'styled-components';
 import media from "../utils/ComponentBreakpoints";
@@ -7,7 +7,8 @@ import {FaChevronDown} from 'react-icons/fa';
 import { v4 as uuidv4 } from 'uuid';
 import './Chatbot.css'
 
-const ArticleSuggestion = ({typing}) => {
+const ArticleSuggestion = ({loading}) => {
+    const [collapsed, setCollapsed] = useState(false);
     const scrollComponentStyles = {
         paddingRight: '1%',
     }
@@ -32,21 +33,25 @@ const ArticleSuggestion = ({typing}) => {
     return (
         <ArticleContainer>
             <ArticleContainerHeader>
-                <ArticleCollapse>
+                <ArticleCollapse onClick={() => setCollapsed(!collapsed)}>
                     <FaChevronDown />
                 </ArticleCollapse>
                 <ArticleSuggestionTitle>
                     article suggestion coming soon...
                 </ArticleSuggestionTitle>
             </ArticleContainerHeader>
-            <InfiniteScroll
-            dataLength={articles.length} //This is important field to render the next data
-            loader={<h4>Loading...</h4>}
-            height={window.innerWidth > 800 ? 230: 350}
-            style={scrollComponentStyles}
-            >
+            {
+                collapsed ? 
+                <CollapsedContainer />
+                :
+                <InfiniteScroll
+                dataLength={articles.length} //This is important field to render the next data
+                loader={<h4>Loading...</h4>}
+                height={window.innerWidth > 800 ? 230: 350}
+                style={scrollComponentStyles}
+                >
                 {
-                typing 
+                    loading 
                 ?
                 <ChatBubbles>
                     <ReactLoading type={'bubbles'} color={'#f2a900'} height={'10%'} width={'10%'} />
@@ -54,15 +59,16 @@ const ArticleSuggestion = ({typing}) => {
                 :
                 articles.map((article) => {
                     return(
-                    <Article key={uuidv4()}>
+                        <Article key={uuidv4()}>
                         <ArticleTitle>{article.title}</ArticleTitle>
                         <ArticleText>"{article.text}"</ArticleText>
                         <ArticleAnchor href={article.link} target="_blank" rel="noreferrer">read</ArticleAnchor>
                     </Article>
                     )
-                    })
+                })
                 }
             </InfiniteScroll>
+            }
         </ArticleContainer>
     )
 }
@@ -117,7 +123,7 @@ const ArticleCollapse = Styled.div`
     }
 `;
 
-const ArticleSuggestionTitle = Styled.h5`
+const ArticleSuggestionTitle = Styled.h4`
     color: white;
     margin: 0 auto;
 `;
@@ -181,4 +187,10 @@ const ArticleAnchor = Styled.a`
 const ChatBubbles = Styled.div`
     display: flex;
     justify-content: center;
+`;
+
+const CollapsedContainer = Styled.div`
+    width: 78%;
+    margin: 1% auto;
+    background: #4F6272;
 `;

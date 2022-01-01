@@ -5,7 +5,7 @@ import ReactLoading from 'react-loading';
 import { v4 as uuidv4 } from 'uuid';
 import './Chatbot.css'
 
-const MessageList = ({messages, bottomListRef, typing}) => {
+const MessageList = ({messages, bottomListRef, loading}) => {
     const scrollComponentStyles = {
         marginRight: '10%',
     }
@@ -28,7 +28,7 @@ const MessageList = ({messages, bottomListRef, typing}) => {
             })}
           </MessageListContainer>
           <ChatBubbles>
-              {typing === true ? <ReactLoading type={'bubbles'} color={'#f2a900'} height={'7%'} width={'7%'} /> : null}
+              {loading === true ? <ReactLoading type={'bubbles'} color={'#f2a900'} height={'7%'} width={'7%'} /> : null}
           </ChatBubbles>
           <div ref={bottomListRef} />
         </InfiniteScroll>
