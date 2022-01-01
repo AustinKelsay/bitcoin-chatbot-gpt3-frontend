@@ -12,6 +12,7 @@ const Chatbot = () => {
   const [newMessage, setNewMessage] = useState('')
   const [loading, setLoading] = useState(false)
   const [id, setId] = useState(4)
+  const [collapsed, setCollapsed] = useState(false);
   const [messages, setMessages] = useState([
     {
         id: 1,
@@ -20,7 +21,7 @@ const Chatbot = () => {
     },
     {
         id: 2,
-        text: "I'm Bitcoin Chatbot",
+        text: "I'm Bitcoin Knowledge Bot",
         name: "Bot"
     },
     {
@@ -99,7 +100,7 @@ const Chatbot = () => {
   return (
     <div>
     <ChatWindow>
-      <MessageList messages={messages} bottomListRef={bottomListRef} loading={loading} />
+      <MessageList collapsed={collapsed} messages={messages} bottomListRef={bottomListRef} loading={loading} />
       <ChatForm
         onSubmit={handleOnSubmit}
         disabled={!newMessage}
@@ -116,7 +117,7 @@ const Chatbot = () => {
         </ChatButtonContainer>
       </ChatForm>
     </ChatWindow>
-    <ArticleSuggestion loading={loading} />
+    <ArticleSuggestion setCollapsed={setCollapsed} collapsed={collapsed} loading={loading} />
     </div>
   )
 }

@@ -5,7 +5,7 @@ import ReactLoading from 'react-loading';
 import { v4 as uuidv4 } from 'uuid';
 import './Chatbot.css'
 
-const MessageList = ({messages, bottomListRef, loading}) => {
+const MessageList = ({messages, bottomListRef, loading, collapsed}) => {
     const scrollComponentStyles = {
         marginRight: '10%',
     }
@@ -14,7 +14,7 @@ const MessageList = ({messages, bottomListRef, loading}) => {
         <InfiniteScroll
           dataLength={messages.length} //This is important field to render the next data
           loader={<h4>Loading...</h4>}
-          height={300}
+          height={collapsed ? 500 : 300}
           style={scrollComponentStyles}
         >
           <MessageListContainer>

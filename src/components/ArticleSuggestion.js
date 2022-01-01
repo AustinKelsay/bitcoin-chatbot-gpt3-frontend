@@ -7,8 +7,7 @@ import {FaChevronDown} from 'react-icons/fa';
 import { v4 as uuidv4 } from 'uuid';
 import './Chatbot.css'
 
-const ArticleSuggestion = ({loading}) => {
-    const [collapsed, setCollapsed] = useState(false);
+const ArticleSuggestion = ({loading, collapsed, setCollapsed}) => {
     const scrollComponentStyles = {
         paddingRight: '1%',
     }
@@ -117,6 +116,7 @@ const ArticleCollapse = Styled.div`
     padding: 0.3%;
     margin: 0.5%;
     border-radius: 50px;
+    border: 1px solid transparent;
     &:hover {
         background-color: #57b8f0;
         border: 1px solid white;
