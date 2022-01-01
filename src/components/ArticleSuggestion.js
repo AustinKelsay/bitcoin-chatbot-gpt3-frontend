@@ -3,6 +3,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import Styled from 'styled-components';
 import media from "../utils/ComponentBreakpoints";
 import ReactLoading from 'react-loading';
+import {FaChevronDown} from 'react-icons/fa';
 import { v4 as uuidv4 } from 'uuid';
 import './Chatbot.css'
 
@@ -32,8 +33,11 @@ const ArticleSuggestion = ({typing}) => {
         <ArticleContainer>
             <ArticleContainerHeader>
                 <ArticleCollapse>
-                    test
+                    <FaChevronDown />
                 </ArticleCollapse>
+                <ArticleSuggestionTitle>
+                    article suggestion coming soon...
+                </ArticleSuggestionTitle>
             </ArticleContainerHeader>
             <InfiniteScroll
             dataLength={articles.length} //This is important field to render the next data
@@ -41,7 +45,6 @@ const ArticleSuggestion = ({typing}) => {
             height={window.innerWidth > 800 ? 230: 350}
             style={scrollComponentStyles}
             >
-                article suggestion coming soon...
                 {
                 typing 
                 ?
@@ -103,9 +106,20 @@ const ArticleContainerHeader = Styled.div`
     border-top-right-radius: 20px;
 `;
 
-const ArticleCollapse = Styled.button`
-    curosr: pointer;
+const ArticleCollapse = Styled.div`
+    cursor: pointer;
+    padding: 0.3%;
     margin: 0.5%;
+    border-radius: 50px;
+    &:hover {
+        background-color: #57b8f0;
+        border: 1px solid white;
+    }
+`;
+
+const ArticleSuggestionTitle = Styled.h5`
+    color: white;
+    margin: 0 auto;
 `;
 
 const Article = Styled.div`
