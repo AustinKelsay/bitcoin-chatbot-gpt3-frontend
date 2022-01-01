@@ -1,12 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Styled from 'styled-components';
 import media from "../utils/ComponentBreakpoints";
 import ReactLoading from 'react-loading';
+import {FaChevronDown} from 'react-icons/fa';
 import { v4 as uuidv4 } from 'uuid';
 import './Chatbot.css'
 
-const ArticleSuggestion = ({typing}) => {
+const ArticleSuggestion = ({loading, collapsed, setCollapsed}) => {
     const scrollComponentStyles = {
         paddingRight: '1%',
     }
@@ -30,15 +31,26 @@ const ArticleSuggestion = ({typing}) => {
     ]
     return (
         <ArticleContainer>
-            <InfiniteScroll
-            dataLength={articles.length} //This is important field to render the next data
-            loader={<h4>Loading...</h4>}
-            height={window.innerWidth > 800 ? 230: 350}
-            style={scrollComponentStyles}
-            >
-                article suggestion coming soon...
+            <ArticleContainerHeader>
+                <ArticleCollapse onClick={() => setCollapsed(!collapsed)}>
+                    <FaChevronDown />
+                </ArticleCollapse>
+                <ArticleSuggestionTitle>
+                    article suggestion coming soon...
+                </ArticleSuggestionTitle>
+            </ArticleContainerHeader>
+            {
+                collapsed ? 
+                <CollapsedContainer />
+                :
+                <InfiniteScroll
+                dataLength={articles.length} //This is important field to render the next data
+                loader={<h4>Loading...</h4>}
+                height={window.innerWidth > 800 ? 230: 350}
+                style={scrollComponentStyles}
+                >
                 {
-                typing 
+                    loading 
                 ?
                 <ChatBubbles>
                     <ReactLoading type={'bubbles'} color={'#f2a900'} height={'10%'} width={'10%'} />
@@ -46,15 +58,16 @@ const ArticleSuggestion = ({typing}) => {
                 :
                 articles.map((article) => {
                     return(
-                    <Article key={uuidv4()}>
+                        <Article key={uuidv4()}>
                         <ArticleTitle>{article.title}</ArticleTitle>
                         <ArticleText>"{article.text}"</ArticleText>
                         <ArticleAnchor href={article.link} target="_blank" rel="noreferrer">read</ArticleAnchor>
                     </Article>
                     )
-                    })
+                })
                 }
             </InfiniteScroll>
+            }
         </ArticleContainer>
     )
 }
@@ -67,9 +80,6 @@ const ArticleContainer = Styled.div`
     border: 4px solid #F2A900;
     border-radius: 25px;
     background: #4F6272;
-    padding: 0.1%;
-    padding-left: 1%;
-    padding-right: 1%;
     ${media.tiny`
         width: 98%;
         margin: 0% auto;
@@ -87,6 +97,37 @@ const ArticleContainer = Styled.div`
     `}
 `;
 
+const ArticleContainerHeader = Styled.div`
+    width: 100%;
+    margin: 0% auto;
+    margin-top: 0;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    display: flex;
+    border-top: 5px solid #F2A900;
+    border-left: 2px solid #F2A900;
+    border-right: 2px solid #F2A900;
+    border-bottom: 2px solid #F2A900;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+`;
+
+const ArticleCollapse = Styled.div`
+    cursor: pointer;
+    padding: 0.3%;
+    margin: 0.5%;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    &:hover {
+        background-color: #57b8f0;
+        border: 1px solid white;
+    }
+`;
+
+const ArticleSuggestionTitle = Styled.h4`
+    color: white;
+    margin: 0 auto;
+`;
+
 const Article = Styled.div`
     display: flex;
     align-items: center;
@@ -94,6 +135,7 @@ const Article = Styled.div`
     border-radius: 10px;
     background-image: linear-gradient(135deg, #f2a900 0%, #FF6A88 86%, #FF99AC 100%);
     margin: 1% auto;
+    margin-left: 1.5%;
 `;
 
 const ArticleTitle = Styled.h3`
@@ -145,4 +187,10 @@ const ArticleAnchor = Styled.a`
 const ChatBubbles = Styled.div`
     display: flex;
     justify-content: center;
+`;
+
+const CollapsedContainer = Styled.div`
+    width: 78%;
+    margin: 1% auto;
+    background: #4F6272;
 `;

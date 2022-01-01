@@ -10,8 +10,9 @@ const Chatbot = () => {
   const inputRef = useRef();
   const bottomListRef = useRef()
   const [newMessage, setNewMessage] = useState('')
-  const [typing, setTyping] = useState(false)
+  const [loading, setLoading] = useState(false)
   const [id, setId] = useState(4)
+  const [collapsed, setCollapsed] = useState(false);
   const [messages, setMessages] = useState([
     {
         id: 1,
@@ -20,7 +21,7 @@ const Chatbot = () => {
     },
     {
         id: 2,
-        text: "I'm Bitcoin Chatbot",
+        text: "I'm Bitcoin Knowledge Bot",
         name: "Bot"
     },
     {
@@ -51,7 +52,7 @@ const Chatbot = () => {
   useEffect(() => {
     const lastMessage = messages[messages.length - 1];
     if (lastMessage && lastMessage.name === 'User') {
-      setTyping(true)
+      setLoading(true)
       const log = formatChatLog()
       axios.post("https://bitcoin-knowledge-bot.herokuapp.com/ask", {chat_log: log})
       .then(response => {
@@ -62,7 +63,7 @@ const Chatbot = () => {
             text: response.data,
             name: "Bot"
           }])
-          setTyping(false)
+          setLoading(false)
           // Scroll down to the bottom of the list
           bottomListRef.current.scrollIntoView({ behavior: 'smooth' });
         }, 3000)
@@ -99,7 +100,7 @@ const Chatbot = () => {
   return (
     <div>
     <ChatWindow>
-      <MessageList messages={messages} bottomListRef={bottomListRef} typing={typing} />
+      <MessageList collapsed={collapsed} messages={messages} bottomListRef={bottomListRef} loading={loading} />
       <ChatForm
         onSubmit={handleOnSubmit}
         disabled={!newMessage}
@@ -116,7 +117,7 @@ const Chatbot = () => {
         </ChatButtonContainer>
       </ChatForm>
     </ChatWindow>
-    <ArticleSuggestion typing={typing} />
+    <ArticleSuggestion setCollapsed={setCollapsed} collapsed={collapsed} loading={loading} />
     </div>
   )
 }
