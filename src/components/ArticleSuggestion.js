@@ -3,7 +3,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import Styled from 'styled-components';
 import media from "../utils/ComponentBreakpoints";
 import ReactLoading from 'react-loading';
-import {FaChevronDown} from 'react-icons/fa';
+import {FaChevronDown, FaChevronUp} from 'react-icons/fa';
 import { v4 as uuidv4 } from 'uuid';
 import './Chatbot.css'
 
@@ -33,7 +33,7 @@ const ArticleSuggestion = ({loading, collapsed, setCollapsed}) => {
         <ArticleContainer>
             <ArticleContainerHeader>
                 <ArticleCollapse onClick={() => setCollapsed(!collapsed)}>
-                    <FaChevronDown />
+                    {collapsed ? <FaChevronUp /> : <FaChevronDown />}
                 </ArticleCollapse>
                 <ArticleSuggestionTitle>
                     article suggestion coming soon...
